@@ -1,5 +1,5 @@
 import { google } from '@ai-sdk/google';
-import { streamText, tool } from 'ai';
+import { streamText, tool, convertToModelMessages } from 'ai';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
@@ -17,11 +17,14 @@ Nhiệm vụ của bạn:
 export async function POST(request: Request) {
     try {
         const { messages } = await request.json();
+        
+        // Convert UI messages from useChat to ModelMessages that streamText understands
+        const coreMessages = await convertToModelMessages(messages);
 
         const result = await streamText({
             model: google('gemini-2.5-flash'),
             system: SYSTEM_PROMPT,
-            messages,
+            messages: coreMessages,
             tools: {
                 search3DModels: tool({
                     description: 'Tìm kiếm file in 3D (vỏ hộp, linh kiện) trên Github và tạo liên kết tìm kiếm cho các nền tảng in 3D (MakerWorld, Thingiverse).',
