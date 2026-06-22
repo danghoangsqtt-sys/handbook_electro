@@ -13,7 +13,7 @@ export default function AILab() {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [input, setInput] = useState('');
 
-    const { messages, sendMessage, status } = useChat({
+    const { messages, sendMessage, status, error } = useChat({
         generateId: () => Math.random().toString(36).substring(2, 15)
     });
     const isLoading = status === 'submitted' || status === 'streaming';
@@ -115,6 +115,18 @@ export default function AILab() {
                             <span className="w-2 h-2 rounded-full bg-slate-400 animate-bounce"></span>
                             <span className="w-2 h-2 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '0.2s' }}></span>
                             <span className="w-2 h-2 rounded-full bg-slate-400 animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+                        </div>
+                    </div>
+                )}
+                
+                {error && (
+                    <div className="flex gap-4">
+                        <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                            <i className="fa-solid fa-triangle-exclamation text-sm"></i>
+                        </div>
+                        <div className="px-5 py-4 rounded-2xl bg-red-50 text-red-700 border border-red-200 rounded-tl-none">
+                            <p className="font-semibold text-sm mb-1">Đã có lỗi xảy ra:</p>
+                            <p className="text-xs font-mono break-words">{error.message || JSON.stringify(error)}</p>
                         </div>
                     </div>
                 )}
