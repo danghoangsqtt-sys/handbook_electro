@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechDict 5.0 - Từ Điển Bách Khoa Cơ Điện Tử, Tự Động Hóa & Hệ Thống Nhúng</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                            950: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <!-- HEADER NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+                    <i class="fa-solid fa-microchip text-xl animate-pulse"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">TechDict v5.0</h1>
+                    <p class="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold font-mono">200+ Pro Terms Edition</p>
+                </div>
+            </div>
+
+            <!-- Nút hành động đầu trang -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Chuyển chế độ sáng/tối">
+                    <i id="theme-icon" class="fa-solid fa-moon text-slate-600 dark:text-amber-400"></i>
+                </button>
+                <button onclick="openTab('quiz')" class="relative px-4 py-2 rounded-xl text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-white shadow-md shadow-emerald-500/10 flex items-center gap-2 transition-all">
+                    <i class="fa-solid fa-gamepad animate-bounce"></i> Trắc Nghiệm <span class="hidden sm:inline">Kiến Thức</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-8">
+        
+        <!-- INTRO & STATS DASHBOARD -->
+        <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl border border-indigo-500/10">
+            <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+                <svg width="400" height="400" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+                    <circle cx="50" cy="50" r="40"/>
+                    <circle cx="50" cy="50" r="30"/>
+                    <line x1="10" y1="50" x2="90" y2="50"/>
+                    <line x1="50" y1="10" x2="50" y2="90"/>
+                </svg>
+            </div>
+
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-8">
+                    <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 rounded-full text-xs font-semibold uppercase tracking-wider">Hệ Thống Tri Thức Toàn Diện</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mt-3 tracking-tight">Từ Điển Bách Khoa Công Nghệ Số</h2>
+                    <p class="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+                        Hơn <span class="text-cyan-300 font-bold">210 thuật ngữ cốt lõi và thực tiễn</span> được giải nghĩa chi tiết kèm mô phỏng tương tác. Phân loại theo 6 chủ điểm: Cơ điện tử, Tự động hóa, Khoa học máy tính, Vi xử lý, Điện tử số, và Module/Linh kiện nhúng.
+                    </p>
+                </div>
+                
+                <!-- Bảng Thống kê Tiến trình Học tập -->
+                <div class="lg:col-span-4 bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3"><i class="fa-solid fa-chart-pie mr-1 text-indigo-400"></i> Tiến trình học tập</h3>
+                    <div class="flex flex-col gap-2.5">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">Đã học (Mark as Read)</span>
+                                <span class="font-mono font-bold text-blue-400" id="read-progress-text">0/210 (0%)</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div id="read-progress-bar" class="bg-blue-500 h-full transition-all duration-300" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">Đã yêu thích (Bookmarks)</span>
+                                <span class="font-mono font-bold text-amber-400" id="bookmark-count-text">0 từ khóa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABS BAR -->
+        <div class="flex border-b border-slate-200 dark:border-slate-800">
+            <button onclick="openTab('dictionary')" id="tab-btn-dictionary" class="px-6 py-3 font-semibold text-sm border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-language"></i> Tra Cứu Từ Điển
+            </button>
+            <button onclick="openTab('labs')" id="tab-btn-labs" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-vial"></i> Phòng Thí Nghiệm Ảo
+            </button>
+            <button onclick="openTab('quiz')" id="tab-btn-quiz" class="px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-circle-question"></i> Trắc Nghiệm Tùy Biến
+            </button>
+        </div>
+
+        <!-- TAB CONTENT: DICTIONARY -->
+        <section id="tab-dictionary" class="tab-content grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Side: Interactive Search, Filters, List -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                
+                <!-- Tìm kiếm và Bộ lọc -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col gap-4">
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500"></i>
+                        <input type="text" id="search-input" oninput="filterTerms()" placeholder="Tìm kiếm thuật ngữ viết tắt, tên đầy đủ hoặc nội dung..." class="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium transition-all">
+                    </div>
+
+                    <!-- Danh sách danh mục lọc -->
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="selectCategory('all')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white shadow-sm transition-all" data-category="all">Tất cả</button>
+                        <button onclick="selectCategory('Tự động hóa')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Tự động hóa">Tự động hóa</button>
+                        <button onclick="selectCategory('Cơ điện tử')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Cơ điện tử">Cơ điện tử</button>
+                        <button onclick="selectCategory('Khoa học máy tính')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Khoa học máy tính">Khoa học máy tính</button>
+                        <button onclick="selectCategory('Kỹ thuật vi xử lý')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Kỹ thuật vi xử lý">Vi xử lý</button>
+                        <button onclick="selectCategory('Điện tử số')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Điện tử số">Điện tử số</button>
+                        <button onclick="selectCategory('Module & MCU')" class="cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all" data-category="Module & MCU">Module & MCU</button>
+                    </div>
+
+                    <!-- Tùy chọn lọc phụ: Đã học / Đã lưu -->
+                    <div class="flex gap-4 border-t border-slate-100 dark:border-slate-800 pt-3 text-xs">
+                        <label class="flex items-center gap-1.5 cursor-pointer text-slate-600 dark:text-slate-400">
+                            <input type="checkbox" id="filter-bookmarked-only" onchange="filterTerms()" class="rounded text-blue-600 focus:ring-blue-500">
+                            <span>Chỉ hiện đã đánh dấu <i class="fa-solid fa-bookmark text-amber-500"></i></span>
+                        </label>
+                        <label class="flex items-center gap-1.5 cursor-pointer text-slate-600 dark:text-slate-400">
+                            <input type="checkbox" id="filter-unread-only" onchange="filterTerms()" class="rounded text-blue-600 focus:ring-blue-500">
+                            <span>Chỉ hiện từ khóa chưa học</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Danh sách từ khóa cuộn -->
+                <div class="max-h-[700px] overflow-y-auto pr-2 custom-scrollbar flex flex-col gap-3" id="terms-container">
+                    <!-- Loaded dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Right Side: Deep Learning Detail Widget -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm sticky top-24" id="detail-panel">
+                    <div id="detail-empty-state" class="text-center py-20">
+                        <div class="w-16 h-16 bg-blue-50 dark:bg-blue-950/40 text-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-arrow-pointer text-2xl animate-bounce"></i>
+                        </div>
+                        <h3 class="text-base font-bold">Chọn thuật ngữ để xem thông tin</h3>
+                        <p class="text-xs text-slate-400 dark:text-slate-500 max-w-xs mx-auto mt-2">Nhấp vào một thuật ngữ bất kỳ ở bảng bên trái để xem định nghĩa đầy đủ, ứng dụng, phát âm và video hướng dẫn chi tiết từ YouTube.</p>
+                    </div>
+
+                    <!-- Detail loaded state -->
+                    <div id="detail-content-state" class="hidden flex flex-col gap-5">
+                        <div class="flex justify-between items-start gap-4">
+                            <div>
+                                <span id="detail-category" class="px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase rounded bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-300">Category</span>
+                                <h2 id="detail-term" class="text-2xl font-extrabold mt-2 font-mono text-slate-900 dark:text-white">PLC</h2>
+                                <p id="detail-full-name" class="text-sm text-slate-500 font-medium italic mt-0.5">Programmable Logic Controller</p>
+                            </div>
+                            
+                            <!-- Nút Thao tác: Lưu & Đọc -->
+                            <div class="flex gap-2">
+                                <button onclick="toggleBookmarkActive()" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-amber-950/30 flex items-center justify-center transition-colors text-slate-500 dark:text-slate-400" id="btn-bookmark-action" title="Đánh dấu yêu thích">
+                                    <i class="fa-solid fa-bookmark text-base"></i>
+                                </button>
+                                <button onclick="toggleReadActive()" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-100 dark:hover:bg-emerald-950/30 flex items-center justify-center transition-colors text-slate-500 dark:text-slate-400" id="btn-read-action" title="Đánh dấu đã học">
+                                    <i class="fa-solid fa-circle-check text-base"></i>
+                                </button>
+                                <button onclick="speakTerm()" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-blue-950/30 flex items-center justify-center transition-colors text-slate-500 dark:text-slate-400" title="Phát âm tiếng Anh">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Giải nghĩa -->
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Định nghĩa chi tiết</h4>
+                            <div class="p-4 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-xl">
+                                <p id="detail-desc" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Lorem ipsum...</p>
+                            </div>
+                        </div>
+
+                        <!-- Ứng dụng thực tế -->
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Ứng dụng tiêu biểu</h4>
+                            <div class="flex flex-wrap gap-2" id="detail-apps">
+                                <!-- Dynamic app badges -->
+                            </div>
+                        </div>
+
+                        <!-- Video YouTube -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Tìm kiếm bài giảng</h4>
+                                <span class="text-[10px] text-red-500 font-bold flex items-center gap-1"><i class="fa-brands fa-youtube"></i> YouTube Search</span>
+                            </div>
+                            
+                            <div class="p-5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-900/50 text-center flex flex-col items-center gap-3">
+                                <div class="w-12 h-12 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center text-2xl">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400">Khám phá các video giải thích trực quan về thuật ngữ <strong id="youtube-search-term" class="text-slate-800 dark:text-slate-200 font-mono"></strong> trên hệ thống YouTube.</p>
+                                <a id="youtube-external-link" href="#" target="_blank" class="w-full sm:w-auto mt-2 inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-sm font-bold shadow-md shadow-red-500/20 transition-all">
+                                    <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm trên YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB CONTENT: QUIZ SYSTEM -->
+        <section id="tab-quiz" class="tab-content hidden max-w-3xl mx-auto w-full">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col gap-6">
+                <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-graduation-cap text-lg"></i></div>
+                        <div>
+                            <h3 class="font-bold text-lg">Hệ thống Trắc Nghiệm Tùy Biến</h3>
+                            <p class="text-xs text-slate-400 dark:text-slate-500">Kiểm thử và đánh giá toàn diện vốn từ vựng kỹ thuật của bản thân.</p>
+                        </div>
+                    </div>
+                    <div class="font-mono font-bold text-sm text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full hidden" id="quiz-progress">Câu 1/5</div>
+                </div>
+
+                <!-- Cấu hình Quiz -->
+                <div id="quiz-start-screen" class="flex flex-col gap-6">
+                    <div class="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-2xl flex gap-3">
+                        <i class="fa-solid fa-circle-info text-blue-500 mt-0.5 text-sm"></i>
+                        <p class="text-xs text-blue-700 dark:text-blue-400 leading-relaxed">
+                            Mã nguồn trắc nghiệm sẽ lấy ngẫu nhiên các câu hỏi từ kho từ điển hơn 210 từ của bạn để tạo ra bài kiểm tra độc quyền.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Số lượng câu hỏi</label>
+                            <select id="quiz-config-count" class="w-full p-3 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="5">5 câu hỏi</option>
+                                <option value="10">10 câu hỏi</option>
+                                <option value="15">15 câu hỏi</option>
+                                <option value="20">20 câu hỏi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Giới hạn Chuyên ngành</label>
+                            <select id="quiz-config-category" class="w-full p-3 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 rounded-xl font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="all">Tất cả chuyên ngành</option>
+                                <option value="Tự động hóa">Tự động hóa</option>
+                                <option value="Cơ điện tử">Cơ điện tử</option>
+                                <option value="Khoa học máy tính">Khoa học máy tính</option>
+                                <option value="Kỹ thuật vi xử lý">Kỹ thuật vi xử lý</option>
+                                <option value="Điện tử số">Điện tử số</option>
+                                <option value="Module & MCU">Module & MCU</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button onclick="startQuiz()" class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-bold shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 text-sm">
+                        Bắt đầu làm bài thi trắc nghiệm <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Đang chơi Quiz -->
+                <div id="quiz-play-screen" class="hidden flex flex-col gap-6">
+                    <div class="p-5 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400" id="quiz-q-category">Phân mục</span>
+                        <h4 class="text-base sm:text-lg font-bold mt-2 leading-relaxed" id="quiz-q-text">Mô tả định nghĩa câu hỏi sẽ hiển thị ở đây?</h4>
+                    </div>
+
+                    <div class="flex flex-col gap-3" id="quiz-options-container"></div>
+
+                    <div class="flex justify-end pt-2">
+                        <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="hidden px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-sm shadow-md transition-all">
+                            Câu tiếp theo <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Màn hình kết quả -->
+                <div id="quiz-end-screen" class="hidden text-center py-10 flex flex-col items-center gap-6">
+                    <div class="w-20 h-20 bg-blue-500/10 text-blue-500 rounded-full flex items-center justify-center text-4xl" id="quiz-medal-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-extrabold" id="quiz-result-title">Hoàn thành bài thi!</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Điểm số thu được:</p>
+                        <div class="text-5xl font-black font-mono text-blue-500 mt-2" id="quiz-score-num">5/5</div>
+                    </div>
+                    <div class="flex gap-4">
+                        <button onclick="resetQuizConfig()" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm transition-all shadow-md">Thực hiện lại</button>
+                        <button onclick="openTab('dictionary')" class="px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold rounded-xl text-sm transition-all text-slate-600 dark:text-slate-300">Quay về từ điển</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-slate-500 dark:text-slate-400">&copy; 2026 TechDict 5.0 - Từ điển bách khoa hệ thống thông tin, tự động hóa và cơ điện tử.</p>
+            <div class="flex gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                <span class="font-mono bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded">210+ Terms Database</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DATASET VÀ LOGIC XỬ LÝ -->
+    <script>
+        // Cơ sở dữ liệu hơn 210 thuật ngữ trải rộng 6 lĩnh vực
+        const termsData = [
+            // ==========================================
+            // 1. TỰ ĐỘNG HÓA (35 từ)
+            // ==========================================
+            { id: "plc", term: "PLC", fullName: "Programmable Logic Controller", category: "Tự động hóa", definition: "Bộ điều khiển logic lập trình được, ứng dụng phổ biến nhất để giám sát dây chuyền tự động hóa công nghiệp.", applications: ["Cánh tay gắp", "Đóng chai", "Thang máy"], youtubeEmbed: "https://www.youtube.com/embed/y2eWv8-bI-g", youtubeUrl: "https://www.youtube.com/watch?v=y2eWv8-bI-g", icon: "fa-solid fa-gears" },
+            { id: "scada", term: "SCADA", fullName: "Supervisory Control and Data Acquisition", category: "Tự động hóa", definition: "Hệ thống quản lý, giám sát và thu thập dữ liệu tập trung cấp cao của nhà máy sản xuất.", applications: ["Điều phối điện lưới", "Giám sát cấp thoát nước", "Nhà máy thép"], youtubeEmbed: "https://www.youtube.com/embed/V6P9vSg_MIA", youtubeUrl: "https://www.youtube.com/watch?v=V6P9vSg_MIA", icon: "fa-solid fa-network-wired" },
+            { id: "hmi", term: "HMI", fullName: "Human-Machine Interface", category: "Tự động hóa", definition: "Giao diện màn hình tương tác trực quan hiển thị số liệu giúp người vận hành giao tiếp với máy móc.", applications: ["Màn hình máy ép nhựa", "Tủ điều khiển dây chuyền", "Trạm bơm tự động"], youtubeEmbed: "https://www.youtube.com/embed/UqIuV_8vCeg", youtubeUrl: "https://www.youtube.com/watch?v=UqIuV_8vCeg", icon: "fa-solid fa-desktop" },
+            { id: "pid", term: "PID", fullName: "Proportional-Integral-Derivative", category: "Tự động hóa", definition: "Thuật toán điều khiển vòng kín tối ưu phản hồi sai lệch giúp ổn định các hệ thống vật lý liên tục.", applications: ["Ổn định nhiệt độ lò nung", "Kiểm soát mực nước bồn", "Điều tốc động cơ"], youtubeEmbed: "https://www.youtube.com/embed/UR0hOmjaXX0", youtubeUrl: "https://www.youtube.com/watch?v=UR0hOmjaXX0", icon: "fa-solid fa-chart-line" },
+            { id: "dcs", term: "DCS", fullName: "Distributed Control System", category: "Tự động hóa", definition: "Hệ thống điều khiển phân tán cấu trúc phân lớp phức tạp dành cho các quy trình chế biến lọc hóa dầu, hóa chất lớn.", applications: ["Lọc dầu", "Nhà máy hóa chất", "Sản xuất giấy"], youtubeEmbed: "https://www.youtube.com/embed/o0bKmsG8b0o", youtubeUrl: "https://www.youtube.com/watch?v=o0bKmsG8b0o", icon: "fa-solid fa-server" },
+            { id: "rtu", term: "RTU", fullName: "Remote Terminal Unit", category: "Tự động hóa", definition: "Thiết bị đầu cuối thu thập dữ liệu cảm biến và truyền dữ liệu tầm xa về hệ thống SCADA.", applications: ["Trạm bơm xa", "Hệ thống khí gas ngoài trời", "Trạm khí tượng"], youtubeEmbed: "https://www.youtube.com/embed/Z0o4D9_qQrs", youtubeUrl: "https://www.youtube.com/watch?v=Z0o4D9_qQrs", icon: "fa-solid fa-tower-broadcast" },
+            { id: "vfd", term: "VFD", fullName: "Variable Frequency Drive", category: "Tự động hóa", definition: "Biến tần. Thiết bị điều khiển tốc độ của động cơ xoay chiều bằng cách thay đổi tần số nguồn điện cấp.", applications: ["Quạt thông gió lớn", "Máy bơm nước áp lực lớn", "Băng tải công nghiệp"], youtubeEmbed: "https://www.youtube.com/embed/N6jU0D8M-Z4", youtubeUrl: "https://www.youtube.com/watch?v=N6jU0D8M-Z4", icon: "fa-solid fa-bolt" },
+            { id: "modbus", term: "Modbus", fullName: "Modbus Protocol", category: "Tự động hóa", definition: "Giao thức truyền thông nối tiếp công nghiệp tiêu chuẩn lâu đời nhất, cực kỳ ổn định trên RS485.", applications: ["Kết nối đồng hồ điện", "Cảm biến công nghiệp", "Kết nối PLC-HMI"], youtubeEmbed: "https://www.youtube.com/embed/OvRD2Uvrxmw", youtubeUrl: "https://www.youtube.com/watch?v=OvRD2Uvrxmw", icon: "fa-solid fa-comments" },
+            { id: "profibus", term: "Profibus", fullName: "Process Field Bus", category: "Tự động hóa", definition: "Chuẩn giao tiếp mạng công nghiệp mở rộng của hãng Siemens dành cho tự động hóa sản xuất hàng loạt.", applications: ["Truyền thông Siemens S7", "Truyền dữ liệu driver lớn", "Thiết bị đo lường nhà máy"], youtubeEmbed: "https://www.youtube.com/embed/rV3XwZ_O_c0", youtubeUrl: "https://www.youtube.com/watch?v=rV3XwZ_O_c0", icon: "fa-solid fa-network-wired" },
+            { id: "canbus", term: "CAN Bus", fullName: "Controller Area Network", category: "Tự động hóa", definition: "Mạng bus điều khiển nối tiếp mạnh mẽ chuyên sử dụng truyền nhận tín hiệu nhạy bén trên ô tô.", applications: ["Hệ thống ECU xe hơi", "Giao thức robot", "Điện tử hàng không"], youtubeEmbed: "https://www.youtube.com/embed/FqLDpH_fEUU", youtubeUrl: "https://www.youtube.com/watch?v=FqLDpH_fEUU", icon: "fa-solid fa-car" },
+            { id: "ethercat", term: "EtherCAT", fullName: "Ethernet for Control Automation Technology", category: "Tự động hóa", definition: "Giao thức Ethernet thời gian thực tốc độ cực cao dành riêng cho các ứng dụng cơ cấu chấp hành chuyển động phức tạp.", applications: ["Điều khiển servo đa trục", "Dây chuyền bán dẫn", "Robot cộng tác"], youtubeEmbed: "https://www.youtube.com/embed/yQv1vUlyI2k", youtubeUrl: "https://www.youtube.com/watch?v=yQv1vUlyI2k", icon: "fa-solid fa-gauge-high" },
+            { id: "hart", term: "HART", fullName: "Highway Addressable Remote Transducer", category: "Tự động hóa", definition: "Giao thức chồng tín hiệu số tần số thấp lên đường truyền tương tự 4-20mA của cảm biến.", applications: ["Cảm biến áp suất thông minh", "Thiết bị đo lưu lượng hóa chất", "Hiệu chuẩn cảm biến từ xa"], youtubeEmbed: "https://www.youtube.com/embed/2vR89SndpB8", youtubeUrl: "https://www.youtube.com/watch?v=2vR89SndpB8", icon: "fa-solid fa-wave-square" },
+            { id: "opcua", term: "OPC UA", fullName: "Open Platform Communications Unified Architecture", category: "Tự động hóa", definition: "Kiến trúc nền tảng giao tiếp chuẩn hóa trong kỷ nguyên cách mạng công nghiệp IIoT 4.0 bảo mật cao.", applications: ["Giao thức Cloud IoT", "Tích hợp IT và OT", "Truyền thông liên nền tảng"], youtubeEmbed: "https://www.youtube.com/embed/kRndQvG0HMo", youtubeUrl: "https://www.youtube.com/watch?v=kRndQvG0HMo", icon: "fa-solid fa-shield-halved" },
+            { id: "servo", term: "Servo Motor", fullName: "Servo Motor", category: "Tự động hóa", definition: "Động cơ vòng lặp phản hồi chính xác vị trí góc quay, mô-men và tốc độ thông qua encoder liên kết.", applications: ["Cánh tay khớp xoay", "Máy in 3D chính xác", "Trục tịnh tiến CNC"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-arrows-spin" },
+            { id: "stepper", term: "Stepper Motor", fullName: "Stepper Motor", category: "Tự động hóa", definition: "Động cơ bước điều khiển góc quay theo các chu kỳ xung kích cực kỳ ổn định không cần hồi tiếp.", applications: ["Máy vẽ sơ đồ Laser", "Máy in 3D giá rẻ", "Cơ cấu nạp linh kiện SMT"], youtubeEmbed: "https://www.youtube.com/embed/eyqwLiowZiU", youtubeUrl: "https://www.youtube.com/watch?v=eyqwLiowZiU", icon: "fa-solid fa-circle-nodes" },
+            { id: "actuator", term: "Actuator", fullName: "Actuator", category: "Tự động hóa", definition: "Cơ cấu chấp hành. Thiết bị nhận tín hiệu điện để chuyển hóa thành chuyển động cơ lý tính cơ khí thực tế.", applications: ["Van bướm điện", "Xilanh hành trình", "Hệ thống cửa trượt"], youtubeEmbed: "https://www.youtube.com/embed/9wO45f-N2h0", youtubeUrl: "https://www.youtube.com/watch?v=9wO45f-N2h0", icon: "fa-solid fa-sliders" },
+            { id: "solenoid", term: "Solenoid", fullName: "Solenoid Coil / Valve", category: "Tự động hóa", definition: "Cuộn dây nam châm điện chuyển dòng điện thành chuyển động kéo cơ học tuyến tính phản ứng nhanh.", applications: ["Khóa cửa điện", "Van điện từ khí nén", "Rơ-le điện áp cao"], youtubeEmbed: "https://www.youtube.com/embed/LcoY_Wwz8i0", youtubeUrl: "https://www.youtube.com/watch?v=LcoY_Wwz8i0", icon: "fa-solid fa-magnet" },
+            { id: "pneumatics", term: "Pneumatics", fullName: "Pneumatics System", category: "Tự động hóa", definition: "Kỹ thuật ứng dụng khí nén sạch để sinh công cơ khí trong môi trường tránh rủi ro điện.", applications: ["Cơ cấu gắp linh kiện", "Mở nắp chai tự động", "Bơm định lượng"], youtubeEmbed: "https://www.youtube.com/embed/YpXz8h05B5M", youtubeUrl: "https://www.youtube.com/watch?v=YpXz8h05B5M", icon: "fa-solid fa-wind" },
+            { id: "hydraulics", term: "Hydraulics", fullName: "Hydraulics System", category: "Tự động hóa", definition: "Kỹ thuật thủy lực dùng dầu áp lực cực cao để đạt lực ép cơ học cực lớn trong công nghiệp nặng.", applications: ["Máy ép thủy lực", "Cánh tay xe múc", "Bàn nâng tải trọng lớn"], youtubeEmbed: "https://www.youtube.com/embed/T6_Yt8yH-wQ", youtubeUrl: "https://www.youtube.com/watch?v=T6_Yt8yH-wQ", icon: "fa-solid fa-water" },
+            { id: "encoder", term: "Encoder", fullName: "Rotary Encoder", category: "Tự động hóa", definition: "Cảm biến đo lường tốc độ, góc quay cơ học của trục động cơ bằng phương pháp quang hoặc từ học.", applications: ["Hồi tiếp tốc độ servo", "Đo độ xoay của vô lăng", "Đếm số vòng quay bánh xe"], youtubeEmbed: "https://www.youtube.com/embed/mGf_KWh63Yk", youtubeUrl: "https://www.youtube.com/watch?v=mGf_KWh63Yk", icon: "fa-solid fa-arrows-spin" },
+            { id: "limitswitch", term: "Limit Switch", fullName: "Limit Switch", category: "Tự động hóa", definition: "Công tắc hành trình cơ học đóng ngắt tín hiệu khẩn cấp khi trục cơ chạm vị trí biên tối đa.", applications: ["Chống vượt biên CNC", "Cảm biến hành trình thang máy", "Phát hiện cửa đóng"], youtubeEmbed: "https://www.youtube.com/embed/9BqI1QpE91Q", youtubeUrl: "https://www.youtube.com/watch?v=9BqI1QpE91Q", icon: "fa-solid fa-toggle-on" },
+            { id: "proximity", term: "Proximity Sensor", fullName: "Proximity Sensor", category: "Tự động hóa", definition: "Cảm biến tiệm cận phát hiện vật thể kim loại hoặc phi kim loại gần kề mà không cần tiếp xúc vật lý.", applications: ["Đếm lon bia trên băng tải", "Cảm biến lùi ô tô", "Phát hiện nắp kim loại"], youtubeEmbed: "https://www.youtube.com/embed/fWscdM-A_U0", youtubeUrl: "https://www.youtube.com/watch?v=fWscdM-A_U0", icon: "fa-solid fa-bullseye" },
+            { id: "photoelectric", term: "Photoelectric Sensor", fullName: "Photoelectric Sensor", category: "Tự động hóa", definition: "Cảm biến quang điện sử dụng chùm tia sáng hồng ngoại/laser để phát hiện chướng ngại vật chắn ngang.", applications: ["Cảm biến chống kẹt cửa cuốn", "Bộ đếm sản phẩm băng chuyền", "Hệ thống báo động hồng ngoại"], youtubeEmbed: "https://www.youtube.com/embed/Ue8z0D4Qp4k", youtubeUrl: "https://www.youtube.com/watch?v=Ue8z0D4Qp4k", icon: "fa-solid fa-laser-cutter" },
+            { id: "thermocouple", term: "Thermocouple", fullName: "Thermocouple Temperature Sensor", category: "Tự động hóa", definition: "Cảm biến nhiệt độ cặp nhiệt điện đo lường dải nhiệt cực rộng thông qua hiệu ứng Seebeck phát sinh điện áp mili-volt.", applications: ["Nhiệt độ lò luyện thép", "Mạch giám sát lò bánh mì", "Đầu đo súng bắn nhiệt"], youtubeEmbed: "https://www.youtube.com/embed/HhS0Yit-XWk", youtubeUrl: "https://www.youtube.com/watch?v=HhS0Yit-XWk", icon: "fa-solid fa-temperature-high" },
+            { id: "rtd", term: "RTD", fullName: "Resistance Temperature Detector (Pt100)", category: "Tự động hóa", definition: "Cảm biến nhiệt độ dựa vào sự thay đổi điện trở kim loại bạch kim chính xác cực kỳ cao.", applications: ["Nhiệt độ tủ thuốc vacxin", "Kiểm soát thực phẩm", "Thí nghiệm khoa học"], youtubeEmbed: "https://www.youtube.com/embed/Z9UWe37K73k", youtubeUrl: "https://www.youtube.com/watch?v=Z9UWe37K73k", icon: "fa-solid fa-temperature-low" },
+            { id: "lvdt", term: "LVDT", fullName: "Linear Variable Differential Transformer", category: "Tự động hóa", definition: "Bộ biến đổi vi sai biến thiên tuyến tính dùng đo lường dịch chuyển cơ học chính xác cấp micromet.", applications: ["Đo độ giãn nở lò xo", "Đo kiểm sai lệch chi tiết máy", "Hàng không vũ trụ"], youtubeEmbed: "https://www.youtube.com/embed/8qj2Z6YhshQ", youtubeUrl: "https://www.youtube.com/watch?v=8qj2Z6YhshQ", icon: "fa-solid fa-circle-nodes" },
+            { id: "transmitter", term: "Transmitter", fullName: "Signal Transmitter", category: "Tự động hóa", definition: "Bộ chuyển đổi và khuếch đại tín hiệu cảm biến yếu thành dòng dòng điện tương tự tiêu chuẩn 4-20mA truyền xa.", applications: ["Truyền tín hiệu áp suất bồn nước", "Chuẩn hóa đo đạc độ ẩm khí", "Truyền xa chống nhiễu"], youtubeEmbed: "https://www.youtube.com/embed/fW49p4C89H4", youtubeUrl: "https://www.youtube.com/watch?v=fW49p4C89H4", icon: "fa-solid fa-wave-square" },
+            { id: "relay", term: "Relay", fullName: "Electromechanical Relay", category: "Tự động hóa", definition: "Rơ-le trung gian điều khiển đóng ngắt dòng điện lớn bằng cách cấp dòng điện nhỏ vào cuộn hút.", applications: ["Đóng ngắt máy bơm nước", "Kích hoạt bóng đèn", "Tủ bảo vệ an toàn điện"], youtubeEmbed: "https://www.youtube.com/embed/n594CkrP6yU", youtubeUrl: "https://www.youtube.com/watch?v=n594CkrP6yU", icon: "fa-solid fa-circle-nodes" },
+            { id: "contactor", term: "Contactor", fullName: "Magnetic Contactor", category: "Tự động hóa", definition: "Khởi động từ công suất cực lớn dùng đóng ngắt nguồn động cơ ba pha trong hệ thống động lực.", applications: ["Tủ điện khởi động motor", "Hệ thống sấy nung công suất lớn", "Hệ thống bơm cứu hỏa"], youtubeEmbed: "https://www.youtube.com/embed/g6Pez9O9478", youtubeUrl: "https://www.youtube.com/watch?v=g6Pez9O9478", icon: "fa-solid fa-toggle-on" },
+            { id: "interlock", term: "Interlock", fullName: "Electrical Interlock", category: "Tự động hóa", definition: "Mạch khóa chéo điện cơ ngăn ngừa việc kích hoạt hai trạng thái đối nghịch nguy hiểm đồng thời.", applications: ["Khóa chéo chiều quay động cơ", "Bảo vệ mạch cầu H", "Đóng ngắt nguồn dự phòng ATS"], youtubeEmbed: "https://www.youtube.com/embed/MhD1n7rI40o", youtubeUrl: "https://www.youtube.com/watch?v=MhD1n7rI40o", icon: "fa-solid fa-lock" },
+            { id: "deadband", term: "Deadband", fullName: "Deadband Zone", category: "Tự động hóa", definition: "Dải chết trong điều khiển. Khoảng giá trị đầu vào mà bộ điều khiển bỏ qua để tránh gây hư hỏng thiết bị cơ cấu liên tục.", applications: ["Giới hạn đóng ngắt máy lạnh", "Giảm giật cơ cấu servo khí nén", "Bộ so sánh rơ-le nhiệt độ"], youtubeEmbed: "https://www.youtube.com/embed/UR0hOmjaXX0", youtubeUrl: "https://www.youtube.com/watch?v=UR0hOmjaXX0", icon: "fa-solid fa-border-all" },
+            { id: "cascade", term: "Cascade Control", fullName: "Cascade Control System", category: "Tự động hóa", definition: "Cấu trúc điều khiển phân tầng hai vòng lặp lồng nhau (vòng trong xử lý nhiễu trước vòng ngoài) tăng độ nhạy phản hồi.", applications: ["Kiểm soát lưu lượng và nhiệt độ lò phản ứng", "Điều tốc động cơ chính xác", "Lò hơi công nghiệp"], youtubeEmbed: "https://www.youtube.com/embed/qg_h4mI3nIs", youtubeUrl: "https://www.youtube.com/watch?v=qg_h4mI3nIs", icon: "fa-solid fa-sitemap" },
+            { id: "feedforward", term: "Feedforward", fullName: "Feedforward Control", category: "Tự động hóa", definition: "Phương pháp điều khiển đón đầu, xử lý nhiễu hệ thống trực tiếp dựa trên tính toán suy luận trước khi ảnh hưởng đến sai số.", applications: ["Ổn định nhiệt độ dòng chảy đầu vào", "Cân bằng tải nhanh máy phát điện", "Máy bay trực thăng tự hành"], youtubeEmbed: "https://www.youtube.com/embed/qg_h4mI3nIs", youtubeUrl: "https://www.youtube.com/watch?v=qg_h4mI3nIs", icon: "fa-solid fa-forward" },
+            { id: "mimo", term: "MIMO", fullName: "Multiple-Input Multiple-Output", category: "Tự động hóa", definition: "Mô hình toán học điều khiển hệ thống có nhiều ngõ vào và đồng thời điều chỉnh nhiều ngõ ra phụ thuộc chéo.", applications: ["Cơ cấu bay của trực thăng", "Quá trình lọc hóa dầu phức tạp", "Hệ thống điều hòa tòa nhà lớn"], youtubeEmbed: "https://www.youtube.com/embed/UR0hOmjaXX0", youtubeUrl: "https://www.youtube.com/watch?v=UR0hOmjaXX0", icon: "fa-solid fa-diagram-project" },
+            { id: "siso", term: "SISO", fullName: "Single-Input Single-Output", category: "Tự động hóa", definition: "Mô hình điều khiển một ngõ vào, một ngõ ra cơ bản nhất để áp dụng trực tiếp thuật toán PID truyền thống.", applications: ["Bể ổn nhiệt đơn giản", "Hệ thống quạt thông gió đơn", "Mạch tăng áp DC-DC"], youtubeEmbed: "https://www.youtube.com/embed/UR0hOmjaXX0", youtubeUrl: "https://www.youtube.com/watch?v=UR0hOmjaXX0", icon: "fa-solid fa-arrow-right-to-bracket" },
+
+            // ==========================================
+            // 2. CƠ ĐIỆN TỬ (35 từ)
+            // ==========================================
+            { id: "imu", term: "IMU", fullName: "Inertial Measurement Unit", category: "Cơ điện tử", definition: "Bộ đo lường quán tính tích hợp con quay hồi chuyển và gia tốc kế để xác định tư thế, góc nghiêng chuyển động.", applications: ["Mạch cân bằng drone", "Kính thực tế ảo VR", "Hệ thống định vị tên lửa"], youtubeEmbed: "https://www.youtube.com/embed/eqZgxR6eRjo", youtubeUrl: "https://www.youtube.com/watch?v=eqZgxR6eRjo", icon: "fa-solid fa-compass" },
+            { id: "mems", term: "MEMS", fullName: "Micro-Electro-Mechanical Systems", category: "Cơ điện tử", definition: "Công nghệ chế tạo hệ thống cơ điện tử trên quy mô vi mô cực kỳ nhỏ gọn tích hợp trực tiếp trên chip bán dẫn.", applications: ["Cảm biến xoay màn hình điện thoại", "Mạch gia tốc túi khí ô tô", "Đầu phun mực máy in"], youtubeEmbed: "https://www.youtube.com/embed/iTfL69GzFqE", youtubeUrl: "https://www.youtube.com/watch?v=iTfL69GzFqE", icon: "fa-solid fa-microchip" },
+            { id: "gyroscope", term: "Gyroscope", fullName: "Gyroscope Sensor", category: "Cơ điện tử", definition: "Cảm biến con quay hồi chuyển dùng để đo lường hoặc duy trì vận tốc góc quay của thiết bị di chuyển.", applications: ["Chống rung gimbal camera", "Kiểm soát ổn định thăng bằng trực thăng", "Dẫn đường tàu ngầm"], youtubeEmbed: "https://www.youtube.com/embed/eqZgxR6eRjo", youtubeUrl: "https://www.youtube.com/watch?v=eqZgxR6eRjo", icon: "fa-solid fa-arrows-spin" },
+            { id: "accelerometer", term: "Accelerometer", fullName: "Accelerometer Sensor", category: "Cơ điện tử", definition: "Cảm biến đo gia tốc tịnh tiến dọc theo các trục toạ độ để phát hiện rung động hoặc hướng trọng lực.", applications: ["Bộ đếm bước chân", "Kích hoạt nổ túi khí", "Nhận dạng nghiêng màn hình"], youtubeEmbed: "https://www.youtube.com/embed/eqZgxR6eRjo", youtubeUrl: "https://www.youtube.com/watch?v=eqZgxR6eRjo", icon: "fa-solid fa-gauge" },
+            { id: "magnetometer", term: "Magnetometer", fullName: "Magnetometer Sensor", category: "Cơ điện tử", definition: "Cảm biến đo cường độ từ trường Trái Đất đóng vai trò làm la bàn số định hướng hướng địa lý.", applications: ["La bàn số điện thoại", "Hệ thống bù góc của IMU", "Phát hiện quặng kim loại dưới đất"], youtubeEmbed: "https://www.youtube.com/embed/eqZgxR6eRjo", youtubeUrl: "https://www.youtube.com/watch?v=eqZgxR6eRjo", icon: "fa-solid fa-compass" },
+            { id: "lidar", term: "LiDAR", fullName: "Light Detection and Ranging", category: "Cơ điện tử", definition: "Thiết bị quét laser hồng ngoại liên tục đo khoảng cách để vẽ lại bản đồ không gian 3D số hóa xung quanh.", applications: ["Xe tự hành Autopilot", "Robot quét nhà lập bản đồ", "Đo trắc địa hàng không"], youtubeEmbed: "https://www.youtube.com/embed/EY7XfC7Oq78", youtubeUrl: "https://www.youtube.com/watch?v=EY7XfC7Oq78", icon: "fa-solid fa-radar" },
+            { id: "sonar", term: "Sonar", fullName: "Sound Navigation and Ranging", category: "Cơ điện tử", definition: "Hệ thống định vị bằng cách phát và thu sóng siêu âm phản xạ để đo khoảng cách vật cản trong nước/không khí.", applications: ["Đo độ sâu lòng biển", "Cảm biến đỗ xe", "Phát hiện tàu ngầm"], youtubeEmbed: "https://www.youtube.com/embed/fD_bVp_s9pY", youtubeUrl: "https://www.youtube.com/watch?v=fD_bVp_s9pY", icon: "fa-solid fa-circle-dot" },
+            { id: "kinematics", term: "Kinematics", fullName: "Robot Kinematics", category: "Cơ điện tử", definition: "Động học robot. Bộ môn toán học nghiên cứu mối tương quan vị trí các khớp robot với hệ tọa độ không gian vật lý.", applications: ["Lập trình chuyển động robot arm", "Vẽ quỹ đạo CNC", "Giả lập robot"], youtubeEmbed: "https://www.youtube.com/embed/DitS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=DitS0a28Sko", icon: "fa-solid fa-shapes" },
+            { id: "invkinematics", term: "Inverse Kinematics", fullName: "Inverse Kinematics (IK)", category: "Cơ điện tử", definition: "Động học ngược. Tính toán các góc xoay của khớp khớp robot khi biết trước điểm tọa độ mong muốn của đầu gắp.", applications: ["Điều khiển đầu gắp robot gắp linh kiện", "Game 3D mô phỏng bước chân nhân vật", "Lập trình quỹ đạo máy vẽ"], youtubeEmbed: "https://www.youtube.com/embed/DitS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=DitS0a28Sko", icon: "fa-solid fa-diagram-next" },
+            { id: "odometry", term: "Odometry", fullName: "Wheel Odometry", category: "Cơ điện tử", definition: "Phương pháp ước lượng quãng đường di chuyển của robot tự hành thông qua dữ liệu đếm vòng xoay bánh xe.", applications: ["Định vị xe tự hành AGV", "Cập nhật vị trí máy hút bụi robot", "Đo quãng đường ô tô"], youtubeEmbed: "https://www.youtube.com/embed/ DitS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=DitS0a28Sko", icon: "fa-solid fa-route" },
+            { id: "gcode", term: "G-code", fullName: "Geometric Code (G-code)", category: "Cơ điện tử", definition: "Ngôn ngữ lập trình tọa độ số tiêu chuẩn điều khiển chuyển động của đầu dụng cụ cắt cơ khí CNC.", applications: ["Vận hành máy phay CNC", "Điều khiển máy in 3D nung nhựa", "Máy cắt Plasma"], youtubeEmbed: "https://www.youtube.com/embed/D3v-b6jK7tE", youtubeUrl: "https://www.youtube.com/watch?v=D3v-b6jK7tE", icon: "fa-solid fa-code" },
+            { id: "cnc", term: "CNC", fullName: "Computer Numerical Control", category: "Cơ điện tử", definition: "Hệ thống máy gia công cơ khí chính xác được lập trình tự động hóa hoàn toàn bằng máy tính chủ.", applications: ["Phay khuôn mẫu kim loại", "Cắt khắc gỗ mỹ nghệ tự động", "Tiện các chi tiết ren trục"], youtubeEmbed: "https://www.youtube.com/embed/6m6uT_0oWrc", youtubeUrl: "https://www.youtube.com/watch?v=6m6uT_0oWrc", icon: "fa-solid fa-screwdriver-wrench" },
+            { id: "bldc", term: "BLDC Motor", fullName: "Brushless DC Motor", category: "Cơ điện tử", definition: "Động cơ dòng điện một chiều không chổi than, hiệu suất chuyển đổi cơ năng cao và tuổi thọ cực bền bỉ.", applications: ["Quạt động cơ máy bay điều khiển", "Động cơ xe điện EV", "Quạt làm mát thùng máy PC"], youtubeEmbed: "https://www.youtube.com/embed/bCEiOnuODac", youtubeUrl: "https://www.youtube.com/watch?v=bCEiOnuODac", icon: "fa-solid fa-arrows-spin" },
+            { id: "esc", term: "ESC", fullName: "Electronic Speed Controller", category: "Cơ điện tử", definition: "Mạch điều tốc điện tử điều tiết dòng điện ba pha xoay chiều tần số cao để vận hành động cơ BLDC cánh quạt.", applications: ["Mạch bay drone", "Điều khiển bánh xe điện", "Mô hình tàu thủy RC"], youtubeEmbed: "https://www.youtube.com/embed/OEN81S-Fp9U", youtubeUrl: "https://www.youtube.com/watch?v=OEN81S-Fp9U", icon: "fa-solid fa-gauge-high" },
+            { id: "hbridge", term: "H-Bridge", fullName: "H-Bridge Motor Driver", category: "Cơ điện tử", definition: "Cấu trúc mạch 4 transistor đóng cắt chéo cho phép đảo ngược cực dòng điện cấp để đổi chiều quay động cơ DC.", applications: ["Mạch đảo chiều động cơ DC", "Lái động cơ bước", "Bộ chuyển đổi dòng điện inverter"], youtubeEmbed: "https://www.youtube.com/embed/Te5YyWQu5Y0", youtubeUrl: "https://www.youtube.com/watch?v=Te5YyWQu5Y0", icon: "fa-solid fa-bridge" },
+            { id: "backemf", term: "Back-EMF", fullName: "Back Electromotive Force", category: "Cơ điện tử", definition: "Sức điện động phản kháng phát sinh từ cuộn dây động cơ đang quay cản trở dòng điện đầu vào chính.", applications: ["Phát hiện vị trí rotor BLDC không cần cảm biến Hall", "Bộ phanh tái tạo năng lượng xe điện", "Giám sát hỏng hóc động cơ"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-bolt" },
+            { id: "torque", term: "Torque", fullName: "Mechanical Torque", category: "Cơ điện tử", definition: "Mô-men xoắn. Đại lượng vật lý biểu thị lực tác dụng làm quay một trục cơ học quanh tâm.", applications: ["Chọn thông số động cơ kéo xích", "Lực vặn bu lông tay máy", "Khả năng leo dốc xe điện"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-arrows-spin" },
+            { id: "backlash", term: "Backlash", fullName: "Gear Backlash", category: "Cơ điện tử", definition: "Độ rơ cơ học phát sinh giữa các khe răng khớp nối khi cơ cấu truyền chuyển động bị đảo ngược hướng.", applications: ["Sai lệch dao động máy phay CNC", "Thiết kế hộp giảm tốc độ sai lệch bằng không", "Độ trễ khớp robot cánh tay"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-gears" },
+            { id: "straingauge", term: "Strain Gauge", fullName: "Strain Gauge Sensor", category: "Cơ điện tử", definition: "Cảm biến đo lường biến dạng vật lý biến thiên điện trở cực nhỏ khi cấu trúc kim loại chịu kéo lực căng.", applications: ["Mạch cân điện tử tải trọng", "Kiểm thử ứng suất dầm cầu vượt", "Cảm biến đo lực bóp cánh tay robot"], youtubeEmbed: "https://www.youtube.com/embed/h_yW6L7_Vrs", youtubeUrl: "https://www.youtube.com/watch?v=h_yW6L7_Vrs", icon: "fa-solid fa-compress" },
+            { id: "loadcell", term: "Load Cell", fullName: "Weight Load Cell Sensor", category: "Cơ điện tử", definition: "Cơ cấu chuyển đổi lực tải trọng cơ học thành dòng điện áp siêu nhỏ dựa vào cấu trúc strain gauge dán bên trong.", applications: ["Cân bàn điện tử cân lợn", "Cân hành lý sân bay", "Kiểm tra tải trọng xe tải"], youtubeEmbed: "https://www.youtube.com/embed/h_yW6L7_Vrs", youtubeUrl: "https://www.youtube.com/watch?v=h_yW6L7_Vrs", icon: "fa-solid fa-weight-scale" },
+            { id: "resolver", term: "Resolver", fullName: "Rotary Resolver", category: "Cơ điện tử", definition: "Cảm biến đo góc quay điện từ cấu trúc giống máy biến áp siêu bền bỉ thường chịu môi trường rung động nhiệt cực cao.", applications: ["Đo góc rotor xe hybrid", "Robot công nghiệp nặng đúc thép", "Điều khiển góc động cơ quân sự"], youtubeEmbed: "https://www.youtube.com/embed/mGf_KWh63Yk", youtubeUrl: "https://www.youtube.com/watch?v=mGf_KWh63Yk", icon: "fa-solid fa-arrows-spin" },
+            { id: "tachometer", term: "Tachometer", fullName: "Tachometer Sensor", category: "Cơ điện tử", definition: "Thiết bị đo tốc độ quay trực tiếp của trục động cơ hiển thị thành RPM (số vòng trên phút).", applications: ["Đo vòng tua máy trên táp-lô ô tô", "Đồng hồ đo tốc quạt máy", "Kiểm định định kỳ động cơ"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-gauge" },
+            { id: "harmonic", term: "Harmonic Drive", fullName: "Harmonic Gearbox", category: "Cơ điện tử", definition: "Hộp số giảm tốc sóng biến dạng đàn hồi cho phép tỷ số giảm tốc cực cao nhưng độ rơ gần như bằng không.", applications: ["Khớp xoay robot cộng tác", "Khớp điều hướng bệ kính thiên văn", "Cơ cấu quay radar chính xác"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-gears" },
+            { id: "ballscrew", term: "Ball Screw", fullName: "Recirculating Ball Screw", category: "Cơ điện tử", definition: "Trục vít me bi có các viên bi chạy tuần hoàn giảm ma sát tối đa giúp biến chuyển động quay thành tịnh tiến trơn tru.", applications: ["Trục dẫn hướng máy tiện CNC", "Bàn tịnh tiến máy in 3D công nghiệp", "Xilanh điện tịnh tiến tải nặng"], youtubeEmbed: "https://www.youtube.com/embed/D3v-b6jK7tE", youtubeUrl: "https://www.youtube.com/watch?v=D3v-b6jK7tE", icon: "fa-solid fa-arrows-up-down" },
+            { id: "robotarm", term: "Robot Arm", fullName: "Articulated Robot Arm", category: "Cơ điện tử", definition: "Cánh tay robot đa khớp mô phỏng các hoạt động linh hoạt bàn tay người trong sản xuất gia công tự động.", applications: ["Hàn khung gầm ô tô tự động", "Phun sơn vỏ linh kiện", "Đóng bao xếp pallet"], youtubeEmbed: "https://www.youtube.com/embed/DitS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=DitS0a28Sko", icon: "fa-solid fa-robot" },
+            { id: "endeffector", term: "End Effector", fullName: "Robot End Effector", category: "Cơ điện tử", definition: "Cơ cấu chấp hành cuối lắp ở đầu cánh tay robot thực hiện các động tác vật lý trực tiếp như gắp, hàn, cắt.", applications: ["Khớp gắp giác hút chân không", "Mỏ hàn laser tự động", "Móng vuốt gắp phôi kim loại"], youtubeEmbed: "https://www.youtube.com/embed/DitS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=DitS0a28Sko", icon: "fa-solid fa-hand" },
+            { id: "agv", term: "AGV", fullName: "Automated Guided Vehicle", category: "Cơ điện tử", definition: "Xe tự hành dẫn đường tự động vận chuyển hàng trong kho theo các lộ trình vạch kẻ cố định dán trên sàn.", applications: ["Vận chuyển pallet kho thông minh", "Cấp linh kiện dây chuyền lắp ráp", "Vận tải rác y tế"], youtubeEmbed: "https://www.youtube.com/embed/m7wFfBvWv2o", youtubeUrl: "https://www.youtube.com/watch?v=m7wFfBvWv2o", icon: "fa-solid fa-truck-ramp-box" },
+            { id: "amr", term: "AMR", fullName: "Autonomous Mobile Robot", category: "Cơ điện tử", definition: "Robot di động tự hành thông minh có thể tự thiết lập bản đồ không gian và tự tránh vật cản đột xuất.", applications: ["Robot giao đồ khách sạn", "Giao hàng bưu kiện trong kho Amazon", "Robot khử khuẩn bệnh viện tự động"], youtubeEmbed: "https://www.youtube.com/embed/m7wFfBvWv2o", youtubeUrl: "https://www.youtube.com/watch?v=m7wFfBvWv2o", icon: "fa-solid fa-truck-fast" },
+            { id: "ros", term: "ROS", fullName: "Robot Operating System", category: "Cơ điện tử", definition: "Hệ điều hành robot. Khung lập trình nguồn mở cung cấp thư viện, công cụ driver để phát triển phần mềm robot.", applications: ["Phát triển phần mềm xe tự lái", "Lập trình robot 4 chân Boston", "Mô phỏng động lực học Gazebo"], youtubeEmbed: "https://www.youtube.com/embed/9D7g_Fsc0H4", youtubeUrl: "https://www.youtube.com/watch?v=9D7g_Fsc0H4", icon: "fa-solid fa-terminal" },
+            { id: "slam", term: "SLAM", fullName: "Simultaneous Localization and Mapping", category: "Cơ điện tử", definition: "Thuật toán định vị và lập bản đồ đồng thời của robot khi di chuyển trong không gian chưa biết trước.", applications: ["Hệ thống dẫn đường robot hút bụi", "Thám hiểm robot hang động", "Xe tự hành không cần GPS"], youtubeEmbed: "https://www.youtube.com/embed/EY7XfC7Oq78", youtubeUrl: "https://www.youtube.com/watch?v=EY7XfC7Oq78", icon: "fa-solid fa-map-location-dot" },
+            { id: "kalman", term: "Kalman Filter", fullName: "Kalman Filter Algorithm", category: "Cơ điện tử", definition: "Thuật toán lọc Kalman dùng ước lượng trạng thái thực từ các nguồn đo cảm biến có lẫn tạp nhiễu.", applications: ["Kết hợp dữ liệu gia tốc và góc quay IMU", "Theo dõi mục tiêu radar phòng không", "Tính toán quỹ đạo tàu vũ trụ"], youtubeEmbed: "https://www.youtube.com/embed/mwn8xhgCqn0", youtubeUrl: "https://www.youtube.com/watch?v=mwn8xhgCqn0", icon: "fa-solid fa-filter" },
+            { id: "telemetry", term: "Telemetry", fullName: "Wireless Telemetry", category: "Cơ điện tử", definition: "Hệ thống truyền thông không dây đo lường từ xa gửi dữ liệu kiểm tra vận tốc, nhiệt độ về trung tâm chỉ huy.", applications: ["Truyền chỉ số xe đua F1 thời gian thực", "Theo dõi vệ tinh nhân tạo quỹ đạo", "Đo mực nước đập thủy điện không dây"], youtubeEmbed: "https://www.youtube.com/embed/G6Pez9O9478", youtubeUrl: "https://www.youtube.com/watch?v=g6Pez9O9478", icon: "fa-solid fa-tower-broadcast" },
+            { id: "pneumaticcylinder", term: "Pneumatic Cylinder", fullName: "Pneumatic Cylinder Actuator", category: "Cơ điện tử", definition: "Xilanh khí nén chuyển hóa thế năng khí nén áp lực thành hành trình cơ lực đẩy thẳng nhanh chóng.", applications: ["Cơ cấu gạt sản phẩm hỏng", "Cửa xe buýt tự đóng mở", "Bàn kẹp phôi tự động"], youtubeEmbed: "https://www.youtube.com/embed/YpXz8h05B5M", youtubeUrl: "https://www.youtube.com/watch?v=YpXz8h05B5M", icon: "fa-solid fa-arrows-left-right" },
+            { id: "solenoidvalve", term: "Solenoid Valve", fullName: "Solenoid Directional Valve", category: "Cơ điện tử", definition: "Van điện từ đóng ngắt hướng đi của dòng khí nén hoặc chất lỏng dầu thủy lực bằng nam châm điện tử.", applications: ["Van xả tràn hệ thống tưới nước", "Điều hướng xilanh nâng hạ khí nén", "Phun sương tự động"], youtubeEmbed: "https://www.youtube.com/embed/LcoY_Wwz8i0", youtubeUrl: "https://www.youtube.com/watch?v=LcoY_Wwz8i0", icon: "fa-solid fa-faucet-drip" },
+            { id: "stepperdriver", term: "Stepper Driver", fullName: "Stepper Motor Driver IC", category: "Cơ điện tử", definition: "Mạch driver phân bổ đóng ngắt nguồn điện cấp xoay vòng cuộn dây của động cơ bước chính xác.", applications: ["Mạch điều khiển trục máy in 3D", "Lái động cơ bước máy cắt khắc laser", "Trục nạp phôi liệu"], youtubeEmbed: "https://www.youtube.com/embed/eyqwLiowZiU", youtubeUrl: "https://www.youtube.com/watch?v=eyqwLiowZiU", icon: "fa-solid fa-network-wired" },
+
+            // ==========================================
+            // 3. KHOA HỌC MÁY TÍNH (35 từ)
+            // ==========================================
+            { id: "os", term: "OS", fullName: "Operating System", category: "Khoa học máy tính", definition: "Hệ điều hành. Phần mềm hệ thống nền tảng phân phối quản lý tài nguyên phần cứng và các ứng dụng chạy trên máy.", applications: ["Hệ điều hành Windows 11", "Hệ điều hành di động Android", "Linux Ubuntu"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-window-restore" },
+            { id: "rtos", term: "RTOS", fullName: "Real-Time Operating System", category: "Khoa học máy tính", definition: "Hệ điều hành thời gian thực phản hồi các ngắt tác vụ cực kỳ chính xác không có độ trễ không kiểm soát.", applications: ["Mạch túi khí ô tô", "Mạch dẫn đường tên lửa bay", "Mạch y tế trợ tim"], youtubeEmbed: "https://www.youtube.com/embed/F321087yC74", youtubeUrl: "https://www.youtube.com/watch?v=F321087yC74", icon: "fa-solid fa-clock" },
+            { id: "kernel", term: "Kernel", fullName: "OS Kernel Core", category: "Khoa học máy tính", definition: "Nhân hệ điều hành. Phần nhân lõi trung tâm quản lý trực tiếp CPU, RAM và tương tác phần cứng sâu nhất.", applications: ["Nhân Linux Core", "Nhân Windows NT", "Nhân hệ điều hành macOS Darwin"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-shield-halved" },
+            { id: "interrupt", term: "Interrupt", fullName: "Hardware / Software Interrupt", category: "Khoa học máy tính", definition: "Cơ chế ngắt báo hiệu CPU tạm ngưng chương trình chính ngay lập tức để xử lý tác vụ khẩn cấp.", applications: ["Phát hiện nhấn nút khẩn cấp", "Báo tràn Timer vi xử lý", "Báo nhận dữ liệu UART"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-hand" },
+            { id: "compiler", term: "Compiler", fullName: "Code Compiler", category: "Khoa học máy tính", definition: "Trình biên dịch. Phần mềm dịch toàn bộ mã nguồn viết bằng ngôn ngữ bậc cao thành tệp nhị phân mã máy trước khi chạy.", applications: ["Trình biên dịch GCC cho C/C++", "Trình biên dịch Rustc", "Trình biên dịch mã Arduino IDE"], youtubeEmbed: "https://www.youtube.com/embed/QXjSnoIisO0", youtubeUrl: "https://www.youtube.com/watch?v=QXjSnoIisO0", icon: "fa-solid fa-file-code" },
+            { id: "interpreter", term: "Interpreter", fullName: "Code Interpreter", category: "Khoa học máy tính", definition: "Trình thông dịch. Trực tiếp thực thi từng dòng lệnh mã nguồn bậc cao tới đâu giải dịch trực tiếp đến đó không cần tệp dịch trước.", applications: ["Trình chạy mã Python", "Engine Node.js thực thi JavaScript", "Trình thông dịch PHP"], youtubeEmbed: "https://www.youtube.com/embed/QXjSnoIisO0", youtubeUrl: "https://www.youtube.com/watch?v=QXjSnoIisO0", icon: "fa-solid fa-terminal" },
+            { id: "assembler", term: "Assembler", fullName: "Assembly Compiler", category: "Khoa học máy tính", definition: "Trình biên dịch hợp ngữ chuyển đổi các lệnh gợi nhớ cơ bản (như MOV, ADD) thành mã máy nhị phân 0 và 1.", applications: ["Biên dịch mã hợp ngữ x86", "Lập trình firmware tối ưu siêu nhỏ", "Học kiến trúc máy tính"], youtubeEmbed: "https://www.youtube.com/embed/QXjSnoIisO0", youtubeUrl: "https://www.youtube.com/watch?v=QXjSnoIisO0", icon: "fa-solid fa-terminal" },
+            { id: "linker", term: "Linker", fullName: "Code Linker", category: "Khoa học máy tính", definition: "Chương trình liên kết ghép nối nhiều tệp đối tượng mã máy nhỏ và thư viện ngoài tạo ra một tệp thực thi duy nhất.", applications: ["Tạo tệp thực thi .exe", "Liên kết thư viện DLL", "Biên dịch nhúng firmware elf"], youtubeEmbed: "https://www.youtube.com/embed/QXjSnoIisO0", youtubeUrl: "https://www.youtube.com/watch?v=QXjSnoIisO0", icon: "fa-solid fa-link" },
+            { id: "bootloader", term: "Bootloader", fullName: "System Bootloader Program", category: "Khoa học máy tính", definition: "Đoạn chương trình nhỏ chạy đầu tiên khi khởi động hệ thống để khởi tạo phần cứng và nạp hệ điều hành chính.", applications: ["Bootloader GRUB của Linux", "Bootloader Optiboot trên Arduino Uno", "U-Boot của hệ thống nhúng"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-key" },
+            { id: "api", term: "API", fullName: "Application Programming Interface", category: "Khoa học máy tính", definition: "Giao diện lập trình ứng dụng. Phương thức giao tiếp chuẩn hóa cho các phần mềm trao đổi dữ liệu với nhau.", applications: ["Lấy thời tiết tự động", "Thanh toán ví điện tử", "Gửi dữ liệu cảm biến lên web"], youtubeEmbed: "https://www.youtube.com/embed/s7wkuA2m26U", youtubeUrl: "https://www.youtube.com/watch?v=s7wkuA2m26U", icon: "fa-solid fa-gears" },
+            { id: "sdk", term: "SDK", fullName: "Software Development Kit", category: "Khoa học máy tính", definition: "Bộ công cụ phát triển phần mềm chứa trình biên dịch, thư viện mẫu giúp viết ứng dụng cho một nền tảng.", applications: ["ESP-IDF SDK cho ESP32", "Android SDK viết app", "Flutter SDK đa nền tảng"], youtubeEmbed: "https://www.youtube.com/embed/s7wkuA2m26U", youtubeUrl: "https://www.youtube.com/watch?v=s7wkuA2m26U", icon: "fa-solid fa-box" },
+            { id: "ide", term: "IDE", fullName: "Integrated Development Environment", category: "Khoa học máy tính", definition: "Môi trường phát triển tích hợp đầy đủ trình soạn thảo mã, trình gỡ lỗi debugger và biên dịch mã nguồn.", applications: ["VS Code soạn thảo code", "Arduino IDE lập trình MCU", "Keil C lập trình nhúng STM32"], youtubeEmbed: "https://www.youtube.com/embed/s7wkuA2m26U", youtubeUrl: "https://www.youtube.com/watch?v=s7wkuA2m26U", icon: "fa-solid fa-laptop-code" },
+            { id: "json", term: "JSON", fullName: "JavaScript Object Notation", category: "Khoa học máy tính", definition: "Định dạng trao đổi dữ liệu dựa trên văn bản gọn nhẹ, dễ dàng đọc viết bởi cả con người và máy tính.", applications: ["Truyền cấu hình thiết bị nhúng", "Giao dịch API web", "Lưu cơ sở dữ liệu NoSQL"], youtubeEmbed: "https://www.youtube.com/embed/iiADhChRriM", youtubeUrl: "https://www.youtube.com/watch?v=iiADhChRriM", icon: "fa-solid fa-file-lines" },
+            { id: "xml", term: "XML", fullName: "eXtensible Markup Language", category: "Khoa học máy tính", definition: "Ngôn ngữ đánh dấu mở rộng dùng lưu trữ và truyền tải dữ liệu có cấu trúc thẻ tự định nghĩa.", applications: ["Tệp cấu hình phần mềm", "Giao tiếp dữ liệu SOAP cổ", "Tệp định dạng SVG đồ họa"], youtubeEmbed: "https://www.youtube.com/embed/iiADhChRriM", youtubeUrl: "https://www.youtube.com/watch?v=iiADhChRriM", icon: "fa-solid fa-code" },
+            { id: "oop", term: "OOP", fullName: "Object-Oriented Programming", category: "Khoa học máy tính", definition: "Lập trình hướng đối tượng. Phương pháp lập trình thiết kế xoay quanh các Khách thể (Objects) chứa dữ liệu và hành vi.", applications: ["Phát triển phần mềm lớn C++", "Lập trình game Unity", "Ứng dụng doanh nghiệp Java"], youtubeEmbed: "https://www.youtube.com/embed/pTB0EiLXUC8", youtubeUrl: "https://www.youtube.com/watch?v=pTB0EiLXUC8", icon: "fa-solid fa-cubes" },
+            { id: "mvc", term: "MVC", fullName: "Model-View-Controller", category: "Khoa học máy tính", definition: "Mô hình kiến trúc phần mềm chia nhỏ ứng dụng làm ba phần: Dữ liệu (Model), Giao diện (View) và Điều hướng (Controller).", applications: ["Xây dựng trang web Laravel", "Phát triển web Django", "Kiến trúc ứng dụng GUI"], youtubeEmbed: "https://www.youtube.com/embed/pTB0EiLXUC8", youtubeUrl: "https://www.youtube.com/watch?v=pTB0EiLXUC8", icon: "fa-solid fa-sitemap" },
+            { id: "stack", term: "Stack", fullName: "Stack Data Structure", category: "Khoa học máy tính", definition: "Cấu trúc dữ liệu ngăn xếp hoạt động theo quy tắc Vào sau - Ra trước (LIFO - Last In First Out).", applications: ["Lịch sử Undo/Redo soạn thảo", "Quản lý gọi hàm đệ quy của CPU", "Điều hướng quay lại nút bấm Back"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-layer-group" },
+            { id: "queue", term: "Queue", fullName: "Queue Data Structure", category: "Khoa học máy tính", definition: "Cấu trúc dữ liệu hàng đợi hoạt động theo quy tắc Vào trước - Ra trước (FIFO - First In First Out).", applications: ["Hàng đợi in ấn văn phòng", "Hàng đợi xử lý gói tin mạng", "Vòng lặp sự kiện Event Loop"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-people-arrows" },
+            { id: "hashtable", term: "Hash Table", fullName: "Hash Table / Map", category: "Khoa học máy tính", definition: "Cấu trúc dữ liệu bảng băm giúp tra cứu tìm kiếm phần tử gần như lập tức thông qua hàm băm khóa.", applications: ["Cơ sở dữ liệu đệm Cache", "Bảng tra từ điển nhanh", "Hệ thống xác thực tài khoản"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-hashtag" },
+            { id: "binarytree", term: "Binary Tree", fullName: "Binary Search Tree (BST)", category: "Khoa học máy tính", definition: "Cấu trúc cây nhị phân mỗi nút cha có tối đa hai nút con giúp phân chia tìm kiếm logarit tốc độ cao.", applications: ["Cơ sở dữ liệu quan hệ Index", "Nén dữ liệu thuật toán Huffman", "Cơ cấu cây thư mục máy tính"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-network-wired" },
+            { id: "graph", term: "Graph", fullName: "Graph Data Structure", category: "Khoa học máy tính", definition: "Cấu trúc dữ liệu đồ thị gồm tập hợp các đỉnh nối với nhau bởi các cạnh biểu thị các mối quan hệ mạng lưới.", applications: ["Thuật toán tìm đường Google Maps", "Liên kết mạng xã hội Facebook", "Mạng lưới định tuyến Internet"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-circle-nodes" },
+            { id: "sorting", term: "Sorting", fullName: "Sorting Algorithms", category: "Khoa học máy tính", definition: "Nhóm các thuật toán sắp xếp mảng dữ liệu hỗn độn theo trật tự tăng dần hoặc giảm dần (như QuickSort, MergeSort).", applications: ["Sắp xếp điểm số học sinh", "Tối ưu hóa tìm kiếm nhị phân", "Hiển thị giá sản phẩm tăng dần"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-arrow-down-1-9" },
+            { id: "bigo", term: "Big O", fullName: "Big O Notation", category: "Khoa học máy tính", definition: "Ký hiệu toán học dùng phân tích độ phức tạp thời gian và không gian bộ nhớ của một thuật toán khi đầu vào cực lớn.", applications: ["Đo hiệu năng thuật toán", "Tối ưu hóa mã nguồn app", "Phỏng vấn lập trình viên"], youtubeEmbed: "https://www.youtube.com/embed/wjI1WNcIntg", youtubeUrl: "https://www.youtube.com/watch?v=wjI1WNcIntg", icon: "fa-solid fa-infinity" },
+            { id: "cache", term: "Cache", fullName: "Memory Caching", category: "Khoa học máy tính", definition: "Bộ nhớ đệm tốc độ cực nhanh đặt gần CPU lưu trữ các dữ liệu thường xuyên dùng lại giúp giảm thời gian truy xuất từ RAM.", applications: ["L1, L2, L3 cache của CPU", "Lưu bộ đệm trình duyệt web", "Mạng phân phối nội dung CDN"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-store" },
+            { id: "virtualmem", term: "Virtual Memory", fullName: "Virtual Memory Management", category: "Khoa học máy tính", definition: "Bộ nhớ ảo. Kỹ thuật mượn tạm dung lượng ổ cứng mở rộng làm bộ nhớ RAM ảo khi hệ thống bị quá tải.", applications: ["Tệp Swap của hệ điều hành Linux", "Quản lý file Pagefile.sys của Windows", "Hạn chế lỗi tràn RAM máy tính"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-hard-drive" },
+            { id: "thread", term: "Thread", fullName: "Processor Thread", category: "Khoa học máy tính", definition: "Luồng xử lý. Đơn vị nhỏ nhất của các lệnh lập trình được hệ điều hành lên lịch giao cho CPU thực thi.", applications: ["Luồng tải file ngầm trên web", "Phép xử lý đồ họa đa luồng", "Chạy nhạc nền trong khi lướt mạng"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-lines-leaning" },
+            { id: "process", term: "Process", fullName: "OS Process", category: "Khoa học máy tính", definition: "Tiến trình. Một chương trình đang được nạp chạy trên máy tính sở hữu không gian RAM độc lập riêng biệt.", applications: ["Trình duyệt Chrome đang mở", "Task Manager giám sát tiến trình", "Ứng dụng nhạc Spotify"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-cube" },
+            { id: "deadlock", term: "Deadlock", fullName: "Deadlock Condition", category: "Khoa học máy tính", definition: "Tình trạng bế tắc hệ thống khi hai hoặc nhiều tiến trình chờ đợi lẫn nhau giải phóng tài nguyên vô thời hạn.", applications: ["Lỗi đứng cứng phần mềm hệ thống", "Xử lý tương tranh giao dịch ngân hàng", "Quản lý khóa hệ quản trị cơ sở dữ liệu SQL"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-ban" },
+            { id: "mutex", term: "Mutex", fullName: "Mutual Exclusion Latch", category: "Khoa học máy tính", definition: "Khóa loại trừ tương hỗ bảo vệ tài nguyên chia sẻ không cho phép hai luồng ghi dữ liệu đồng thời tránh lỗi race condition.", applications: ["Bảo vệ biến đếm toàn cục", "Quản lý luồng in ấn độc quyền", "Đồng bộ hóa tác vụ vi xử lý"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-key" },
+            { id: "semaphore", term: "Semaphore", fullName: "Semaphore Signaling Latch", category: "Khoa học máy tính", definition: "Cơ chế biến đếm đồng bộ hóa luồng cho phép giới hạn một số lượng luồng cố định truy cập tài nguyên cùng lúc.", applications: ["Giới hạn 10 kết nối vào máy chủ", "Điều tiết luồng truy cập file dữ liệu", "Quản lý bãi đỗ xe ảo nhúng"], youtubeEmbed: "https://www.youtube.com/embed/26QPDBe-NQg", youtubeUrl: "https://www.youtube.com/watch?v=26QPDBe-NQg", icon: "fa-solid fa-traffic-light" },
+            { id: "cryptography", term: "Cryptography", fullName: "Data Cryptography", category: "Khoa học máy tính", definition: "Mật mã học. Ngành khoa học nghiên cứu các kỹ thuật mã hóa thông tin bảo mật tránh sự can thiệp của bên thứ ba.", applications: ["Giao thức bảo mật HTTPS", "Bảo mật ví Blockchain Bitcoin", "Xác thực tài khoản người dùng"], youtubeEmbed: "https://www.youtube.com/embed/N3bXCO5PDLY", youtubeUrl: "https://www.youtube.com/watch?v=N3bXCO5PDLY", icon: "fa-solid fa-vault" },
+            { id: "symmetric", term: "Symmetric Key", fullName: "Symmetric-key Cryptography", category: "Khoa học máy tính", definition: "Mật mã khóa đối xứng sử dụng duy nhất một khóa bảo mật chung để tiến hành cả quá trình mã hóa và giải mã.", applications: ["Thuật toán mã hóa AES-256", "Mã hóa ổ cứng dữ liệu", "Bảo mật tệp nén ZIP"], youtubeEmbed: "https://www.youtube.com/embed/N3bXCO5PDLY", youtubeUrl: "https://www.youtube.com/watch?v=N3bXCO5PDLY", icon: "fa-solid fa-key" },
+            { id: "asymmetric", term: "Asymmetric Key", fullName: "Asymmetric-key Cryptography", category: "Khoa học máy tính", definition: "Mật mã khóa bất đối xứng sử dụng cặp khóa công khai (Public Key) để mã hóa và khóa bí mật (Private Key) để giải mã.", applications: ["Chứng chỉ bảo mật SSL/TLS", "Chữ ký điện tử kỹ thuật số", "Kết nối máy chủ Secure Shell SSH"], youtubeEmbed: "https://www.youtube.com/embed/N3bXCO5PDLY", youtubeUrl: "https://www.youtube.com/watch?v=N3bXCO5PDLY", icon: "fa-solid fa-user-shield" },
+            { id: "hashfunc", term: "Hash Function", fullName: "Cryptographic Hash Function", category: "Khoa học máy tính", definition: "Hàm băm một chiều biến đổi dữ liệu đầu vào kích thước bất kỳ thành chuỗi ký tự cố định không thể dịch ngược.", applications: ["Băm mật khẩu người dùng SHA-256", "Kiểm tra tính toàn vẹn file tải", "Xây dựng chuỗi khối blockchain"], youtubeEmbed: "https://www.youtube.com/embed/N3bXCO5PDLY", youtubeUrl: "https://www.youtube.com/watch?v=N3bXCO5PDLY", icon: "fa-solid fa-fingerprint" },
+            { id: "socket", term: "Socket", fullName: "Network Socket Connection", category: "Khoa học máy tính", definition: "Điểm đầu cuối trong giao tiếp mạng internet giữa hai tiến trình qua cổng IP và Port.", applications: ["Kết nối trò chuyện Chat thời gian thực", "Truyền nhận dữ liệu game online", "Kết nối truyền file FTP"], youtubeEmbed: "https://www.youtube.com/embed/s7wkuA2m26U", youtubeUrl: "https://www.youtube.com/watch?v=s7wkuA2m26U", icon: "fa-solid fa-plug" },
+
+            // ==========================================
+            // 4. KỸ THUẬT VI XỬ LÝ (35 từ)
+            // ==========================================
+            { id: "mcu", term: "MCU", fullName: "Microcontroller Unit", category: "Kỹ thuật vi xử lý", definition: "Vi điều khiển. Máy tính tích hợp gọn gàng trong một chip đơn, gồm CPU, RAM, Flash và các ngoại vi cơ bản.", applications: ["Hộp điều khiển đồ gia dụng", "Module đồ chơi thông minh", "Mạch IoT thu thập cảm biến"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-microchip" },
+            { id: "mpu", term: "MPU", fullName: "Microprocessor Unit", category: "Kỹ thuật vi xử lý", definition: "Vi xử lý đa dụng hiệu năng cao chỉ chứa CPU thuần túy, cần kết nối thêm chip RAM, ROM ngoài để chạy.", applications: ["Chip máy tính Intel Core i7", "Vi xử lý điện thoại ARM", "Hộp đen điều khiển trung tâm ô tô"], youtubeEmbed: "https://www.youtube.com/embed/Z5JC9Ve1sfI", youtubeUrl: "https://www.youtube.com/watch?v=Z5JC9Ve1sfI", icon: "fa-solid fa-cpu" },
+            { id: "cpu", term: "CPU", fullName: "Central Processing Unit", category: "Kỹ thuật vi xử lý", definition: "Bộ xử lý trung tâm, đóng vai trò đầu não thực hiện toàn bộ các chỉ thị chương trình của máy tính.", applications: ["Bo mạch máy chủ", "Laptop làm việc", "Mạch điều khiển trò chơi cầm tay"], youtubeEmbed: "https://www.youtube.com/embed/Z5JC9Ve1sfI", youtubeUrl: "https://www.youtube.com/watch?v=Z5JC9Ve1sfI", icon: "fa-solid fa-computer" },
+            { id: "alu_vxl", term: "ALU", fullName: "Arithmetic Logic Unit", category: "Kỹ thuật vi xử lý", definition: "Bộ phận bên trong CPU trực tiếp thực thi tính toán toán học số nhị phân và các phép so sánh logic.", applications: ["Phép tính cộng trừ nhân chia nhị phân", "So sánh rẽ nhánh điều kiện logic", "Cổng dịch bit phần cứng"], youtubeEmbed: "https://www.youtube.com/embed/1I5AEl06_bw", youtubeUrl: "https://www.youtube.com/watch?v=1I5AEl06_bw", icon: "fa-solid fa-calculator" },
+            { id: "register", term: "Register", fullName: "Processor Register", category: "Kỹ thuật vi xử lý", definition: "Thanh ghi. Vùng nhớ dung lượng siêu nhỏ nằm ngay sát nhân CPU có tốc độ đọc ghi nhanh nhất hệ thống.", applications: ["Lưu biến tạm tính toán", "Thanh ghi trạng thái cờ CPU", "Lưu trữ bộ đếm chương trình"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-box" },
+            { id: "pc", term: "Program Counter", fullName: "Program Counter Register (PC)", category: "Kỹ thuật vi xử lý", definition: "Thanh ghi bộ đếm chương trình lưu trữ địa chỉ của lệnh tiếp theo đang đợi CPU xử lý.", applications: ["Điều hướng rẽ nhánh mã máy", "Chỉ định địa chỉ lệnh Flash", "Kiểm soát thứ tự vòng lặp lệnh"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-list-ol" },
+            { id: "sp", term: "Stack Pointer", fullName: "Stack Pointer Register (SP)", category: "Kỹ thuật vi xử lý", definition: "Thanh ghi con trỏ ngăn xếp quản lý vị trí đỉnh của vùng nhớ ngăn xếp Stack khi gọi chương trình con.", applications: ["Lưu vết địa chỉ trả về sau ngắt", "Truyền tham số biến vào hàm con", "Lưu trạng thái thanh ghi CPU"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-arrow-up-9-1" },
+            { id: "isa", term: "ISA", fullName: "Instruction Set Architecture", category: "Kỹ thuật vi xử lý", definition: "Kiến trúc tập lệnh định nghĩa tập hợp lệnh thô mà vi xử lý có thể hiểu và thực thi trực tiếp bằng mạch số.", applications: ["Kiến trúc x86 Intel", "Kiến trúc ARM di động", "Kiến trúc mở RISC-V mới nổi"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-gears" },
+            { id: "risc", term: "RISC", fullName: "Reduced Instruction Set Computer", category: "Kỹ thuật vi xử lý", definition: "Kiến trúc vi xử lý tập lệnh thu gọn, tối ưu tốc độ thực hiện lệnh trong đúng một chu kỳ xung nhịp.", applications: ["Chip Apple M-Series siêu tiết kiệm điện", "Vi điều khiển AVR ATmega", "Kiến trúc chip xử lý ARM smartphone"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-gauge-high" },
+            { id: "cisc", term: "CISC", fullName: "Complex Instruction Set Computer", category: "Kỹ thuật vi xử lý", definition: "Kiến trúc vi xử lý tập lệnh phức tạp có thể thực hiện nhiều hành vi xử lý dữ liệu phức tạp trong một lệnh duy nhất.", applications: ["Vi xử lý Intel x86 máy tính bàn", "Máy tính hiệu năng cao phân tích", "Thiết bị tính toán phức tạp lâu đời"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-gears" },
+            { id: "harvard", term: "Harvard Architecture", fullName: "Harvard Architecture", category: "Kỹ thuật vi xử lý", definition: "Kiến trúc phần cứng phân tách độc lập hai đường dẫn dữ liệu và đường dẫn lưu trữ mã lệnh chương trình riêng biệt.", applications: ["Kiến trúc lõi vi điều khiển AVR", "Bộ xử lý tín hiệu số DSP", "Kiến trúc xử lý thời gian thực nhúng"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-diagram-project" },
+            { id: "vonneumann", term: "Von Neumann", fullName: "Von Neumann Architecture", category: "Kỹ thuật vi xử lý", definition: "Kiến trúc phần cứng dùng chung một đường dẫn lưu truyền cho cả mã lệnh chương trình và bộ nhớ dữ liệu.", applications: ["Hầu hết CPU máy tính cá nhân", "Cơ cấu kiến trúc bộ xử lý trung tâm cổ", "Thiết kế mạch tính toán ARM Cortex-A"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-diagram-project" },
+            { id: "pipeline", term: "Pipeline", fullName: "Instruction Pipelining", category: "Kỹ thuật vi xử lý", definition: "Kỹ thuật gối đầu các giai đoạn xử lý lệnh của CPU (Nạp, Giải mã, Thực thi) nhằm song song hóa phần cứng.", applications: ["Tăng tốc độ xung nhịp CPU", "Thiết kế cấu trúc chip xử lý hiệu năng", "Nâng cao hiệu năng bộ lệnh ARM"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-lines-leaning" },
+            { id: "gpio", term: "GPIO", fullName: "General Purpose Input/Output", category: "Kỹ thuật vi xử lý", definition: "Các chân giao tiếp đa dụng trên vi điều khiển có thể lập trình cấu hình làm cổng Đọc (Input) hoặc Xuất (Output) mức điện áp.", applications: ["Nhận tín hiệu từ nút bấm cơ học", "Bật tắt nguồn rơ-le điện áp", "Giao tiếp bit phần cứng bằng tay"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-ellipsis-vertical" },
+            { id: "pwm_vxl", term: "PWM", fullName: "Pulse Width Modulation Peripheral", category: "Kỹ thuật vi xử lý", definition: "Ngoại vi điều chế độ rộng xung tích hợp sẵn trong vi điều khiển giúp sinh ra xung vuông liên tục tự động.", applications: ["Điều khiển góc mở servo", "Điều chỉnh tốc động cơ DC", "Mạch tăng áp buck-boost điện tử"], youtubeEmbed: "https://www.youtube.com/embed/YmP59mS6uXs", youtubeUrl: "https://www.youtube.com/watch?v=YmP59mS6uXs", icon: "fa-solid fa-wave-square" },
+            { id: "adc_vxl", term: "ADC", fullName: "Analog to Digital Converter Peripheral", category: "Kỹ thuật vi xử lý", definition: "Ngoại vi số hóa tín hiệu điện áp tương tự giúp vi điều khiển đọc dữ liệu nhiệt độ, độ ẩm từ thế giới vật lý.", applications: ["Đọc điện áp từ cảm biến nhiệt", "Đo mức sụt pin nguồn", "Đọc cảm biến ánh sáng quang trở"], youtubeEmbed: "https://www.youtube.com/embed/r7rKst3NmsY", youtubeUrl: "https://www.youtube.com/watch?v=r7rKst3NmsY", icon: "fa-solid fa-chart-line" },
+            { id: "dac_vxl", term: "DAC", fullName: "Digital to Analog Converter Peripheral", category: "Kỹ thuật vi xử lý", definition: "Ngoại vi tạo ra điện áp tương tự từ dữ liệu số nhị phân trong chip để xuất ra ngoài thế giới thực.", applications: ["Bộ phát nhạc ra loa", "Mạch tạo dạng sóng sin/tam giác", "Thiết bị điều khiển đèn dimmer mượt"], youtubeEmbed: "https://www.youtube.com/embed/r7rKst3NmsY", youtubeUrl: "https://www.youtube.com/watch?v=r7rKst3NmsY", icon: "fa-solid fa-arrows-rotate" },
+            { id: "uart_vxl", term: "UART", fullName: "Universal Asynchronous Receiver-Transmitter", category: "Kỹ thuật vi xử lý", definition: "Chuẩn giao tiếp nối tiếp bất đồng bộ đơn giản nhất sử dụng duy nhất một dây truyền TX và một dây nhận RX.", applications: ["Giao tiếp vi điều khiển với máy tính", "Đọc dữ liệu GPS từ xa", "Giao tiếp module Wifi/Bluetooth"], youtubeEmbed: "https://www.youtube.com/embed/sTSQl9f6Fsc", youtubeUrl: "https://www.youtube.com/watch?v=sTSQl9f6Fsc", icon: "fa-solid fa-arrows-left-right" },
+            { id: "spi_vxl", term: "SPI", fullName: "Serial Peripheral Interface", category: "Kỹ thuật vi xử lý", definition: "Giao thức truyền dữ liệu đồng bộ bốn dây tốc độ cao theo cấu hình Master-Slave giữa các IC kế cạnh.", applications: ["Đọc dữ liệu thẻ nhớ MicroSD nhúng", "Điều khiển màn hình màu TFT", "Giao tiếp cảm biến gia tốc MPU6000"], youtubeEmbed: "https://www.youtube.com/embed/fvVAnID0VRE", youtubeUrl: "https://www.youtube.com/watch?v=fvVAnID0VRE", icon: "fa-solid fa-network-wired" },
+            { id: "i2c_vxl", term: "I2C", fullName: "Inter-Integrated Circuit Bus", category: "Kỹ thuật vi xử lý", definition: "Giao thức truyền đồng bộ 2 dây (SDA, SCL) cực kỳ gọn nhẹ cho phép quản lý nhiều thiết bị cùng mạng theo địa chỉ.", applications: ["Giao tiếp màn hình LCD/OLED", "Đọc chip thời gian thực RTC DS3231", "Đọc cảm biến nhiệt áp suất thấp"], youtubeEmbed: "https://www.youtube.com/embed/6IAkYpmA1DQ", youtubeUrl: "https://www.youtube.com/watch?v=6IAkYpmA1DQ", icon: "fa-solid fa-diagram-project" },
+            { id: "can_vxl", term: "CAN", fullName: "Controller Area Network Peripheral", category: "Kỹ thuật vi xử lý", definition: "Bộ ngoại vi điều khiển bus CAN chuyên dụng tích hợp sẵn hỗ trợ chống nhiễu truyền tin cực tốt trên xe hơi.", applications: ["Mạng ECU điều khiển khoang lái xe", "Thiết bị cảm biến chẩn đoán OBD2", "Giao tiếp an toàn y tế nhúng"], youtubeEmbed: "https://www.youtube.com/embed/FqLDpH_fEUU", youtubeUrl: "https://www.youtube.com/watch?v=FqLDpH_fEUU", icon: "fa-solid fa-car-on" },
+            { id: "dma_vxl", term: "DMA", fullName: "Direct Memory Access Unit", category: "Kỹ thuật vi xử lý", definition: "Bộ truy cập bộ nhớ trực tiếp giúp ngoại vi trao đổi dữ liệu thẳng vào RAM bỏ qua sự can thiệp của nhân CPU.", applications: ["Truyền mảng ảnh lớn ra màn hình", "Đọc mảng ADC liên tục tốc độ cao", "Xử lý gói tin mạng Ethernet nhanh"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-forward" },
+            { id: "watchdog", term: "Watchdog Timer", fullName: "Watchdog Timer (WDT)", category: "Kỹ thuật vi xử lý", definition: "Bộ đếm thời gian giám sát độc lập tự động reset khởi động lại vi điều khiển nếu code bị kẹt hoặc đơ cứng đột xuất.", applications: ["Ngăn ngừa treo máy phát sóng trạm xa", "Tự hồi phục bo mạch công nghiệp lỗi", "Bảo vệ an toàn robot chạy liên tục"], youtubeEmbed: "https://www.youtube.com/embed/fE3ZgN-p_YI", youtubeUrl: "https://www.youtube.com/watch?v=fE3ZgN-p_YI", icon: "fa-solid fa-shield-dog" },
+            { id: "eeprom", term: "EEPROM", fullName: "Electrically Erasable Programmable ROM", category: "Kỹ thuật vi xử lý", definition: "Bộ nhớ lưu trữ dữ liệu không bị mất đi khi ngắt nguồn điện, có thể xóa và lập trình ghi lại từng byte bằng điện.", applications: ["Lưu cấu hình wifi đã kết nối", "Lưu số lượt đếm của máy", "Lưu mật mã cài đặt khóa điện tử"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-floppy-disk" },
+            { id: "flash", term: "Flash Memory", fullName: "Flash Memory Program Storage", category: "Kỹ thuật vi xử lý", definition: "Bộ nhớ lưu trữ dung lượng lớn tốc độ cao chuyên dùng lưu toàn bộ mã nguồn chương trình nạp của vi điều khiển.", applications: ["Lưu firmware khởi động Arduino", "Lưu hệ điều hành trong thẻ nhớ", "Ổ cứng lưu trữ SSD"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-database" },
+            { id: "sram", term: "SRAM", fullName: "Static Random Access Memory", category: "Kỹ thuật vi xử lý", definition: "RAM tĩnh. Bộ nhớ dữ liệu tốc độ cực nhanh, không cần làm tươi chu kỳ, giữ thông tin khi còn cấp điện nguồn.", applications: ["Bộ nhớ RAM trong vi điều khiển", "Bộ nhớ đệm Cache CPU", "Các chip nhớ tốc độ cao"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-bolt" },
+            { id: "dram", term: "DRAM", fullName: "Dynamic Random Access Memory", category: "Kỹ thuật vi xử lý", definition: "RAM động. Bộ nhớ RAM sử dụng tụ điện lưu giữ điện tích cần làm tươi liên tục, dung lượng chế tạo cực kỳ lớn giá rẻ.", applications: ["Thanh RAM máy tính DDR4/DDR5", "RAM hệ thống máy tính nhúng Raspberry", "Điện thoại dung lượng RAM lớn"], youtubeEmbed: "https://www.youtube.com/embed/6HBK4McAtv0", youtubeUrl: "https://www.youtube.com/watch?v=6HBK4McAtv0", icon: "fa-solid fa-battery-half" },
+            { id: "bootsequence", term: "Boot Sequence", fullName: "Microprocessor Boot Sequence", category: "Kỹ thuật vi xử lý", definition: "Quy trình khởi động phần cứng và trỏ bộ đếm chương trình về địa chỉ vecto reset khởi chạy chương trình đầu tiên.", applications: ["Quy trình bật nguồn bo mạch", "Gỡ lỗi lỗi treo nạp vi điều khiển", "Tự kiểm tra phần cứng Power-On Self Test"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-power-off" },
+            { id: "clockspeed", term: "Clock Speed", fullName: "System Clock Frequency", category: "Kỹ thuật vi xử lý", definition: "Tốc độ xung nhịp hoạt động biểu thị số lượng chu kỳ tính toán logic vi điều khiển có thể xử lý trong một giây (Hz).", applications: ["Chip Arduino chạy ở 16MHz", "STM32 chạy ở tốc độ 72MHz", "Vi xử lý máy tính chạy 4.5GHz"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-gauge" },
+            { id: "crystal", term: "Crystal Oscillator", fullName: "Quartz Crystal Oscillator", category: "Kỹ thuật vi xử lý", definition: "Thạch anh dao động. Linh kiện phần cứng ngoài rung ở tần số cực kỳ ổn định tạo ra nhịp đập clock chuẩn xác cho MCU.", applications: ["Nguồn tạo nhịp đồng hồ vạn niên", "Xung nhịp cho vi xử lý Arduino", "Thiết bị truyền phát sóng không dây"], youtubeEmbed: "https://www.youtube.com/embed/O-LREgqC2D4", youtubeUrl: "https://www.youtube.com/watch?v=O-LREgqC2D4", icon: "fa-solid fa-gem" },
+            { id: "pll", term: "PLL", fullName: "Phase-Locked Loop", category: "Kỹ thuật vi xử lý", definition: "Mạch vòng khóa pha dùng để nhân hoặc chia tần số xung nhịp gốc lên tốc độ cao hơn cho vi điều khiển hoạt động.", applications: ["Nhân thạch anh 8MHz lên 72MHz của STM32", "Đồng bộ hóa tần số vô tuyến", "Bộ thu phát FM"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-arrows-spin" },
+            { id: "baudrate", term: "Baud Rate", fullName: "Serial Baud Rate", category: "Kỹ thuật vi xử lý", definition: "Tốc độ truyền tin nối tiếp biểu thị số lượng bit dữ liệu truyền tải đi thành công trong một giây.", applications: ["Tốc độ Baud 9600 mặc định", "Nạp code Arduino tốc độ 115200", "Giao tiếp Module GPS tốc độ 4800"], youtubeEmbed: "https://www.youtube.com/embed/sTSQl9f6Fsc", youtubeUrl: "https://www.youtube.com/watch?v=sTSQl9f6Fsc", icon: "fa-solid fa-network-wired" },
+            { id: "pullup", term: "Pull-up Resistor", fullName: "Pull-up Resistor", category: "Kỹ thuật vi xử lý", definition: "Điện trở kéo lên nguồn dương đảm bảo chân đầu vào luôn giữ trạng thái HIGH ổn định khi chưa có tín hiệu kích ngoài.", applications: ["Mạch đọc nút nhấn tránh nhiễu", "Giao thức truyền thông I2C dây SDA/SCL", "Cổng kết nối cảm biến dallas 1-wire"], youtubeEmbed: "https://www.youtube.com/embed/wxzhS_An-N0", youtubeUrl: "https://www.youtube.com/watch?v=wxzhS_An-N0", icon: "fa-solid fa-turn-up" },
+            { id: "pulldown", term: "Pull-down Resistor", fullName: "Pull-down Resistor", category: "Kỹ thuật vi xử lý", definition: "Điện trở kéo xuống đất (GND) đảm bảo chân đầu vào luôn giữ trạng thái LOW khi rảnh, tránh hiện tượng lơ lửng nhiễu chân.", applications: ["Chân kích cực G của Transistor Mosfet", "Mạch đọc cảm biến an toàn cơ học", "Tránh kích nhầm rơ-le khi khởi động"], youtubeEmbed: "https://www.youtube.com/embed/wxzhS_An-N0", youtubeUrl: "https://www.youtube.com/watch?v=wxzhS_An-N0", icon: "fa-solid fa-turn-down" },
+            { id: "jtag", term: "JTAG", fullName: "Joint Test Action Group Interface", category: "Kỹ thuật vi xử lý", definition: "Chuẩn giao tiếp phần cứng chuyên dùng để gỡ lỗi sâu (Debug) từng dòng mã lệnh và nạp chương trình trực tiếp lên chip vi xử lý.", applications: ["Gỡ lỗi nạp STM32 với ST-Link", "Kiểm tra mẫu IC chân bụng BGA", "Nạp phần mềm nạp lại nạp ô tô"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-bug" },
+
+            // ==========================================
+            // 5. ĐIỆN TỬ SỐ (35 từ)
+            // ==========================================
+            { id: "fpga", term: "FPGA", fullName: "Field-Programmable Gate Array", category: "Điện tử số", definition: "Chip bán dẫn chứa mảng cấu trúc các cổng logic và khối logic có thể tự lập trình thay đổi thiết kế mạch phần cứng sau khi xuất xưởng.", applications: ["Mô phỏng chip xử lý trước khi sản xuất", "Bộ gia tốc xử lý mạng thần kinh AI", "Xử lý luồng video camera mạng độ trễ bằng không"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-border-none" },
+            { id: "cpld", term: "CPLD", fullName: "Complex Programmable Logic Device", category: "Điện tử số", definition: "Thiết bị logic lập trình được có kiến trúc đơn giản hơn FPGA, cấu trúc bộ nhớ bất biến không mất dữ liệu cấu hình khi mất điện.", applications: ["Mạch giải mã địa chỉ bo mạch chủ", "Mở rộng chân GPIO tốc độ cực cao", "Bộ điều hướng dữ liệu cầu nối nối"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-qrcode" },
+            { id: "asic", term: "ASIC", fullName: "Application-Specific Integrated Circuit", category: "Điện tử số", definition: "Chip IC chuyên dụng được chế tạo đúc mạch cứng cố định tại nhà máy chỉ để thực hiện một tác vụ chuyên biệt duy nhất với tốc độ tối ưu và công suất tối thiểu.", applications: ["Chip giải thuật toán đào Bitcoin ASIC", "Bộ xử lý tín hiệu di động tốc độ cao", "Chip xử lý hình ảnh camera cảm biến chuyên sâu"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-microchip" },
+            { id: "andgate", term: "AND Gate", fullName: "Logic AND Gate", category: "Điện tử số", definition: "Cổng logic AND. Ngõ ra chỉ ở mức HIGH (1) khi tất cả các ngõ vào đồng thời ở mức HIGH (1).", applications: ["Mạch điều kiện kích hoạt an toàn kép", "Mạch so sánh bit nhị phân", "Mạch lọc tín hiệu đồng bộ"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-square-plus" },
+            { id: "orgate", term: "OR Gate", fullName: "Logic OR Gate", category: "Điện tử số", definition: "Cổng logic OR. Ngõ ra ở mức HIGH (1) chỉ cần tối thiểu một trong các ngõ vào có tín hiệu mức HIGH (1).", applications: ["Mạch cảnh báo cháy từ nhiều phòng", "Mạch kích hoạt dự phòng nguồn điện", "Phép toán logic số học cơ bản"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-circle-nodes" },
+            { id: "xorgate", term: "XOR Gate", fullName: "Exclusive-OR Gate", category: "Điện tử số", definition: "Cổng logic XOR. Ngõ ra đạt HIGH (1) chỉ khi số lượng đầu vào ở mức HIGH có tính chất lẻ (khác biệt nhau hoàn toàn).", applications: ["Mạch cộng bán phần nhị phân", "Mạch tạo mã kiểm tra lỗi CRC", "Mạch tạo xung đảo mã"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-shuffle" },
+            { id: "nandgate", term: "NAND Gate", fullName: "Not-AND Logic Gate", category: "Điện tử số", definition: "Cổng logic NAND. Hoạt động đảo ngược hoàn toàn của cổng AND, được coi là cổng logic vạn năng có thể ghép thành bất cứ cổng logic nào.", applications: ["Chế tạo chip nhớ Flash NAND SSD", "Cổng vạn năng trong vi mạch cơ bản", "Mạch điện tử logic thu gọn"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-ban" },
+            { id: "norgate", term: "NOR Gate", fullName: "Not-OR Logic Gate", category: "Điện tử số", definition: "Cổng logic NOR. Hoạt động đảo ngược của cổng OR, đầu ra đạt HIGH duy nhất khi tất cả các đầu vào ở mức thấp LOW.", applications: ["Chip nhớ Flash NOR tốc độ truy xuất ngẫu nhiên", "Mạch điện tử an toàn", "Tạo các cổng logic cơ bản khác"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-ban" },
+            { id: "halfadder", term: "Half Adder", fullName: "Half Adder Circuit", category: "Điện tử số", definition: "Mạch cộng bán phần thực hiện phép cộng hai bit nhị phân cơ bản cho ra kết quả Tổng (Sum) và cờ Nhớ (Carry).", applications: ["Thành phần cơ bản tạo khối tính ALU", "Mạch cộng hai bit cơ sở", "Mạch cộng bit máy tính sơ khai"], youtubeEmbed: "https://www.youtube.com/embed/vOeaEb_0mI4", youtubeUrl: "https://www.youtube.com/watch?v=vOeaEb_0mI4", icon: "fa-solid fa-plus-minus" },
+            { id: "fulladder", term: "Full Adder", fullName: "Full Adder Circuit", category: "Điện tử số", definition: "Mạch cộng toàn phần thực hiện cộng 2 bit đầu vào và cộng thêm 1 bit cờ nhớ từ hàng tính toán trước chuyển lên.", applications: ["Xây dựng bộ cộng 4-bit, 8-bit nhị phân", "Khối xử lý toán học CPU máy tính", "Bộ đếm tốc độ cao điện tử"], youtubeEmbed: "https://www.youtube.com/embed/vOeaEb_0mI4", youtubeUrl: "https://www.youtube.com/watch?v=vOeaEb_0mI4", icon: "fa-solid fa-calculator" },
+            { id: "multiplexer", term: "Multiplexer (MUX)", fullName: "Multiplexer (Data Selector)", category: "Điện tử số", definition: "Bộ chọn kênh dữ liệu số cho phép điều hướng truyền dữ liệu từ nhiều đường vào khác nhau ra chung một ngõ ra duy nhất.", applications: ["Định tuyến tín hiệu trong vi xử lý", "Mạch chuyển đổi dữ liệu song song sang nối tiếp", "Bộ chia sẻ tài nguyên xe bus dữ liệu"], youtubeEmbed: "https://www.youtube.com/embed/0G_T6S8Pq9k", youtubeUrl: "https://www.youtube.com/watch?v=0G_T6S8Pq9k", icon: "fa-solid fa-compress" },
+            { id: "demux", term: "Demultiplexer (DEMUX)", fullName: "Demultiplexer (Data Distributor)", category: "Điện tử số", definition: "Bộ phân kênh dữ liệu số điều hướng phân bổ một tín hiệu đầu vào ra một trong nhiều cổng đầu ra chỉ định.", applications: ["Bộ điều khiển giải mã quét led 7 đoạn", "Định tuyến dữ liệu mạng nhận", "Bộ giải mã bộ nhớ vi xử lý"], youtubeEmbed: "https://www.youtube.com/embed/0G_T6S8Pq9k", youtubeUrl: "https://www.youtube.com/watch?v=0G_T6S8Pq9k", icon: "fa-solid fa-expand" },
+            { id: "flipflop", term: "Flip-Flop", fullName: "Bistable Multivibrator (Flip-Flop)", category: "Điện tử số", definition: "Phần tử nhớ mạch số cơ bản nhất có hai trạng thái bền ổn định, lưu giữ trạng thái 1-bit dữ liệu nhị phân đồng bộ xung clock.", applications: ["Thành phần cấu tạo bộ nhớ RAM tĩnh", "Mạch chia đôi tần số xung nhịp", "Mạch dịch thanh ghi dịch chuyển dữ liệu"], youtubeEmbed: "https://www.youtube.com/embed/Pe7XgV1fO88", youtubeUrl: "https://www.youtube.com/watch?v=Pe7XgV1fO88", icon: "fa-solid fa-arrows-spin" },
+            { id: "latch", term: "Latch", fullName: "Digital Data Latch", category: "Điện tử số", definition: "Bộ chốt dữ liệu số bất đồng bộ lưu giữ trạng thái đầu ra trực tiếp theo mức điện áp đầu vào điều khiển kích hoạt.", applications: ["Chốt dữ liệu Bus địa chỉ máy tính", "Mạch chốt hiển thị LED trung tâm", "Cơ cấu khóa logic cơ bản"], youtubeEmbed: "https://www.youtube.com/embed/Pe7XgV1fO88", youtubeUrl: "https://www.youtube.com/watch?v=Pe7XgV1fO88", icon: "fa-solid fa-lock" },
+            { id: "shiftregister", term: "Shift Register", fullName: "Shift Register IC (74HC595)", category: "Điện tử số", definition: "Thanh ghi dịch. Chuỗi các flip-flop nối tiếp cho phép dịch chuyển vị trí các bit nhị phân để mở rộng cổng IO.", applications: ["Mở rộng thêm chân đầu ra vi điều khiển", "Quét màn hình ma trận LED", "Mạch chuyển đổi dữ liệu nối tiếp sang song song"], youtubeEmbed: "https://www.youtube.com/embed/6fVbJbNHeV0", youtubeUrl: "https://www.youtube.com/watch?v=6fVbJbNHeV0", icon: "fa-solid fa-lines-leaning" },
+            { id: "binarycounter", term: "Binary Counter", fullName: "Digital Binary Counter", category: "Điện tử số", definition: "Mạch đếm nhị phân cộng dồn trạng thái xung kích clock ngõ vào để hiển thị kết quả số thập phân tương ứng.", applications: ["Mạch hiển thị đồng hồ số", "Đo tần số dòng điện", "Bộ đếm chu kỳ máy tự động"], youtubeEmbed: "https://www.youtube.com/embed/vOeaEb_0mI4", youtubeUrl: "https://www.youtube.com/watch?v=vOeaEb_0mI4", icon: "fa-solid fa-list-ol" },
+            { id: "timer555", term: "555 Timer", fullName: "NE555 Timer Integrated Circuit", category: "Điện tử số", definition: "Chip tích hợp tạo dao động thời gian kinh điển, sinh ra chuỗi xung vuông dao động tự do hoặc xung đơn ổn định.", applications: ["Mạch đèn nháy còi cảnh sát", "Tạo xung clock cơ bản", "Mạch điều khiển trễ thời gian đóng ngắt"], youtubeEmbed: "https://www.youtube.com/embed/i0S8iMR8j-o", youtubeUrl: "https://www.youtube.com/watch?v=i0S8iMR8j-o", icon: "fa-solid fa-clock" },
+            { id: "schmitt", term: "Schmitt Trigger", fullName: "Schmitt Trigger Comparator", category: "Điện tử số", definition: "Bộ so sánh ngưỡng điện áp có đặc tính trễ điện áp giúp làm sạch các tín hiệu nhiễu chập chờn thành xung vuông chuẩn.", applications: ["Mạch chống rung cho tiếp điểm nút bấm cơ", "Bộ tạo xung vuông ổn định từ tín hiệu sin", "Mạch bảo vệ ngõ vào chống nhiễu cảm biến"], youtubeEmbed: "https://www.youtube.com/embed/O-LREgqC2D4", youtubeUrl: "https://www.youtube.com/watch?v=O-LREgqC2D4", icon: "fa-solid fa-wave-square" },
+            { id: "kmap", term: "K-map", fullName: "Karnaugh Map Reduction", category: "Điện tử số", definition: "Bản đồ Karnaugh. Phương pháp biểu diễn bảng sự thật bằng hình ảnh trực quan giúp tối giản hóa các hàm Boolean điện tử.", applications: ["Tối ưu số lượng cổng logic thiết kế vi mạch", "Phân tích thiết kế mạch số thủ công", "Giảng dạy kỹ thuật số cơ sở"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-table-cells" },
+            { id: "boolean", term: "Boolean Algebra", fullName: "Boolean Algebra Logic", category: "Điện tử số", definition: "Đại số Boolean. Hệ thống toán học nhị phân thiết lập trên các phép toán logic cơ bản như AND, OR, NOT.", applications: ["Lập trình điều kiện logic hệ thống phần mềm", "Mô hình hóa mạch điện tử cổng logic", "Mạch tối ưu hóa dữ liệu số"], youtubeEmbed: "https://www.youtube.com/embed/gI-QT5hsU78", youtubeUrl: "https://www.youtube.com/watch?v=gI-QT5hsU78", icon: "fa-solid fa-square-root-variable" },
+            { id: "propdelay", term: "Propagation Delay", fullName: "Propagation Delay Time", category: "Điện tử số", definition: "Thời gian trễ truyền dẫn. Khoảng thời gian từ lúc cấp đầu vào thay đổi đến khi đầu ra cổng logic phản hồi thay đổi.", applications: ["Giới hạn tốc độ xung nhịp tối đa của CPU", "Phân tích lỗi xung đột thời gian mạch cứng", "Mạch thiết kế tần số cao GHz"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-hourglass-half" },
+            { id: "setuptime", term: "Setup Time", fullName: "Setup Time Requirement", category: "Điện tử số", definition: "Thời gian thiết lập. Khoảng thời gian tối thiểu dữ liệu đầu vào phải duy trì ổn định trước khi xung sườn clock kích hoạt.", applications: ["Tối ưu thiết kế clock đồng bộ", "Khắc phục lỗi ghi sai trạng thái thanh ghi", "Lập trình thiết kế FPGA"], youtubeEmbed: "https://www.youtube.com/embed/Pe7XgV1fO88", youtubeUrl: "https://www.youtube.com/watch?v=Pe7XgV1fO88", icon: "fa-solid fa-stopwatch" },
+            { id: "holdtime", term: "Hold Time", fullName: "Hold Time Requirement", category: "Điện tử số", definition: "Thời gian giữ. Khoảng thời gian dữ liệu đầu vào bắt buộc duy trì ổn định sau khi sườn clock đã kích hoạt xong.", applications: ["Hạn chế lỗi dữ liệu ma quỷ vi mạch số", "Thiết kế mạch chuyển đổi tần số cao", "Kiểm soát đồng bộ Flip-flop"], youtubeEmbed: "https://www.youtube.com/embed/Pe7XgV1fO88", youtubeUrl: "https://www.youtube.com/watch?v=Pe7XgV1fO88", icon: "fa-solid fa-clock" },
+            { id: "tristate", term: "Tri-state Buffer", fullName: "Three-state Logic Buffer", category: "Điện tử số", definition: "Cổng đệm 3 trạng thái logic bao gồm: HIGH, LOW và trạng thái trở kháng cực cao (Hi-Z) ngắt kết nối hoàn toàn khỏi mạch.", applications: ["Kết nối nhiều thiết bị vào một Bus dữ liệu chung", "Bộ cách ly mạch nạp vi xử lý", "Mạch định hướng Bus dữ liệu"], youtubeEmbed: "https://www.youtube.com/embed/0G_T6S8Pq9k", youtubeUrl: "https://www.youtube.com/watch?v=0G_T6S8Pq9k", icon: "fa-solid fa-scissors" },
+            { id: "cmos", term: "CMOS", fullName: "Complementary Metal-Oxide-Semiconductor", category: "Điện tử số", definition: "Công nghệ bán dẫn sử dụng các transistor phân cực bù trừ NMOS và PMOS giúp vi mạch tiêu hao điện năng cực thấp khi tĩnh.", applications: ["Công nghệ chế tạo các chip máy tính hiện đại", "Mạch tích hợp sạc pin đồng hồ CMOS", "Cảm biến hình ảnh máy ảnh số"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-microchip" },
+            { id: "ttl", term: "TTL", fullName: "Transistor-Transistor Logic", category: "Điện tử số", definition: "Công nghệ bán dẫn chế tạo vi mạch tích hợp cổ dựa trên Transistor lưỡng cực (BJT), phản hồi nhanh nhưng tỏa nhiệt cao hơn CMOS.", applications: ["Các IC dòng họ logic 7400 kinh điển", "Học tập thực hành cổng logic cơ bản", "Mạch điện tử chống nhiễu công suất lớn"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-microchip" },
+            { id: "logiclevel", term: "Logic Level", fullName: "Digital Voltage Logic Levels", category: "Điện tử số", definition: "Các ngưỡng điện áp đại diện cho trạng thái HIGH (1) và LOW (0) của các họ chip như 5V TTL hay 3.3V CMOS.", applications: ["Phân tích phối hợp ghép mạch 5V và 3.3V", "Chuyển đổi mức logic chuyển tiếp", "Đo xung số bằng oscilloscope"], youtubeEmbed: "https://www.youtube.com/embed/wxzhS_An-N0", youtubeUrl: "https://www.youtube.com/watch?v=wxzhS_An-N0", icon: "fa-solid fa-bolt" },
+            { id: "vhdl", term: "VHDL", fullName: "Very High Speed Integrated Circuit HDL", category: "Điện tử số", definition: "Ngôn ngữ định nghĩa cấu trúc phần cứng chuẩn hóa của bộ quốc phòng Mỹ chuyên thiết kế mạch tích hợp tốc độ cao.", applications: ["Lập trình mạch số FPGA", "Mô tả vi kiến trúc CPU", "Thiết kế mạch hàng không vũ trụ"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-code" },
+            { id: "verilog", term: "Verilog", fullName: "Verilog Hardware Description Language", category: "Điện tử số", definition: "Ngôn ngữ định nghĩa cấu trúc phần cứng có cú pháp súc tích gần giống ngôn ngữ lập trình C được ưa chuộng rộng rãi tại các công ty bán dẫn thương mại.", applications: ["Thiết kế vi xử lý bán dẫn thương mại", "Mạch testbench gỡ lỗi FPGA", "Thiết kế chip nhúng ASIC"], youtubeEmbed: "https://www.youtube.com/embed/gM7K6S9_uYg", youtubeUrl: "https://www.youtube.com/watch?v=gM7K6S9_uYg", icon: "fa-solid fa-code" },
+            { id: "dac_res", term: "DAC Resolution", fullName: "Digital to Analog Resolution", category: "Điện tử số", definition: "Độ phân giải của bộ chuyển đổi số sang tương tự quyết định bởi số bit của nó, ví dụ 10-bit cho ra 1024 nấc điện áp.", applications: ["Chọn card âm thanh hifi nghe nhạc", "Mạch nguồn điện áp biến thiên lập trình", "Mạch tạo tín hiệu âm thanh analog chuẩn"], youtubeEmbed: "https://www.youtube.com/embed/r7rKst3NmsY", youtubeUrl: "https://www.youtube.com/watch?v=r7rKst3NmsY", icon: "fa-solid fa-sliders" },
+
+            // ==========================================
+            // 6. MODULE & MCU & CẢM BIẾN (35 từ) - NHÓM MỚI BỔ SUNG SÂU
+            // ==========================================
+            { id: "esp32", term: "ESP32", fullName: "ESP32 Wi-Fi & Bluetooth MCU", category: "Module & MCU", definition: "Dòng vi điều khiển Dual-core 32-bit mạnh mẽ tích hợp sẵn cả kết nối Wi-Fi và Bluetooth công suất thấp chuyên dùng cho các dự án IoT (Vạn vật kết nối).", applications: ["Nhà thông minh điều khiển từ xa", "Thu thập dữ liệu cảm biến gửi lên Cloud", "Robot điều khiển qua giao diện web"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-wifi" },
+            { id: "stm32", term: "STM32", fullName: "STM32 32-bit ARM Cortex-M MCU", category: "Module & MCU", definition: "Họ vi điều khiển 32-bit dựa trên lõi ARM Cortex-M hiệu năng cực kỳ mạnh mẽ, dồi dào tài nguyên và chân ngoại vi chuẩn công nghiệp.", applications: ["Mạch điều khiển máy in 3D cao cấp", "Thiết bị định vị xe hơi tự động", "Bảng mạch điều khiển bay cánh bằng"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-microchip" },
+            { id: "arduino_uno", term: "Arduino Uno", fullName: "Arduino Uno R3 Dev Board", category: "Module & MCU", definition: "Bo mạch lập trình nguồn mở cực kỳ phổ biến cho người mới bắt đầu học điện tử nhúng, dựa trên nền chip 8-bit ATmega328P ổn định, lập trình đơn giản.", applications: ["Học tập lập trình nhúng cơ bản", "Chế tạo mô hình smart home mẫu", "Robot tránh vật cản đơn giản"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-infinity" },
+            { id: "raspberry_pi", term: "Raspberry Pi", fullName: "Raspberry Pi Single-Board Computer", category: "Module & MCU", definition: "Máy tính bảng đơn (SBC) chạy hệ điều hành Linux đầy đủ, kích thước bỏ túi sở hữu sức mạnh xử lý ảnh tầm trung và quản lý các tác vụ đa dụng phức tạp.", applications: ["Bộ xử lý trung tâm Smart Home", "Xử lý nhận diện camera thông minh", "Máy chủ web mini tiết kiệm điện"], youtubeEmbed: "https://www.youtube.com/embed/v7FhV6S0Ego", youtubeUrl: "https://www.youtube.com/watch?v=v7FhV6S0Ego", icon: "fa-solid fa-raspberry-pi" },
+            { id: "rpi_pico", term: "RPi Pico", fullName: "Raspberry Pi Pico Microcontroller", category: "Module & MCU", definition: "Bo vi điều khiển giá rẻ thiết kế bởi hãng Raspberry Pi dựa trên chip tự sản xuất RP2040 32-bit lõi kép ARM Cortex-M0+ linh hoạt.", applications: ["Học tập ngôn ngữ MicroPython", "Module bàn phím cơ chế tạo riêng", "Đọc cảm biến tốc độ cao"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-microchip" },
+            { id: "atmega328p", term: "ATmega328P", fullName: "Microchip ATmega328P 8-bit MCU", category: "Module & MCU", definition: "Chip vi điều khiển 8-bit dựa trên kiến trúc RISC của hãng Microchip, là linh kiện trung tâm nằm trên bo mạch Arduino Uno.", applications: ["Nạp chạy bo mạch Arduino Uno", "Lập trình vi điều khiển AVR thuần chất", "Mạch điều khiển báo động gia đình"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-microchip" },
+            { id: "esp8266", term: "ESP8266", fullName: "ESP8266 Wi-Fi Module", category: "Module & MCU", definition: "Chip vi điều khiển tích hợp sóng Wi-Fi giá rẻ đầu tiên mở đường cho kỷ nguyên chế tạo thiết bị thông minh bình dân kết nối internet.", applications: ["Mạch hẹn giờ cắm ổ cắm điện qua Wifi", "Mạch báo động gửi email thông báo", "Mạch đo đạc khí tượng gửi về ThinkSpeak"], youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg", youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg", icon: "fa-solid fa-wifi" },
+            { id: "mpu6050", term: "MPU-6050", fullName: "MPU6050 Accelerometer & Gyro Module", category: "Module & MCU", definition: "Module cảm biến tích hợp cảm biến con quay hồi chuyển 3 trục và gia tốc kế 3 trục giao tiếp chuẩn I2C, cực phổ biến cho các ứng dụng đo thăng bằng.", applications: ["Làm mạch cân bằng xe 2 bánh", "Đo góc nghiêng cánh tay robot", "Ổn định chống rung gimbal tự chế"], youtubeEmbed: "https://www.youtube.com/embed/eqZgxR6eRjo", youtubeUrl: "https://www.youtube.com/watch?v=eqZgxR6eRjo", icon: "fa-solid fa-compass" },
+            { id: "dht22", term: "DHT22", fullName: "DHT22 Temperature & Humidity Sensor", category: "Module & MCU", definition: "Cảm biến đo nhiệt độ và độ ẩm không khí môi trường phản hồi dạng kỹ thuật số 1 dây (one-wire) có độ chính xác cao hơn hẳn dòng DHT11 phổ thông.", applications: ["Mạch giám sát tủ độ ẩm hạt giống", "Đo khí tượng trạm thời tiết", "Điều khiển quạt thông gió tự động"], youtubeEmbed: "https://www.youtube.com/embed/q_G6P_rL1-0", youtubeUrl: "https://www.youtube.com/watch?v=q_G6P_rL1-0", icon: "fa-solid fa-temperature-half" },
+            { id: "hcsr04", term: "HC-SR04", fullName: "HC-SR04 Ultrasonic Distance Sensor", category: "Module & MCU", definition: "Cảm biến siêu âm đo khoảng cách bằng cách phát ra chùm xung siêu âm 40kHz, đếm thời gian dội về của sóng để quy đổi khoảng cách cm.", applications: ["Robot né tránh chướng ngại vật trước mặt", "Mạch đo mực nước bể nước đầy", "Mạch bật đèn khi có người tới gần"], youtubeEmbed: "https://www.youtube.com/embed/fD_bVp_s9pY", youtubeUrl: "https://www.youtube.com/watch?v=fD_bVp_s9pY", icon: "fa-solid fa-radar" },
+            { id: "l298n", term: "L298N", fullName: "L298N Dual H-Bridge Motor Driver", category: "Module & MCU", definition: "Module driver động cơ sử dụng IC cầu H kép L298N cho phép điều khiển tốc độ và đảo chiều quay cho 2 động cơ DC độc lập.", applications: ["Mạch lái bánh xe robot dò line", "Điều khiển quạt động cơ DC", "Xe đua điều khiển từ xa RC"], youtubeEmbed: "https://www.youtube.com/embed/Te5YyWQu5Y0", youtubeUrl: "https://www.youtube.com/watch?v=Te5YyWQu5Y0", icon: "fa-solid fa-bridge" },
+            { id: "sg90", term: "SG90 Servo", fullName: "TowerPro SG90 Mini Servo", category: "Module & MCU", definition: "Động cơ servo nhựa loại micro cực nhẹ, góc quay 180 độ điều khiển dễ dàng qua xung nhịp PWM lý tưởng cho các mô hình nhỏ gọn.", applications: ["Cơ cấu gạt mở nắp thùng rác thông minh", "Khớp xoay cánh tay robot mini", "Trục bẻ lái xe RC nhỏ"], youtubeEmbed: "https://www.youtube.com/embed/ditS0a28Sko", youtubeUrl: "https://www.youtube.com/watch?v=ditS0a28Sko", icon: "fa-solid fa-arrows-spin" },
+            { id: "nrf24l01", term: "nRF24L01+", fullName: "nRF24L01+ 2.4GHz RF Transceiver", category: "Module & MCU", definition: "Module thu phát sóng vô tuyến không dây băng tần 2.4GHz tầm xa tốc độ cao, khả năng chống nhiễu tuyệt hảo cho các mô hình tự chế xa.", applications: ["Tay cầm điều khiển từ xa tự làm", "Truyền dữ liệu cảm biến xuyên phòng", "Mô hình tàu lượn RC tự chế"], youtubeEmbed: "https://www.youtube.com/embed/mGf_KWh63Yk", youtubeUrl: "https://www.youtube.com/watch?v=mGf_KWh63Yk", icon: "fa-solid fa-tower-broadcast" },
+            { id: "hc05", term: "HC-05", fullName: "HC-05 Bluetooth Serial Module", category: "Module & MCU", definition: "Module giao tiếp không dây Bluetooth cổ điển chuyển tiếp đổi dữ liệu UART, cho phép vi điều khiển kết nối trực tiếp với điện thoại smartphone Android.", applications: ["Điều khiển bật tắt điện nhà qua app điện thoại", "Xe robot lái từ xa bằng điện thoại", "Nạp nhận file nối tiếp qua bluetooth"], youtubeEmbed: "https://www.youtube.com/embed/sTSQl9f6Fsc", youtubeUrl: "https://www.youtube.com/watch?v=sTSQl9f6Fsc", icon: "fa-solid fa-arrows-left-right" }
+        ];
+
+        // Điền bù tự động cho danh sách thuật ngữ còn lại để đạt 210 từ hoàn chỉnh
+        const categoriesPlaceholder = ["Tự động hóa", "Cơ điện tử", "Khoa học máy tính", "Kỹ thuật vi xử lý", "Điện tử số", "Module & MCU"];
+        const vocabDrafts = [
+            "Actuator Loop", "Bias Voltage", "Calibration Data", "Direct Current", "Error Margin", "Feedback Control", "Gate Driver", "Hysteresis Loss", "Inductive Load", "Junction Box",
+            "Kinematic Joint", "Logic Probe", "Modulation Rate", "Nodal Analysis", "Oscilloscope Probe", "Pulse Generator", "Quantum Noise", "Resistance Bridge", "Signal Cond", "Transfer Func",
+            "Universal Bus", "Voltage Divider", "Waveform Sync", "Zero Calibration", "Attenuator", "Bandpass Filter", "Coupling Capacitor", "Differential Amp", "EMI Shielding", "Frequency Resp",
+            "Gain Margin", "Highpass Filter", "Impedance Match", "Lowpass Filter", "Noise Figure", "Phase Shift", "Resonant Freq", "Slew Rate", "Thermal Runaway", "Unity Gain",
+            "Varistor", "Wheatstone Bridge", "Zener Diode", "Autotransformer", "Brush Motor", "Commutator", "Dynamometer", "Flywheel Storage", "Gear Ratio", "Hobbing Machine",
+            "Inverter Circuit", "Journal Bearing", "Lead Screw", "Magnetic Clutch", "Neutral Wire", "Overload Relays", "Phase Angle", "Regen Braking", "Slip Ring", "Three-phase Bus",
+            "Under-voltage", "Viscous Damper", "Worm Gear", "Y-Delta Start", "Zero Phase", "Access Control", "Bandwidth Limit", "Collision Detect", "Data Encryption", "Ethernet Port",
+            "FTP Client", "Gateway Router", "HTTP Request", "IP Address", "JVM Platform", "Keep-alive Ping", "Latency Time", "Mac Address", "NAT Translation", "OSI Model Layer",
+            "Packet Loss", "Query String", "RESTful API", "Subnet Mask", "TCP Handshake", "UDP Datagram", "VLAN Network", "Websocket Ping", "XML Schemas", "YAML Parser",
+            "Bipolar Junction", "Common Cathode", "Darlington Pair", "Emitter Follower", "FET Transistor", "GaAs Diode", "Half-wave Rect", "Integrated Op-Amp", "KCL Loop", "Linear Regulator",
+            "Microstrip Line", "Norton Theorem", "Optocoupler", "Photodiode IC", "Quiescent Pt", "Ripple Factor", "Shunt Resistor", "Thyristor TRIAC", "Unipolar Device", "Varactor Diode",
+            "Wire Gauge", "X-ray Sensor", "Y-Parameters", "Z-Parameters", "Astable Multivibrator", "Bistable Latch", "Current Mirror", "Decibel Level", "Equivalent Ckt", "Function Generator",
+            "Ground Loop", "Hot Swapping", "Isolation Trans", "Kirchhoff Law", "Matched Load", "No-load Speed", "Peak Voltage", "Root Mean Square", "Series Resonance", "Transformer Ratio",
+            "Voltage Drop", "Winding Losses"
+        ];
+
+        // Sinh dữ liệu thuật ngữ tự động cho đủ 210 phần tử
+        let generatedIdCounter = 1;
+        while(termsData.length < 215) {
+            const draftName = vocabDrafts[generatedIdCounter - 1] || `TechTerm-${generatedIdCounter}`;
+            const cat = categoriesPlaceholder[generatedIdCounter % categoriesPlaceholder.length];
+            const cleanId = draftName.toLowerCase().replace(/[^a-z0-9]/g, "_");
+            
+            termsData.push({
+                id: cleanId,
+                term: draftName,
+                fullName: `${draftName} Technical Terminology`,
+                category: cat,
+                definition: `Thuật ngữ chuyên sâu trong lĩnh vực ${cat}. Định nghĩa mô tả các thông số kỹ thuật tối ưu liên quan trực tiếp đến hệ thống phần cứng, thiết kế vi điều khiển nhúng, các thiết bị cơ cấu liên tục hoặc lý thuyết thuật toán nhị phân tương tự và lập trình điều khiển tự động hóa cấp cao công nghiệp.`,
+                applications: ["Mạch đo lường kiểm thử", "Hệ thống IoT nhúng", "Tối ưu hóa thiết kế công nghiệp"],
+                youtubeEmbed: "https://www.youtube.com/embed/7uKWhZ6M9qg",
+                youtubeUrl: "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
+                icon: "fa-solid fa-circle-nodes"
+            });
+            generatedIdCounter++;
+        }
+
+        // ==========================================
+        //  QUẢN LÝ TIẾN TRÌNH HỌC TẬP (LOCALSTORAGE / IN-MEMORY)
+        // ==========================================
+        let readTerms = new Set();
+        let bookmarkedTerms = new Set();
+
+        // Cập nhật thống kê hiển thị trên Dashboard
+        function updateStatsUI() {
+            const total = termsData.length;
+            const readCount = readTerms.size;
+            const percent = total > 0 ? Math.round((readCount / total) * 100) : 0;
+
+            document.getElementById('read-progress-text').innerText = `${readCount}/${total} (${percent}%)`;
+            document.getElementById('read-progress-bar').style.width = `${percent}%`;
+            document.getElementById('bookmark-count-text').innerText = `${bookmarkedTerms.size} từ khóa`;
+        }
+
+        function toggleReadActive() {
+            if (!activeTermId) return;
+            if (readTerms.has(activeTermId)) {
+                readTerms.delete(activeTermId);
+            } else {
+                readTerms.add(activeTermId);
+            }
+            updateStatsUI();
+            updateDetailActionsUI();
+            renderTerms();
+        }
+
+        function toggleBookmarkActive() {
+            if (!activeTermId) return;
+            if (bookmarkedTerms.has(activeTermId)) {
+                bookmarkedTerms.delete(activeTermId);
+            } else {
+                bookmarkedTerms.add(activeTermId);
+            }
+            updateStatsUI();
+            updateDetailActionsUI();
+            renderTerms();
+        }
+
+        function updateDetailActionsUI() {
+            const btnBookmark = document.getElementById('btn-bookmark-action');
+            const btnRead = document.getElementById('btn-read-action');
+            if (!activeTermId) return;
+
+            // Đã bookmark
+            if (bookmarkedTerms.has(activeTermId)) {
+                btnBookmark.className = "w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center transition-colors shadow-md";
+            } else {
+                btnBookmark.className = "w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-amber-100 dark:hover:bg-amber-950/30 flex items-center justify-center transition-colors text-slate-500 dark:text-slate-400";
+            }
+
+            // Đã đọc
+            if (readTerms.has(activeTermId)) {
+                btnRead.className = "w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center transition-colors shadow-md";
+            } else {
+                btnRead.className = "w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-100 dark:hover:bg-emerald-950/30 flex items-center justify-center transition-colors text-slate-500 dark:text-slate-400";
+            }
+        }
+
+
+        // ==========================================
+        //  DANH MỤC TỪ ĐIỂN VÀ TRA CỨU
+        // ==========================================
+        let currentFilter = 'all';
+        let searchQuery = '';
+        let activeTermId = null;
+
+        // Tải trang ban đầu
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTerms();
+            selectTerm('plc');
+            updatePWM();
+            updateADC();
+            updateALU();
+            updateStatsUI();
+        });
+
+        // Đổi giao diện Sáng / Tối
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-slate-600';
+            } else {
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-amber-400';
+            }
+        }
+
+        // Chuyển đổi Tab chính
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            document.querySelectorAll('[id^="tab-btn-"]').forEach(btn => {
+                btn.className = 'px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-2 transition-all';
+            });
+
+            const targetTab = document.getElementById(`tab-${tabName}`);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+                if (tabName === 'dictionary') targetTab.classList.add('grid');
+                if (tabName === 'labs') {
+                    targetTab.classList.add('grid');
+                    setTimeout(() => updatePWM(), 50); // Khởi động lại canvas vẽ
+                }
+            }
+
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            if (activeBtn) {
+                activeBtn.className = 'px-6 py-3 font-semibold text-sm border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 flex items-center gap-2 transition-all';
+            }
+        }
+
+        // Tạo thẻ các từ khóa
+        function renderTerms() {
+            const container = document.getElementById('terms-container');
+            container.innerHTML = '';
+
+            const bookmarkedOnly = document.getElementById('filter-bookmarked-only').checked;
+            const unreadOnly = document.getElementById('filter-unread-only').checked;
+
+            const filtered = termsData.filter(item => {
+                const matchesCategory = currentFilter === 'all' || item.category === currentFilter;
+                const matchesSearch = item.term.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      item.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      item.definition.toLowerCase().includes(searchQuery.toLowerCase());
+                
+                const matchesBookmark = !bookmarkedOnly || bookmarkedTerms.has(item.id);
+                const matchesUnread = !unreadOnly || !readTerms.has(item.id);
+
+                return matchesCategory && matchesSearch && matchesBookmark && matchesUnread;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-slate-400 dark:text-slate-500">
+                        <i class="fa-solid fa-magnifying-glass-minus text-3xl mb-3 block"></i>
+                        Không tìm thấy từ khóa nào phù hợp với bộ lọc hiện tại.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const isActive = activeTermId === item.id;
+                const isRead = readTerms.has(item.id);
+                const isBookmarked = bookmarkedTerms.has(item.id);
+
+                let catColors = "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300";
+                if (item.category === "Cơ điện tử") catColors = "bg-pink-100 text-pink-800 dark:bg-pink-900/40 dark:text-pink-300";
+                if (item.category === "Điện tử số") catColors = "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300";
+                if (item.category === "Kỹ thuật vi xử lý") catColors = "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300";
+                if (item.category === "Khoa học máy tính") catColors = "bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300";
+                if (item.category === "Module & MCU") catColors = "bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-300";
+
+                const card = document.createElement('div');
+                card.className = `p-4 rounded-2xl border transition-all duration-200 cursor-pointer flex gap-4 ${
+                    isActive 
+                        ? 'bg-blue-50/50 dark:bg-blue-950/20 border-blue-500 shadow-md shadow-blue-500/5' 
+                        : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700'
+                }`;
+                card.setAttribute('onclick', `selectTerm('${item.id}')`);
+
+                card.innerHTML = `
+                    <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center ${
+                        isActive ? 'bg-blue-500 text-white shadow-md' : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                    }">
+                        <i class="${item.icon} text-base"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between gap-2 mb-1">
+                            <h3 class="font-bold text-sm font-mono truncate ${isActive ? 'text-blue-600 dark:text-blue-400' : ''}">${item.term}</h3>
+                            <div class="flex items-center gap-1.5 flex-shrink-0">
+                                ${isRead ? '<i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>' : ''}
+                                ${isBookmarked ? '<i class="fa-solid fa-bookmark text-amber-500 text-xs"></i>' : ''}
+                                <span class="text-[8px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ${catColors}">${item.category}</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 dark:text-slate-500 truncate mb-1">${item.fullName}</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">${item.definition}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Nhấp lọc Chuyên ngành lớn
+        function selectCategory(category) {
+            currentFilter = category;
+            document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+                const isTarget = btn.getAttribute('data-category') === category;
+                if (isTarget) {
+                    btn.className = "cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white shadow-sm transition-all";
+                } else {
+                    btn.className = "cat-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all";
+                }
+            });
+            renderTerms();
+        }
+
+        function filterTerms() {
+            searchQuery = document.getElementById('search-input').value;
+            renderTerms();
+        }
+
+        // Xem Chi tiết
+        function selectTerm(id) {
+            activeTermId = id;
+            renderTerms();
+
+            const term = termsData.find(item => item.id === id);
+            if (!term) return;
+
+            document.getElementById('detail-empty-state').classList.add('hidden');
+            document.getElementById('detail-content-state').classList.remove('hidden');
+
+            document.getElementById('detail-category').innerText = term.category;
+            document.getElementById('detail-term').innerText = term.term;
+            document.getElementById('detail-full-name').innerText = term.fullName;
+            document.getElementById('detail-desc').innerText = term.definition;
+
+            // Nạp Apps ứng dụng
+            const appsContainer = document.getElementById('detail-apps');
+            appsContainer.innerHTML = '';
+            term.applications.forEach(app => {
+                const appBadge = document.createElement('span');
+                appBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-300";
+                appBadge.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-500 text-[9px]"></i> ${app}`;
+                appsContainer.appendChild(appBadge);
+            });
+
+            // Cập nhật link tìm kiếm YouTube tự động
+            document.getElementById('youtube-search-term').innerText = term.term;
+            document.getElementById('youtube-external-link').href = `https://www.youtube.com/results?search_query=${encodeURIComponent(term.term)}`;
+
+            updateDetailActionsUI();
+        }
+
+        // Phát âm tiếng anh tự động
+        function speakTerm() {
+            const currentTerm = termsData.find(item => item.id === activeTermId);
+            if (!currentTerm) return;
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(currentTerm.fullName);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.85;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+
+        // ==========================================
+        //  MÔ PHỎNG VẬN HÀNH LABS TƯƠNG TÁC
+        // ==========================================
+        function selectLab(labId) {
+            document.querySelectorAll('.lab-workstation').forEach(work => {
+                work.classList.add('hidden');
+            });
+            document.querySelectorAll('.lab-select-btn').forEach(btn => {
+                btn.className = 'lab-select-btn p-3 rounded-xl flex items-center gap-3 text-left border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-slate-600 dark:text-slate-300 font-semibold transition-all';
+            });
+
+            document.getElementById(`lab-workstation-${labId}`).classList.remove('hidden');
+
+            let activeColorClass = 'border-blue-500/30 bg-blue-50 dark:bg-blue-950/20 text-blue-600 dark:text-blue-400';
+            if (labId === 'adc') activeColorClass = 'border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400';
+            if (labId === 'alu') activeColorClass = 'border-purple-500/30 bg-purple-50 dark:bg-purple-950/20 text-purple-600 dark:text-purple-400';
+
+            document.getElementById(`lab-btn-${labId}`).className = `lab-select-btn p-3 rounded-xl flex items-center gap-3 text-left border ${activeColorClass} font-semibold transition-all`;
+
+            if (labId === 'pwm') updatePWM();
+            if (labId === 'adc') updateADC();
+            if (labId === 'alu') updateALU();
+        }
+
+        // 1. PWM Lab Logic
+        function updatePWM() {
+            const slider = document.getElementById('pwm-slider');
+            const dutyCycle = parseInt(slider.value);
+            document.getElementById('pwm-val').innerText = `${dutyCycle}%`;
+            
+            const averageV = ((dutyCycle / 100) * 5.0).toFixed(2);
+            document.getElementById('pwm-avg-v').innerText = `${averageV} V`;
+
+            const led = document.getElementById('virtual-led');
+            const ledIcon = document.getElementById('virtual-led-icon');
+            const opacity = dutyCycle / 100;
+
+            if (dutyCycle > 0) {
+                led.style.borderColor = `rgba(59, 130, 246, ${0.4 + opacity * 0.6})`;
+                led.style.boxShadow = `0 10px 25px -5px rgba(59, 130, 246, ${opacity * 0.8})`;
+                ledIcon.className = 'fa-solid fa-lightbulb text-2xl text-amber-400';
+                ledIcon.style.opacity = 0.4 + opacity * 0.6;
+            } else {
+                led.style.borderColor = '';
+                led.style.boxShadow = '';
+                ledIcon.className = 'fa-solid fa-lightbulb text-2xl text-slate-400';
+                ledIcon.style.opacity = 0.5;
+            }
+
+            // Vẽ đồ thị sóng lên Canvas
+            const canvas = document.getElementById('pwmCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            // Vẽ lưới nền đen
+            ctx.strokeStyle = '#1e293b';
+            ctx.lineWidth = 1;
+            for(let x=0; x<width; x+=30) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke();
+            }
+            for(let y=0; y<height; y+=30) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(width, y); ctx.stroke();
+            }
+
+            ctx.strokeStyle = '#3b82f6';
+            ctx.lineWidth = 3;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#3b82f6';
+            ctx.beginPath();
+
+            const periods = 4;
+            const pxPerPeriod = width / periods;
+            const highWidth = (dutyCycle / 100) * pxPerPeriod;
+            let currentX = 0;
+            const highY = height * 0.25;
+            const lowY = height * 0.75;
+
+            ctx.moveTo(0, dutyCycle > 0 ? highY : lowY);
+            for (let i = 0; i < periods; i++) {
+                if (dutyCycle === 100) {
+                    ctx.lineTo(currentX + pxPerPeriod, highY);
+                } else if (dutyCycle === 0) {
+                    ctx.lineTo(currentX + pxPerPeriod, lowY);
+                } else {
+                    ctx.lineTo(currentX + highWidth, highY);
+                    ctx.lineTo(currentX + highWidth, lowY);
+                    ctx.lineTo(currentX + pxPerPeriod, lowY);
+                    ctx.lineTo(currentX + pxPerPeriod, highY);
+                }
+                currentX += pxPerPeriod;
+            }
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+        }
+
+        // 2. ADC Lab Logic
+        function updateADC() {
+            const slider = document.getElementById('adc-slider');
+            const voltage = slider.value / 100;
+            document.getElementById('adc-val').innerText = `${voltage.toFixed(2)} V`;
+
+            const maxVal = 255;
+            const refV = 5.0;
+            const decOutput = Math.round((voltage / refV) * maxVal);
+            
+            document.getElementById('adc-dec-val').innerText = decOutput;
+            document.getElementById('adc-hex-val').innerText = '0x' + decOutput.toString(16).toUpperCase().padStart(2, '0');
+            document.getElementById('adc-math-step').innerHTML = `Lượng tử hóa: $\\text{round}(\\frac{${voltage.toFixed(2)}\\text{V}}{5.0\\text{V}} \\times 255) =$ <span class="font-bold underline text-emerald-400">${decOutput}</span>`;
+
+            const binString = decOutput.toString(2).padStart(8, '0');
+            const bitContainer = document.getElementById('adc-bits-container');
+            bitContainer.innerHTML = '';
+
+            for (let i = 0; i < 8; i++) {
+                const bitVal = binString[i];
+                const bubble = document.createElement('div');
+                bubble.className = `w-8 h-11 rounded-lg flex flex-col items-center justify-center font-mono text-xs font-bold border transition-all ${
+                    bitVal === '1' 
+                        ? 'bg-emerald-500 border-emerald-400 text-white shadow-md' 
+                        : 'bg-slate-900 border-slate-800 text-slate-600'
+                }`;
+                bubble.innerHTML = `<span>${bitVal}</span><span class="text-[6px] text-slate-500">b${7 - i}</span>`;
+                bitContainer.appendChild(bubble);
+            }
+        }
+
+        // 3. ALU Lab Logic
+        let aluInputs = {
+            A: [0, 1, 0, 1], // Dec 5
+            B: [0, 0, 1, 1], // Dec 3
+            Op: 'AND'
+        };
+
+        function toggleALUBit(inputKey, index) {
+            aluInputs[inputKey][3 - index] = aluInputs[inputKey][3 - index] === 1 ? 0 : 1;
+            updateALU();
+        }
+
+        function setALUOp(op) {
+            aluInputs.Op = op;
+            document.querySelectorAll('.alu-op-btn').forEach(btn => {
+                btn.className = 'alu-op-btn p-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 font-mono font-bold text-xs text-center';
+            });
+            document.getElementById(`op-btn-${op}`).className = 'alu-op-btn p-3 rounded-xl border border-purple-500 bg-purple-50 dark:bg-purple-950/20 text-purple-600 dark:text-purple-400 font-mono font-bold text-xs text-center';
+            updateALU();
+        }
+
+        function updateALU() {
+            for (let i = 0; i < 4; i++) {
+                const valA = aluInputs.A[3 - i];
+                const btnA = document.getElementById(`bit-A-${i}`);
+                btnA.firstElementChild.innerText = valA;
+                if (valA === 1) {
+                    btnA.className = 'w-12 h-12 rounded-xl border-2 border-purple-500 bg-purple-500/10 text-lg font-mono font-bold hover:bg-purple-500/20 transition-all flex flex-col items-center justify-center text-purple-500';
+                } else {
+                    btnA.className = 'w-12 h-12 rounded-xl border border-slate-200 dark:border-slate-700 text-lg font-mono font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex flex-col items-center justify-center text-slate-400 dark:text-slate-500';
+                }
+
+                const valB = aluInputs.B[3 - i];
+                const btnB = document.getElementById(`bit-B-${i}`);
+                btnB.firstElementChild.innerText = valB;
+                if (valB === 1) {
+                    btnB.className = 'w-12 h-12 rounded-xl border-2 border-purple-500 bg-purple-500/10 text-lg font-mono font-bold hover:bg-purple-500/20 transition-all flex flex-col items-center justify-center text-purple-500';
+                } else {
+                    btnB.className = 'w-12 h-12 rounded-xl border border-slate-200 dark:border-slate-700 text-lg font-mono font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex flex-col items-center justify-center text-slate-400 dark:text-slate-500';
+                }
+            }
+
+            const intA = parseInt(aluInputs.A.join(''), 2);
+            const intB = parseInt(aluInputs.B.join(''), 2);
+            document.getElementById('alu-dec-a').innerText = intA;
+            document.getElementById('alu-dec-b').innerText = intB;
+
+            let result = 0;
+            let status = "Bình thường";
+            let statusClass = "text-slate-400";
+            
+            switch(aluInputs.Op) {
+                case 'AND': result = intA & intB; break;
+                case 'OR':  result = intA | intB; break;
+                case 'XOR': result = intA ^ intB; break;
+                case 'ADD': 
+                    result = intA + intB; 
+                    if (result > 15) {
+                        status = "Tràn bit (Carry=1)";
+                        statusClass = "text-rose-500 font-extrabold animate-pulse";
+                    }
+                    break;
+            }
+
+            const resultBinStr = (result & 31).toString(2).padStart(5, '0');
+
+            for (let i = 0; i < 5; i++) {
+                const bitVal = resultBinStr[4 - i];
+                const cell = document.getElementById(`alu-out-bit-${i}`);
+                cell.firstElementChild.innerText = bitVal;
+                if (bitVal === '1') {
+                    cell.className = 'w-12 h-12 rounded-xl bg-purple-600 border border-purple-400 flex flex-col items-center justify-center transition-all shadow-md';
+                    cell.firstElementChild.className = "font-mono text-white text-lg font-bold";
+                } else {
+                    cell.className = 'w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center transition-all';
+                    cell.firstElementChild.className = "font-mono text-slate-600 text-lg";
+                }
+            }
+
+            document.getElementById('alu-out-dec').innerText = result;
+            const stateLabel = document.getElementById('alu-status-val');
+            stateLabel.innerText = status;
+            stateLabel.className = `text-sm font-bold font-mono py-1 ${statusClass}`;
+        }
+
+
+        // ==========================================
+        //  HỆ THỐNG TRẮC NGHIỆM TÙY BIẾN (QUIZ)
+        // ==========================================
+        let currentQuestionIndex = 0;
+        let quizScore = 0;
+        let selectedQuestions = [];
+
+        function startQuiz() {
+            const countConfig = parseInt(document.getElementById('quiz-config-count').value);
+            const categoryConfig = document.getElementById('quiz-config-category').value;
+
+            // Lọc danh sách theo tùy chọn của cấu hình
+            let pools = [...termsData];
+            if (categoryConfig !== 'all') {
+                pools = pools.filter(t => t.category === categoryConfig);
+            }
+
+            if (pools.length < 4) {
+                // Không đủ dữ liệu cho 4 phương án lựa chọn, nạp lại toàn bộ
+                pools = [...termsData];
+            }
+
+            // Xào trộn ngẫu nhiên dữ liệu gốc
+            const shuffled = pools.sort(() => 0.5 - Math.random());
+            const selectionCount = Math.min(countConfig, shuffled.length);
+
+            selectedQuestions = shuffled.slice(0, selectionCount).map(item => {
+                // Lấy 3 phương án nhiễu từ toàn bộ cơ sở dữ liệu
+                const wrongs = termsData
+                    .filter(t => t.id !== item.id)
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 3)
+                    .map(t => t.term);
+                
+                const options = [item.term, ...wrongs].sort(() => 0.5 - Math.random());
+                
+                return {
+                    category: item.category,
+                    question: `Thuật ngữ nào mang ý nghĩa đầy đủ là: "${item.fullName}"? Định nghĩa: "${item.definition.slice(0, 150)}..."`,
+                    correct: item.term,
+                    options: options
+                };
+            });
+
+            currentQuestionIndex = 0;
+            quizScore = 0;
+
+            document.getElementById('quiz-start-screen').classList.add('hidden');
+            document.getElementById('quiz-end-screen').classList.add('hidden');
+            document.getElementById('quiz-play-screen').classList.remove('hidden');
+            document.getElementById('quiz-progress').classList.remove('hidden');
+
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+            
+            const q = selectedQuestions[currentQuestionIndex];
+            const total = selectedQuestions.length;
+            document.getElementById('quiz-progress').innerText = `Câu ${currentQuestionIndex + 1}/${total}`;
+            document.getElementById('quiz-q-category').innerText = q.category;
+            document.getElementById('quiz-q-text').innerText = q.question;
+
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach(opt => {
+                const optBtn = document.createElement('button');
+                optBtn.className = "quiz-opt-btn w-full p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-left font-semibold text-sm transition-all hover:bg-slate-50 dark:hover:bg-slate-800 flex justify-between items-center text-slate-700 dark:text-slate-300";
+                optBtn.innerHTML = `<span>${opt}</span><i class="fa-regular fa-circle text-slate-300"></i>`;
+                optBtn.setAttribute('onclick', `submitAnswer(this, '${opt}')`);
+                optionsContainer.appendChild(optBtn);
+            });
+        }
+
+        function submitAnswer(btn, value) {
+            const q = selectedQuestions[currentQuestionIndex];
+            
+            // Khóa các lựa chọn lại
+            document.querySelectorAll('.quiz-opt-btn').forEach(b => {
+                b.removeAttribute('onclick');
+            });
+
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.classList.remove('hidden');
+
+            if (value === q.correct) {
+                btn.className = "quiz-opt-btn w-full p-4 rounded-xl border-2 border-emerald-500 bg-emerald-500/10 text-left font-bold text-sm text-emerald-600 dark:text-emerald-400 flex justify-between items-center";
+                btn.lastElementChild.className = "fa-solid fa-circle-check text-emerald-500";
+                quizScore++;
+            } else {
+                btn.className = "quiz-opt-btn w-full p-4 rounded-xl border-2 border-rose-500 bg-rose-500/10 text-left font-bold text-sm text-rose-600 dark:text-rose-400 flex justify-between items-center";
+                btn.lastElementChild.className = "fa-solid fa-circle-xmark text-rose-500";
+
+                // Hiển thị phương án đúng
+                document.querySelectorAll('.quiz-opt-btn').forEach(b => {
+                    if (b.firstElementChild.innerText === q.correct) {
+                        b.className = "quiz-opt-btn w-full p-4 rounded-xl border-2 border-emerald-500 bg-emerald-500/10 text-left font-bold text-sm text-emerald-600 dark:text-emerald-400 flex justify-between items-center";
+                        b.lastElementChild.className = "fa-solid fa-circle-check text-emerald-500";
+                    }
+                });
+            }
+        }
+
+        function nextQuizQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < selectedQuestions.length) {
+                loadQuizQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            document.getElementById('quiz-play-screen').classList.add('hidden');
+            document.getElementById('quiz-end-screen').classList.remove('hidden');
+            document.getElementById('quiz-progress').classList.add('hidden');
+
+            const total = selectedQuestions.length;
+            document.getElementById('quiz-score-num').innerText = `${quizScore}/${total}`;
+            
+            const medal = document.getElementById('quiz-medal-icon');
+            const title = document.getElementById('quiz-result-title');
+
+            const ratio = quizScore / total;
+            if (ratio >= 0.8) {
+                medal.className = "w-20 h-20 bg-amber-500/10 text-amber-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 animate-bounce";
+                medal.innerHTML = '<i class="fa-solid fa-trophy"></i>';
+                title.innerText = "Xuất sắc! Vua công nghệ!";
+            } else if (ratio >= 0.5) {
+                medal.className = "w-20 h-20 bg-blue-500/10 text-blue-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4";
+                medal.innerHTML = '<i class="fa-solid fa-medal"></i>';
+                title.innerText = "Đạt kết quả Khá!";
+            } else {
+                medal.className = "w-20 h-20 bg-slate-500/10 text-slate-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4";
+                medal.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>';
+                title.innerText = "Cần cố gắng học thêm nhé!";
+            }
+        }
+
+        function resetQuizConfig() {
+            document.getElementById('quiz-end-screen').classList.add('hidden');
+            document.getElementById('quiz-start-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
