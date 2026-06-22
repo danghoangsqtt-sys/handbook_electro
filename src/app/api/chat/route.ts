@@ -3,7 +3,7 @@ import { streamText, tool, convertToModelMessages } from 'ai';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-const SYSTEM_PROMPT = `Bạn là một Cố vấn Kỹ thuật cấp cao, chuyên sâu về Cơ điện tử, Tự động hóa, Vi xử lý, và Khoa học máy tính.
+const SYSTEM_PROMPT = `Bạn là một Cố vấn Kỹ thuật cấp cao, chuyên sâu về Cơ điện tử, Tự động hóa, Vi xử lý, Khoa học máy tính, Vô tuyến điện, Viễn thông, và Anten.
 Nhiệm vụ của bạn:
 - Hướng dẫn kỹ sư và sinh viên cách thiết kế, lựa chọn linh kiện, lập trình và giải quyết lỗi.
 - Cung cấp câu trả lời rõ ràng, định dạng dễ đọc bằng Markdown (có highlight code nếu là source code).

@@ -24,7 +24,7 @@ export default function TermsList({ onSelectTerm, selectedTermId }: TermsListPro
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('Tất cả');
 
-    const CATEGORIES = ["Tất cả", "Tự động hóa", "Cơ điện tử", "Khoa học máy tính", "Vi xử lý", "Điện tử số", "IoT"];
+    const CATEGORIES = ["Tất cả", "Tự động hóa", "Cơ điện tử", "Khoa học máy tính", "Vi xử lý", "Điện tử số", "IoT", "Vô tuyến & Viễn thông"];
 
     useEffect(() => {
         const fetchTerms = async () => {

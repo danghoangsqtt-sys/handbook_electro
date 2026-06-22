@@ -75,6 +75,7 @@ export default function QuizSystem() {
                         <option value="Cơ điện tử">Cơ điện tử</option>
                         <option value="Khoa học máy tính">Khoa học máy tính</option>
                         <option value="Kỹ thuật vi xử lý">Vi xử lý</option>
+                        <option value="Vô tuyến & Viễn thông">Vô tuyến & Viễn thông</option>
                         <option value="Điện tử số">Điện tử số</option>
                         <option value="Module & MCU">Module & MCU</option>
                     </select>

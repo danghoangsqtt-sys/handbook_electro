@@ -23,7 +23,7 @@ export default function IntroStats() {
                     <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 rounded-full text-xs font-semibold uppercase tracking-wider">Hệ Thống Tri Thức Toàn Diện</span>
                     <h2 className="text-2xl sm:text-4xl font-extrabold mt-3 tracking-tight">Từ Điển Bách Khoa Công Nghệ Số</h2>
                     <p className="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
-                        Hơn <span className="text-cyan-300 font-bold">3000 thuật ngữ cốt lõi và thực tiễn</span> được giải nghĩa chi tiết kèm mô phỏng tương tác. Phân loại theo 6 chủ điểm: Cơ điện tử, Tự động hóa, Khoa học máy tính, Vi xử lý, Điện tử số, và Module/Linh kiện nhúng.
+                        Hơn <span className="text-cyan-300 font-bold">3000 thuật ngữ cốt lõi và thực tiễn</span> được giải nghĩa chi tiết kèm mô phỏng tương tác. Phân loại theo 7 chủ điểm: Cơ điện tử, Tự động hóa, Khoa học máy tính, Vi xử lý, Điện tử số, Vô tuyến & Viễn thông, và Module/Linh kiện nhúng.
                     </p>
                 </div>
                 

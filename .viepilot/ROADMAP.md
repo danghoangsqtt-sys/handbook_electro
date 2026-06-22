@@ -16,6 +16,11 @@
 - [x] Tích hợp API Gemini vào Next.js backend với System Prompt kỹ thuật.
 
 ## Phase 4: Polish, Testing & Deployment
-- [ ] Kiểm thử Mobile Responsive & UX.
-- [ ] Deploy lên Vercel.
-- [ ] Hoàn thiện tài liệu README.
+- [x] Kiểm thử Mobile Responsive & UX.
+- [x] Deploy lên Vercel.
+- [x] Hoàn thiện tài liệu README.
+
+## Phase 5: Domain Expansion
+- [x] Viết công cụ Batch Seeding (seed-terms.mjs) sinh dữ liệu qua Gemini API.
+- [x] Cập nhật giao diện (TermsList, QuizSystem, IntroStats).
+- [x] Mở rộng System Prompt cho AI Lab.

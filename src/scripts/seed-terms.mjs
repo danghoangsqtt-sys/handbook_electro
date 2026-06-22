@@ -18,21 +18,23 @@ if (!GEMINI_API_KEY) {
 
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-const CATEGORIES = ["Tự động hóa", "Cơ điện tử", "Khoa học máy tính", "Vi xử lý", "Điện tử số", "IoT"];
 
-async function generateTerms(count = 5) {
+
+const delay = (ms) => new Promise(res => setTimeout(res, ms));
+
+async function generateTerms(category, count = 50) {
   const prompt = `
-Bạn là chuyên gia về Cơ điện tử, Khoa học máy tính và Tự động hóa.
-Hãy tạo ra danh sách ${count} thuật ngữ kỹ thuật phổ biến.
+Bạn là chuyên gia cấp cao về ${category}.
+Hãy tạo ra danh sách ${count} thuật ngữ kỹ thuật phổ biến và chuyên sâu thuộc chuyên ngành "${category}". KHÔNG TRÙNG LẶP NHAU.
 Định dạng trả về phải là một Array JSON hợp lệ, với mỗi object chứa các key sau:
 - "id": Một chuỗi ngẫu nhiên độc nhất (vd: uuid).
-- "term": Tên thuật ngữ (ví dụ: "PLC", "I2C") hoặc từ viết tắt.
-- "fullName": Tên đầy đủ (nếu có, ví dụ: "Programmable Logic Controller"), nếu không có hãy để chuỗi rỗng.
-- "category": Phân loại, chỉ chọn 1 trong các mục: ${CATEGORIES.join(', ')}.
-- "definition": Giải nghĩa ngắn gọn, dễ hiểu và chuẩn xác.
-- "applications": Mảng gồm 2-3 chuỗi mô tả các ứng dụng thực tế.
+- "term": Tên thuật ngữ (ví dụ: "PLC", "I2C", "Anten Yagi") hoặc từ viết tắt.
+- "fullName": Tên đầy đủ bằng tiếng Anh hoặc tiếng Việt (nếu có), nếu không có hãy để chuỗi rỗng.
+- "category": Phân loại, LUÔN LÀ: "${category}".
+- "definition": Giải nghĩa ngắn gọn, dễ hiểu và chuẩn xác chuyên môn.
+- "applications": Mảng gồm 2-3 chuỗi mô tả các ứng dụng thực tế trong công nghiệp/đời sống.
 - "youtubeUrl": Một URL video Youtube hướng dẫn (giả lập hoặc có thật, ví dụ "https://www.youtube.com/watch?v=...").
-Trả về DUY NHẤT một mảng JSON, không bao gồm code block markdown hay bất kỳ text nào khác.
+Trả về DUY NHẤT một mảng JSON (không bọc trong markdown code block, KHÔNG có bất kỳ text nào khác ngoài JSON array).
   `;
 
   try {
@@ -41,25 +43,23 @@ Trả về DUY NHẤT một mảng JSON, không bao gồm code block markdown ha
     let text = result.response.text();
     text = text.replace(/```json/g, '').replace(/```/g, '').trim();
     
+    // Xử lý json an toàn
+    const startIdx = text.indexOf('[');
+    const endIdx = text.lastIndexOf(']') + 1;
+    if(startIdx !== -1 && endIdx !== -1) {
+        text = text.substring(startIdx, endIdx);
+    }
+
     const terms = JSON.parse(text);
     return terms;
   } catch (e) {
-    console.error('Error seeding terms:', e);
+    console.error(`Error seeding terms for ${category}:`, e);
     return [];
   }
 }
 
 async function seed() {
-  console.log("Đang gọi Gemini để sinh dữ liệu...");
-  const newTerms = await generateTerms(10); // Generate 10 terms for initial testing
-  
-  if (newTerms.length === 0) {
-    console.log("Không có dữ liệu để lưu.");
-    return;
-  }
-
-  console.log(`Đã sinh ${newTerms.length} thuật ngữ. Bắt đầu lưu vào file JSON...`);
-  
+  console.log("Đang cấu hình tiến trình Batch Processing sinh dữ liệu...");
   const outputPath = path.join(__dirname, '../../public/data/categories/generated_terms.json');
   
   let existingTerms = [];
@@ -70,11 +70,40 @@ async function seed() {
     } catch {}
   }
 
-  const combinedTerms = [...existingTerms, ...newTerms];
-  
-  fs.writeFileSync(outputPath, JSON.stringify(combinedTerms, null, 2), 'utf8');
-  console.log(`Lưu dữ liệu thành công vào ${outputPath}`);
+  // Set để lọc trùng id hoặc term
+  const existingTermNames = new Set(existingTerms.map(t => t.term.toLowerCase()));
+
+  const TARGET_CATEGORIES = ["Vi xử lý", "IoT", "Vô tuyến & Viễn thông"];
+  const TERMS_PER_BATCH = 20; // 20 terms / request for stability
+  const BATCHES_PER_CATEGORY = 2; // Thử nghiệm 2 lô (40 từ/mục), để 25 lô nếu muốn 500 từ/mục
+
+  for (const category of TARGET_CATEGORIES) {
+      console.log(`\n>>> Bắt đầu xử lý danh mục: ${category}`);
+      for (let i = 0; i < BATCHES_PER_CATEGORY; i++) {
+          console.log(`  -> Đang chạy Batch ${i + 1}/${BATCHES_PER_CATEGORY} cho "${category}"...`);
+          const newTerms = await generateTerms(category, TERMS_PER_BATCH);
+          
+          let addedCount = 0;
+          for (const term of newTerms) {
+              if (!existingTermNames.has(term.term.toLowerCase())) {
+                  existingTerms.push(term);
+                  existingTermNames.add(term.term.toLowerCase());
+                  addedCount++;
+              }
+          }
+          console.log(`     + Đã thêm ${addedCount} thuật ngữ hợp lệ.`);
+          
+          // Ghi file liên tục để tránh mất data nếu script bị dừng
+          fs.writeFileSync(outputPath, JSON.stringify(existingTerms, null, 2), 'utf8');
+          
+          if (i < BATCHES_PER_CATEGORY - 1 || category !== TARGET_CATEGORIES[TARGET_CATEGORIES.length - 1]) {
+              console.log("  -> Tạm nghỉ 5 giây để tránh Rate Limit...");
+              await delay(5000);
+          }
+      }
+  }
+
+  console.log(`\n🎉 Hoàn thành! Tổng dữ liệu hiện có: ${existingTerms.length} thuật ngữ. Được lưu tại: ${outputPath}`);
 }
 
 seed();
-
