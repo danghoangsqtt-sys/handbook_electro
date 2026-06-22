@@ -96,10 +96,10 @@ export default function AILab() {
                         </div>
                         <div className={`px-5 py-3 rounded-2xl max-w-[80%] ${m.role === 'user' ? 'bg-slate-800 text-white rounded-tr-none' : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200 dark:border-slate-700 prose prose-sm dark:prose-invert max-w-none break-words overflow-x-auto'}`}>
                             {m.role === 'user' ? (
-                                <p className="whitespace-pre-wrap text-sm">{m.content}</p>
+                                <p className="whitespace-pre-wrap text-sm">{m.content || m.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('')}</p>
                             ) : (
                                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                    {m.content}
+                                    {m.content || m.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('')}
                                 </ReactMarkdown>
                             )}
                         </div>

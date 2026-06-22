@@ -127,11 +127,14 @@ export async function POST(request: Request) {
                     },
                 }),
             },
+            onError: ({ error }) => {
+                console.error('streamText internal error:', error);
+            }
         });
         // @ts-ignore
-        return result.toDataStreamResponse();
-    } catch (error) {
+        return result.toUIMessageStreamResponse();
+    } catch (error: any) {
         console.error('Chat error:', error);
-        return NextResponse.json({ error: 'Chat API Error' }, { status: 500 });
+        return NextResponse.json({ error: 'Chat API Error', details: error.message, stack: error.stack }, { status: 500 });
     }
 }
