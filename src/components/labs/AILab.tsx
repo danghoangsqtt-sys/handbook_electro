@@ -13,8 +13,11 @@ export default function AILab() {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     // @ts-ignore
-    const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, append } = useChat();
+    const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, append } = useChat({
+        generateId: () => Math.random().toString(36).substring(2, 15)
+    });
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     useEffect(() => {
         // Check auth status
@@ -72,7 +75,14 @@ export default function AILab() {
                             ].map((sug, i) => (
                                 <button
                                     key={i}
-                                    onClick={() => append({ role: 'user', content: sug })}
+                                    onClick={() => {
+                                        setInput(sug);
+                                        setTimeout(() => {
+                                            if (formRef.current) {
+                                                formRef.current.requestSubmit();
+                                            }
+                                        }, 100);
+                                    }}
                                     className="px-3 py-2 bg-slate-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-blue-900/30 text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-800 transition-all text-left"
                                 >
                                     <i className="fa-solid fa-sparkles mr-2 text-blue-500"></i>
@@ -118,7 +128,7 @@ export default function AILab() {
 
             {/* Input Area */}
             <div className="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-                <form onSubmit={(e) => {
+                <form ref={formRef} onSubmit={(e) => {
                     e.preventDefault();
                     if (!(input || '').trim() && !files?.length) return;
                     handleSubmit(e, { experimental_attachments: files });
