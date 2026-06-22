@@ -31,8 +31,7 @@ export async function POST(request: Request) {
                     parameters: z.object({
                         query: z.string().describe('Từ khóa tiếng Anh ngắn gọn để tìm kiếm (VD: ESP32 case, ultrasonic mount)'),
                     }),
-                    // @ts-ignore: TS incompatibility with Zod and AI SDK
-                    // @ts-ignore
+                    // @ts-expect-error: TS incompatibility with Zod and AI SDK
                     execute: async ({ query }) => {
                         try {
                             // Dùng search repositories thay vì code search vì code search có thể dính rate limit hoặc bắt buộc auth
@@ -43,6 +42,7 @@ export async function POST(request: Request) {
                             let githubRepos: { name: string; repo: string; url: string; description: string }[] = [];
                             if (githubRes.ok) {
                                 const data = await githubRes.json();
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 githubRepos = (data.items || []).map((item: any) => ({
                                     name: item.name,
                                     repo: item.full_name,
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
                                 ],
                                 error: null as string | null
                             };
-                        } catch (err) {
+                        } catch {
                             return { 
                                 githubProjects: [], 
                                 externalSearchLinks: [],
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
                     parameters: z.object({
                         query: z.string().describe('Từ khóa tìm kiếm (VD: ESP32 IoT, Arduino PID controller)'),
                     }),
-                    // @ts-ignore
+                    // @ts-expect-error: ignoring type
                     execute: async ({ query }) => {
                         try {
                             const res = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=stars&per_page=3`, {
@@ -84,6 +84,7 @@ export async function POST(request: Request) {
                             });
                             if (!res.ok) return { items: [], error: 'Lỗi khi gọi Github API' };
                             const data = await res.json();
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
                             const items = data.items.map((item: any) => ({
                                 name: item.name,
                                 full_name: item.full_name,
@@ -93,7 +94,7 @@ export async function POST(request: Request) {
                                 language: item.language
                             })) as { name: string; full_name: string; description: string; html_url: string; stars: number; language: string }[];
                             return { items, error: null as string | null };
-                        } catch (err) {
+                        } catch {
                             return { items: [], error: 'Không thể truy cập Github' };
                         }
                     },
@@ -103,7 +104,7 @@ export async function POST(request: Request) {
                     parameters: z.object({
                         repoFullName: z.string().describe('Tên đầy đủ của repo (VD: microsoft/TypeScript)'),
                     }),
-                    // @ts-ignore: TS incompatibility with Zod and AI SDK
+                    // @ts-expect-error: TS incompatibility with Zod and AI SDK
                     execute: async ({ repoFullName }) => {
                         try {
                             // Fetch README
@@ -124,7 +125,7 @@ export async function POST(request: Request) {
                                 readme: readmeContent,
                                 error: null as string | null
                             };
-                        } catch (err) {
+                        } catch {
                             return { repo: repoFullName, readme: '', error: 'Không thể đọc Github repo' };
                         }
                     },
@@ -134,10 +135,10 @@ export async function POST(request: Request) {
                 console.error('streamText internal error:', error);
             }
         });
-        // @ts-ignore
+        
         return result.toUIMessageStreamResponse();
-    } catch (error: any) {
+    } catch (error) {
         console.error('Chat error:', error);
-        return NextResponse.json({ error: 'Chat API Error', details: error.message, stack: error.stack }, { status: 500 });
+        return NextResponse.json({ error: 'Chat API Error', details: error instanceof Error ? error.message : String(error) }, { status: 500 });
     }
 }

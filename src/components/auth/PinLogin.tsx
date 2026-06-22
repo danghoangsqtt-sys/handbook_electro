@@ -30,7 +30,7 @@ export default function PinLogin({ onSuccess }: { onSuccess: () => void }) {
             } else {
                 setError(data.error || 'Xác thực thất bại');
             }
-        } catch (err) {
+        } catch {
             setError('Lỗi kết nối máy chủ');
         } finally {
             setLoading(false);

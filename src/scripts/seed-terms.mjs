@@ -43,8 +43,8 @@ Trả về DUY NHẤT một mảng JSON, không bao gồm code block markdown ha
     
     const terms = JSON.parse(text);
     return terms;
-  } catch (error) {
-    console.error("Lỗi khi sinh dữ liệu từ Gemini:", error);
+  } catch (e) {
+    console.error('Error seeding terms:', e);
     return [];
   }
 }
@@ -67,7 +67,7 @@ async function seed() {
     const fileData = fs.readFileSync(outputPath, 'utf8');
     try {
       existingTerms = JSON.parse(fileData);
-    } catch(e) {}
+    } catch {}
   }
 
   const combinedTerms = [...existingTerms, ...newTerms];

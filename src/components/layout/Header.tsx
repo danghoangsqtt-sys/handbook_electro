@@ -5,9 +5,12 @@ export default function Header() {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
+     
     if (document.documentElement.classList.contains('dark')) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme('dark');
     } else {
+       
       setTheme('light');
     }
   }, []);

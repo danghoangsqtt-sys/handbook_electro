@@ -18,7 +18,9 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         const storedRead = localStorage.getItem('readTerms');
         const storedBookmarks = localStorage.getItem('bookmarkedTerms');
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (storedRead) setReadTerms(JSON.parse(storedRead));
+         
         if (storedBookmarks) setBookmarkedTerms(JSON.parse(storedBookmarks));
     }, []);
 

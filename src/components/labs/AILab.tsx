@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useChat } from '@ai-sdk/react';
@@ -148,6 +149,7 @@ export default function AILab() {
                         <div className="flex gap-2 px-2 pt-2">
                             {Array.from(files).map((file, i) => (
                                 <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img src={URL.createObjectURL(file)} alt="preview" className="w-full h-full object-cover" />
                                 </div>
                             ))}

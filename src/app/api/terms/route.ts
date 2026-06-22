@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 function getAllTerms() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let allTerms: any[] = [];
     const categoriesDir = path.join(process.cwd(), 'public/data/categories');
     
@@ -13,7 +14,7 @@ function getAllTerms() {
                 const data = fs.readFileSync(path.join(categoriesDir, file), 'utf8');
                 try {
                     allTerms = allTerms.concat(JSON.parse(data));
-                } catch(e) {}
+                } catch {}
             }
         }
     }

@@ -103,7 +103,7 @@ export default function TermDetail({ term, onBack }: TermDetailProps) {
                         className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-red-50 hover:bg-red-100 dark:bg-red-900/20 dark:hover:bg-red-900/40 text-red-600 dark:text-red-400 font-semibold transition-all border border-red-100 dark:border-red-900/30 group text-sm"
                     >
                         <i className="fa-brands fa-youtube text-lg group-hover:scale-110 transition-transform"></i>
-                        Tìm "{term.term} là gì?"
+                        Tìm &quot;{term.term} là gì?&quot;
                     </a>
                     <a 
                         href={`https://www.youtube.com/results?search_query=${encodeURIComponent("Tính năng và ứng dụng của " + (term.fullName || term.term) + " " + term.term + " " + term.category)}`}

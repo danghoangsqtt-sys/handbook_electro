@@ -15,7 +15,7 @@ export async function GET() {
         });
         
         return NextResponse.json({ success: true, text: result.text });
-    } catch (err: any) {
-        return NextResponse.json({ success: false, error: err.message, stack: err.stack, name: err.name });
+    } catch (err) {
+        return NextResponse.json({ success: false, error: err instanceof Error ? err.message : String(err) });
     }
 }
