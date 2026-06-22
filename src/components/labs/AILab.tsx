@@ -11,11 +11,12 @@ export default function AILab() {
 
     const [files, setFiles] = useState<FileList | null>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const [input, setInput] = useState('');
 
-    // @ts-ignore
-    const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, append } = useChat({
+    const { messages, sendMessage, status } = useChat({
         generateId: () => Math.random().toString(36).substring(2, 15)
     });
+    const isLoading = status === 'submitted' || status === 'streaming';
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -76,12 +77,7 @@ export default function AILab() {
                                 <button
                                     key={i}
                                     onClick={() => {
-                                        setInput(sug);
-                                        setTimeout(() => {
-                                            if (formRef.current) {
-                                                formRef.current.requestSubmit();
-                                            }
-                                        }, 100);
+                                        sendMessage({ text: sug });
                                     }}
                                     className="px-3 py-2 bg-slate-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-blue-900/30 text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-800 transition-all text-left"
                                 >
@@ -131,7 +127,8 @@ export default function AILab() {
                 <form ref={formRef} onSubmit={(e) => {
                     e.preventDefault();
                     if (!(input || '').trim() && !files?.length) return;
-                    handleSubmit(e, { experimental_attachments: files });
+                    sendMessage({ text: input, ...(files && files.length > 0 ? { files } : {}) });
+                    setInput('');
                     setFiles(null);
                 }} className="relative flex flex-col gap-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl p-2 focus-within:ring-2 focus-within:ring-blue-500 transition-all">
                     
@@ -169,16 +166,16 @@ export default function AILab() {
 
                         <textarea 
                             value={input}
-                            onChange={handleInputChange}
+                            onChange={(e) => setInput(e.target.value)}
                             placeholder="Nhập câu hỏi hoặc dán link GitHub..."
                             className="w-full bg-transparent border-none focus:outline-none resize-none max-h-32 min-h-[44px] px-2 py-2 text-sm custom-scrollbar"
                             rows={(input || '').split('\n').length > 1 ? Math.min((input || '').split('\n').length, 5) : 1}
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' && !e.shiftKey) {
                                     e.preventDefault();
-                                    const formEvent = new Event('submit', { bubbles: true, cancelable: true }) as unknown as React.FormEvent<HTMLFormElement>;
                                     if (!(input || '').trim() && !files?.length) return;
-                                    handleSubmit(formEvent, { experimental_attachments: files });
+                                    sendMessage({ text: input, ...(files && files.length > 0 ? { files } : {}) });
+                                    setInput('');
                                     setFiles(null);
                                 }
                             }}
