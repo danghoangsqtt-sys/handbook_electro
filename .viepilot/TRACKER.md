@@ -1,7 +1,7 @@
 # Progress Tracker
 
 ## Current State
-- **Phase 18 (Search Optimization):** Bắt đầu xây dựng cơ chế tìm kiếm tiếng Việt không dấu, bổ sung ứng dụng và bộ nhớ đệm Cache JSON.
+- **Phase 19 (Extended Lookups):** Khởi tạo bộ 3 nút tra cứu ngoài (Google, Datasheet, YouTube) cho từng thuật ngữ.
 
 ## Progress Overview
 - [x] Phase 1: 100%
@@ -22,9 +22,10 @@
 - [x] Phase 16: 100% (AI Lab Advanced Features)
 - [x] Phase 17: 100% (Project Branding & Favicon)
 - [x] Phase 18: 100% (Search Optimization & Caching)
+- [x] Phase 19: 100% (Extended Lookups)
 
 ## Version Info
-- Current Version: 0.14.0 (Minor Bump for Evolution)
+- Current Version: 0.15.0 (Minor Bump for Evolution)
 
 ## Backlog
 
@@ -32,3 +33,4 @@
 | ID | Type | Title | Priority | Status |
 |----|------|-------|----------|--------|
 | ENH-001 | 🔧 | Cải thiện thuật toán tìm kiếm từ khóa | high | done |
+| FEAT-001 | ✨ | Tra cứu Google, Datasheet & Ứng dụng | medium | done |

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.15.0] - 2026-06-23
+
+### Added
+- Bổ sung Phase 19 (Extended Lookups) dựa trên FEAT-001.
+- Khởi tạo tài liệu SPEC cho tính năng tra cứu Google, Datasheet và Video ứng dụng.
+
 ## [0.14.0] - 2026-06-23
 
 ### Added

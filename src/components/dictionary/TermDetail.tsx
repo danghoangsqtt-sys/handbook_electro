@@ -94,6 +94,39 @@ export default function TermDetail({ term, onBack }: TermDetailProps) {
             )}
 
             <div>
+                <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 border-b border-slate-100 dark:border-slate-800 pb-2">Tra cứu Mở rộng</h3>
+                <div className="flex flex-wrap gap-3 mb-6">
+                    <a 
+                        href={`https://www.google.com/search?q=${encodeURIComponent(term.term + " " + term.category)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/40 text-blue-600 dark:text-blue-400 font-semibold transition-all border border-blue-100 dark:border-blue-900/30 text-xs md:text-sm group"
+                    >
+                        <i className="fa-brands fa-google text-base group-hover:scale-110 transition-transform"></i>
+                        Google
+                    </a>
+                    <a 
+                        href={`https://www.google.com/search?q=${encodeURIComponent(term.term + " datasheet pdf")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-orange-50 hover:bg-orange-100 dark:bg-orange-900/20 dark:hover:bg-orange-900/40 text-orange-600 dark:text-orange-400 font-semibold transition-all border border-orange-100 dark:border-orange-900/30 text-xs md:text-sm group"
+                    >
+                        <i className="fa-solid fa-file-pdf text-base group-hover:scale-110 transition-transform"></i>
+                        Datasheet
+                    </a>
+                    <a 
+                        href={`https://www.youtube.com/results?search_query=${encodeURIComponent(term.term + " applications in engineering")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-violet-50 hover:bg-violet-100 dark:bg-violet-900/20 dark:hover:bg-violet-900/40 text-violet-600 dark:text-violet-400 font-semibold transition-all border border-violet-100 dark:border-violet-900/30 text-xs md:text-sm group"
+                    >
+                        <i className="fa-brands fa-youtube text-base group-hover:scale-110 transition-transform"></i>
+                        Ứng dụng
+                    </a>
+                </div>
+            </div>
+
+            <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 border-b border-slate-100 dark:border-slate-800 pb-2">Tra cứu Video trên YouTube</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <a 

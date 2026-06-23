@@ -82,3 +82,8 @@
 - [x] Xây dựng tiện ích `removeAccents` để hỗ trợ tìm kiếm không dấu Tiếng Việt.
 - [x] Cập nhật API tìm kiếm để quét dữ liệu mảng `applications`.
 - [x] Triển khai cơ chế Memory Cache cho danh sách thuật ngữ, thay thế thao tác đọc file I/O đồng bộ.
+
+### Phase 19: Extended Lookups (Google, Datasheet, Applications)
+- [x] Bổ sung các nút bấm vào giao diện `TermDetail.tsx`.
+- [x] Gắn link cấu trúc động tìm kiếm Google, PDF Datasheet, Youtube.
+- [x] Đảm bảo giao diện Responsive và có icons minh hoạ trực quan.
