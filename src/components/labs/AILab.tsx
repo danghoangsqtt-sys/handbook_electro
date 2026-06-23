@@ -67,9 +67,7 @@ export default function AILab() {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [input, setInput] = useState('');
 
-    const { messages, append, status, error, setMessages } = useChat({
-        api: '/api/chat',
-        body: { sessionId: currentSessionId },
+    const { messages, sendMessage, status, error, setMessages } = useChat({
         generateId: () => Math.random().toString(36).substring(2, 15)
     });
     const isLoading = status === 'submitted' || status === 'streaming';
@@ -163,9 +161,9 @@ export default function AILab() {
         // Wait for React to update currentSessionId if we just created it? 
         // useChat's append uses the latest body state if we pass it, or we rely on the component state.
         // To be safe, we can trigger append after state updates, but append takes options:
-        append({
-            role: 'user',
-            content: input,
+        sendMessage({
+            text: input,
+            ...(files && files.length > 0 ? { files: files } : {})
         }, {
             body: { sessionId: activeSessionId }
         });
@@ -240,8 +238,7 @@ export default function AILab() {
                                         key={i}
                                         onClick={() => {
                                             setInput(sug);
-                                            // setTimeout is needed here because handleSendMessage uses the state `input`. Wait, better to pass directly:
-                                            append({ role: 'user', content: sug }, { body: { sessionId: currentSessionId }});
+                                            sendMessage({ text: sug }, { body: { sessionId: currentSessionId }});
                                         }}
                                         className="px-3 py-2 bg-slate-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-blue-900/30 text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-800 transition-all text-left"
                                     >
