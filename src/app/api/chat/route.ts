@@ -2,6 +2,7 @@ import { google } from '@ai-sdk/google';
 import { streamText, tool, convertToModelMessages } from 'ai';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import { supabase } from '@/lib/supabase';
 
 const SYSTEM_PROMPT = `Bạn là một Cố vấn Kỹ thuật cấp cao, chuyên sâu về Cơ điện tử, Tự động hóa, Vi xử lý, Khoa học máy tính, Vô tuyến điện, Viễn thông, và Anten.
 Nhiệm vụ của bạn:
@@ -16,7 +17,44 @@ Nhiệm vụ của bạn:
 
 export async function POST(request: Request) {
     try {
-        const { messages } = await request.json();
+        const { messages, sessionId } = await request.json();
+        
+        // Save user message
+        if (sessionId && messages.length > 0) {
+            const lastMsg = messages[messages.length - 1];
+            if (lastMsg.role === 'user') {
+                const content = typeof lastMsg.content === 'string' ? lastMsg.content : (lastMsg.parts?.filter((p: Record<string, unknown>) => p.type === 'text').map((p: Record<string, unknown>) => p.text).join('') || '');
+                
+                // Upload images if any
+                const imageUrls: string[] = [];
+                if (lastMsg.experimental_attachments && lastMsg.experimental_attachments.length > 0) {
+                    for (const attachment of lastMsg.experimental_attachments) {
+                        if (attachment.contentType?.startsWith('image/') && attachment.url?.startsWith('data:image')) {
+                            const base64Data = attachment.url.split(',')[1];
+                            if (base64Data) {
+                                const fileName = `${sessionId}_${Date.now()}_${Math.random().toString(36).substring(7)}.jpg`;
+                                const buffer = Buffer.from(base64Data, 'base64');
+                                const { error: uploadError } = await supabase.storage
+                                    .from('chat_attachments')
+                                    .upload(fileName, buffer, { contentType: attachment.contentType });
+                                
+                                if (!uploadError) {
+                                    const { data: publicUrlData } = supabase.storage.from('chat_attachments').getPublicUrl(fileName);
+                                    imageUrls.push(publicUrlData.publicUrl);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                await supabase.from('chat_messages').insert([{
+                    session_id: sessionId,
+                    role: 'user',
+                    content: content,
+                    images: imageUrls
+                }]);
+            }
+        }
         
         // Convert UI messages from useChat to ModelMessages that streamText understands
         const coreMessages = await convertToModelMessages(messages);
@@ -138,6 +176,16 @@ export async function POST(request: Request) {
             },
             onError: ({ error }) => {
                 console.error('streamText internal error:', error);
+            },
+            onFinish: async ({ text }) => {
+                const { sessionId } = await request.json().catch(() => ({ sessionId: null }));
+                if (sessionId && text) {
+                    await supabase.from('chat_messages').insert([{
+                        session_id: sessionId,
+                        role: 'assistant',
+                        content: text
+                    }]);
+                }
             }
         });
         

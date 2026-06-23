@@ -89,6 +89,24 @@
 - [x] Đảm bảo giao diện Responsive và có icons minh hoạ trực quan.
 
 ### Phase 20: Core Vocabulary Enrichment
-- [ ] Soạn thảo danh sách 350 từ khoá cơ bản cho 7 chuyên mục.
-- [ ] Viết kịch bản tự động gộp (append) dữ liệu vào file JSON.
-- [ ] Triển khai nạp dữ liệu.
+- [x] Soạn thảo danh sách 350 từ khoá cơ bản cho 7 chuyên mục.
+- [x] Viết kịch bản tự động gộp (append) dữ liệu vào file JSON.
+- [x] Triển khai nạp dữ liệu.
+
+### Phase 21: AI Lab Chat History & Supabase Integration (v0.16.0)
+
+**Goal:** Chuyển đổi dữ liệu chat AI từ `localStorage` sang `Supabase` để lưu trữ đồng bộ lịch sử, hỗ trợ quản lý danh sách và ghim hội thoại, cũng như xử lý tính năng đính kèm và lưu trữ hình ảnh.
+
+- [x] **Thiết lập Supabase & Database Schema:**
+  - Khởi tạo kết nối Supabase Client (`src/lib/supabase.ts`).
+  - Tạo bảng `chat_sessions` (ID, User_PIN, tiêu đề, trạng thái ghim, thời gian cập nhật).
+  - Tạo bảng `chat_messages` (ID, Session ID, Role, Nội dung, Danh sách ảnh đính kèm).
+  - Cấu hình Storage Bucket (`chat_attachments`) để lưu trữ file ảnh upload từ User.
+- [x] **Xây dựng Backend API (Next.js):**
+  - CRUD API cho `chat_sessions` (tạo mới, sửa tên, ghim, xóa dựa trên User PIN auth cookie).
+  - Cập nhật `/api/chat/route.ts` để upload hình ảnh và ghi lại message của user/assistant vào database.
+  - API `GET /api/chat-messages` trả về lịch sử phiên chat chi tiết để render giao diện.
+- [x] **Nâng cấp Giao diện (AI Lab Frontend):**
+  - Tạo Component `<AILabSidebar />` chứa danh sách cuộc trò chuyện phân nhóm "Đã ghim" và "Gần đây".
+  - Refactor `<AILab />` (xóa cơ chế `localStorage`, đồng bộ `sessionId` cho `useChat` và hiển thị ảnh Markdown đính kèm).
+  - Hỗ trợ responsive layout (ấn menu trên thiết bị di động).

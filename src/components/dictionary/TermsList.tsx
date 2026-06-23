@@ -22,6 +22,7 @@ export default function TermsList({ onSelectTerm, selectedTermId }: TermsListPro
     const [terms, setTerms] = useState<Term[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
+    const [showSuggestions, setShowSuggestions] = useState(false);
     const [activeCategory, setActiveCategory] = useState('Tất cả');
 
     const CATEGORIES = ["Tất cả", "Tự động hóa", "Cơ điện tử", "Khoa học máy tính", "Vi xử lý", "Điện tử số", "IoT", "Vô tuyến & Viễn thông"];
@@ -63,10 +64,39 @@ export default function TermsList({ onSelectTerm, selectedTermId }: TermsListPro
                 <input 
                     type="text" 
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e) => {
+                        setSearchQuery(e.target.value);
+                        setShowSuggestions(true);
+                    }}
+                    onFocus={() => setShowSuggestions(true)}
+                    onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
                     placeholder="Tìm kiếm thuật ngữ viết tắt, tên đầy đủ hoặc nội dung..." 
                     className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium transition-all" 
                 />
+                
+                {showSuggestions && searchQuery.trim().length > 0 && terms.length > 0 && (
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg z-50 overflow-hidden flex flex-col">
+                        {terms.slice(0, 5).map(term => (
+                            <button
+                                key={`suggest-${term.id}`}
+                                onClick={() => {
+                                    onSelectTerm(term);
+                                    setShowSuggestions(false);
+                                    setSearchQuery(term.term);
+                                }}
+                                className="text-left px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 border-b border-slate-100 dark:border-slate-800/50 last:border-0 transition-colors flex items-center justify-between group"
+                            >
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-slate-800 dark:text-slate-200 text-sm">{term.term}</span>
+                                    {term.fullName && <span className="text-[10px] text-slate-500 truncate mt-0.5">{term.fullName}</span>}
+                                </div>
+                                <span className="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    {term.category}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
             
             <div className="flex overflow-x-auto whitespace-nowrap gap-2 pb-2 custom-scrollbar">

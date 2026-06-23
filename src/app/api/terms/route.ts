@@ -50,26 +50,46 @@ export async function GET(request: Request) {
     }
 
     if (query) {
-        results = results.filter(t => {
+        const scoredResults = results.map(t => {
+            let score = 0;
             const termRaw = t.term || '';
             const fullNameRaw = t.fullName || '';
             const defRaw = t.definition || '';
             const appsRaw = t.applications ? t.applications.join(' ') : '';
             
-            const termMatches = removeAccents(termRaw).toLowerCase().includes(query);
-            const fullNameMatches = removeAccents(fullNameRaw).toLowerCase().includes(query);
-            
-            // Đối với truy vấn quá ngắn (1-2 ký tự), chỉ tìm trong tên thuật ngữ (term, fullName)
-            // để tránh bị nhiễu (noise) do trùng lặp ký tự đơn lẻ trong phần định nghĩa dài.
-            if (query.length < 3) {
-                return termMatches || fullNameMatches;
+            const termClean = removeAccents(termRaw).toLowerCase();
+            const fullNameClean = removeAccents(fullNameRaw).toLowerCase();
+            const defClean = removeAccents(defRaw).toLowerCase();
+            const appsClean = removeAccents(appsRaw).toLowerCase();
+
+            if (termClean === query) {
+                score += 100;
+            } else if (termClean.startsWith(query) || termClean.split(' ').some(word => word.startsWith(query))) {
+                score += 60;
+            } else if (termClean.includes(query)) {
+                score += 50;
             }
 
-            const defMatches = removeAccents(defRaw).toLowerCase().includes(query);
-            const appsMatches = removeAccents(appsRaw).toLowerCase().includes(query);
+            if (fullNameClean === query) {
+                score += 80;
+            } else if (fullNameClean.includes(query)) {
+                score += 40;
+            }
 
-            return termMatches || fullNameMatches || defMatches || appsMatches;
+            // Đối với truy vấn quá ngắn (1-2 ký tự), chỉ tìm trong tên thuật ngữ (term, fullName)
+            // để tránh bị nhiễu do trùng lặp ký tự đơn lẻ trong phần định nghĩa dài.
+            if (query.length >= 3) {
+                if (defClean.includes(query)) score += 20;
+                if (appsClean.includes(query)) score += 10;
+            }
+
+            return { item: t, score };
         });
+
+        results = scoredResults
+            .filter(result => result.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .map(result => result.item);
     }
 
     return NextResponse.json(results);

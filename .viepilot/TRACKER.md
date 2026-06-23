@@ -1,7 +1,7 @@
 # Progress Tracker
 
 ## Current State
-- **Phase 20 (Core Vocabulary Enrichment):** Tự động nạp hơn 350 từ khóa nền tảng vào 7 danh mục từ điển.
+- **Phase 21 (AI Lab Chat History & Supabase Integration):** Xây dựng danh sách lịch sử trò chuyện và lưu trữ dữ liệu lên Supabase.
 
 ## Progress Overview
 - [x] Phase 1: 100%
@@ -24,6 +24,7 @@
 - [x] Phase 18: 100% (Search Optimization & Caching)
 - [x] Phase 19: 100% (Extended Lookups)
 - [x] Phase 20: 100% (Core Vocabulary Enrichment)
+- [x] Phase 21: 100% (AI Lab Chat History & Supabase Integration)
 
 ## Version Info
 - Current Version: 0.16.0 (Minor Bump for Evolution)
@@ -35,3 +36,4 @@
 |----|------|-------|----------|--------|
 | ENH-001 | 🔧 | Cải thiện thuật toán tìm kiếm từ khóa | high | done |
 | FEAT-001 | ✨ | Tra cứu Google, Datasheet & Ứng dụng | medium | done |
+| FEAT-002 | ✨ | Danh sách lịch sử đoạn chat & Lưu trữ Supabase cho AI Lab | high | done |
