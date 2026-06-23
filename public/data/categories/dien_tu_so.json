@@ -1209,17 +1209,6 @@
     ]
   },
   {
-    "id": "dien_tu_so-core-1",
-    "term": "5. Điện tử số (Digital Electronics) - 50 từ",
-    "fullName": "5. Điện tử số (Digital Electronics) - 50 từ",
-    "definition": "Thuật ngữ cơ bản: 5. Điện tử số (Digital Electronics) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
-    "category": "dien_tu_so",
-    "applications": [
-      "Đóng vai trò nền tảng trong hệ thống",
-      "Thường xuất hiện trong các thiết kế cơ bản"
-    ]
-  },
-  {
     "id": "dien_tu_so-core-4",
     "term": "NOT Gate",
     "fullName": "NOT Gate",

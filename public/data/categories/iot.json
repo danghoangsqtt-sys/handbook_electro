@@ -1248,17 +1248,6 @@
   },
   {
     "id": "iot-core-1",
-    "term": "6. IoT (Internet of Things) - 50 từ",
-    "fullName": "6. IoT (Internet of Things) - 50 từ",
-    "definition": "Thuật ngữ cơ bản: 6. IoT (Internet of Things) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
-    "category": "iot",
-    "applications": [
-      "Đóng vai trò nền tảng trong hệ thống",
-      "Thường xuất hiện trong các thiết kế cơ bản"
-    ]
-  },
-  {
-    "id": "iot-core-1",
     "term": "Internet of Things",
     "fullName": "Internet of Things",
     "definition": "Thuật ngữ cơ bản: Internet of Things. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",

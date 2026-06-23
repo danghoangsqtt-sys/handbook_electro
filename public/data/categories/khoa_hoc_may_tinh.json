@@ -1629,17 +1629,6 @@
   },
   {
     "id": "khoa_hoc_may_tinh-core-1",
-    "term": "1. Khoa học máy tính (Computer Science) - 50 từ",
-    "fullName": "1. Khoa học máy tính (Computer Science) - 50 từ",
-    "definition": "Thuật ngữ cơ bản: 1. Khoa học máy tính (Computer Science) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
-    "category": "khoa_hoc_may_tinh",
-    "applications": [
-      "Đóng vai trò nền tảng trong hệ thống",
-      "Thường xuất hiện trong các thiết kế cơ bản"
-    ]
-  },
-  {
-    "id": "khoa_hoc_may_tinh-core-1",
     "term": "BIOS",
     "fullName": "BIOS",
     "definition": "Thuật ngữ cơ bản: BIOS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",

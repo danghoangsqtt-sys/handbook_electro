@@ -58,6 +58,13 @@ export async function GET(request: Request) {
             
             const termMatches = removeAccents(termRaw).toLowerCase().includes(query);
             const fullNameMatches = removeAccents(fullNameRaw).toLowerCase().includes(query);
+            
+            // Đối với truy vấn quá ngắn (1-2 ký tự), chỉ tìm trong tên thuật ngữ (term, fullName)
+            // để tránh bị nhiễu (noise) do trùng lặp ký tự đơn lẻ trong phần định nghĩa dài.
+            if (query.length < 3) {
+                return termMatches || fullNameMatches;
+            }
+
             const defMatches = removeAccents(defRaw).toLowerCase().includes(query);
             const appsMatches = removeAccents(appsRaw).toLowerCase().includes(query);
 
