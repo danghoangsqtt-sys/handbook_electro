@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 
+import Image from 'next/image';
+
 export default function Header() {
   const [theme, setTheme] = useState('dark');
 
@@ -29,8 +31,8 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex items-center gap-3">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-                    <i className="fa-solid fa-microchip text-base md:text-xl animate-pulse"></i>
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl overflow-hidden flex items-center justify-center bg-slate-900 shadow-lg shadow-blue-500/20">
+                    <Image src="/logo.png" alt="TechDict Logo" width={40} height={40} className="w-full h-full object-cover" />
                 </div>
                 <div>
                     <h1 className="text-base md:text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">TechDict v5.0</h1>
