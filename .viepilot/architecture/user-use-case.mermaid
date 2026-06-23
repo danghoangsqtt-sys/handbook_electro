@@ -1,0 +1,14 @@
+flowchart TD
+    User([Kỹ sư / Sinh viên])
+    
+    User --> |Tra cứu không cần đăng nhập| Search[Tìm kiếm Thuật ngữ & Module]
+    Search --> |Xem chi tiết| Detail[Trang Thông tin chi tiết]
+    
+    User --> |Tạo session riêng tư| Auth[Đăng nhập bằng PIN Code]
+    Auth --> |Thành công| AILab[Không gian: Phòng Lab AI]
+    
+    AILab --> |Hỏi đáp dự án| Gemini[Hệ thống Gemini AI (Backend API)]
+    Gemini --> |Gợi ý linh kiện, code, hướng dẫn| AILab
+    
+    Detail --> |Lưu trữ| Bookmark[Bookmark vào tài khoản cá nhân]
+    Auth --> |Thành công| Bookmark

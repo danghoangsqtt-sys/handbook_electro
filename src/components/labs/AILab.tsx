@@ -4,6 +4,8 @@
 import { useChat } from '@ai-sdk/react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useEffect, useRef, useState } from 'react';
 import PinLogin from '../auth/PinLogin';
 
@@ -35,11 +37,13 @@ export default function AILab() {
         if (saved) {
             try {
                 setMessages(JSON.parse(saved));
-            } catch (e) {
-                console.error("Failed to parse saved messages");
+            } catch (err) {
+                console.error("Failed to parse saved messages", err);
             }
         }
-        setIsLoaded(true);
+        
+        // Delay setting isLoaded to avoid synchronous setState in effect warning
+        setTimeout(() => setIsLoaded(true), 0);
     }, [setMessages]);
 
     // Save to localStorage when messages change
@@ -56,11 +60,11 @@ export default function AILab() {
     if (authenticated === null) return <div className="h-[800px] flex items-center justify-center"><i className="fa-solid fa-spinner animate-spin text-2xl text-blue-500"></i></div>;
 
     return (
-        <div className="relative h-[800px] bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col overflow-hidden">
+        <div className="relative flex-1 min-h-[600px] h-full md:h-[calc(100vh-6rem)] bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl rounded-3xl border border-white/20 dark:border-slate-700/50 shadow-2xl flex flex-col overflow-hidden">
             {!authenticated && <PinLogin onSuccess={() => setAuthenticated(true)} />}
             
             {/* Header */}
-            <div className="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-950/50">
+            <div className="px-6 py-4 border-b border-slate-200/50 dark:border-slate-800/50 flex justify-between items-center bg-slate-50/50 dark:bg-slate-950/30 backdrop-blur-md">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white shadow-md">
                         <i className="fa-solid fa-robot"></i>
@@ -133,7 +137,36 @@ export default function AILab() {
                             {m.role === 'user' ? (
                                 <p className="whitespace-pre-wrap text-sm">{m.content || m.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('')}</p>
                             ) : (
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                <ReactMarkdown 
+                                    remarkPlugins={[remarkGfm]}
+                                    components={{
+                                        code({inline, className, children, ...props}: any) {
+                                            const match = /language-(\w+)/.exec(className || '');
+                                            return !inline && match ? (
+                                                <div className="my-4 rounded-xl overflow-hidden shadow-lg border border-slate-700/50">
+                                                    <div className="bg-slate-800 px-4 py-1.5 text-xs text-slate-400 font-mono flex items-center justify-between">
+                                                        <span>{match[1]}</span>
+                                                    </div>
+                                                    <SyntaxHighlighter
+                                                        style={vscDarkPlus as any}
+                                                        language={match[1]}
+                                                        PreTag="div"
+                                                        className="!m-0 !bg-[#1E1E1E]"
+                                                        showLineNumbers={true}
+                                                        customStyle={{ margin: 0, borderRadius: 0 }}
+                                                        {...props}
+                                                    >
+                                                        {String(children).replace(/\n$/, '')}
+                                                    </SyntaxHighlighter>
+                                                </div>
+                                            ) : (
+                                                <code className={`${className} bg-slate-200/80 dark:bg-slate-700/80 px-1.5 py-0.5 rounded-md text-pink-600 dark:text-pink-400 font-mono text-sm`} {...props}>
+                                                    {children}
+                                                </code>
+                                            )
+                                        }
+                                    }}
+                                >
                                     {m.content || m.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('')}
                                 </ReactMarkdown>
                             )}
@@ -170,7 +203,7 @@ export default function AILab() {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <div className="p-4 border-t border-slate-200/50 dark:border-slate-800/50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
                 <form ref={formRef} onSubmit={(e) => {
                     e.preventDefault();
                     if (!(input || '').trim() && !files?.length) return;

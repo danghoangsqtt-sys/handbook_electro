@@ -59,5 +59,11 @@
 - [x] Thực thi tự động bằng kịch bản AI trực tiếp.
 
 ### Phase 14: AI Lab Refactoring
-- [ ] Nâng cấp độ ổn định cho tính năng AI Lab (Rate limit Github).
-- [ ] Cải thiện UX Frontend (Lưu lịch sử chat vào localStorage).
+- [x] Nâng cấp độ ổn định cho tính năng AI Lab (Rate limit Github).
+- [x] Cải thiện UX Frontend (Lưu lịch sử chat vào localStorage).
+
+### Phase 15: AI Lab UI/UX Premium & Responsive
+- [x] Nâng cấp giao diện AILab (Glassmorphism, Animations, Premium UI).
+- [x] Hỗ trợ Responsive đa thiết bị (Máy tính, Điện thoại - loại bỏ chiều cao cố định).
+- [x] Tích hợp Syntax Highlighting cho Code blocks trong Chat.
+- [x] Auto-test và kiểm tra bugs tự động.
