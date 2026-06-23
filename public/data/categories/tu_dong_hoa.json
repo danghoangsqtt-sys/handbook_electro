@@ -1,93 +1,69 @@
 [
   {
-    "id": "plc",
+    "id": "tu_dong_hoa-core-1",
     "term": "PLC",
-    "fullName": "Programmable Logic Controller",
-    "category": "Tự động hóa",
-    "definition": "Bộ điều khiển logic lập trình được, ứng dụng phổ biến nhất để giám sát dây chuyền tự động hóa công nghiệp.",
+    "fullName": "PLC",
+    "definition": "Thuật ngữ cơ bản: PLC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Cánh tay gắp",
-      "Đóng chai",
-      "Thang máy"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/y2eWv8-bI-g",
-    "youtubeUrl": "https://www.youtube.com/watch?v=y2eWv8-bI-g",
-    "icon": "fa-solid fa-gears"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "scada",
+    "id": "tu_dong_hoa-core-2",
     "term": "SCADA",
-    "fullName": "Supervisory Control and Data Acquisition",
-    "category": "Tự động hóa",
-    "definition": "Hệ thống quản lý, giám sát và thu thập dữ liệu tập trung cấp cao của nhà máy sản xuất.",
+    "fullName": "SCADA",
+    "definition": "Thuật ngữ cơ bản: SCADA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Điều phối điện lưới",
-      "Giám sát cấp thoát nước",
-      "Nhà máy thép"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/V6P9vSg_MIA",
-    "youtubeUrl": "https://www.youtube.com/watch?v=V6P9vSg_MIA",
-    "icon": "fa-solid fa-network-wired"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "hmi",
+    "id": "tu_dong_hoa-core-3",
     "term": "HMI",
-    "fullName": "Human-Machine Interface",
-    "category": "Tự động hóa",
-    "definition": "Giao diện màn hình tương tác trực quan hiển thị số liệu giúp người vận hành giao tiếp với máy móc.",
+    "fullName": "HMI",
+    "definition": "Thuật ngữ cơ bản: HMI. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Màn hình máy ép nhựa",
-      "Tủ điều khiển dây chuyền",
-      "Trạm bơm tự động"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/UqIuV_8vCeg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=UqIuV_8vCeg",
-    "icon": "fa-solid fa-desktop"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "pid",
+    "id": "tu_dong_hoa-core-4",
     "term": "PID",
-    "fullName": "Proportional-Integral-Derivative",
-    "category": "Tự động hóa",
-    "definition": "Thuật toán điều khiển vòng kín tối ưu phản hồi sai lệch giúp ổn định các hệ thống vật lý liên tục.",
+    "fullName": "PID",
+    "definition": "Thuật ngữ cơ bản: PID. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Ổn định nhiệt độ lò nung",
-      "Kiểm soát mực nước bồn",
-      "Điều tốc động cơ"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/UR0hOmjaXX0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=UR0hOmjaXX0",
-    "icon": "fa-solid fa-chart-line"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "dcs",
+    "id": "tu_dong_hoa-core-12",
     "term": "DCS",
-    "fullName": "Distributed Control System",
-    "category": "Tự động hóa",
-    "definition": "Hệ thống điều khiển phân tán cấu trúc phân lớp phức tạp dành cho các quy trình chế biến lọc hóa dầu, hóa chất lớn.",
+    "fullName": "DCS",
+    "definition": "Thuật ngữ cơ bản: DCS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Lọc dầu",
-      "Nhà máy hóa chất",
-      "Sản xuất giấy"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/o0bKmsG8b0o",
-    "youtubeUrl": "https://www.youtube.com/watch?v=o0bKmsG8b0o",
-    "icon": "fa-solid fa-server"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "rtu",
+    "id": "tu_dong_hoa-core-13",
     "term": "RTU",
-    "fullName": "Remote Terminal Unit",
-    "category": "Tự động hóa",
-    "definition": "Thiết bị đầu cuối thu thập dữ liệu cảm biến và truyền dữ liệu tầm xa về hệ thống SCADA.",
+    "fullName": "RTU",
+    "definition": "Thuật ngữ cơ bản: RTU. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Trạm bơm xa",
-      "Hệ thống khí gas ngoài trời",
-      "Trạm khí tượng"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Z0o4D9_qQrs",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Z0o4D9_qQrs",
-    "icon": "fa-solid fa-tower-broadcast"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "vfd",
@@ -105,49 +81,37 @@
     "icon": "fa-solid fa-bolt"
   },
   {
-    "id": "modbus",
+    "id": "tu_dong_hoa-core-21",
     "term": "Modbus",
-    "fullName": "Modbus Protocol",
-    "category": "Tự động hóa",
-    "definition": "Giao thức truyền thông nối tiếp công nghiệp tiêu chuẩn lâu đời nhất, cực kỳ ổn định trên RS485.",
+    "fullName": "Modbus",
+    "definition": "Thuật ngữ cơ bản: Modbus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Kết nối đồng hồ điện",
-      "Cảm biến công nghiệp",
-      "Kết nối PLC-HMI"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/OvRD2Uvrxmw",
-    "youtubeUrl": "https://www.youtube.com/watch?v=OvRD2Uvrxmw",
-    "icon": "fa-solid fa-comments"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "profibus",
+    "id": "tu_dong_hoa-core-22",
     "term": "Profibus",
-    "fullName": "Process Field Bus",
-    "category": "Tự động hóa",
-    "definition": "Chuẩn giao tiếp mạng công nghiệp mở rộng của hãng Siemens dành cho tự động hóa sản xuất hàng loạt.",
+    "fullName": "Profibus",
+    "definition": "Thuật ngữ cơ bản: Profibus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Truyền thông Siemens S7",
-      "Truyền dữ liệu driver lớn",
-      "Thiết bị đo lường nhà máy"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/rV3XwZ_O_c0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=rV3XwZ_O_c0",
-    "icon": "fa-solid fa-network-wired"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "ethercat",
+    "id": "tu_dong_hoa-core-24",
     "term": "EtherCAT",
-    "fullName": "Ethernet for Control Automation Technology",
-    "category": "Tự động hóa",
-    "definition": "Giao thức Ethernet thời gian thực tốc độ cực cao dành riêng cho các ứng dụng cơ cấu chấp hành chuyển động phức tạp.",
+    "fullName": "EtherCAT",
+    "definition": "Thuật ngữ cơ bản: EtherCAT. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Điều khiển servo đa trục",
-      "Dây chuyền bán dẫn",
-      "Robot cộng tác"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/yQv1vUlyI2k",
-    "youtubeUrl": "https://www.youtube.com/watch?v=yQv1vUlyI2k",
-    "icon": "fa-solid fa-gauge-high"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "hart",
@@ -165,64 +129,48 @@
     "icon": "fa-solid fa-wave-square"
   },
   {
-    "id": "opcua",
+    "id": "tu_dong_hoa-core-25",
     "term": "OPC UA",
-    "fullName": "Open Platform Communications Unified Architecture",
-    "category": "Tự động hóa",
-    "definition": "Kiến trúc nền tảng giao tiếp chuẩn hóa trong kỷ nguyên cách mạng công nghiệp IIoT 4.0 bảo mật cao.",
+    "fullName": "OPC UA",
+    "definition": "Thuật ngữ cơ bản: OPC UA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Giao thức Cloud IoT",
-      "Tích hợp IT và OT",
-      "Truyền thông liên nền tảng"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/kRndQvG0HMo",
-    "youtubeUrl": "https://www.youtube.com/watch?v=kRndQvG0HMo",
-    "icon": "fa-solid fa-shield-halved"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "servo",
+    "id": "tu_dong_hoa-core-10",
     "term": "Servo Motor",
     "fullName": "Servo Motor",
-    "category": "Tự động hóa",
-    "definition": "Động cơ vòng lặp phản hồi chính xác vị trí góc quay, mô-men và tốc độ thông qua encoder liên kết.",
+    "definition": "Thuật ngữ cơ bản: Servo Motor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Cánh tay khớp xoay",
-      "Máy in 3D chính xác",
-      "Trục tịnh tiến CNC"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/ditS0a28Sko",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ditS0a28Sko",
-    "icon": "fa-solid fa-arrows-spin"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "stepper",
+    "id": "tu_dong_hoa-core-11",
     "term": "Stepper Motor",
     "fullName": "Stepper Motor",
-    "category": "Tự động hóa",
-    "definition": "Động cơ bước điều khiển góc quay theo các chu kỳ xung kích cực kỳ ổn định không cần hồi tiếp.",
+    "definition": "Thuật ngữ cơ bản: Stepper Motor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Máy vẽ sơ đồ Laser",
-      "Máy in 3D giá rẻ",
-      "Cơ cấu nạp linh kiện SMT"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/eyqwLiowZiU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=eyqwLiowZiU",
-    "icon": "fa-solid fa-circle-nodes"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "actuator",
+    "id": "tu_dong_hoa-core-6",
     "term": "Actuator",
     "fullName": "Actuator",
-    "category": "Tự động hóa",
-    "definition": "Cơ cấu chấp hành. Thiết bị nhận tín hiệu điện để chuyển hóa thành chuyển động cơ lý tính cơ khí thực tế.",
+    "definition": "Thuật ngữ cơ bản: Actuator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Van bướm điện",
-      "Xilanh hành trình",
-      "Hệ thống cửa trượt"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/9wO45f-N2h0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=9wO45f-N2h0",
-    "icon": "fa-solid fa-sliders"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "solenoid",
@@ -270,34 +218,26 @@
     "icon": "fa-solid fa-water"
   },
   {
-    "id": "encoder",
+    "id": "tu_dong_hoa-core-14",
     "term": "Encoder",
-    "fullName": "Rotary Encoder",
-    "category": "Tự động hóa",
-    "definition": "Cảm biến đo lường tốc độ, góc quay cơ học của trục động cơ bằng phương pháp quang hoặc từ học.",
+    "fullName": "Encoder",
+    "definition": "Thuật ngữ cơ bản: Encoder. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Hồi tiếp tốc độ servo",
-      "Đo độ xoay của vô lăng",
-      "Đếm số vòng quay bánh xe"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/mGf_KWh63Yk",
-    "youtubeUrl": "https://www.youtube.com/watch?v=mGf_KWh63Yk",
-    "icon": "fa-solid fa-arrows-spin"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "limitswitch",
+    "id": "tu_dong_hoa-core-16",
     "term": "Limit Switch",
     "fullName": "Limit Switch",
-    "category": "Tự động hóa",
-    "definition": "Công tắc hành trình cơ học đóng ngắt tín hiệu khẩn cấp khi trục cơ chạm vị trí biên tối đa.",
+    "definition": "Thuật ngữ cơ bản: Limit Switch. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Chống vượt biên CNC",
-      "Cảm biến hành trình thang máy",
-      "Phát hiện cửa đóng"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/9BqI1QpE91Q",
-    "youtubeUrl": "https://www.youtube.com/watch?v=9BqI1QpE91Q",
-    "icon": "fa-solid fa-toggle-on"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "proximity",
@@ -315,19 +255,15 @@
     "icon": "fa-solid fa-bullseye"
   },
   {
-    "id": "photoelectric",
+    "id": "tu_dong_hoa-core-17",
     "term": "Photoelectric Sensor",
     "fullName": "Photoelectric Sensor",
-    "category": "Tự động hóa",
-    "definition": "Cảm biến quang điện sử dụng chùm tia sáng hồng ngoại/laser để phát hiện chướng ngại vật chắn ngang.",
+    "definition": "Thuật ngữ cơ bản: Photoelectric Sensor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Cảm biến chống kẹt cửa cuốn",
-      "Bộ đếm sản phẩm băng chuyền",
-      "Hệ thống báo động hồng ngoại"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Ue8z0D4Qp4k",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Ue8z0D4Qp4k",
-    "icon": "fa-solid fa-laser-cutter"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "thermocouple",
@@ -375,49 +311,37 @@
     "icon": "fa-solid fa-circle-nodes"
   },
   {
-    "id": "transmitter",
+    "id": "tu_dong_hoa-core-40",
     "term": "Transmitter",
-    "fullName": "Signal Transmitter",
-    "category": "Tự động hóa",
-    "definition": "Bộ chuyển đổi và khuếch đại tín hiệu cảm biến yếu thành dòng dòng điện tương tự tiêu chuẩn 4-20mA truyền xa.",
+    "fullName": "Transmitter",
+    "definition": "Thuật ngữ cơ bản: Transmitter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Truyền tín hiệu áp suất bồn nước",
-      "Chuẩn hóa đo đạc độ ẩm khí",
-      "Truyền xa chống nhiễu"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/fW49p4C89H4",
-    "youtubeUrl": "https://www.youtube.com/watch?v=fW49p4C89H4",
-    "icon": "fa-solid fa-wave-square"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "relay",
+    "id": "tu_dong_hoa-core-7",
     "term": "Relay",
-    "fullName": "Electromechanical Relay",
-    "category": "Tự động hóa",
-    "definition": "Rơ-le trung gian điều khiển đóng ngắt dòng điện lớn bằng cách cấp dòng điện nhỏ vào cuộn hút.",
+    "fullName": "Relay",
+    "definition": "Thuật ngữ cơ bản: Relay. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Đóng ngắt máy bơm nước",
-      "Kích hoạt bóng đèn",
-      "Tủ bảo vệ an toàn điện"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/n594CkrP6yU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=n594CkrP6yU",
-    "icon": "fa-solid fa-circle-nodes"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "contactor",
+    "id": "tu_dong_hoa-core-8",
     "term": "Contactor",
-    "fullName": "Magnetic Contactor",
-    "category": "Tự động hóa",
-    "definition": "Khởi động từ công suất cực lớn dùng đóng ngắt nguồn động cơ ba pha trong hệ thống động lực.",
+    "fullName": "Contactor",
+    "definition": "Thuật ngữ cơ bản: Contactor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Tủ điện khởi động motor",
-      "Hệ thống sấy nung công suất lớn",
-      "Hệ thống bơm cứu hỏa"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/g6Pez9O9478",
-    "youtubeUrl": "https://www.youtube.com/watch?v=g6Pez9O9478",
-    "icon": "fa-solid fa-toggle-on"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "interlock",
@@ -435,19 +359,15 @@
     "icon": "fa-solid fa-lock"
   },
   {
-    "id": "deadband",
+    "id": "tu_dong_hoa-core-43",
     "term": "Deadband",
-    "fullName": "Deadband Zone",
-    "category": "Tự động hóa",
-    "definition": "Dải chết trong điều khiển. Khoảng giá trị đầu vào mà bộ điều khiển bỏ qua để tránh gây hư hỏng thiết bị cơ cấu liên tục.",
+    "fullName": "Deadband",
+    "definition": "Thuật ngữ cơ bản: Deadband. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Giới hạn đóng ngắt máy lạnh",
-      "Giảm giật cơ cấu servo khí nén",
-      "Bộ so sánh rơ-le nhiệt độ"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/UR0hOmjaXX0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=UR0hOmjaXX0",
-    "icon": "fa-solid fa-border-all"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "cascade",
@@ -465,19 +385,15 @@
     "icon": "fa-solid fa-sitemap"
   },
   {
-    "id": "feedforward",
+    "id": "tu_dong_hoa-core-34",
     "term": "Feedforward",
-    "fullName": "Feedforward Control",
-    "category": "Tự động hóa",
-    "definition": "Phương pháp điều khiển đón đầu, xử lý nhiễu hệ thống trực tiếp dựa trên tính toán suy luận trước khi ảnh hưởng đến sai số.",
+    "fullName": "Feedforward",
+    "definition": "Thuật ngữ cơ bản: Feedforward. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Ổn định nhiệt độ dòng chảy đầu vào",
-      "Cân bằng tải nhanh máy phát điện",
-      "Máy bay trực thăng tự hành"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/qg_h4mI3nIs",
-    "youtubeUrl": "https://www.youtube.com/watch?v=qg_h4mI3nIs",
-    "icon": "fa-solid fa-forward"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "mimo",
@@ -495,28 +411,26 @@
     "icon": "fa-solid fa-diagram-project"
   },
   {
-    "id": "profinet",
+    "id": "tu_dong_hoa-core-23",
     "term": "Profinet",
-    "fullName": "Process Field Net",
-    "category": "Tự động hóa",
-    "definition": "Chuẩn truyền thông công nghiệp dựa trên nền tảng Ethernet thời gian thực để truyền tải dữ liệu nhanh.",
+    "fullName": "Profinet",
+    "definition": "Thuật ngữ cơ bản: Profinet. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Robot tốc độ cao",
-      "Hệ thống Motion Control"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "ladder_logic",
+    "id": "tu_dong_hoa-core-26",
     "term": "Ladder Logic",
-    "fullName": "Sơ đồ bậc thang",
-    "category": "Tự động hóa",
-    "definition": "Ngôn ngữ lập trình PLC trực quan mô phỏng theo mạch rơ-le phần cứng truyền thống.",
+    "fullName": "Ladder Logic",
+    "definition": "Thuật ngữ cơ bản: Ladder Logic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
     "applications": [
-      "Lập trình máy ép nhựa",
-      "Điều khiển bơm nước"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "sfc",
@@ -1293,6 +1207,314 @@
     "applications": [
       "Chạy công thức trên hệ thống ERP",
       "Xuất kho linh kiện tự động"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-1",
+    "term": "2. Tự động hóa (Automation) - 50 từ",
+    "fullName": "2. Tự động hóa (Automation) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 2. Tự động hóa (Automation) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-5",
+    "term": "Sensor",
+    "fullName": "Sensor",
+    "definition": "Thuật ngữ cơ bản: Sensor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-9",
+    "term": "Inverter",
+    "fullName": "Inverter",
+    "definition": "Thuật ngữ cơ bản: Inverter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-15",
+    "term": "Proximity Switch",
+    "fullName": "Proximity Switch",
+    "definition": "Thuật ngữ cơ bản: Proximity Switch. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-18",
+    "term": "Pneumatic",
+    "fullName": "Pneumatic",
+    "definition": "Thuật ngữ cơ bản: Pneumatic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-19",
+    "term": "Hydraulic",
+    "fullName": "Hydraulic",
+    "definition": "Thuật ngữ cơ bản: Hydraulic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-20",
+    "term": "Solenoid Valve",
+    "fullName": "Solenoid Valve",
+    "definition": "Thuật ngữ cơ bản: Solenoid Valve. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-27",
+    "term": "Function Block Diagram",
+    "fullName": "Function Block Diagram",
+    "definition": "Thuật ngữ cơ bản: Function Block Diagram. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-28",
+    "term": "Structured Text",
+    "fullName": "Structured Text",
+    "definition": "Thuật ngữ cơ bản: Structured Text. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-29",
+    "term": "Statement List",
+    "fullName": "Statement List",
+    "definition": "Thuật ngữ cơ bản: Statement List. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-30",
+    "term": "Sequential Function Chart",
+    "fullName": "Sequential Function Chart",
+    "definition": "Thuật ngữ cơ bản: Sequential Function Chart. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-31",
+    "term": "Closed Loop",
+    "fullName": "Closed Loop",
+    "definition": "Thuật ngữ cơ bản: Closed Loop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-32",
+    "term": "Open Loop",
+    "fullName": "Open Loop",
+    "definition": "Thuật ngữ cơ bản: Open Loop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-33",
+    "term": "Feedback",
+    "fullName": "Feedback",
+    "definition": "Thuật ngữ cơ bản: Feedback. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-35",
+    "term": "Setpoint",
+    "fullName": "Setpoint",
+    "definition": "Thuật ngữ cơ bản: Setpoint. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-36",
+    "term": "Process Variable",
+    "fullName": "Process Variable",
+    "definition": "Thuật ngữ cơ bản: Process Variable. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-37",
+    "term": "Manipulated Variable",
+    "fullName": "Manipulated Variable",
+    "definition": "Thuật ngữ cơ bản: Manipulated Variable. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-38",
+    "term": "Control Valve",
+    "fullName": "Control Valve",
+    "definition": "Thuật ngữ cơ bản: Control Valve. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-39",
+    "term": "Transducer",
+    "fullName": "Transducer",
+    "definition": "Thuật ngữ cơ bản: Transducer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-41",
+    "term": "Calibration",
+    "fullName": "Calibration",
+    "definition": "Thuật ngữ cơ bản: Calibration. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-42",
+    "term": "Hysteresis",
+    "fullName": "Hysteresis",
+    "definition": "Thuật ngữ cơ bản: Hysteresis. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-44",
+    "term": "Offset",
+    "fullName": "Offset",
+    "definition": "Thuật ngữ cơ bản: Offset. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-45",
+    "term": "Gain",
+    "fullName": "Gain",
+    "definition": "Thuật ngữ cơ bản: Gain. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-46",
+    "term": "Integral Time",
+    "fullName": "Integral Time",
+    "definition": "Thuật ngữ cơ bản: Integral Time. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-47",
+    "term": "Derivative Time",
+    "fullName": "Derivative Time",
+    "definition": "Thuật ngữ cơ bản: Derivative Time. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-48",
+    "term": "Tuning",
+    "fullName": "Tuning",
+    "definition": "Thuật ngữ cơ bản: Tuning. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-49",
+    "term": "Robotics",
+    "fullName": "Robotics",
+    "definition": "Thuật ngữ cơ bản: Robotics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "tu_dong_hoa-core-50",
+    "term": "CNC",
+    "fullName": "CNC",
+    "definition": "Thuật ngữ cơ bản: CNC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "tu_dong_hoa",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
     ]
   }
 ]

@@ -105,19 +105,15 @@
     "icon": "fa-solid fa-circle-dot"
   },
   {
-    "id": "kinematics",
+    "id": "co_dien_tu-core-2",
     "term": "Kinematics",
-    "fullName": "Robot Kinematics",
-    "category": "Cơ điện tử",
-    "definition": "Động học robot. Bộ môn toán học nghiên cứu mối tương quan vị trí các khớp robot với hệ tọa độ không gian vật lý.",
+    "fullName": "Kinematics",
+    "definition": "Thuật ngữ cơ bản: Kinematics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "Lập trình chuyển động robot arm",
-      "Vẽ quỹ đạo CNC",
-      "Giả lập robot"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/DitS0a28Sko",
-    "youtubeUrl": "https://www.youtube.com/watch?v=DitS0a28Sko",
-    "icon": "fa-solid fa-shapes"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "invkinematics",
@@ -240,19 +236,15 @@
     "icon": "fa-solid fa-bolt"
   },
   {
-    "id": "torque",
+    "id": "co_dien_tu-core-23",
     "term": "Torque",
-    "fullName": "Mechanical Torque",
-    "category": "Cơ điện tử",
-    "definition": "Mô-men xoắn. Đại lượng vật lý biểu thị lực tác dụng làm quay một trục cơ học quanh tâm.",
+    "fullName": "Torque",
+    "definition": "Thuật ngữ cơ bản: Torque. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "Chọn thông số động cơ kéo xích",
-      "Lực vặn bu lông tay máy",
-      "Khả năng leo dốc xe điện"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/ditS0a28Sko",
-    "youtubeUrl": "https://www.youtube.com/watch?v=ditS0a28Sko",
-    "icon": "fa-solid fa-arrows-spin"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "backlash",
@@ -1369,43 +1361,37 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Timing%20Belt%20mechatronics%20engineering"
   },
   {
+    "id": "co_dien_tu-core-8",
     "term": "CAD",
-    "fullName": "Computer-Aided Design",
-    "definition": "Phần mềm thiết kế trợ giúp bằng máy tính tạo bản vẽ 2D/3D mô phỏng trực quan hình học của bộ phận cơ khí trước khi chế tạo.",
+    "fullName": "CAD",
+    "definition": "Thuật ngữ cơ bản: CAD. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "AutoCAD vẽ mặt bằng nhà xưởng",
-      "SolidWorks vẽ chi tiết máy CNC",
-      "Thiết kế vỏ hộp nhựa sản phẩm"
-    ],
-    "id": "mech_azyhxqj",
-    "category": "Cơ điện tử",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=CAD%20mechatronics%20engineering"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "co_dien_tu-core-9",
     "term": "CAM",
-    "fullName": "Computer-Aided Manufacturing",
-    "definition": "Phần mềm tính toán tự động sinh ra đường chạy dao G-code từ bản vẽ CAD để ra lệnh cho máy móc cơ khí đục đẽo kim loại.",
+    "fullName": "CAM",
+    "definition": "Thuật ngữ cơ bản: CAM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "Mastercam lập trình phay CNC 5 trục",
-      "Phần mềm máy cắt Laser SheetMetal",
-      "Phay khuôn đúc vỏ nhôm động cơ"
-    ],
-    "id": "mech_hyu4em3",
-    "category": "Cơ điện tử",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=CAM%20mechatronics%20engineering"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "co_dien_tu-core-10",
     "term": "CAE",
-    "fullName": "Computer-Aided Engineering",
-    "definition": "Phần mềm phân tích kỹ thuật ảo kiểm định chịu lực, tản nhiệt tĩnh/động học (FEA/CFD) trên môi trường mô phỏng vật lý chân thực.",
+    "fullName": "CAE",
+    "definition": "Thuật ngữ cơ bản: CAE. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "Ansys kiểm tra độ võng cầu thép",
-      "Mô phỏng khí động học vỏ xe hơi",
-      "Kiểm tra giới hạn gãy cánh quạt"
-    ],
-    "id": "mech_7zwamuc",
-    "category": "Cơ điện tử",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=CAE%20mechatronics%20engineering"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Industry 4.0",
@@ -1499,17 +1485,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=CMM%20mechatronics%20engineering"
   },
   {
+    "id": "co_dien_tu-core-42",
     "term": "Tolerance",
-    "fullName": "Engineering Tolerance",
-    "definition": "Dung sai kỹ thuật. Khoảng sai số chênh lệch kích thước tối đa cho phép trong sản xuất để hai chi tiết vẫn lắp ráp vừa khít vào nhau.",
+    "fullName": "Tolerance",
+    "definition": "Thuật ngữ cơ bản: Tolerance. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
     "applications": [
-      "Dung sai lắp ghép H7/g6 ổ bi",
-      "Quy định sai số lỗ trục",
-      "Giá thành gia công cơ khí tăng theo độ dung sai"
-    ],
-    "id": "mech_kz9ll3r",
-    "category": "Cơ điện tử",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Tolerance%20mechatronics%20engineering"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Surface Rough",
@@ -1562,5 +1546,500 @@
     "id": "mech_a8ukc2e",
     "category": "Cơ điện tử",
     "youtubeUrl": "https://www.youtube.com/results?search_query=Kaizen%20mechatronics%20engineering"
+  },
+  {
+    "id": "co_dien_tu-core-1",
+    "term": "3. Cơ điện tử (Mechatronics) - 50 từ",
+    "fullName": "3. Cơ điện tử (Mechatronics) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 3. Cơ điện tử (Mechatronics) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-1",
+    "term": "Mechatronics",
+    "fullName": "Mechatronics",
+    "definition": "Thuật ngữ cơ bản: Mechatronics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-3",
+    "term": "Dynamics",
+    "fullName": "Dynamics",
+    "definition": "Thuật ngữ cơ bản: Dynamics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-4",
+    "term": "Statics",
+    "fullName": "Statics",
+    "definition": "Thuật ngữ cơ bản: Statics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-5",
+    "term": "Thermodynamics",
+    "fullName": "Thermodynamics",
+    "definition": "Thuật ngữ cơ bản: Thermodynamics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-6",
+    "term": "Fluid Mechanics",
+    "fullName": "Fluid Mechanics",
+    "definition": "Thuật ngữ cơ bản: Fluid Mechanics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-7",
+    "term": "Material Science",
+    "fullName": "Material Science",
+    "definition": "Thuật ngữ cơ bản: Material Science. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-11",
+    "term": "SolidWorks",
+    "fullName": "SolidWorks",
+    "definition": "Thuật ngữ cơ bản: SolidWorks. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-12",
+    "term": "AutoCAD",
+    "fullName": "AutoCAD",
+    "definition": "Thuật ngữ cơ bản: AutoCAD. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-13",
+    "term": "FEA",
+    "fullName": "FEA",
+    "definition": "Thuật ngữ cơ bản: FEA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-14",
+    "term": "Gear",
+    "fullName": "Gear",
+    "definition": "Thuật ngữ cơ bản: Gear. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-15",
+    "term": "Bearing",
+    "fullName": "Bearing",
+    "definition": "Thuật ngữ cơ bản: Bearing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-16",
+    "term": "Shaft",
+    "fullName": "Shaft",
+    "definition": "Thuật ngữ cơ bản: Shaft. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-17",
+    "term": "Pulley",
+    "fullName": "Pulley",
+    "definition": "Thuật ngữ cơ bản: Pulley. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-18",
+    "term": "Belt",
+    "fullName": "Belt",
+    "definition": "Thuật ngữ cơ bản: Belt. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-19",
+    "term": "Chain",
+    "fullName": "Chain",
+    "definition": "Thuật ngữ cơ bản: Chain. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-20",
+    "term": "Spring",
+    "fullName": "Spring",
+    "definition": "Thuật ngữ cơ bản: Spring. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-21",
+    "term": "Damper",
+    "fullName": "Damper",
+    "definition": "Thuật ngữ cơ bản: Damper. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-22",
+    "term": "Friction",
+    "fullName": "Friction",
+    "definition": "Thuật ngữ cơ bản: Friction. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-24",
+    "term": "Force",
+    "fullName": "Force",
+    "definition": "Thuật ngữ cơ bản: Force. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-25",
+    "term": "Velocity",
+    "fullName": "Velocity",
+    "definition": "Thuật ngữ cơ bản: Velocity. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-26",
+    "term": "Acceleration",
+    "fullName": "Acceleration",
+    "definition": "Thuật ngữ cơ bản: Acceleration. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-27",
+    "term": "Mass",
+    "fullName": "Mass",
+    "definition": "Thuật ngữ cơ bản: Mass. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-28",
+    "term": "Inertia",
+    "fullName": "Inertia",
+    "definition": "Thuật ngữ cơ bản: Inertia. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-29",
+    "term": "Center of Gravity",
+    "fullName": "Center of Gravity",
+    "definition": "Thuật ngữ cơ bản: Center of Gravity. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-30",
+    "term": "Moment of Inertia",
+    "fullName": "Moment of Inertia",
+    "definition": "Thuật ngữ cơ bản: Moment of Inertia. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-31",
+    "term": "Stress",
+    "fullName": "Stress",
+    "definition": "Thuật ngữ cơ bản: Stress. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-32",
+    "term": "Strain",
+    "fullName": "Strain",
+    "definition": "Thuật ngữ cơ bản: Strain. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-33",
+    "term": "Yield Strength",
+    "fullName": "Yield Strength",
+    "definition": "Thuật ngữ cơ bản: Yield Strength. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-34",
+    "term": "Tensile Strength",
+    "fullName": "Tensile Strength",
+    "definition": "Thuật ngữ cơ bản: Tensile Strength. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-35",
+    "term": "Fatigue",
+    "fullName": "Fatigue",
+    "definition": "Thuật ngữ cơ bản: Fatigue. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-36",
+    "term": "Hardness",
+    "fullName": "Hardness",
+    "definition": "Thuật ngữ cơ bản: Hardness. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-37",
+    "term": "Toughness",
+    "fullName": "Toughness",
+    "definition": "Thuật ngữ cơ bản: Toughness. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-38",
+    "term": "Ductility",
+    "fullName": "Ductility",
+    "definition": "Thuật ngữ cơ bản: Ductility. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-39",
+    "term": "Malleability",
+    "fullName": "Malleability",
+    "definition": "Thuật ngữ cơ bản: Malleability. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-40",
+    "term": "Corrosion",
+    "fullName": "Corrosion",
+    "definition": "Thuật ngữ cơ bản: Corrosion. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-41",
+    "term": "Lubrication",
+    "fullName": "Lubrication",
+    "definition": "Thuật ngữ cơ bản: Lubrication. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-43",
+    "term": "Fit",
+    "fullName": "Fit",
+    "definition": "Thuật ngữ cơ bản: Fit. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-44",
+    "term": "Surface Finish",
+    "fullName": "Surface Finish",
+    "definition": "Thuật ngữ cơ bản: Surface Finish. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-45",
+    "term": "Machining",
+    "fullName": "Machining",
+    "definition": "Thuật ngữ cơ bản: Machining. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-46",
+    "term": "Welding",
+    "fullName": "Welding",
+    "definition": "Thuật ngữ cơ bản: Welding. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-47",
+    "term": "Casting",
+    "fullName": "Casting",
+    "definition": "Thuật ngữ cơ bản: Casting. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-48",
+    "term": "Forging",
+    "fullName": "Forging",
+    "definition": "Thuật ngữ cơ bản: Forging. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-49",
+    "term": "Extrusion",
+    "fullName": "Extrusion",
+    "definition": "Thuật ngữ cơ bản: Extrusion. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "co_dien_tu-core-50",
+    "term": "3D Printing",
+    "fullName": "3D Printing",
+    "definition": "Thuật ngữ cơ bản: 3D Printing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "co_dien_tu",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   }
 ]

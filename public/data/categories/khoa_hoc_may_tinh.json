@@ -30,19 +30,15 @@
     "icon": "fa-solid fa-clock"
   },
   {
-    "id": "kernel",
+    "id": "khoa_hoc_may_tinh-core-11",
     "term": "Kernel",
-    "fullName": "OS Kernel Core",
-    "category": "Khoa học máy tính",
-    "definition": "Nhân hệ điều hành. Phần nhân lõi trung tâm quản lý trực tiếp CPU, RAM và tương tác phần cứng sâu nhất.",
+    "fullName": "Kernel",
+    "definition": "Thuật ngữ cơ bản: Kernel. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Nhân Linux Core",
-      "Nhân Windows NT",
-      "Nhân hệ điều hành macOS Darwin"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/26QPDBe-NQg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=26QPDBe-NQg",
-    "icon": "fa-solid fa-shield-halved"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "interrupt",
@@ -60,34 +56,26 @@
     "icon": "fa-solid fa-hand"
   },
   {
-    "id": "compiler",
+    "id": "khoa_hoc_may_tinh-core-14",
     "term": "Compiler",
-    "fullName": "Code Compiler",
-    "category": "Khoa học máy tính",
-    "definition": "Trình biên dịch. Phần mềm dịch toàn bộ mã nguồn viết bằng ngôn ngữ bậc cao thành tệp nhị phân mã máy trước khi chạy.",
+    "fullName": "Compiler",
+    "definition": "Thuật ngữ cơ bản: Compiler. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Trình biên dịch GCC cho C/C++",
-      "Trình biên dịch Rustc",
-      "Trình biên dịch mã Arduino IDE"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/QXjSnoIisO0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=QXjSnoIisO0",
-    "icon": "fa-solid fa-file-code"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "interpreter",
+    "id": "khoa_hoc_may_tinh-core-15",
     "term": "Interpreter",
-    "fullName": "Code Interpreter",
-    "category": "Khoa học máy tính",
-    "definition": "Trình thông dịch. Trực tiếp thực thi từng dòng lệnh mã nguồn bậc cao tới đâu giải dịch trực tiếp đến đó không cần tệp dịch trước.",
+    "fullName": "Interpreter",
+    "definition": "Thuật ngữ cơ bản: Interpreter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Trình chạy mã Python",
-      "Engine Node.js thực thi JavaScript",
-      "Trình thông dịch PHP"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/QXjSnoIisO0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=QXjSnoIisO0",
-    "icon": "fa-solid fa-terminal"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "assembler",
@@ -135,19 +123,15 @@
     "icon": "fa-solid fa-key"
   },
   {
-    "id": "api",
+    "id": "khoa_hoc_may_tinh-core-21",
     "term": "API",
-    "fullName": "Application Programming Interface",
-    "category": "Khoa học máy tính",
-    "definition": "Giao diện lập trình ứng dụng. Phương thức giao tiếp chuẩn hóa cho các phần mềm trao đổi dữ liệu với nhau.",
+    "fullName": "API",
+    "definition": "Thuật ngữ cơ bản: API. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Lấy thời tiết tự động",
-      "Thanh toán ví điện tử",
-      "Gửi dữ liệu cảm biến lên web"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/s7wkuA2m26U",
-    "youtubeUrl": "https://www.youtube.com/watch?v=s7wkuA2m26U",
-    "icon": "fa-solid fa-gears"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "sdk",
@@ -210,19 +194,15 @@
     "icon": "fa-solid fa-code"
   },
   {
-    "id": "oop",
+    "id": "khoa_hoc_may_tinh-core-49",
     "term": "OOP",
-    "fullName": "Object-Oriented Programming",
-    "category": "Khoa học máy tính",
-    "definition": "Lập trình hướng đối tượng. Phương pháp lập trình thiết kế xoay quanh các Khách thể (Objects) chứa dữ liệu và hành vi.",
+    "fullName": "OOP",
+    "definition": "Thuật ngữ cơ bản: OOP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Phát triển phần mềm lớn C++",
-      "Lập trình game Unity",
-      "Ứng dụng doanh nghiệp Java"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/pTB0EiLXUC8",
-    "youtubeUrl": "https://www.youtube.com/watch?v=pTB0EiLXUC8",
-    "icon": "fa-solid fa-cubes"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "mvc",
@@ -345,19 +325,15 @@
     "icon": "fa-solid fa-infinity"
   },
   {
-    "id": "cache",
+    "id": "khoa_hoc_may_tinh-core-8",
     "term": "Cache",
-    "fullName": "Memory Caching",
-    "category": "Khoa học máy tính",
-    "definition": "Bộ nhớ đệm tốc độ cực nhanh đặt gần CPU lưu trữ các dữ liệu thường xuyên dùng lại giúp giảm thời gian truy xuất từ RAM.",
+    "fullName": "Cache",
+    "definition": "Thuật ngữ cơ bản: Cache. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "L1, L2, L3 cache của CPU",
-      "Lưu bộ đệm trình duyệt web",
-      "Mạng phân phối nội dung CDN"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-store"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "virtualmem",
@@ -375,34 +351,26 @@
     "icon": "fa-solid fa-hard-drive"
   },
   {
-    "id": "thread",
+    "id": "khoa_hoc_may_tinh-core-12",
     "term": "Thread",
-    "fullName": "Processor Thread",
-    "category": "Khoa học máy tính",
-    "definition": "Luồng xử lý. Đơn vị nhỏ nhất của các lệnh lập trình được hệ điều hành lên lịch giao cho CPU thực thi.",
+    "fullName": "Thread",
+    "definition": "Thuật ngữ cơ bản: Thread. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Luồng tải file ngầm trên web",
-      "Phép xử lý đồ họa đa luồng",
-      "Chạy nhạc nền trong khi lướt mạng"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/26QPDBe-NQg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=26QPDBe-NQg",
-    "icon": "fa-solid fa-lines-leaning"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "process",
+    "id": "khoa_hoc_may_tinh-core-13",
     "term": "Process",
-    "fullName": "OS Process",
-    "category": "Khoa học máy tính",
-    "definition": "Tiến trình. Một chương trình đang được nạp chạy trên máy tính sở hữu không gian RAM độc lập riêng biệt.",
+    "fullName": "Process",
+    "definition": "Thuật ngữ cơ bản: Process. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Trình duyệt Chrome đang mở",
-      "Task Manager giám sát tiến trình",
-      "Ứng dụng nhạc Spotify"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/26QPDBe-NQg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=26QPDBe-NQg",
-    "icon": "fa-solid fa-cube"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "deadlock",
@@ -811,69 +779,59 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=TCP%2FIP%20computer%20science%20tutorial"
   },
   {
+    "id": "khoa_hoc_may_tinh-core-29",
     "term": "UDP",
-    "fullName": "User Datagram Protocol",
-    "definition": "Giao thức truyền dữ liệu không kết nối, tốc độ cực cao do không kiểm tra lỗi và không đảm bảo gói tin đến đích.",
+    "fullName": "UDP",
+    "definition": "Thuật ngữ cơ bản: UDP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Gọi video trực tuyến",
-      "Game online thời gian thực",
-      "Livestream sự kiện"
-    ],
-    "id": "cs_lux6es9",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=UDP%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-24",
     "term": "DNS",
-    "fullName": "Domain Name System",
-    "definition": "Hệ thống phân giải tên miền, đóng vai trò như danh bạ Internet biến tên miền dễ nhớ thành địa chỉ IP.",
+    "fullName": "DNS",
+    "definition": "Thuật ngữ cơ bản: DNS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Gõ google.com để truy cập",
-      "Cấu hình mạng gia đình",
-      "Tránh tấn công DNS Spoofing"
-    ],
-    "id": "cs_7hyru01",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=DNS%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-25",
     "term": "DHCP",
-    "fullName": "Dynamic Host Configuration Protocol",
-    "definition": "Giao thức tự động cấp phát địa chỉ IP và các thông số mạng tĩnh khác cho các thiết bị khi chúng kết nối vào mạng.",
+    "fullName": "DHCP",
+    "definition": "Thuật ngữ cơ bản: DHCP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Modem WiFi nhà cấp IP cho điện thoại",
-      "Mạng khách sạn",
-      "Phòng máy trường học"
-    ],
-    "id": "cs_ldv5ryl",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=DHCP%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-26",
     "term": "HTTP",
-    "fullName": "Hypertext Transfer Protocol",
-    "definition": "Giao thức cốt lõi của World Wide Web dùng để truyền tải các văn bản siêu liên kết (HTML) giữa Client và Server.",
+    "fullName": "HTTP",
+    "definition": "Thuật ngữ cơ bản: HTTP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Lướt web thông thường",
-      "Gọi API RESTful",
-      "Tải tài nguyên hình ảnh web"
-    ],
-    "id": "cs_ps9np2o",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=HTTP%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-27",
     "term": "HTTPS",
-    "fullName": "HTTP Secure",
-    "definition": "Phiên bản bảo mật của HTTP, dữ liệu được mã hóa toàn bộ bằng TLS/SSL bảo vệ khỏi việc bị đánh cắp trên đường truyền.",
+    "fullName": "HTTPS",
+    "definition": "Thuật ngữ cơ bản: HTTPS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Web ngân hàng",
-      "Trang đăng nhập",
-      "Thương mại điện tử"
-    ],
-    "id": "cs_pk8j99l",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=HTTPS%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "FTP",
@@ -967,30 +925,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=ARP%20computer%20science%20tutorial"
   },
   {
+    "id": "khoa_hoc_may_tinh-core-23",
     "term": "MAC Address",
-    "fullName": "Media Access Control Address",
-    "definition": "Địa chỉ vật lý duy nhất toàn cầu gồm 48-bit được nhà sản xuất ghi cứng (burn) vào phần cứng card mạng của thiết bị.",
+    "fullName": "MAC Address",
+    "definition": "Thuật ngữ cơ bản: MAC Address. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Bảo mật lọc địa chỉ MAC WiFi",
-      "Định danh thiết bị cứng",
-      "Hỗ trợ DHCP cấp IP cố định"
-    ],
-    "id": "cs_v6rxvvl",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=MAC%20Address%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-22",
     "term": "IP Address",
-    "fullName": "Internet Protocol Address",
-    "definition": "Chuỗi số logic định danh vị trí của một thiết bị trên mạng máy tính (IPv4 hoặc IPv6).",
+    "fullName": "IP Address",
+    "definition": "Thuật ngữ cơ bản: IP Address. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Định tuyến Internet",
-      "Hosting Website",
-      "Chặn IP độc hại"
-    ],
-    "id": "cs_ncotswc",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=IP%20Address%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Subnet Mask",
@@ -1149,17 +1103,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Hypervisor%20computer%20science%20tutorial"
   },
   {
+    "id": "khoa_hoc_may_tinh-core-35",
     "term": "Container",
-    "fullName": "Docker Container",
-    "definition": "Công nghệ ảo hóa cấp hệ điều hành siêu nhẹ, đóng gói ứng dụng và tất cả thư viện liên quan thành một khối duy nhất, khởi động mất vài mili-giây.",
+    "fullName": "Container",
+    "definition": "Thuật ngữ cơ bản: Container. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Phát triển Web Docker",
-      "Triển khai Kubernetes (K8s)",
-      "Đồng bộ môi trường Dev/Prod"
-    ],
-    "id": "cs_z2gb7dv",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Container%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "File System",
@@ -1201,30 +1153,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=RDBMS%20computer%20science%20tutorial"
   },
   {
+    "id": "khoa_hoc_may_tinh-core-20",
     "term": "NoSQL",
-    "fullName": "Not Only SQL Database",
-    "definition": "Các loại cơ sở dữ liệu phi quan hệ, lưu trữ dữ liệu dưới dạng linh hoạt (Tài liệu, Key-Value, Đồ thị) giúp mở rộng ngang dễ dàng.",
+    "fullName": "NoSQL",
+    "definition": "Thuật ngữ cơ bản: NoSQL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "MongoDB",
-      "Redis",
-      "Cassandra"
-    ],
-    "id": "cs_t58dtb5",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=NoSQL%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "khoa_hoc_may_tinh-core-19",
     "term": "SQL",
-    "fullName": "Structured Query Language",
-    "definition": "Ngôn ngữ truy vấn có cấu trúc, chuẩn công nghiệp để giao tiếp, chèn, xóa và truy xuất dữ liệu từ các RDBMS.",
+    "fullName": "SQL",
+    "definition": "Thuật ngữ cơ bản: SQL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Phân tích dữ liệu Data Analyst",
-      "Viết câu truy vấn JOIN",
-      "Báo cáo thông minh BI"
-    ],
-    "id": "cs_0zwqtcc",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=SQL%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "ACID",
@@ -1643,17 +1591,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=VCS%20computer%20science%20tutorial"
   },
   {
+    "id": "khoa_hoc_may_tinh-core-38",
     "term": "Git",
-    "fullName": "Git Distributed Version Control",
-    "definition": "Công cụ quản lý phiên bản phân tán miễn phí phổ biến nhất thế giới do Linus Torvalds tạo ra, nền tảng của GitHub và GitLab.",
+    "fullName": "Git",
+    "definition": "Thuật ngữ cơ bản: Git. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
     "applications": [
-      "Lệnh git commit/push/pull",
-      "Giải quyết Conflict khi gộp mã (Merge)",
-      "Tạo nhánh Branch cho tính năng mới"
-    ],
-    "id": "cs_a6xd3ia",
-    "category": "Khoa học máy tính",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Git%20computer%20science%20tutorial"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Design Patterns",
@@ -1680,5 +1626,357 @@
     "id": "cs_4dcjt28",
     "category": "Khoa học máy tính",
     "youtubeUrl": "https://www.youtube.com/results?search_query=SOLID%20computer%20science%20tutorial"
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-1",
+    "term": "1. Khoa học máy tính (Computer Science) - 50 từ",
+    "fullName": "1. Khoa học máy tính (Computer Science) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 1. Khoa học máy tính (Computer Science) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-1",
+    "term": "BIOS",
+    "fullName": "BIOS",
+    "definition": "Thuật ngữ cơ bản: BIOS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-2",
+    "term": "RAM",
+    "fullName": "RAM",
+    "definition": "Thuật ngữ cơ bản: RAM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-3",
+    "term": "ROM",
+    "fullName": "ROM",
+    "definition": "Thuật ngữ cơ bản: ROM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-4",
+    "term": "CPU",
+    "fullName": "CPU",
+    "definition": "Thuật ngữ cơ bản: CPU. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-5",
+    "term": "GPU",
+    "fullName": "GPU",
+    "definition": "Thuật ngữ cơ bản: GPU. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-6",
+    "term": "HDD",
+    "fullName": "HDD",
+    "definition": "Thuật ngữ cơ bản: HDD. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-7",
+    "term": "SSD",
+    "fullName": "SSD",
+    "definition": "Thuật ngữ cơ bản: SSD. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-9",
+    "term": "Motherboard",
+    "fullName": "Motherboard",
+    "definition": "Thuật ngữ cơ bản: Motherboard. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-10",
+    "term": "Operating System",
+    "fullName": "Operating System",
+    "definition": "Thuật ngữ cơ bản: Operating System. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-16",
+    "term": "Algorithm",
+    "fullName": "Algorithm",
+    "definition": "Thuật ngữ cơ bản: Algorithm. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-17",
+    "term": "Data Structure",
+    "fullName": "Data Structure",
+    "definition": "Thuật ngữ cơ bản: Data Structure. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-18",
+    "term": "Database",
+    "fullName": "Database",
+    "definition": "Thuật ngữ cơ bản: Database. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-28",
+    "term": "TCP",
+    "fullName": "TCP",
+    "definition": "Thuật ngữ cơ bản: TCP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-30",
+    "term": "Router",
+    "fullName": "Router",
+    "definition": "Thuật ngữ cơ bản: Router. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-31",
+    "term": "Switch",
+    "fullName": "Switch",
+    "definition": "Thuật ngữ cơ bản: Switch. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-32",
+    "term": "Firewall",
+    "fullName": "Firewall",
+    "definition": "Thuật ngữ cơ bản: Firewall. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-33",
+    "term": "Cloud Computing",
+    "fullName": "Cloud Computing",
+    "definition": "Thuật ngữ cơ bản: Cloud Computing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-34",
+    "term": "Virtual Machine",
+    "fullName": "Virtual Machine",
+    "definition": "Thuật ngữ cơ bản: Virtual Machine. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-36",
+    "term": "Docker",
+    "fullName": "Docker",
+    "definition": "Thuật ngữ cơ bản: Docker. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-37",
+    "term": "Kubernetes",
+    "fullName": "Kubernetes",
+    "definition": "Thuật ngữ cơ bản: Kubernetes. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-39",
+    "term": "Version Control",
+    "fullName": "Version Control",
+    "definition": "Thuật ngữ cơ bản: Version Control. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-40",
+    "term": "Frontend",
+    "fullName": "Frontend",
+    "definition": "Thuật ngữ cơ bản: Frontend. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-41",
+    "term": "Backend",
+    "fullName": "Backend",
+    "definition": "Thuật ngữ cơ bản: Backend. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-42",
+    "term": "Fullstack",
+    "fullName": "Fullstack",
+    "definition": "Thuật ngữ cơ bản: Fullstack. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-43",
+    "term": "Node.js",
+    "fullName": "Node.js",
+    "definition": "Thuật ngữ cơ bản: Node.js. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-44",
+    "term": "Python",
+    "fullName": "Python",
+    "definition": "Thuật ngữ cơ bản: Python. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-45",
+    "term": "Java",
+    "fullName": "Java",
+    "definition": "Thuật ngữ cơ bản: Java. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-46",
+    "term": "C++",
+    "fullName": "C++",
+    "definition": "Thuật ngữ cơ bản: C++. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-47",
+    "term": "Pointer",
+    "fullName": "Pointer",
+    "definition": "Thuật ngữ cơ bản: Pointer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-48",
+    "term": "Memory Leak",
+    "fullName": "Memory Leak",
+    "definition": "Thuật ngữ cơ bản: Memory Leak. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "khoa_hoc_may_tinh-core-50",
+    "term": "Big O Notation",
+    "fullName": "Big O Notation",
+    "definition": "Thuật ngữ cơ bản: Big O Notation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "khoa_hoc_may_tinh",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   }
 ]

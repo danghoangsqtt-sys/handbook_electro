@@ -1,33 +1,25 @@
 [
   {
-    "id": "fpga",
+    "id": "dien_tu_so-core-44",
     "term": "FPGA",
-    "fullName": "Field-Programmable Gate Array",
-    "category": "Điện tử số",
-    "definition": "Chip bán dẫn chứa mảng cấu trúc các cổng logic và khối logic có thể tự lập trình thay đổi thiết kế mạch phần cứng sau khi xuất xưởng.",
+    "fullName": "FPGA",
+    "definition": "Thuật ngữ cơ bản: FPGA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mô phỏng chip xử lý trước khi sản xuất",
-      "Bộ gia tốc xử lý mạng thần kinh AI",
-      "Xử lý luồng video camera mạng độ trễ bằng không"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-border-none"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "cpld",
+    "id": "dien_tu_so-core-45",
     "term": "CPLD",
-    "fullName": "Complex Programmable Logic Device",
-    "category": "Điện tử số",
-    "definition": "Thiết bị logic lập trình được có kiến trúc đơn giản hơn FPGA, cấu trúc bộ nhớ bất biến không mất dữ liệu cấu hình khi mất điện.",
+    "fullName": "CPLD",
+    "definition": "Thuật ngữ cơ bản: CPLD. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mạch giải mã địa chỉ bo mạch chủ",
-      "Mở rộng chân GPIO tốc độ cực cao",
-      "Bộ điều hướng dữ liệu cầu nối nối"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-qrcode"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "asic",
@@ -45,109 +37,81 @@
     "icon": "fa-solid fa-microchip"
   },
   {
-    "id": "andgate",
+    "id": "dien_tu_so-core-2",
     "term": "AND Gate",
-    "fullName": "Logic AND Gate",
-    "category": "Điện tử số",
-    "definition": "Cổng logic AND. Ngõ ra chỉ ở mức HIGH (1) khi tất cả các ngõ vào đồng thời ở mức HIGH (1).",
+    "fullName": "AND Gate",
+    "definition": "Thuật ngữ cơ bản: AND Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mạch điều kiện kích hoạt an toàn kép",
-      "Mạch so sánh bit nhị phân",
-      "Mạch lọc tín hiệu đồng bộ"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-square-plus"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "orgate",
+    "id": "dien_tu_so-core-3",
     "term": "OR Gate",
-    "fullName": "Logic OR Gate",
-    "category": "Điện tử số",
-    "definition": "Cổng logic OR. Ngõ ra ở mức HIGH (1) chỉ cần tối thiểu một trong các ngõ vào có tín hiệu mức HIGH (1).",
+    "fullName": "OR Gate",
+    "definition": "Thuật ngữ cơ bản: OR Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mạch cảnh báo cháy từ nhiều phòng",
-      "Mạch kích hoạt dự phòng nguồn điện",
-      "Phép toán logic số học cơ bản"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-circle-nodes"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "xorgate",
+    "id": "dien_tu_so-core-7",
     "term": "XOR Gate",
-    "fullName": "Exclusive-OR Gate",
-    "category": "Điện tử số",
-    "definition": "Cổng logic XOR. Ngõ ra đạt HIGH (1) chỉ khi số lượng đầu vào ở mức HIGH có tính chất lẻ (khác biệt nhau hoàn toàn).",
+    "fullName": "XOR Gate",
+    "definition": "Thuật ngữ cơ bản: XOR Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mạch cộng bán phần nhị phân",
-      "Mạch tạo mã kiểm tra lỗi CRC",
-      "Mạch tạo xung đảo mã"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-shuffle"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "nandgate",
+    "id": "dien_tu_so-core-5",
     "term": "NAND Gate",
-    "fullName": "Not-AND Logic Gate",
-    "category": "Điện tử số",
-    "definition": "Cổng logic NAND. Hoạt động đảo ngược hoàn toàn của cổng AND, được coi là cổng logic vạn năng có thể ghép thành bất cứ cổng logic nào.",
+    "fullName": "NAND Gate",
+    "definition": "Thuật ngữ cơ bản: NAND Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Chế tạo chip nhớ Flash NAND SSD",
-      "Cổng vạn năng trong vi mạch cơ bản",
-      "Mạch điện tử logic thu gọn"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-ban"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "norgate",
+    "id": "dien_tu_so-core-6",
     "term": "NOR Gate",
-    "fullName": "Not-OR Logic Gate",
-    "category": "Điện tử số",
-    "definition": "Cổng logic NOR. Hoạt động đảo ngược của cổng OR, đầu ra đạt HIGH duy nhất khi tất cả các đầu vào ở mức thấp LOW.",
+    "fullName": "NOR Gate",
+    "definition": "Thuật ngữ cơ bản: NOR Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Chip nhớ Flash NOR tốc độ truy xuất ngẫu nhiên",
-      "Mạch điện tử an toàn",
-      "Tạo các cổng logic cơ bản khác"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-ban"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "halfadder",
+    "id": "dien_tu_so-core-28",
     "term": "Half Adder",
-    "fullName": "Half Adder Circuit",
-    "category": "Điện tử số",
-    "definition": "Mạch cộng bán phần thực hiện phép cộng hai bit nhị phân cơ bản cho ra kết quả Tổng (Sum) và cờ Nhớ (Carry).",
+    "fullName": "Half Adder",
+    "definition": "Thuật ngữ cơ bản: Half Adder. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thành phần cơ bản tạo khối tính ALU",
-      "Mạch cộng hai bit cơ sở",
-      "Mạch cộng bit máy tính sơ khai"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/vOeaEb_0mI4",
-    "youtubeUrl": "https://www.youtube.com/watch?v=vOeaEb_0mI4",
-    "icon": "fa-solid fa-plus-minus"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "fulladder",
+    "id": "dien_tu_so-core-29",
     "term": "Full Adder",
-    "fullName": "Full Adder Circuit",
-    "category": "Điện tử số",
-    "definition": "Mạch cộng toàn phần thực hiện cộng 2 bit đầu vào và cộng thêm 1 bit cờ nhớ từ hàng tính toán trước chuyển lên.",
+    "fullName": "Full Adder",
+    "definition": "Thuật ngữ cơ bản: Full Adder. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Xây dựng bộ cộng 4-bit, 8-bit nhị phân",
-      "Khối xử lý toán học CPU máy tính",
-      "Bộ đếm tốc độ cao điện tử"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/vOeaEb_0mI4",
-    "youtubeUrl": "https://www.youtube.com/watch?v=vOeaEb_0mI4",
-    "icon": "fa-solid fa-calculator"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "multiplexer",
@@ -180,49 +144,37 @@
     "icon": "fa-solid fa-expand"
   },
   {
-    "id": "flipflop",
+    "id": "dien_tu_so-core-15",
     "term": "Flip-Flop",
-    "fullName": "Bistable Multivibrator (Flip-Flop)",
-    "category": "Điện tử số",
-    "definition": "Phần tử nhớ mạch số cơ bản nhất có hai trạng thái bền ổn định, lưu giữ trạng thái 1-bit dữ liệu nhị phân đồng bộ xung clock.",
+    "fullName": "Flip-Flop",
+    "definition": "Thuật ngữ cơ bản: Flip-Flop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thành phần cấu tạo bộ nhớ RAM tĩnh",
-      "Mạch chia đôi tần số xung nhịp",
-      "Mạch dịch thanh ghi dịch chuyển dữ liệu"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Pe7XgV1fO88",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Pe7XgV1fO88",
-    "icon": "fa-solid fa-arrows-spin"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "latch",
+    "id": "dien_tu_so-core-20",
     "term": "Latch",
-    "fullName": "Digital Data Latch",
-    "category": "Điện tử số",
-    "definition": "Bộ chốt dữ liệu số bất đồng bộ lưu giữ trạng thái đầu ra trực tiếp theo mức điện áp đầu vào điều khiển kích hoạt.",
+    "fullName": "Latch",
+    "definition": "Thuật ngữ cơ bản: Latch. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Chốt dữ liệu Bus địa chỉ máy tính",
-      "Mạch chốt hiển thị LED trung tâm",
-      "Cơ cấu khóa logic cơ bản"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Pe7XgV1fO88",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Pe7XgV1fO88",
-    "icon": "fa-solid fa-lock"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "shiftregister",
+    "id": "dien_tu_so-core-21",
     "term": "Shift Register",
-    "fullName": "Shift Register IC (74HC595)",
-    "category": "Điện tử số",
-    "definition": "Thanh ghi dịch. Chuỗi các flip-flop nối tiếp cho phép dịch chuyển vị trí các bit nhị phân để mở rộng cổng IO.",
+    "fullName": "Shift Register",
+    "definition": "Thuật ngữ cơ bản: Shift Register. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mở rộng thêm chân đầu ra vi điều khiển",
-      "Quét màn hình ma trận LED",
-      "Mạch chuyển đổi dữ liệu nối tiếp sang song song"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6fVbJbNHeV0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6fVbJbNHeV0",
-    "icon": "fa-solid fa-lines-leaning"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "binarycounter",
@@ -285,64 +237,48 @@
     "icon": "fa-solid fa-table-cells"
   },
   {
-    "id": "boolean",
+    "id": "dien_tu_so-core-10",
     "term": "Boolean Algebra",
-    "fullName": "Boolean Algebra Logic",
-    "category": "Điện tử số",
-    "definition": "Đại số Boolean. Hệ thống toán học nhị phân thiết lập trên các phép toán logic cơ bản như AND, OR, NOT.",
+    "fullName": "Boolean Algebra",
+    "definition": "Thuật ngữ cơ bản: Boolean Algebra. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Lập trình điều kiện logic hệ thống phần mềm",
-      "Mô hình hóa mạch điện tử cổng logic",
-      "Mạch tối ưu hóa dữ liệu số"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gI-QT5hsU78",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gI-QT5hsU78",
-    "icon": "fa-solid fa-square-root-variable"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "propdelay",
+    "id": "dien_tu_so-core-37",
     "term": "Propagation Delay",
-    "fullName": "Propagation Delay Time",
-    "category": "Điện tử số",
-    "definition": "Thời gian trễ truyền dẫn. Khoảng thời gian từ lúc cấp đầu vào thay đổi đến khi đầu ra cổng logic phản hồi thay đổi.",
+    "fullName": "Propagation Delay",
+    "definition": "Thuật ngữ cơ bản: Propagation Delay. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Giới hạn tốc độ xung nhịp tối đa của CPU",
-      "Phân tích lỗi xung đột thời gian mạch cứng",
-      "Mạch thiết kế tần số cao GHz"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-hourglass-half"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "setuptime",
+    "id": "dien_tu_so-core-35",
     "term": "Setup Time",
-    "fullName": "Setup Time Requirement",
-    "category": "Điện tử số",
-    "definition": "Thời gian thiết lập. Khoảng thời gian tối thiểu dữ liệu đầu vào phải duy trì ổn định trước khi xung sườn clock kích hoạt.",
+    "fullName": "Setup Time",
+    "definition": "Thuật ngữ cơ bản: Setup Time. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Tối ưu thiết kế clock đồng bộ",
-      "Khắc phục lỗi ghi sai trạng thái thanh ghi",
-      "Lập trình thiết kế FPGA"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Pe7XgV1fO88",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Pe7XgV1fO88",
-    "icon": "fa-solid fa-stopwatch"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "holdtime",
+    "id": "dien_tu_so-core-36",
     "term": "Hold Time",
-    "fullName": "Hold Time Requirement",
-    "category": "Điện tử số",
-    "definition": "Thời gian giữ. Khoảng thời gian dữ liệu đầu vào bắt buộc duy trì ổn định sau khi sườn clock đã kích hoạt xong.",
+    "fullName": "Hold Time",
+    "definition": "Thuật ngữ cơ bản: Hold Time. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Hạn chế lỗi dữ liệu ma quỷ vi mạch số",
-      "Thiết kế mạch chuyển đổi tần số cao",
-      "Kiểm soát đồng bộ Flip-flop"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/Pe7XgV1fO88",
-    "youtubeUrl": "https://www.youtube.com/watch?v=Pe7XgV1fO88",
-    "icon": "fa-solid fa-clock"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "tristate",
@@ -360,79 +296,59 @@
     "icon": "fa-solid fa-scissors"
   },
   {
-    "id": "cmos",
+    "id": "dien_tu_so-core-42",
     "term": "CMOS",
-    "fullName": "Complementary Metal-Oxide-Semiconductor",
-    "category": "Điện tử số",
-    "definition": "Công nghệ bán dẫn sử dụng các transistor phân cực bù trừ NMOS và PMOS giúp vi mạch tiêu hao điện năng cực thấp khi tĩnh.",
+    "fullName": "CMOS",
+    "definition": "Thuật ngữ cơ bản: CMOS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Công nghệ chế tạo các chip máy tính hiện đại",
-      "Mạch tích hợp sạc pin đồng hồ CMOS",
-      "Cảm biến hình ảnh máy ảnh số"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-microchip"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "ttl",
+    "id": "dien_tu_so-core-43",
     "term": "TTL",
-    "fullName": "Transistor-Transistor Logic",
-    "category": "Điện tử số",
-    "definition": "Công nghệ bán dẫn chế tạo vi mạch tích hợp cổ dựa trên Transistor lưỡng cực (BJT), phản hồi nhanh nhưng tỏa nhiệt cao hơn CMOS.",
+    "fullName": "TTL",
+    "definition": "Thuật ngữ cơ bản: TTL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Các IC dòng họ logic 7400 kinh điển",
-      "Học tập thực hành cổng logic cơ bản",
-      "Mạch điện tử chống nhiễu công suất lớn"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-microchip"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "logiclevel",
+    "id": "dien_tu_so-core-40",
     "term": "Logic Level",
-    "fullName": "Digital Voltage Logic Levels",
-    "category": "Điện tử số",
-    "definition": "Các ngưỡng điện áp đại diện cho trạng thái HIGH (1) và LOW (0) của các họ chip như 5V TTL hay 3.3V CMOS.",
+    "fullName": "Logic Level",
+    "definition": "Thuật ngữ cơ bản: Logic Level. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Phân tích phối hợp ghép mạch 5V và 3.3V",
-      "Chuyển đổi mức logic chuyển tiếp",
-      "Đo xung số bằng oscilloscope"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/wxzhS_An-N0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=wxzhS_An-N0",
-    "icon": "fa-solid fa-bolt"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "vhdl",
+    "id": "dien_tu_so-core-47",
     "term": "VHDL",
-    "fullName": "Very High Speed Integrated Circuit HDL",
-    "category": "Điện tử số",
-    "definition": "Ngôn ngữ định nghĩa cấu trúc phần cứng chuẩn hóa của bộ quốc phòng Mỹ chuyên thiết kế mạch tích hợp tốc độ cao.",
+    "fullName": "VHDL",
+    "definition": "Thuật ngữ cơ bản: VHDL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Lập trình mạch số FPGA",
-      "Mô tả vi kiến trúc CPU",
-      "Thiết kế mạch hàng không vũ trụ"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-code"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "verilog",
+    "id": "dien_tu_so-core-46",
     "term": "Verilog",
-    "fullName": "Verilog Hardware Description Language",
-    "category": "Điện tử số",
-    "definition": "Ngôn ngữ định nghĩa cấu trúc phần cứng có cú pháp súc tích gần giống ngôn ngữ lập trình C được ưa chuộng rộng rãi tại các công ty bán dẫn thương mại.",
+    "fullName": "Verilog",
+    "definition": "Thuật ngữ cơ bản: Verilog. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thiết kế vi xử lý bán dẫn thương mại",
-      "Mạch testbench gỡ lỗi FPGA",
-      "Thiết kế chip nhúng ASIC"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/gM7K6S9_uYg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=gM7K6S9_uYg",
-    "icon": "fa-solid fa-code"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "dac_res",
@@ -450,16 +366,15 @@
     "icon": "fa-solid fa-sliders"
   },
   {
-    "id": "logic_gate",
+    "id": "dien_tu_so-core-1",
     "term": "Logic Gate",
-    "fullName": "Cổng logic",
-    "category": "Điện tử số",
-    "definition": "Phần tử cơ sở cấu tạo nên mạch số, thực hiện các phép toán Boole trên một hoặc nhiều ngõ vào và tạo ra một ngõ ra duy nhất.",
+    "fullName": "Logic Gate",
+    "definition": "Thuật ngữ cơ bản: Logic Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "IC số",
-      "Vi xử lý"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "not_gate",
@@ -474,26 +389,26 @@
     "youtubeUrl": ""
   },
   {
-    "id": "xnor_gate",
+    "id": "dien_tu_so-core-8",
     "term": "XNOR Gate",
-    "fullName": "Cổng XNOR",
-    "category": "Điện tử số",
-    "definition": "Cổng logic cho ngõ ra mức 1 khi các ngõ vào có trạng thái giống hệt nhau.",
+    "fullName": "XNOR Gate",
+    "definition": "Thuật ngữ cơ bản: XNOR Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Mạch so sánh bằng (Comparator)"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "truth_table",
+    "id": "dien_tu_so-core-9",
     "term": "Truth Table",
-    "fullName": "Bảng chân lý",
-    "category": "Điện tử số",
-    "definition": "Bảng liệt kê tất cả các tổ hợp có thể của biến ngõ vào và giá trị ngõ ra tương ứng của một hàm logic.",
+    "fullName": "Truth Table",
+    "definition": "Thuật ngữ cơ bản: Truth Table. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thiết kế mạch tổ hợp"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "demorgan_theorem",
@@ -562,39 +477,37 @@
     "youtubeUrl": ""
   },
   {
-    "id": "fan_in",
+    "id": "dien_tu_so-core-38",
     "term": "Fan-in",
-    "fullName": "Hệ số Fan-in",
-    "category": "Điện tử số",
-    "definition": "Số lượng tối đa các ngõ vào mà một cổng logic có thể xử lý mà không làm ảnh hưởng tính năng điện.",
+    "fullName": "Fan-in",
+    "definition": "Thuật ngữ cơ bản: Fan-in. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Đánh giá thông số vi mạch"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "fan_out",
+    "id": "dien_tu_so-core-39",
     "term": "Fan-out",
-    "fullName": "Hệ số Fan-out",
-    "category": "Điện tử số",
-    "definition": "Số lượng ngõ vào của các cổng khác mà một cổng logic có thể kéo (drive) một cách an toàn.",
+    "fullName": "Fan-out",
+    "definition": "Thuật ngữ cơ bản: Fan-out. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thiết kế bus tín hiệu"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "combinational_logic",
+    "id": "dien_tu_so-core-13",
     "term": "Combinational Logic",
-    "fullName": "Mạch logic tổ hợp",
-    "category": "Điện tử số",
-    "definition": "Loại mạch số mà ngõ ra tại một thời điểm chỉ phụ thuộc vào trạng thái ngõ vào tại chính thời điểm đó (không có bộ nhớ).",
+    "fullName": "Combinational Logic",
+    "definition": "Thuật ngữ cơ bản: Combinational Logic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "ALU",
-      "Mạch giải mã",
-      "Mạch cộng"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "encoder_circuit",
@@ -609,16 +522,15 @@
     "youtubeUrl": ""
   },
   {
-    "id": "decoder",
+    "id": "dien_tu_so-core-27",
     "term": "Decoder",
-    "fullName": "Bộ giải mã",
-    "category": "Điện tử số",
-    "definition": "Mạch dịch một mã nhị phân n-bit thành tối đa 2^n đường tín hiệu ngõ ra.",
+    "fullName": "Decoder",
+    "definition": "Thuật ngữ cơ bản: Decoder. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Giải mã địa chỉ bộ nhớ",
-      "Điều khiển LED 7 đoạn"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "ripple_carry_adder",
@@ -643,15 +555,15 @@
     "youtubeUrl": ""
   },
   {
-    "id": "subtractor",
+    "id": "dien_tu_so-core-30",
     "term": "Subtractor",
-    "fullName": "Bộ trừ",
-    "category": "Điện tử số",
-    "definition": "Mạch thực hiện phép trừ nhị phân, thường được thực hiện bằng bộ cộng kết hợp với mã bù 2.",
+    "fullName": "Subtractor",
+    "definition": "Thuật ngữ cơ bản: Subtractor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Tính toán số học"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "comparator",
@@ -768,17 +680,15 @@
     "youtubeUrl": ""
   },
   {
-    "id": "sequential_logic",
+    "id": "dien_tu_so-core-14",
     "term": "Sequential Logic",
-    "fullName": "Mạch logic tuần tự",
-    "category": "Điện tử số",
-    "definition": "Mạch số mà ngõ ra phụ thuộc cả vào ngõ vào hiện tại VÀ trạng thái cũ trong quá khứ (có bộ nhớ/hồi tiếp).",
+    "fullName": "Sequential Logic",
+    "definition": "Thuật ngữ cơ bản: Sequential Logic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Ram",
-      "Bộ đếm",
-      "Thanh ghi"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "sr_latch",
@@ -792,39 +702,37 @@
     "youtubeUrl": ""
   },
   {
-    "id": "d_flip_flop",
+    "id": "dien_tu_so-core-17",
     "term": "D Flip-Flop",
-    "fullName": "Data Flip-Flop",
-    "category": "Điện tử số",
-    "definition": "Flip-Flop chốt lấy dữ liệu ở chân D truyền ra chân Q ngay tại khoảnh khắc sườn xung nhịp tới.",
+    "fullName": "D Flip-Flop",
+    "definition": "Thuật ngữ cơ bản: D Flip-Flop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thanh ghi CPU",
-      "Đồng bộ hóa dữ liệu"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "jk_flip_flop",
+    "id": "dien_tu_so-core-18",
     "term": "JK Flip-Flop",
     "fullName": "JK Flip-Flop",
-    "category": "Điện tử số",
-    "definition": "Flip-Flop đa năng nâng cấp từ SR, khắc phục được trạng thái cấm, có khả năng lật trạng thái (toggle).",
+    "definition": "Thuật ngữ cơ bản: JK Flip-Flop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Thiết kế bộ đếm phức tạp"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "t_flip_flop",
+    "id": "dien_tu_so-core-19",
     "term": "T Flip-Flop",
-    "fullName": "Toggle Flip-Flop",
-    "category": "Điện tử số",
-    "definition": "Flip-Flop lật trạng thái ngõ ra mỗi khi có một sườn xung nhịp đến nếu chân T=1.",
+    "fullName": "T Flip-Flop",
+    "definition": "Thuật ngữ cơ bản: T Flip-Flop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Bộ chia đôi tần số",
-      "Bộ đếm nhị phân"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "clock_signal",
@@ -929,15 +837,15 @@
     "youtubeUrl": ""
   },
   {
-    "id": "synchronous_counter",
+    "id": "dien_tu_so-core-23",
     "term": "Synchronous Counter",
-    "fullName": "Bộ đếm đồng bộ",
-    "category": "Điện tử số",
-    "definition": "Bộ đếm mà tất cả các Flip-Flop đều nhận cùng chung một xung clock, cập nhật đồng thời, không bị trễ gợn sóng.",
+    "fullName": "Synchronous Counter",
+    "definition": "Thuật ngữ cơ bản: Synchronous Counter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
     "applications": [
-      "Hệ thống số tốc độ cao"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "rom",
@@ -1298,6 +1206,193 @@
     "applications": [
       "Mạch I2C",
       "Đọc nút nhấn MCU"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-1",
+    "term": "5. Điện tử số (Digital Electronics) - 50 từ",
+    "fullName": "5. Điện tử số (Digital Electronics) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 5. Điện tử số (Digital Electronics) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-4",
+    "term": "NOT Gate",
+    "fullName": "NOT Gate",
+    "definition": "Thuật ngữ cơ bản: NOT Gate. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-11",
+    "term": "De Morgan's Laws",
+    "fullName": "De Morgan's Laws",
+    "definition": "Thuật ngữ cơ bản: De Morgan's Laws. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-12",
+    "term": "Karnaugh Map",
+    "fullName": "Karnaugh Map",
+    "definition": "Thuật ngữ cơ bản: Karnaugh Map. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-16",
+    "term": "SR Flip-Flop",
+    "fullName": "SR Flip-Flop",
+    "definition": "Thuật ngữ cơ bản: SR Flip-Flop. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-22",
+    "term": "Ripple Counter",
+    "fullName": "Ripple Counter",
+    "definition": "Thuật ngữ cơ bản: Ripple Counter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-24",
+    "term": "Multiplexer",
+    "fullName": "Multiplexer",
+    "definition": "Thuật ngữ cơ bản: Multiplexer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-25",
+    "term": "Demultiplexer",
+    "fullName": "Demultiplexer",
+    "definition": "Thuật ngữ cơ bản: Demultiplexer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-26",
+    "term": "Encoder",
+    "fullName": "Encoder",
+    "definition": "Thuật ngữ cơ bản: Encoder. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-31",
+    "term": "Comparator",
+    "fullName": "Comparator",
+    "definition": "Thuật ngữ cơ bản: Comparator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-32",
+    "term": "Clock Signal",
+    "fullName": "Clock Signal",
+    "definition": "Thuật ngữ cơ bản: Clock Signal. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-33",
+    "term": "Rising Edge",
+    "fullName": "Rising Edge",
+    "definition": "Thuật ngữ cơ bản: Rising Edge. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-34",
+    "term": "Falling Edge",
+    "fullName": "Falling Edge",
+    "definition": "Thuật ngữ cơ bản: Falling Edge. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-41",
+    "term": "Noise Margin",
+    "fullName": "Noise Margin",
+    "definition": "Thuật ngữ cơ bản: Noise Margin. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-48",
+    "term": "State Machine",
+    "fullName": "State Machine",
+    "definition": "Thuật ngữ cơ bản: State Machine. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-49",
+    "term": "Moore Machine",
+    "fullName": "Moore Machine",
+    "definition": "Thuật ngữ cơ bản: Moore Machine. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "dien_tu_so-core-50",
+    "term": "Mealy Machine",
+    "fullName": "Mealy Machine",
+    "definition": "Thuật ngữ cơ bản: Mealy Machine. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "dien_tu_so",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
     ]
   }
 ]

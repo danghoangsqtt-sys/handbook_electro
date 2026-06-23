@@ -26,42 +26,37 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=wz_Z9V7R1cE"
   },
   {
-    "id": "ofdm",
+    "id": "vo_tuyen_vien_thong-core-15",
     "term": "OFDM",
-    "fullName": "Orthogonal Frequency-Division Multiplexing",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Kỹ thuật điều chế ghép kênh phân chia theo tần số trực giao, chia luồng dữ liệu thành nhiều sóng mang phụ để chống nhiễu đa đường.",
+    "fullName": "OFDM",
+    "definition": "Thuật ngữ cơ bản: OFDM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Wi-Fi 802.11",
-      "Truyền hình số DVB-T",
-      "Mạng 4G/5G"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=SyY5p-oI5Hk"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "qam",
+    "id": "vo_tuyen_vien_thong-core-12",
     "term": "QAM",
-    "fullName": "Quadrature Amplitude Modulation",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Phương pháp điều chế kết hợp biến đổi cả biên độ và pha của sóng mang để tăng tốc độ bit trên một đơn vị băng thông.",
+    "fullName": "QAM",
+    "definition": "Thuật ngữ cơ bản: QAM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Truyền hình cáp",
-      "Băng rộng không dây",
-      "Modem cáp quang"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=9x0c1b3y4z"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "vswr",
+    "id": "vo_tuyen_vien_thong-core-39",
     "term": "VSWR",
-    "fullName": "Voltage Standing Wave Ratio",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Hệ số sóng đứng điện áp, đặc trưng cho mức độ phối hợp trở kháng giữa đường dây truyền tải và tải (như ăng-ten).",
+    "fullName": "VSWR",
+    "definition": "Thuật ngữ cơ bản: VSWR. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Đo kiểm ăng-ten",
-      "Thiết kế bộ khuếch đại RF"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=6v9a8b7c6d"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "snr",
@@ -113,16 +108,15 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=e1f2g3h4i5"
   },
   {
-    "id": "wavelength",
+    "id": "vo_tuyen_vien_thong-core-25",
     "term": "Wavelength",
-    "fullName": "Bước sóng (Lambda)",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Khoảng cách giữa hai điểm tương đồng liên tiếp trên một chu kỳ sóng vô tuyến, tỷ lệ nghịch với tần số.",
+    "fullName": "Wavelength",
+    "definition": "Thuật ngữ cơ bản: Wavelength. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Tính toán kích thước ăng-ten",
-      "Phân tích nhiễu xạ sóng"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=h1i2j3k4l5"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "frequency_band",
@@ -150,29 +144,26 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=m1i2c3r4o5"
   },
   {
-    "id": "cdma",
+    "id": "vo_tuyen_vien_thong-core-20",
     "term": "CDMA",
-    "fullName": "Code-Division Multiple Access",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Công nghệ đa truy cập phân chia theo mã, cho phép nhiều trạm phát gửi thông tin trên cùng một tần số bằng các mã giả ngẫu nhiên.",
+    "fullName": "CDMA",
+    "definition": "Thuật ngữ cơ bản: CDMA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Mạng di động 3G",
-      "Hệ thống định vị GPS"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=c1d2m3a4b5"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "modulation",
+    "id": "vo_tuyen_vien_thong-core-7",
     "term": "Modulation",
-    "fullName": "Điều chế tín hiệu",
-    "category": "Vô tuyến & Viễn thông",
-    "definition": "Quá trình biến đổi đặc tính (biên độ, pha, tần số) của sóng mang tần số cao theo tín hiệu thông tin tần số thấp.",
+    "fullName": "Modulation",
+    "definition": "Thuật ngữ cơ bản: Modulation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "FM Radio",
-      "AM Radio",
-      "Truyền dẫn kỹ thuật số"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=m1o2d3u4l5"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "baseband",
@@ -549,17 +540,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Multipath%20Fading%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-36",
     "term": "Path Loss",
-    "fullName": "Free Space Path Loss",
-    "definition": "Sự suy hao công suất tín hiệu tự nhiên do sóng điện từ bị phân tán khi truyền qua không gian tự do tỷ lệ nghịch với bình phương khoảng cách.",
+    "fullName": "Path Loss",
+    "definition": "Thuật ngữ cơ bản: Path Loss. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Tính toán Link Budget",
-      "Thiết kế vùng phủ sóng vệ tinh",
-      "Quy hoạch trạm BTS"
-    ],
-    "id": "tel_n6ccwh8",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Path%20Loss%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Diversity",
@@ -588,17 +577,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Polarization%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-37",
     "term": "Gain",
-    "fullName": "Antenna Gain",
-    "definition": "Độ lợi ăng-ten (đo bằng dBi), biểu thị khả năng tập trung năng lượng bức xạ về một hướng so với ăng-ten đẳng hướng.",
+    "fullName": "Gain",
+    "definition": "Thuật ngữ cơ bản: Gain. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Chọn ăng-ten cho router",
-      "Thiết kế trạm vi ba",
-      "Thu sóng vệ tinh"
-    ],
-    "id": "tel_5vzlkqo",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Gain%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Directivity",
@@ -614,17 +601,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Directivity%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-40",
     "term": "Return Loss",
     "fullName": "Return Loss",
-    "definition": "Suy hao dội ngược, đo lường năng lượng tín hiệu bị phản xạ ngược lại do sự không phối hợp trở kháng ở các đầu nối cáp.",
+    "definition": "Thuật ngữ cơ bản: Return Loss. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Kiểm tra cáp đồng trục",
-      "Đo kiểm ăng-ten trạm phát",
-      "Hiệu chuẩn máy phát RF"
-    ],
-    "id": "tel_irbtuk3",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Return%20Loss%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Smith Chart",
@@ -640,17 +625,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Smith%20Chart%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-38",
     "term": "Impedance Matching",
-    "fullName": "Phối hợp trở kháng",
-    "definition": "Kỹ thuật điều chỉnh trở kháng của tải sao cho bằng với trở kháng nguồn hoặc đường dây nhằm truyền tải công suất lớn nhất.",
+    "fullName": "Impedance Matching",
+    "definition": "Thuật ngữ cơ bản: Impedance Matching. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Hàn đầu nối cáp RF",
-      "Mạch lọc băng thông",
-      "Mạch thu phát vô tuyến"
-    ],
-    "id": "tel_wa6r6lz",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Impedance%20Matching%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Parabolic Antenna",
@@ -822,30 +805,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=PSK%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-14",
     "term": "BPSK",
-    "fullName": "Binary Phase-Shift Keying",
-    "definition": "Dạng điều chế PSK đơn giản nhất sử dụng hai pha lệch nhau 180 độ để mã hóa 1 bit trên mỗi symbol (0 hoặc 1).",
+    "fullName": "BPSK",
+    "definition": "Thuật ngữ cơ bản: BPSK. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Hệ thống liên lạc không gian sâu",
-      "Mạng viễn thông điều kiện nhiễu cao",
-      "Tín hiệu đồng hồ GPS"
-    ],
-    "id": "tel_488zm0j",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=BPSK%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "vo_tuyen_vien_thong-core-13",
     "term": "QPSK",
-    "fullName": "Quadrature Phase-Shift Keying",
-    "definition": "Điều chế pha cầu phương, sử dụng bốn góc pha khác nhau để mã hóa 2 bit trên mỗi symbol, tăng gấp đôi tốc độ so với BPSK.",
+    "fullName": "QPSK",
+    "definition": "Thuật ngữ cơ bản: QPSK. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Mạng 3G WCDMA",
-      "Truyền hình kỹ thuật số DVB-S",
-      "Mạng truyền dữ liệu vệ tinh"
-    ],
-    "id": "tel_6hsko0k",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=QPSK%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "256-QAM",
@@ -887,30 +866,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=WCDMA%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-21",
     "term": "TDMA",
-    "fullName": "Time-Division Multiple Access",
-    "definition": "Đa truy nhập phân chia theo thời gian, chia một kênh tần số duy nhất thành nhiều khe thời gian xen kẽ cho nhiều thuê bao.",
+    "fullName": "TDMA",
+    "definition": "Thuật ngữ cơ bản: TDMA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Mạng di động 2G GSM",
-      "Hệ thống thông tin vô tuyến trung kế",
-      "Vệ tinh VSAT"
-    ],
-    "id": "tel_670bsqr",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=TDMA%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "vo_tuyen_vien_thong-core-22",
     "term": "FDMA",
-    "fullName": "Frequency-Division Multiple Access",
-    "definition": "Đa truy nhập phân chia theo tần số, chia nhỏ dải băng thông tổng thành nhiều dải tần con, mỗi người dùng chiếm một tần số riêng.",
+    "fullName": "FDMA",
+    "definition": "Thuật ngữ cơ bản: FDMA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Phát thanh Radio truyền thống",
-      "Kênh analog truyền hình",
-      "Mạng di động 1G"
-    ],
-    "id": "tel_bccew42",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=FDMA%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "SDMA",
@@ -1056,30 +1031,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=TIR%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-33",
     "term": "Dispersion",
-    "fullName": "Optical Dispersion (Tán sắc)",
-    "definition": "Sự phân tán của các thành phần quang học trên sợi quang dẫn đến việc xung ánh sáng bị trải rộng ra khi truyền, làm giảm băng thông.",
+    "fullName": "Dispersion",
+    "definition": "Thuật ngữ cơ bản: Dispersion. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Kiểm soát lỗi tín hiệu cáp quang",
-      "Bù tán sắc (DCF) cáp biển",
-      "Thiết kế sợi quang bù tán sắc"
-    ],
-    "id": "tel_va15x8a",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Dispersion%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "vo_tuyen_vien_thong-core-19",
     "term": "WDM",
-    "fullName": "Wavelength-Division Multiplexing",
-    "definition": "Ghép kênh phân chia theo bước sóng, kỹ thuật dùng nhiều màu sắc (bước sóng) ánh sáng khác nhau truyền qua cùng 1 sợi quang.",
+    "fullName": "WDM",
+    "definition": "Thuật ngữ cơ bản: WDM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Hệ thống mạng trục cáp quang",
-      "Kết nối ISP lõi",
-      "Tăng dung lượng cáp biển cũ"
-    ],
-    "id": "tel_rjoc06a",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=WDM%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "CWDM",
@@ -1238,17 +1209,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=FTTC%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-30",
     "term": "Attenuation",
-    "fullName": "Signal Attenuation (Suy hao)",
-    "definition": "Sự giảm cường độ của tín hiệu quang hoặc vô tuyến khi truyền qua khoảng cách xa do bị hấp thụ hoặc tán xạ.",
+    "fullName": "Attenuation",
+    "definition": "Thuật ngữ cơ bản: Attenuation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Tính toán giới hạn khoảng cách WiFi",
-      "Hiệu chỉnh khuếch đại cáp quang",
-      "Tính khoảng cách liên lạc vô tuyến"
-    ],
-    "id": "tel_wmh2471",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Attenuation%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Dark Fiber",
@@ -1472,17 +1441,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=OTDR%20telecommunications"
   },
   {
+    "id": "vo_tuyen_vien_thong-core-23",
     "term": "Bandwidth",
-    "fullName": "System Bandwidth",
-    "definition": "Băng thông hệ thống, khoảng chênh lệch giữa tần số cao nhất và tần số thấp nhất của dải tần được phép truyền tải tín hiệu.",
+    "fullName": "Bandwidth",
+    "definition": "Thuật ngữ cơ bản: Bandwidth. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
     "applications": [
-      "Thuê bao cáp quang Internet",
-      "Phân bổ dải tần 4G LTE/5G",
-      "Xác định giới hạn dung lượng kênh"
-    ],
-    "id": "tel_3adebgy",
-    "category": "Vô tuyến & Viễn thông",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Bandwidth%20telecommunications"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Throughput",
@@ -1522,5 +1489,401 @@
     "id": "tel_gify35u",
     "category": "Vô tuyến & Viễn thông",
     "youtubeUrl": "https://www.youtube.com/results?search_query=Jitter%20telecommunications"
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-1",
+    "term": "7. Vô tuyến & Viễn thông (Telecom) - 50 từ",
+    "fullName": "7. Vô tuyến & Viễn thông (Telecom) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 7. Vô tuyến & Viễn thông (Telecom) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-1",
+    "term": "Telecommunications",
+    "fullName": "Telecommunications",
+    "definition": "Thuật ngữ cơ bản: Telecommunications. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-2",
+    "term": "Radio Frequency",
+    "fullName": "Radio Frequency",
+    "definition": "Thuật ngữ cơ bản: Radio Frequency. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-3",
+    "term": "Antenna",
+    "fullName": "Antenna",
+    "definition": "Thuật ngữ cơ bản: Antenna. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-4",
+    "term": "Transmitter",
+    "fullName": "Transmitter",
+    "definition": "Thuật ngữ cơ bản: Transmitter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-5",
+    "term": "Receiver",
+    "fullName": "Receiver",
+    "definition": "Thuật ngữ cơ bản: Receiver. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-6",
+    "term": "Transceiver",
+    "fullName": "Transceiver",
+    "definition": "Thuật ngữ cơ bản: Transceiver. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-8",
+    "term": "Demodulation",
+    "fullName": "Demodulation",
+    "definition": "Thuật ngữ cơ bản: Demodulation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-9",
+    "term": "Amplitude Modulation",
+    "fullName": "Amplitude Modulation",
+    "definition": "Thuật ngữ cơ bản: Amplitude Modulation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-10",
+    "term": "Frequency Modulation",
+    "fullName": "Frequency Modulation",
+    "definition": "Thuật ngữ cơ bản: Frequency Modulation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-11",
+    "term": "Phase Modulation",
+    "fullName": "Phase Modulation",
+    "definition": "Thuật ngữ cơ bản: Phase Modulation. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-16",
+    "term": "Multiplexing",
+    "fullName": "Multiplexing",
+    "definition": "Thuật ngữ cơ bản: Multiplexing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-17",
+    "term": "FDM",
+    "fullName": "FDM",
+    "definition": "Thuật ngữ cơ bản: FDM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-18",
+    "term": "TDM",
+    "fullName": "TDM",
+    "definition": "Thuật ngữ cơ bản: TDM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-24",
+    "term": "Spectrum",
+    "fullName": "Spectrum",
+    "definition": "Thuật ngữ cơ bản: Spectrum. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-26",
+    "term": "Frequency",
+    "fullName": "Frequency",
+    "definition": "Thuật ngữ cơ bản: Frequency. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-27",
+    "term": "Amplitude",
+    "fullName": "Amplitude",
+    "definition": "Thuật ngữ cơ bản: Amplitude. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-28",
+    "term": "Phase",
+    "fullName": "Phase",
+    "definition": "Thuật ngữ cơ bản: Phase. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-29",
+    "term": "Signal to Noise Ratio",
+    "fullName": "Signal to Noise Ratio",
+    "definition": "Thuật ngữ cơ bản: Signal to Noise Ratio. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-31",
+    "term": "Interference",
+    "fullName": "Interference",
+    "definition": "Thuật ngữ cơ bản: Interference. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-32",
+    "term": "Crosstalk",
+    "fullName": "Crosstalk",
+    "definition": "Thuật ngữ cơ bản: Crosstalk. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-34",
+    "term": "Fading",
+    "fullName": "Fading",
+    "definition": "Thuật ngữ cơ bản: Fading. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-35",
+    "term": "Multipath",
+    "fullName": "Multipath",
+    "definition": "Thuật ngữ cơ bản: Multipath. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-41",
+    "term": "Insertion Loss",
+    "fullName": "Insertion Loss",
+    "definition": "Thuật ngữ cơ bản: Insertion Loss. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-42",
+    "term": "Filter",
+    "fullName": "Filter",
+    "definition": "Thuật ngữ cơ bản: Filter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-43",
+    "term": "LPF",
+    "fullName": "LPF",
+    "definition": "Thuật ngữ cơ bản: LPF. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-44",
+    "term": "HPF",
+    "fullName": "HPF",
+    "definition": "Thuật ngữ cơ bản: HPF. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-45",
+    "term": "BPF",
+    "fullName": "BPF",
+    "definition": "Thuật ngữ cơ bản: BPF. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-46",
+    "term": "BSF",
+    "fullName": "BSF",
+    "definition": "Thuật ngữ cơ bản: BSF. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-47",
+    "term": "LNA",
+    "fullName": "LNA",
+    "definition": "Thuật ngữ cơ bản: LNA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-48",
+    "term": "Power Amplifier",
+    "fullName": "Power Amplifier",
+    "definition": "Thuật ngữ cơ bản: Power Amplifier. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-49",
+    "term": "Mixer",
+    "fullName": "Mixer",
+    "definition": "Thuật ngữ cơ bản: Mixer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-50",
+    "term": "Oscillator. 1. Cập nhật `ROADMAP.md`",
+    "fullName": "Oscillator. 1. Cập nhật `ROADMAP.md`",
+    "definition": "Thuật ngữ cơ bản: Oscillator. 1. Cập nhật `ROADMAP.md`. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-51",
+    "term": "`TRACKER.md` và `package.json` lên phiên bản `0.16.0` (Phase 20). 2. Tạo các Script Node.js tự động sinh nội dung chi tiết (Định nghĩa",
+    "fullName": "`TRACKER.md` và `package.json` lên phiên bản `0.16.0` (Phase 20). 2. Tạo các Script Node.js tự động sinh nội dung chi tiết (Định nghĩa",
+    "definition": "Thuật ngữ cơ bản: `TRACKER.md` và `package.json` lên phiên bản `0.16.0` (Phase 20). 2. Tạo các Script Node.js tự động sinh nội dung chi tiết (Định nghĩa. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-52",
+    "term": "Tên đầy đủ",
+    "fullName": "Tên đầy đủ",
+    "definition": "Thuật ngữ cơ bản: Tên đầy đủ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vo_tuyen_vien_thong-core-53",
+    "term": "Ứng dụng thực tiễn) cho các từ khoá trên bằng tiếng Việt. 3. Chạy các Script để ghi đè nối (append) dữ liệu vào 7 file `public/data/categories/*.json`. 4. Commit & Tag phiên bản mới lên Github",
+    "fullName": "Ứng dụng thực tiễn) cho các từ khoá trên bằng tiếng Việt. 3. Chạy các Script để ghi đè nối (append) dữ liệu vào 7 file `public/data/categories/*.json`. 4. Commit & Tag phiên bản mới lên Github",
+    "definition": "Thuật ngữ cơ bản: Ứng dụng thực tiễn) cho các từ khoá trên bằng tiếng Việt. 3. Chạy các Script để ghi đè nối (append) dữ liệu vào 7 file `public/data/categories/*.json`. 4. Commit & Tag phiên bản mới lên Github. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vo_tuyen_vien_thong",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   }
 ]

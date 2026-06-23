@@ -45,49 +45,37 @@
     "icon": "fa-solid fa-computer"
   },
   {
-    "id": "register",
+    "id": "vi_xu_ly-core-5",
     "term": "Register",
-    "fullName": "Processor Register",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Thanh ghi. Vùng nhớ dung lượng siêu nhỏ nằm ngay sát nhân CPU có tốc độ đọc ghi nhanh nhất hệ thống.",
+    "fullName": "Register",
+    "definition": "Thuật ngữ cơ bản: Register. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Lưu biến tạm tính toán",
-      "Thanh ghi trạng thái cờ CPU",
-      "Lưu trữ bộ đếm chương trình"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-box"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "pc",
+    "id": "vi_xu_ly-core-6",
     "term": "Program Counter",
-    "fullName": "Program Counter Register (PC)",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Thanh ghi bộ đếm chương trình lưu trữ địa chỉ của lệnh tiếp theo đang đợi CPU xử lý.",
+    "fullName": "Program Counter",
+    "definition": "Thuật ngữ cơ bản: Program Counter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Điều hướng rẽ nhánh mã máy",
-      "Chỉ định địa chỉ lệnh Flash",
-      "Kiểm soát thứ tự vòng lặp lệnh"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-list-ol"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "sp",
+    "id": "vi_xu_ly-core-9",
     "term": "Stack Pointer",
-    "fullName": "Stack Pointer Register (SP)",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Thanh ghi con trỏ ngăn xếp quản lý vị trí đỉnh của vùng nhớ ngăn xếp Stack khi gọi chương trình con.",
+    "fullName": "Stack Pointer",
+    "definition": "Thuật ngữ cơ bản: Stack Pointer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Lưu vết địa chỉ trả về sau ngắt",
-      "Truyền tham số biến vào hàm con",
-      "Lưu trạng thái thanh ghi CPU"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-arrow-up-9-1"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "isa",
@@ -105,34 +93,26 @@
     "icon": "fa-solid fa-gears"
   },
   {
-    "id": "risc",
+    "id": "vi_xu_ly-core-25",
     "term": "RISC",
-    "fullName": "Reduced Instruction Set Computer",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Kiến trúc vi xử lý tập lệnh thu gọn, tối ưu tốc độ thực hiện lệnh trong đúng một chu kỳ xung nhịp.",
+    "fullName": "RISC",
+    "definition": "Thuật ngữ cơ bản: RISC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Chip Apple M-Series siêu tiết kiệm điện",
-      "Vi điều khiển AVR ATmega",
-      "Kiến trúc chip xử lý ARM smartphone"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-gauge-high"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "cisc",
+    "id": "vi_xu_ly-core-26",
     "term": "CISC",
-    "fullName": "Complex Instruction Set Computer",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Kiến trúc vi xử lý tập lệnh phức tạp có thể thực hiện nhiều hành vi xử lý dữ liệu phức tạp trong một lệnh duy nhất.",
+    "fullName": "CISC",
+    "definition": "Thuật ngữ cơ bản: CISC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Vi xử lý Intel x86 máy tính bàn",
-      "Máy tính hiệu năng cao phân tích",
-      "Thiết bị tính toán phức tạp lâu đời"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-gears"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "harvard",
@@ -210,19 +190,15 @@
     "icon": "fa-solid fa-car-on"
   },
   {
-    "id": "dma_vxl",
+    "id": "vi_xu_ly-core-20",
     "term": "DMA",
-    "fullName": "Direct Memory Access Unit",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Bộ truy cập bộ nhớ trực tiếp giúp ngoại vi trao đổi dữ liệu thẳng vào RAM bỏ qua sự can thiệp của nhân CPU.",
+    "fullName": "DMA",
+    "definition": "Thuật ngữ cơ bản: DMA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Truyền mảng ảnh lớn ra màn hình",
-      "Đọc mảng ADC liên tục tốc độ cao",
-      "Xử lý gói tin mạng Ethernet nhanh"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-forward"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "watchdog",
@@ -1095,27 +1071,26 @@
     "youtubeUrl": ""
   },
   {
-    "id": "assembly_language",
+    "id": "vi_xu_ly-core-45",
     "term": "Assembly Language",
-    "fullName": "Hợp ngữ",
-    "category": "Vi xử lý",
-    "definition": "Ngôn ngữ lập trình bậc thấp giao tiếp sát sườn với kiến trúc tập lệnh ISA, mỗi lệnh Assembly tương ứng 1 lệnh mã máy (Machine Code).",
+    "fullName": "Assembly Language",
+    "definition": "Thuật ngữ cơ bản: Assembly Language. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "Tối ưu vòng lặp ISR",
-      "Reverse Engineering"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "machine_code",
+    "id": "vi_xu_ly-core-46",
     "term": "Machine Code",
-    "fullName": "Mã máy",
-    "category": "Vi xử lý",
-    "definition": "Chuỗi các bit 0 và 1 dạng nhị phân thô sơ nhất mà bóng bán dẫn phần cứng của CPU có thể trực tiếp hiểu và thực thi.",
+    "fullName": "Machine Code",
+    "definition": "Thuật ngữ cơ bản: Machine Code. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
     "applications": [
-      "File .bin, .hex nạp xuống chip"
-    ],
-    "youtubeUrl": ""
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "cross_compiler",
@@ -1380,6 +1355,479 @@
     "definition": "Kiến trúc bóng bán dẫn 3D có cực cổng (gate) bao quanh thân kênh dẫn (kênh hình vây cá) giúp thu nhỏ CPU xuống tiến trình dưới 22nm.",
     "applications": [
       "Công nghệ sản xuất CPU Intel/AMD/TSMC hiện tại"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-1",
+    "term": "4. Vi xử lý (Microprocessors) - 50 từ",
+    "fullName": "4. Vi xử lý (Microprocessors) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 4. Vi xử lý (Microprocessors) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-1",
+    "term": "Microprocessor",
+    "fullName": "Microprocessor",
+    "definition": "Thuật ngữ cơ bản: Microprocessor. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-2",
+    "term": "Microcontroller",
+    "fullName": "Microcontroller",
+    "definition": "Thuật ngữ cơ bản: Microcontroller. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-3",
+    "term": "ALU",
+    "fullName": "ALU",
+    "definition": "Thuật ngữ cơ bản: ALU. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-4",
+    "term": "Control Unit",
+    "fullName": "Control Unit",
+    "definition": "Thuật ngữ cơ bản: Control Unit. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-7",
+    "term": "Instruction Register",
+    "fullName": "Instruction Register",
+    "definition": "Thuật ngữ cơ bản: Instruction Register. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-8",
+    "term": "Accumulator",
+    "fullName": "Accumulator",
+    "definition": "Thuật ngữ cơ bản: Accumulator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-10",
+    "term": "MAR",
+    "fullName": "MAR",
+    "definition": "Thuật ngữ cơ bản: MAR. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-11",
+    "term": "MDR",
+    "fullName": "MDR",
+    "definition": "Thuật ngữ cơ bản: MDR. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-12",
+    "term": "Bus",
+    "fullName": "Bus",
+    "definition": "Thuật ngữ cơ bản: Bus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-13",
+    "term": "Address Bus",
+    "fullName": "Address Bus",
+    "definition": "Thuật ngữ cơ bản: Address Bus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-14",
+    "term": "Data Bus",
+    "fullName": "Data Bus",
+    "definition": "Thuật ngữ cơ bản: Data Bus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-15",
+    "term": "Control Bus",
+    "fullName": "Control Bus",
+    "definition": "Thuật ngữ cơ bản: Control Bus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-16",
+    "term": "Clock",
+    "fullName": "Clock",
+    "definition": "Thuật ngữ cơ bản: Clock. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-17",
+    "term": "Oscillator",
+    "fullName": "Oscillator",
+    "definition": "Thuật ngữ cơ bản: Oscillator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-18",
+    "term": "Interrupt",
+    "fullName": "Interrupt",
+    "definition": "Thuật ngữ cơ bản: Interrupt. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-19",
+    "term": "Polling",
+    "fullName": "Polling",
+    "definition": "Thuật ngữ cơ bản: Polling. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-21",
+    "term": "Fetch",
+    "fullName": "Fetch",
+    "definition": "Thuật ngữ cơ bản: Fetch. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-22",
+    "term": "Decode",
+    "fullName": "Decode",
+    "definition": "Thuật ngữ cơ bản: Decode. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-23",
+    "term": "Execute",
+    "fullName": "Execute",
+    "definition": "Thuật ngữ cơ bản: Execute. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-24",
+    "term": "Instruction Set",
+    "fullName": "Instruction Set",
+    "definition": "Thuật ngữ cơ bản: Instruction Set. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-27",
+    "term": "Opcode",
+    "fullName": "Opcode",
+    "definition": "Thuật ngữ cơ bản: Opcode. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-28",
+    "term": "Operand",
+    "fullName": "Operand",
+    "definition": "Thuật ngữ cơ bản: Operand. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-29",
+    "term": "Addressing Mode",
+    "fullName": "Addressing Mode",
+    "definition": "Thuật ngữ cơ bản: Addressing Mode. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-30",
+    "term": "Pipelining",
+    "fullName": "Pipelining",
+    "definition": "Thuật ngữ cơ bản: Pipelining. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-31",
+    "term": "Cache",
+    "fullName": "Cache",
+    "definition": "Thuật ngữ cơ bản: Cache. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-32",
+    "term": "EPROM",
+    "fullName": "EPROM",
+    "definition": "Thuật ngữ cơ bản: EPROM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-33",
+    "term": "EEPROM",
+    "fullName": "EEPROM",
+    "definition": "Thuật ngữ cơ bản: EEPROM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-34",
+    "term": "Flash Memory",
+    "fullName": "Flash Memory",
+    "definition": "Thuật ngữ cơ bản: Flash Memory. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-35",
+    "term": "I/O Port",
+    "fullName": "I/O Port",
+    "definition": "Thuật ngữ cơ bản: I/O Port. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-36",
+    "term": "Timer",
+    "fullName": "Timer",
+    "definition": "Thuật ngữ cơ bản: Timer. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-37",
+    "term": "Counter",
+    "fullName": "Counter",
+    "definition": "Thuật ngữ cơ bản: Counter. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-38",
+    "term": "PWM",
+    "fullName": "PWM",
+    "definition": "Thuật ngữ cơ bản: PWM. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-39",
+    "term": "ADC",
+    "fullName": "ADC",
+    "definition": "Thuật ngữ cơ bản: ADC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-40",
+    "term": "DAC",
+    "fullName": "DAC",
+    "definition": "Thuật ngữ cơ bản: DAC. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-41",
+    "term": "UART",
+    "fullName": "UART",
+    "definition": "Thuật ngữ cơ bản: UART. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-42",
+    "term": "SPI",
+    "fullName": "SPI",
+    "definition": "Thuật ngữ cơ bản: SPI. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-43",
+    "term": "I2C",
+    "fullName": "I2C",
+    "definition": "Thuật ngữ cơ bản: I2C. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-44",
+    "term": "CAN bus",
+    "fullName": "CAN bus",
+    "definition": "Thuật ngữ cơ bản: CAN bus. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-47",
+    "term": "Cross Compiler",
+    "fullName": "Cross Compiler",
+    "definition": "Thuật ngữ cơ bản: Cross Compiler. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-48",
+    "term": "Debugger",
+    "fullName": "Debugger",
+    "definition": "Thuật ngữ cơ bản: Debugger. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-49",
+    "term": "Emulator",
+    "fullName": "Emulator",
+    "definition": "Thuật ngữ cơ bản: Emulator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "vi_xu_ly-core-50",
+    "term": "Simulator",
+    "fullName": "Simulator",
+    "definition": "Thuật ngữ cơ bản: Simulator. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "vi_xu_ly",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
     ]
   }
 ]

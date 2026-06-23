@@ -1,7 +1,7 @@
 # Progress Tracker
 
 ## Current State
-- **Phase 19 (Extended Lookups):** Khởi tạo bộ 3 nút tra cứu ngoài (Google, Datasheet, YouTube) cho từng thuật ngữ.
+- **Phase 20 (Core Vocabulary Enrichment):** Tự động nạp hơn 350 từ khóa nền tảng vào 7 danh mục từ điển.
 
 ## Progress Overview
 - [x] Phase 1: 100%
@@ -23,9 +23,10 @@
 - [x] Phase 17: 100% (Project Branding & Favicon)
 - [x] Phase 18: 100% (Search Optimization & Caching)
 - [x] Phase 19: 100% (Extended Lookups)
+- [x] Phase 20: 100% (Core Vocabulary Enrichment)
 
 ## Version Info
-- Current Version: 0.15.0 (Minor Bump for Evolution)
+- Current Version: 0.16.0 (Minor Bump for Evolution)
 
 ## Backlog
 

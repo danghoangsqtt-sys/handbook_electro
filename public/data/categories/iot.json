@@ -1,66 +1,58 @@
 [
   {
-    "id": "mqtt",
+    "id": "iot-core-5",
     "term": "MQTT",
-    "fullName": "Message Queuing Telemetry Transport",
-    "category": "IoT",
-    "definition": "Giao thức truyền tin nhắn nhẹ nhàng theo mô hình publish/subscribe, tối ưu hóa cho các thiết bị IoT băng thông thấp.",
+    "fullName": "MQTT",
+    "definition": "Thuật ngữ cơ bản: MQTT. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Smart Home",
-      "Giám sát công nghiệp",
-      "Thiết bị đo lường từ xa"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=EIxdz-2rhLs"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "coap",
+    "id": "iot-core-6",
     "term": "CoAP",
-    "fullName": "Constrained Application Protocol",
-    "category": "IoT",
-    "definition": "Giao thức truyền tải web đơn giản hóa (chạy trên UDP) được thiết kế đặc biệt cho thiết bị phần cứng hạn chế (constrained nodes).",
+    "fullName": "CoAP",
+    "definition": "Thuật ngữ cơ bản: CoAP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Smart Metering",
-      "Chiếu sáng thông minh"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=4bMEJEBqFmA"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "lorawan",
+    "id": "iot-core-14",
     "term": "LoRaWAN",
-    "fullName": "Long Range Wide Area Network",
-    "category": "IoT",
-    "definition": "Mạng diện rộng năng lượng thấp (LPWAN) dùng để kết nối các thiết bị dùng pin, phủ sóng xa (hàng km) với tốc độ thấp.",
+    "fullName": "LoRaWAN",
+    "definition": "Thuật ngữ cơ bản: LoRaWAN. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Nông nghiệp thông minh",
-      "Theo dõi GPS",
-      "Smart City"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=hSO_B-M8c-w"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "nb_iot",
+    "id": "iot-core-15",
     "term": "NB-IoT",
-    "fullName": "Narrowband IoT",
-    "category": "IoT",
-    "definition": "Công nghệ vô tuyến LPWAN do 3GPP phát triển, sử dụng dải tần được cấp phép mạng viễn thông để kết nối thiết bị với độ trễ thấp.",
+    "fullName": "NB-IoT",
+    "definition": "Thuật ngữ cơ bản: NB-IoT. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Đồng hồ nước thông minh",
-      "Bãi đỗ xe thông minh"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=gT6cR-n_qJ8"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "zigbee",
+    "id": "iot-core-11",
     "term": "Zigbee",
-    "fullName": "Zigbee Protocol",
-    "category": "IoT",
-    "definition": "Chuẩn mạng không dây cá nhân (WPAN) dựa trên IEEE 802.15.4, hỗ trợ mạng mesh dùng năng lượng thấp.",
+    "fullName": "Zigbee",
+    "definition": "Thuật ngữ cơ bản: Zigbee. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Bóng đèn thông minh (Philips Hue)",
-      "Cảm biến cửa",
-      "Nhà thông minh"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=2eFhT6jX29U"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "esp32",
@@ -89,69 +81,59 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=R3xT1JqJj9w"
   },
   {
-    "id": "edge_computing",
+    "id": "iot-core-3",
     "term": "Edge Computing",
-    "fullName": "Điện toán biên",
-    "category": "IoT",
-    "definition": "Kiến trúc máy tính cho phép xử lý dữ liệu ở sát với nguồn tạo ra dữ liệu (như gateway, router) thay vì gửi hết lên Cloud.",
+    "fullName": "Edge Computing",
+    "definition": "Thuật ngữ cơ bản: Edge Computing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Camera AI nhận diện khuôn mặt",
-      "Nhà máy tự động hóa",
-      "Xe tự lái"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=3hqwzC4q2E4"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "digital_twin",
+    "id": "iot-core-39",
     "term": "Digital Twin",
-    "fullName": "Bản sao kỹ thuật số",
-    "category": "IoT",
-    "definition": "Mô hình số hóa mô phỏng chính xác trạng thái, vị trí và vòng đời của một đối tượng vật lý ngoài đời thực thông qua sensor data.",
+    "fullName": "Digital Twin",
+    "definition": "Thuật ngữ cơ bản: Digital Twin. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Mô phỏng tuabin gió",
-      "Giám sát động cơ máy bay",
-      "Quy hoạch đô thị"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=2dCJsuqwEHA"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "ota",
+    "id": "iot-core-37",
     "term": "OTA",
-    "fullName": "Over-The-Air Update",
-    "category": "IoT",
-    "definition": "Công nghệ phân phối bản cập nhật phần mềm/firmware từ xa qua mạng Wi-Fi hoặc Cellular mà không cần cắm cáp.",
+    "fullName": "OTA",
+    "definition": "Thuật ngữ cơ bản: OTA. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Cập nhật firmware ESP32",
-      "Nâng cấp phần mềm Tesla",
-      "Bảo mật thiết bị y tế"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=b4bM2Y0UoKw"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "node_red",
+    "id": "iot-core-50",
     "term": "Node-RED",
     "fullName": "Node-RED",
-    "category": "IoT",
-    "definition": "Công cụ lập trình trực quan dựa trên luồng (flow-based) cho IoT, giúp kéo-thả các block để kết nối thiết bị và API.",
+    "definition": "Thuật ngữ cơ bản: Node-RED. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Kết nối MQTT sang cơ sở dữ liệu",
-      "Thiết kế Dashboard nhanh",
-      "Home Assistant"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=KSg_0uM1vjY"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "ble",
+    "id": "iot-core-9",
     "term": "BLE",
-    "fullName": "Bluetooth Low Energy",
-    "category": "IoT",
-    "definition": "Chuẩn kết nối Bluetooth thế hệ mới tiêu hao cực ít năng lượng, chuyên dùng cho thiết bị đeo và cảm biến tầm ngắn.",
+    "fullName": "BLE",
+    "definition": "Thuật ngữ cơ bản: BLE. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Smartwatch",
-      "Định vị Indoor (Beacon)",
-      "Tai nghe không dây"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=Fj2s3y4r084"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "rfid",
@@ -204,28 +186,26 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=1a2b3c4d5e"
   },
   {
-    "id": "z_wave",
+    "id": "iot-core-12",
     "term": "Z-Wave",
-    "fullName": "Z-Wave Protocol",
-    "category": "IoT",
-    "definition": "Giao thức truyền thông không dây chuyên biệt cho nhà thông minh, vận hành ở băng tần sub-GHz giúp tránh nhiễu Wi-Fi.",
+    "fullName": "Z-Wave",
+    "definition": "Thuật ngữ cơ bản: Z-Wave. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Khóa cửa thông minh",
-      "Cảm biến chống trộm"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=9h8g7f6e5d"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
-    "id": "sigfox",
+    "id": "iot-core-16",
     "term": "Sigfox",
-    "fullName": "Sigfox LPWAN",
-    "category": "IoT",
-    "definition": "Mạng không dây chuẩn LPWAN sử dụng công nghệ băng hẹp siêu hẹp (Ultra Narrowband) do công ty Sigfox phát triển.",
+    "fullName": "Sigfox",
+    "definition": "Thuật ngữ cơ bản: Sigfox. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Định vị xe cộ",
-      "Nông nghiệp ngoài trời"
-    ],
-    "youtubeUrl": "https://www.youtube.com/watch?v=3x2y1z0a9b"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "id": "matter",
@@ -252,17 +232,15 @@
     "youtubeUrl": "https://www.youtube.com/watch?v=p1o2i3u4y5"
   },
   {
+    "id": "iot-core-8",
     "term": "AMQP",
-    "fullName": "Advanced Message Queuing Protocol",
-    "definition": "Giao thức tiêu chuẩn mở ở lớp ứng dụng dành cho middleware hướng thông điệp, chuyên dùng trong giao dịch tài chính và hệ thống doanh nghiệp.",
+    "fullName": "AMQP",
+    "definition": "Thuật ngữ cơ bản: AMQP. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Hệ thống ngân hàng cốt lõi",
-      "Tích hợp dịch vụ đám mây IoT",
-      "RabbitMQ"
-    ],
-    "id": "iot_rqdzi6f",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=AMQP%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "XMPP",
@@ -291,43 +269,37 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=DDS%20IoT%20explain"
   },
   {
+    "id": "iot-core-7",
     "term": "WebSockets",
-    "fullName": "WebSockets Protocol",
-    "definition": "Giao thức truyền thông hai chiều toàn phần (full-duplex) hoạt động trên một kết nối TCP duy nhất, cho phép trao đổi dữ liệu thời gian thực giữa client và server.",
+    "fullName": "WebSockets",
+    "definition": "Thuật ngữ cơ bản: WebSockets. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Dashboard IoT thời gian thực",
-      "Game online",
-      "Cập nhật dữ liệu cảm biến live"
-    ],
-    "id": "iot_kpx0zv6",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=WebSockets%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "iot-core-30",
     "term": "REST API",
-    "fullName": "Representational State Transfer API",
-    "definition": "Giao thức kiến trúc tiêu chuẩn để tạo các dịch vụ web, dùng phương thức HTTP (GET, POST, PUT, DELETE) để điều khiển thiết bị IoT.",
+    "fullName": "REST API",
+    "definition": "Thuật ngữ cơ bản: REST API. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Ứng dụng điều khiển Smart Home",
-      "Đẩy dữ liệu lên Cloud",
-      "Webhooks IoT"
-    ],
-    "id": "iot_voisucd",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=REST%20API%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "iot-core-31",
     "term": "GraphQL",
     "fullName": "GraphQL",
-    "definition": "Ngôn ngữ truy vấn dữ liệu linh hoạt dành cho API, cho phép các thiết bị hoặc app IoT chỉ lấy chính xác các trường dữ liệu cảm biến mà chúng cần.",
+    "definition": "Thuật ngữ cơ bản: GraphQL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Mobile App điều khiển nhà thông minh",
-      "Nền tảng Cloud IoT",
-      "Tối ưu băng thông mạng"
-    ],
-    "id": "iot_zrrp2tv",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=GraphQL%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Azure IoT",
@@ -420,17 +392,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Ubidots%20IoT%20explain"
   },
   {
+    "id": "iot-core-4",
     "term": "Fog Computing",
-    "fullName": "Điện toán sương mù",
-    "definition": "Mô hình kiến trúc mở rộng điện toán đám mây xuống tới rìa mạng, tạo ra một lớp tính toán phân tán trung gian sát thiết bị IoT hơn điện toán biên.",
+    "fullName": "Fog Computing",
+    "definition": "Thuật ngữ cơ bản: Fog Computing. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Kiểm soát đèn giao thông thông minh",
-      "Xử lý dữ liệu video camera trước khi nén",
-      "Hệ thống lưới điện siêu nhỏ"
-    ],
-    "id": "iot_fgqz0lq",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Fog%20Computing%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Cloud Computing",
@@ -719,17 +689,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=I2S%20IoT%20explain"
   },
   {
+    "id": "iot-core-20",
     "term": "6LoWPAN",
-    "fullName": "IPv6 over Low-Power Wireless PAN",
-    "definition": "Kỹ thuật nén dữ liệu cho phép truyền và định tuyến nguyên bản các gói tin giao thức IPv6 trực tiếp qua mạng không dây chuẩn IEEE 802.15.4 năng lượng thấp.",
+    "fullName": "6LoWPAN",
+    "definition": "Thuật ngữ cơ bản: 6LoWPAN. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Mạng lưới Thread",
-      "Thiết bị đo lường không dây công nghiệp",
-      "Internet kết nối thiết bị đeo sinh học"
-    ],
-    "id": "iot_cvufbk8",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=6LoWPAN%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "BLE Mesh",
@@ -810,17 +778,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=PoE%20IoT%20explain"
   },
   {
+    "id": "iot-core-19",
     "term": "IPv6",
-    "fullName": "Internet Protocol version 6",
-    "definition": "Phiên bản thế hệ thứ 6 của Giao thức Internet mở rộng không gian địa chỉ IP lên con số khổng lồ vô hạn, cung cấp IP định tuyến trực tiếp cho từng thiết bị IoT nhỏ nhất.",
+    "fullName": "IPv6",
+    "definition": "Thuật ngữ cơ bản: IPv6. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Triển khai hạ tầng 5G chuẩn mới",
-      "Cấu trúc mạng Thread Smart Home",
-      "Định danh thiết bị vạn vật kết nối"
-    ],
-    "id": "iot_750j6eu",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=IPv6%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "MPTCP",
@@ -849,17 +815,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=DTLS%20IoT%20explain"
   },
   {
+    "id": "iot-core-35",
     "term": "TLS",
-    "fullName": "Transport Layer Security",
-    "definition": "Giao thức tiêu chuẩn ngành cho an ninh mật mã để mã hóa kết nối giữa thiết bị IoT và máy chủ đám mây, chống giả mạo hay đánh cắp dữ liệu.",
+    "fullName": "TLS",
+    "definition": "Thuật ngữ cơ bản: TLS. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Truy cập Website HTTPS an toàn",
-      "Mã hóa luồng dữ liệu MQTT (MQTTS)",
-      "Nền tảng thanh toán ngân hàng"
-    ],
-    "id": "iot_ydpk61x",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=TLS%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "PKI",
@@ -1083,17 +1047,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=NAT%20IoT%20explain"
   },
   {
+    "id": "iot-core-42",
     "term": "Smart Grid",
-    "fullName": "Smart Power Grid",
-    "definition": "Mạng lưới điện quốc gia kỹ thuật số tiên tiến dùng cảm biến thu thập tự động các hành vi để tối ưu hiệu suất cung cấp tiết kiệm điện năng cho toàn vùng.",
+    "fullName": "Smart Grid",
+    "definition": "Thuật ngữ cơ bản: Smart Grid. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Tự động cân bằng cắt giảm tải điện mùa hè",
-      "Tích hợp tấm pin năng lượng mặt trời nối lưới",
-      "Đo lường điện số điện tự động toàn dân"
-    ],
-    "id": "iot_jmxsnxw",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Grid%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Telematics",
@@ -1135,30 +1097,26 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=V2V%20IoT%20explain"
   },
   {
+    "id": "iot-core-41",
     "term": "Smart City",
-    "fullName": "Thành phố thông minh",
-    "definition": "Tầm nhìn đô thị tương lai tích hợp sâu rộng các dữ liệu thu thập từ thiết bị cảm biến vạn vật và camera phân tích vào hệ thống quy hoạch vận hành để nâng cấp tiêu chuẩn quản lý xã hội sống.",
+    "fullName": "Smart City",
+    "definition": "Thuật ngữ cơ bản: Smart City. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Bãi đỗ xe hệ thống nhận diện tự động",
-      "Chiếu sáng cột đèn công cộng điều tiết lưu lượng người",
-      "Hệ thống cảnh báo sớm báo động triều cường ngập lụt nước"
-    ],
-    "id": "iot_k8oonbp",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20City%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
+    "id": "iot-core-40",
     "term": "Smart Home",
-    "fullName": "Nhà thông minh",
-    "definition": "Sinh thái nhà ở tự động tích hợp các trang thiết bị kỹ thuật điện tử gia dụng được kết nối và điều khiển từ xa một cách tập trung, tăng thêm an toàn và sự sang trọng.",
+    "fullName": "Smart Home",
+    "definition": "Thuật ngữ cơ bản: Smart Home. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Trợ lý ảo điều khiển bằng giọng nói Alexa/Siri",
-      "Rèm cửa động cơ máy lạnh tự động mở đón ánh sáng",
-      "Camera khóa cửa AI tự mở nhận dạng chủ nhân"
-    ],
-    "id": "iot_kl2pi55",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Home%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Smart Agri",
@@ -1187,17 +1145,15 @@
     "youtubeUrl": "https://www.youtube.com/results?search_query=Precision%20Farming%20IoT%20explain"
   },
   {
+    "id": "iot-core-44",
     "term": "Wearables",
-    "fullName": "Thiết bị đeo thông minh",
-    "definition": "Thiết bị điện tử công nghệ sinh trắc học tích hợp vi xử lý siêu nhỏ mặc trực tiếp mang trên cơ thể người dùng suốt ngày đêm thu nhận các chỉ số đo sức khỏe di động liên tục.",
+    "fullName": "Wearables",
+    "definition": "Thuật ngữ cơ bản: Wearables. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
     "applications": [
-      "Apple Watch phân tích điện tâm đồ (ECG)",
-      "Thiết bị đo độ bão hòa oxy máu SpO2 y tế thông minh",
-      "Mắt kính thực tế hỗn hợp đo tương tác cử chỉ mắt"
-    ],
-    "id": "iot_ck2b06a",
-    "category": "IoT",
-    "youtubeUrl": "https://www.youtube.com/results?search_query=Wearables%20IoT%20explain"
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   },
   {
     "term": "Smart Contract",
@@ -1289,5 +1245,302 @@
     "id": "iot_13xhb0r",
     "category": "IoT",
     "youtubeUrl": "https://www.youtube.com/results?search_query=Asset%20Tracking%20IoT%20explain"
+  },
+  {
+    "id": "iot-core-1",
+    "term": "6. IoT (Internet of Things) - 50 từ",
+    "fullName": "6. IoT (Internet of Things) - 50 từ",
+    "definition": "Thuật ngữ cơ bản: 6. IoT (Internet of Things) - 50 từ. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-1",
+    "term": "Internet of Things",
+    "fullName": "Internet of Things",
+    "definition": "Thuật ngữ cơ bản: Internet of Things. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-2",
+    "term": "Sensor Node",
+    "fullName": "Sensor Node",
+    "definition": "Thuật ngữ cơ bản: Sensor Node. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-10",
+    "term": "Wi-Fi",
+    "fullName": "Wi-Fi",
+    "definition": "Thuật ngữ cơ bản: Wi-Fi. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-13",
+    "term": "LoRa",
+    "fullName": "LoRa",
+    "definition": "Thuật ngữ cơ bản: LoRa. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-17",
+    "term": "Cellular IoT",
+    "fullName": "Cellular IoT",
+    "definition": "Thuật ngữ cơ bản: Cellular IoT. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-18",
+    "term": "5G",
+    "fullName": "5G",
+    "definition": "Thuật ngữ cơ bản: 5G. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-21",
+    "term": "Gateway",
+    "fullName": "Gateway",
+    "definition": "Thuật ngữ cơ bản: Gateway. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-22",
+    "term": "Hub",
+    "fullName": "Hub",
+    "definition": "Thuật ngữ cơ bản: Hub. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-23",
+    "term": "Broker",
+    "fullName": "Broker",
+    "definition": "Thuật ngữ cơ bản: Broker. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-24",
+    "term": "Publish",
+    "fullName": "Publish",
+    "definition": "Thuật ngữ cơ bản: Publish. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-25",
+    "term": "Subscribe",
+    "fullName": "Subscribe",
+    "definition": "Thuật ngữ cơ bản: Subscribe. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-26",
+    "term": "Topic",
+    "fullName": "Topic",
+    "definition": "Thuật ngữ cơ bản: Topic. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-27",
+    "term": "Payload",
+    "fullName": "Payload",
+    "definition": "Thuật ngữ cơ bản: Payload. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-28",
+    "term": "JSON",
+    "fullName": "JSON",
+    "definition": "Thuật ngữ cơ bản: JSON. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-29",
+    "term": "XML",
+    "fullName": "XML",
+    "definition": "Thuật ngữ cơ bản: XML. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-32",
+    "term": "Authentication",
+    "fullName": "Authentication",
+    "definition": "Thuật ngữ cơ bản: Authentication. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-33",
+    "term": "Authorization",
+    "fullName": "Authorization",
+    "definition": "Thuật ngữ cơ bản: Authorization. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-34",
+    "term": "Encryption",
+    "fullName": "Encryption",
+    "definition": "Thuật ngữ cơ bản: Encryption. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-36",
+    "term": "SSL",
+    "fullName": "SSL",
+    "definition": "Thuật ngữ cơ bản: SSL. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-38",
+    "term": "Firmware Update",
+    "fullName": "Firmware Update",
+    "definition": "Thuật ngữ cơ bản: Firmware Update. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-43",
+    "term": "Industrial IoT",
+    "fullName": "Industrial IoT",
+    "definition": "Thuật ngữ cơ bản: Industrial IoT. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-45",
+    "term": "Telemetry",
+    "fullName": "Telemetry",
+    "definition": "Thuật ngữ cơ bản: Telemetry. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-46",
+    "term": "Data Analytics",
+    "fullName": "Data Analytics",
+    "definition": "Thuật ngữ cơ bản: Data Analytics. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-47",
+    "term": "Machine Learning",
+    "fullName": "Machine Learning",
+    "definition": "Thuật ngữ cơ bản: Machine Learning. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-48",
+    "term": "Deep Learning",
+    "fullName": "Deep Learning",
+    "definition": "Thuật ngữ cơ bản: Deep Learning. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
+  },
+  {
+    "id": "iot-core-49",
+    "term": "Big Data",
+    "fullName": "Big Data",
+    "definition": "Thuật ngữ cơ bản: Big Data. Đây là một khái niệm cốt lõi trong lĩnh vực chuyên ngành. Định nghĩa đang được mở rộng tự động.",
+    "category": "iot",
+    "applications": [
+      "Đóng vai trò nền tảng trong hệ thống",
+      "Thường xuất hiện trong các thiết kế cơ bản"
+    ]
   }
 ]

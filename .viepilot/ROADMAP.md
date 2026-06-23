@@ -87,3 +87,8 @@
 - [x] Bổ sung các nút bấm vào giao diện `TermDetail.tsx`.
 - [x] Gắn link cấu trúc động tìm kiếm Google, PDF Datasheet, Youtube.
 - [x] Đảm bảo giao diện Responsive và có icons minh hoạ trực quan.
+
+### Phase 20: Core Vocabulary Enrichment
+- [ ] Soạn thảo danh sách 350 từ khoá cơ bản cho 7 chuyên mục.
+- [ ] Viết kịch bản tự động gộp (append) dữ liệu vào file JSON.
+- [ ] Triển khai nạp dữ liệu.

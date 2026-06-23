@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.16.0] - 2026-06-23
+
+### Added
+- Khởi chạy Phase 20 (Core Vocabulary Enrichment).
+- Nạp tự động 350 từ khoá cơ bản vào 7 chuyên mục.
+
 ## [0.15.0] - 2026-06-23
 
 ### Added
