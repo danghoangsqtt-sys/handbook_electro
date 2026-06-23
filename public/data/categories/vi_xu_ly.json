@@ -45,21 +45,6 @@
     "icon": "fa-solid fa-computer"
   },
   {
-    "id": "alu_vxl",
-    "term": "ALU",
-    "fullName": "Arithmetic Logic Unit",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Bộ phận bên trong CPU trực tiếp thực thi tính toán toán học số nhị phân và các phép so sánh logic.",
-    "applications": [
-      "Phép tính cộng trừ nhân chia nhị phân",
-      "So sánh rẽ nhánh điều kiện logic",
-      "Cổng dịch bit phần cứng"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/1I5AEl06_bw",
-    "youtubeUrl": "https://www.youtube.com/watch?v=1I5AEl06_bw",
-    "icon": "fa-solid fa-calculator"
-  },
-  {
     "id": "register",
     "term": "Register",
     "fullName": "Processor Register",
@@ -210,96 +195,6 @@
     "icon": "fa-solid fa-ellipsis-vertical"
   },
   {
-    "id": "pwm_vxl",
-    "term": "PWM",
-    "fullName": "Pulse Width Modulation Peripheral",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Ngoại vi điều chế độ rộng xung tích hợp sẵn trong vi điều khiển giúp sinh ra xung vuông liên tục tự động.",
-    "applications": [
-      "Điều khiển góc mở servo",
-      "Điều chỉnh tốc động cơ DC",
-      "Mạch tăng áp buck-boost điện tử"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/YmP59mS6uXs",
-    "youtubeUrl": "https://www.youtube.com/watch?v=YmP59mS6uXs",
-    "icon": "fa-solid fa-wave-square"
-  },
-  {
-    "id": "adc_vxl",
-    "term": "ADC",
-    "fullName": "Analog to Digital Converter Peripheral",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Ngoại vi số hóa tín hiệu điện áp tương tự giúp vi điều khiển đọc dữ liệu nhiệt độ, độ ẩm từ thế giới vật lý.",
-    "applications": [
-      "Đọc điện áp từ cảm biến nhiệt",
-      "Đo mức sụt pin nguồn",
-      "Đọc cảm biến ánh sáng quang trở"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/r7rKst3NmsY",
-    "youtubeUrl": "https://www.youtube.com/watch?v=r7rKst3NmsY",
-    "icon": "fa-solid fa-chart-line"
-  },
-  {
-    "id": "dac_vxl",
-    "term": "DAC",
-    "fullName": "Digital to Analog Converter Peripheral",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Ngoại vi tạo ra điện áp tương tự từ dữ liệu số nhị phân trong chip để xuất ra ngoài thế giới thực.",
-    "applications": [
-      "Bộ phát nhạc ra loa",
-      "Mạch tạo dạng sóng sin/tam giác",
-      "Thiết bị điều khiển đèn dimmer mượt"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/r7rKst3NmsY",
-    "youtubeUrl": "https://www.youtube.com/watch?v=r7rKst3NmsY",
-    "icon": "fa-solid fa-arrows-rotate"
-  },
-  {
-    "id": "uart_vxl",
-    "term": "UART",
-    "fullName": "Universal Asynchronous Receiver-Transmitter",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Chuẩn giao tiếp nối tiếp bất đồng bộ đơn giản nhất sử dụng duy nhất một dây truyền TX và một dây nhận RX.",
-    "applications": [
-      "Giao tiếp vi điều khiển với máy tính",
-      "Đọc dữ liệu GPS từ xa",
-      "Giao tiếp module Wifi/Bluetooth"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/sTSQl9f6Fsc",
-    "youtubeUrl": "https://www.youtube.com/watch?v=sTSQl9f6Fsc",
-    "icon": "fa-solid fa-arrows-left-right"
-  },
-  {
-    "id": "spi_vxl",
-    "term": "SPI",
-    "fullName": "Serial Peripheral Interface",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Giao thức truyền dữ liệu đồng bộ bốn dây tốc độ cao theo cấu hình Master-Slave giữa các IC kế cạnh.",
-    "applications": [
-      "Đọc dữ liệu thẻ nhớ MicroSD nhúng",
-      "Điều khiển màn hình màu TFT",
-      "Giao tiếp cảm biến gia tốc MPU6000"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/fvVAnID0VRE",
-    "youtubeUrl": "https://www.youtube.com/watch?v=fvVAnID0VRE",
-    "icon": "fa-solid fa-network-wired"
-  },
-  {
-    "id": "i2c_vxl",
-    "term": "I2C",
-    "fullName": "Inter-Integrated Circuit Bus",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Giao thức truyền đồng bộ 2 dây (SDA, SCL) cực kỳ gọn nhẹ cho phép quản lý nhiều thiết bị cùng mạng theo địa chỉ.",
-    "applications": [
-      "Giao tiếp màn hình LCD/OLED",
-      "Đọc chip thời gian thực RTC DS3231",
-      "Đọc cảm biến nhiệt áp suất thấp"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6IAkYpmA1DQ",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6IAkYpmA1DQ",
-    "icon": "fa-solid fa-diagram-project"
-  },
-  {
     "id": "can_vxl",
     "term": "CAN",
     "fullName": "Controller Area Network Peripheral",
@@ -343,66 +238,6 @@
     "youtubeEmbed": "https://www.youtube.com/embed/fE3ZgN-p_YI",
     "youtubeUrl": "https://www.youtube.com/watch?v=fE3ZgN-p_YI",
     "icon": "fa-solid fa-shield-dog"
-  },
-  {
-    "id": "eeprom",
-    "term": "EEPROM",
-    "fullName": "Electrically Erasable Programmable ROM",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Bộ nhớ lưu trữ dữ liệu không bị mất đi khi ngắt nguồn điện, có thể xóa và lập trình ghi lại từng byte bằng điện.",
-    "applications": [
-      "Lưu cấu hình wifi đã kết nối",
-      "Lưu số lượt đếm của máy",
-      "Lưu mật mã cài đặt khóa điện tử"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-floppy-disk"
-  },
-  {
-    "id": "flash",
-    "term": "Flash Memory",
-    "fullName": "Flash Memory Program Storage",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Bộ nhớ lưu trữ dung lượng lớn tốc độ cao chuyên dùng lưu toàn bộ mã nguồn chương trình nạp của vi điều khiển.",
-    "applications": [
-      "Lưu firmware khởi động Arduino",
-      "Lưu hệ điều hành trong thẻ nhớ",
-      "Ổ cứng lưu trữ SSD"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-database"
-  },
-  {
-    "id": "sram",
-    "term": "SRAM",
-    "fullName": "Static Random Access Memory",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "RAM tĩnh. Bộ nhớ dữ liệu tốc độ cực nhanh, không cần làm tươi chu kỳ, giữ thông tin khi còn cấp điện nguồn.",
-    "applications": [
-      "Bộ nhớ RAM trong vi điều khiển",
-      "Bộ nhớ đệm Cache CPU",
-      "Các chip nhớ tốc độ cao"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-bolt"
-  },
-  {
-    "id": "dram",
-    "term": "DRAM",
-    "fullName": "Dynamic Random Access Memory",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "RAM động. Bộ nhớ RAM sử dụng tụ điện lưu giữ điện tích cần làm tươi liên tục, dung lượng chế tạo cực kỳ lớn giá rẻ.",
-    "applications": [
-      "Thanh RAM máy tính DDR4/DDR5",
-      "RAM hệ thống máy tính nhúng Raspberry",
-      "Điện thoại dung lượng RAM lớn"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/6HBK4McAtv0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=6HBK4McAtv0",
-    "icon": "fa-solid fa-battery-half"
   },
   {
     "id": "bootsequence",
@@ -450,21 +285,6 @@
     "icon": "fa-solid fa-gem"
   },
   {
-    "id": "pll",
-    "term": "PLL",
-    "fullName": "Phase-Locked Loop",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Mạch vòng khóa pha dùng để nhân hoặc chia tần số xung nhịp gốc lên tốc độ cao hơn cho vi điều khiển hoạt động.",
-    "applications": [
-      "Nhân thạch anh 8MHz lên 72MHz của STM32",
-      "Đồng bộ hóa tần số vô tuyến",
-      "Bộ thu phát FM"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-arrows-spin"
-  },
-  {
     "id": "baudrate",
     "term": "Baud Rate",
     "fullName": "Serial Baud Rate",
@@ -478,21 +298,6 @@
     "youtubeEmbed": "https://www.youtube.com/embed/sTSQl9f6Fsc",
     "youtubeUrl": "https://www.youtube.com/watch?v=sTSQl9f6Fsc",
     "icon": "fa-solid fa-network-wired"
-  },
-  {
-    "id": "pullup",
-    "term": "Pull-up Resistor",
-    "fullName": "Pull-up Resistor",
-    "category": "Kỹ thuật vi xử lý",
-    "definition": "Điện trở kéo lên nguồn dương đảm bảo chân đầu vào luôn giữ trạng thái HIGH ổn định khi chưa có tín hiệu kích ngoài.",
-    "applications": [
-      "Mạch đọc nút nhấn tránh nhiễu",
-      "Giao thức truyền thông I2C dây SDA/SCL",
-      "Cổng kết nối cảm biến dallas 1-wire"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/wxzhS_An-N0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=wxzhS_An-N0",
-    "icon": "fa-solid fa-turn-up"
   },
   {
     "id": "pulldown",
@@ -708,5 +513,873 @@
       "Điều khiển động cơ"
     ],
     "youtubeUrl": "https://www.youtube.com/watch?v=cortex_m"
+  },
+  {
+    "id": "cpu_arch",
+    "term": "CPU Architecture",
+    "fullName": "Kiến trúc máy tính",
+    "category": "Vi xử lý",
+    "definition": "Tập hợp các quy tắc và phương pháp mô tả chức năng, tổ chức và cách thực thi của hệ thống máy tính.",
+    "applications": [
+      "Thiết kế vi xử lý",
+      "Viết trình biên dịch (Compiler)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "von_neumann",
+    "term": "Von Neumann Architecture",
+    "fullName": "Kiến trúc Von Neumann",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc máy tính trong đó bộ nhớ chương trình và bộ nhớ dữ liệu dùng chung một không gian và chung bus truyền dữ liệu.",
+    "applications": [
+      "Máy tính PC truyền thống"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "hyper_threading",
+    "term": "Hyper-Threading (SMT)",
+    "fullName": "Siêu phân luồng",
+    "category": "Vi xử lý",
+    "definition": "Công nghệ của Intel (Simultaneous Multithreading) chia một nhân vật lý thành hai nhân logic để tận dụng tối đa chu kỳ trống của CPU.",
+    "applications": [
+      "Render video",
+      "Chạy đa nhiệm nặng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "data_hazard",
+    "term": "Data Hazard",
+    "fullName": "Xung đột dữ liệu",
+    "category": "Vi xử lý",
+    "definition": "Tình huống trong pipeline khi một lệnh cần đọc kết quả của một lệnh trước đó nhưng lệnh trước vẫn chưa tính xong.",
+    "applications": [
+      "Giải quyết bằng Data Forwarding"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "control_hazard",
+    "term": "Control Hazard",
+    "fullName": "Xung đột rẽ nhánh",
+    "category": "Vi xử lý",
+    "definition": "Sự gián đoạn luồng pipeline do các lệnh nhảy (jump/branch) làm thay đổi Program Counter một cách đột ngột.",
+    "applications": [
+      "Giải quyết bằng Branch Prediction"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fpu",
+    "term": "FPU",
+    "fullName": "Floating-Point Unit",
+    "category": "Vi xử lý",
+    "definition": "Bộ đồng xử lý chuyên dụng đảm nhận việc tính toán số học dấu phẩy động phức tạp với tốc độ cực nhanh.",
+    "applications": [
+      "Đồ họa 3D",
+      "Tính toán khoa học"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "paging",
+    "term": "Paging",
+    "fullName": "Phân trang",
+    "category": "Vi xử lý",
+    "definition": "Cơ chế quản lý bộ nhớ ảo chia RAM thành các khối kích thước cố định (thường 4KB) gọi là 'trang'.",
+    "applications": [
+      "Hệ điều hành hiện đại"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "endianness",
+    "term": "Endianness",
+    "fullName": "Định hướng Byte (Endianness)",
+    "category": "Vi xử lý",
+    "definition": "Quy ước thứ tự sắp xếp các byte của một từ dữ liệu lớn (Word) trong bộ nhớ: Little-Endian (Byte nhỏ lưu trước) hay Big-Endian (Byte lớn lưu trước).",
+    "applications": [
+      "Truyền thông mạng TCP/IP",
+      "Xử lý file nhị phân"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "program_counter",
+    "term": "Program Counter (PC)",
+    "fullName": "Bộ đếm chương trình",
+    "category": "Vi xử lý",
+    "definition": "Thanh ghi cực kỳ quan trọng luôn chứa địa chỉ của câu lệnh TIẾP THEO sẽ được vi xử lý nạp và thực thi.",
+    "applications": [
+      "Luồng điều khiển CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "stack_pointer",
+    "term": "Stack Pointer (SP)",
+    "fullName": "Con trỏ ngăn xếp",
+    "category": "Vi xử lý",
+    "definition": "Thanh ghi trỏ đến đỉnh của vùng nhớ Stack, dùng để lưu trữ địa chỉ quay về khi gọi hàm và các biến cục bộ.",
+    "applications": [
+      "Call/Return hàm",
+      "Ngắt (Interrupt)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "instruction_register",
+    "term": "Instruction Register (IR)",
+    "fullName": "Thanh ghi lệnh",
+    "category": "Vi xử lý",
+    "definition": "Thanh ghi chứa lệnh vừa được nạp (Fetch) từ bộ nhớ, đang chờ khối giải mã (Decode) xử lý.",
+    "applications": [
+      "Chu kỳ lệnh CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "status_register",
+    "term": "Status Register",
+    "fullName": "Thanh ghi trạng thái (Cờ)",
+    "category": "Vi xử lý",
+    "definition": "Tập hợp các bit cờ (Zero, Carry, Negative, Overflow) báo hiệu kết quả của phép toán ALU gần nhất.",
+    "applications": [
+      "Câu lệnh rẽ nhánh có điều kiện (IF/ELSE)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "gpr",
+    "term": "GPR",
+    "fullName": "General Purpose Register",
+    "category": "Vi xử lý",
+    "definition": "Các thanh ghi đa dụng (như R0-R15, EAX, EBX) dùng để chứa dữ liệu tạm thời cho ALU tính toán.",
+    "applications": [
+      "Tối ưu tốc độ lập trình Assembly"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "rtc",
+    "term": "RTC",
+    "fullName": "Real-Time Clock",
+    "category": "Vi xử lý",
+    "definition": "Bộ đếm thời gian thời gian thực chạy bằng pin CMOS độc lập, giữ thông tin ngày tháng năm chuẩn xác kể cả khi tắt nguồn.",
+    "applications": [
+      "Đồng hồ hệ thống",
+      "Dấu thời gian Data Logger"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "nvic",
+    "term": "NVIC",
+    "fullName": "Nested Vectored Interrupt Controller",
+    "category": "Vi xử lý",
+    "definition": "Bộ điều khiển ngắt đa hướng lồng nhau trong chip ARM Cortex-M, quản lý mức độ ưu tiên của hàng trăm loại ngắt.",
+    "applications": [
+      "Lập trình vi điều khiển STM32"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "interrupt_vector",
+    "term": "Interrupt Vector Table",
+    "fullName": "Bảng vector ngắt",
+    "category": "Vi xử lý",
+    "definition": "Bảng nằm ở đầu bộ nhớ chứa các địa chỉ của các hàm xử lý ngắt (ISR), CPU sẽ nhảy đến đây khi có ngắt xảy ra.",
+    "applications": [
+      "Khởi động Bootloader",
+      "Quản lý sự kiện phần cứng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "isr",
+    "term": "ISR",
+    "fullName": "Interrupt Service Routine",
+    "category": "Vi xử lý",
+    "definition": "Hàm phần mềm đặc biệt được phần cứng tự động kích hoạt để xử lý một sự kiện khẩn cấp ngắt ngang chương trình chính.",
+    "applications": [
+      "Đọc nút nhấn tức thời",
+      "Nhận dữ liệu UART"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "open_drain",
+    "term": "Open-Drain",
+    "fullName": "Ngõ ra cực máng hở",
+    "category": "Vi xử lý",
+    "definition": "Cấu hình ngõ ra vi điều khiển chỉ có thể kéo xuống 0V (GND), muốn xuất mức 1 thì phải cần điện trở Pull-up nối lên VCC.",
+    "applications": [
+      "Bus I2C",
+      "Giao tiếp khác mức điện áp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "push_pull",
+    "term": "Push-Pull",
+    "fullName": "Ngõ ra đẩy-kéo",
+    "category": "Vi xử lý",
+    "definition": "Cấu hình ngõ ra tiêu chuẩn sử dụng 2 transistor (P và N) có thể tự động đẩy tín hiệu lên mức VCC hoặc kéo xuống GND.",
+    "applications": [
+      "Điều khiển LED trực tiếp",
+      "Truyền tín hiệu SPI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "swd",
+    "term": "SWD",
+    "fullName": "Serial Wire Debug",
+    "category": "Vi xử lý",
+    "definition": "Giao diện debug 2 dây (Clock và Data) do ARM thiết kế, thay thế JTAG cồng kềnh cho các vi điều khiển nhỏ.",
+    "applications": [
+      "Nạp code dòng STM32, nRF"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "icsp",
+    "term": "ICSP",
+    "fullName": "In-Circuit Serial Programming",
+    "category": "Vi xử lý",
+    "definition": "Phương pháp nạp chương trình trực tiếp vào vi điều khiển (VD: AVR, PIC) khi nó đã được hàn lên bo mạch hoàn chỉnh.",
+    "applications": [
+      "Nạp code Arduino qua giao thức SPI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "brown_out_reset",
+    "term": "Brown-Out Reset (BOR)",
+    "fullName": "Bộ reset sụt áp",
+    "category": "Vi xử lý",
+    "definition": "Mạch bảo vệ tự động đóng băng và reset vi xử lý khi điện áp nguồn tụt xuống dưới mức an toàn, tránh lỗi rác dữ liệu.",
+    "applications": [
+      "Thiết bị chạy pin"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "power_on_reset",
+    "term": "Power-On Reset (POR)",
+    "fullName": "Khởi tạo nguồn",
+    "category": "Vi xử lý",
+    "definition": "Mạch tạo ra tín hiệu reset hệ thống khi điện áp nguồn vừa mới được cấp vào, đảm bảo chip bắt đầu từ trạng thái sạch.",
+    "applications": [
+      "Khởi động hệ thống ổn định"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sleep_mode",
+    "term": "Sleep / Standby Mode",
+    "fullName": "Chế độ ngủ",
+    "category": "Vi xử lý",
+    "definition": "Chế độ tiết kiệm năng lượng sâu của vi điều khiển, tắt xung nhịp lõi CPU nhưng vẫn giữ đánh thức bằng ngắt ngoại vi.",
+    "applications": [
+      "Đồng hồ thông minh",
+      "Cảm biến IoT chạy pin"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cache_l1",
+    "term": "L1 Cache",
+    "fullName": "Bộ nhớ đệm mức 1",
+    "category": "Vi xử lý",
+    "definition": "Bộ nhớ đệm SRAM siêu nhỏ và cực kỳ nhanh nằm ngay sát nhân CPU lõi, thường chia đôi thành L1 Data và L1 Instruction.",
+    "applications": [
+      "Tăng tốc độ truy xuất dữ liệu nóng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cache_l2",
+    "term": "L2 Cache",
+    "fullName": "Bộ nhớ đệm mức 2",
+    "category": "Vi xử lý",
+    "definition": "Bộ đệm SRAM có dung lượng lớn hơn nhưng chậm hơn L1 đôi chút, mỗi nhân CPU thường có một L2 riêng.",
+    "applications": [
+      "Đệm dữ liệu trung gian"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cache_l3",
+    "term": "L3 Cache",
+    "fullName": "Bộ nhớ đệm mức 3",
+    "category": "Vi xử lý",
+    "definition": "Bộ đệm khổng lồ (vài chục MB) được chia sẻ chung cho toàn bộ các nhân vật lý bên trong một con chip đa nhân.",
+    "applications": [
+      "Intel Smart Cache",
+      "Giao tiếp giữa các nhân"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cache_hit",
+    "term": "Cache Hit",
+    "fullName": "Bắn trúng Cache",
+    "category": "Vi xử lý",
+    "definition": "Tình huống lý tưởng khi CPU tìm thấy ngay dữ liệu cần đọc ở bên trong bộ nhớ đệm tốc độ cao.",
+    "applications": [
+      "Tối ưu thuật toán phần mềm"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cache_miss",
+    "term": "Cache Miss",
+    "fullName": "Trượt Cache",
+    "category": "Vi xử lý",
+    "definition": "Khi CPU không tìm thấy dữ liệu trong Cache và buộc phải tốn hàng trăm chu kỳ nhịp để ra ngoài RAM chậm chạp lấy dữ liệu.",
+    "applications": [
+      "Nguyên nhân chính gây chậm phần mềm"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "write_through",
+    "term": "Write-Through",
+    "fullName": "Ghi xuyên suốt",
+    "category": "Vi xử lý",
+    "definition": "Chính sách quản lý cache: khi CPU ghi dữ liệu, nó sẽ ghi đồng thời vào cả Cache và bộ nhớ RAM chính để đảm bảo đồng bộ.",
+    "applications": [
+      "Hệ thống cần an toàn dữ liệu"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "write_back",
+    "term": "Write-Back",
+    "fullName": "Ghi dội lại",
+    "category": "Vi xử lý",
+    "definition": "Chính sách quản lý cache: CPU chỉ ghi vào Cache, dữ liệu chỉ bị đẩy ra RAM chính khi khối cache đó bị đẩy đi chỗ khác.",
+    "applications": [
+      "CPU hiệu năng cao, giảm băng thông bus"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "amba_bus",
+    "term": "AMBA",
+    "fullName": "Advanced Microcontroller Bus Architecture",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc bus giao tiếp nội bộ chip mã nguồn mở do ARM phát triển, chuẩn mực của thiết kế chip SoC hiện đại.",
+    "applications": [
+      "Thiết kế chip Snapdragon, Apple A-series"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "axi_bus",
+    "term": "AXI",
+    "fullName": "Advanced eXtensible Interface",
+    "category": "Vi xử lý",
+    "definition": "Giao thức bus hiệu năng cao nhất trong kiến trúc AMBA, hỗ trợ truyền burst và nhiều master/slave hoạt động song song.",
+    "applications": [
+      "Giao tiếp CPU với RAM controller nội bộ"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "ahb_bus",
+    "term": "AHB",
+    "fullName": "Advanced High-performance Bus",
+    "category": "Vi xử lý",
+    "definition": "Bus hiệu suất cao của ARM dùng để kết nối các thành phần cần băng thông lớn như CPU, DMA và bộ nhớ.",
+    "applications": [
+      "Trục xương sống của Vi điều khiển ARM"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "apb_bus",
+    "term": "APB",
+    "fullName": "Advanced Peripheral Bus",
+    "category": "Vi xử lý",
+    "definition": "Bus ngoại vi chậm, tiêu thụ điện thấp, dùng để kết nối UART, I2C, Timer với hệ thống mà không cản trở bus tốc độ cao.",
+    "applications": [
+      "Ngoại vi vi điều khiển"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fpu_coprocessor",
+    "term": "Coprocessor",
+    "fullName": "Bộ đồng xử lý",
+    "category": "Vi xử lý",
+    "definition": "Một lõi xử lý phụ được thiết kế để chia sẻ gánh nặng toán học đặc thù (như đồ họa, mã hóa, AI) cho CPU chính.",
+    "applications": [
+      "Neural Engine (NPU)",
+      "Toán tử vector"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "von_neumann_bottleneck",
+    "term": "Von Neumann Bottleneck",
+    "fullName": "Nút thắt cổ chai Von Neumann",
+    "category": "Vi xử lý",
+    "definition": "Hiện tượng CPU xử lý quá nhanh nhưng tốc độ của Bus dữ liệu ra RAM quá chậm, khiến CPU phải nhàn rỗi chờ đợi.",
+    "applications": [
+      "Lý do phải có Cache và DMA"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "memory_mapped_io",
+    "term": "Memory-Mapped I/O",
+    "fullName": "Vào/Ra ánh xạ bộ nhớ",
+    "category": "Vi xử lý",
+    "definition": "Kỹ thuật giao tiếp thiết bị ngoại vi bằng cách gán cho chúng các dải địa chỉ chung với RAM, dùng lệnh đọc/ghi RAM để điều khiển.",
+    "applications": [
+      "Kiến trúc ARM, RISC-V"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "port_mapped_io",
+    "term": "Port-Mapped I/O",
+    "fullName": "Vào/Ra ánh xạ cổng",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc x86 dùng không gian địa chỉ IN/OUT độc lập với RAM để giao tiếp ngoại vi, có tập lệnh In/Out riêng biệt.",
+    "applications": [
+      "Lập trình vi xử lý Intel/AMD"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "northbridge",
+    "term": "Northbridge",
+    "fullName": "Chip bán cầu bắc",
+    "category": "Vi xử lý",
+    "definition": "Chip cầu bắc truyền thống (hiện đã tích hợp vào CPU) giao tiếp trực tiếp tốc độ siêu cao với RAM và PCIe (Card đồ họa).",
+    "applications": [
+      "Bo mạch chủ cũ"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "southbridge",
+    "term": "Southbridge",
+    "fullName": "Chip bán cầu nam",
+    "category": "Vi xử lý",
+    "definition": "Chip cầu nam xử lý tất cả các kết nối ngoại vi chậm hơn như USB, SATA, LAN, Âm thanh trên bo mạch chủ (PCH).",
+    "applications": [
+      "Cấu trúc Mainboard PC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fsb",
+    "term": "Front-Side Bus (FSB)",
+    "fullName": "Bus mặt trước",
+    "category": "Vi xử lý",
+    "definition": "Kênh truyền thông kỹ thuật số vật lý kết nối trực tiếp bộ vi xử lý với chip Northbridge và RAM.",
+    "applications": [
+      "Kiến trúc Intel đời cũ"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "qpi",
+    "term": "QPI / HyperTransport",
+    "fullName": "QuickPath Interconnect",
+    "category": "Vi xử lý",
+    "definition": "Kết nối điểm-điểm tốc độ siêu cao thay thế cho FSB, dùng để giao tiếp trực tiếp giữa các CPU với nhau và với RAM.",
+    "applications": [
+      "Hệ thống Server đa CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dmi",
+    "term": "DMI",
+    "fullName": "Direct Media Interface",
+    "category": "Vi xử lý",
+    "definition": "Đường truyền dữ liệu kết nối giữa CPU (đã tích hợp Northbridge) và PCH (Chipset cầu nam) trên các hệ thống Intel hiện đại.",
+    "applications": [
+      "Kiến trúc máy tính hiện đại"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "bare_metal",
+    "term": "Bare-Metal",
+    "fullName": "Lập trình trên kim loại trần",
+    "category": "Vi xử lý",
+    "definition": "Phương pháp lập trình nhúng trực tiếp thao tác các thanh ghi phần cứng mà không sử dụng bất kỳ Hệ điều hành nào.",
+    "applications": [
+      "Đồ án vi điều khiển nhỏ",
+      "Phần mềm siêu tối ưu"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "firmware",
+    "term": "Firmware",
+    "fullName": "Phần sụn (Firmware)",
+    "category": "Vi xử lý",
+    "definition": "Phần mềm cấp cực thấp được lập trình cố định vào bộ nhớ Flash/ROM của thiết bị để điều khiển vĩnh viễn phần cứng đó.",
+    "applications": [
+      "BIOS/UEFI",
+      "Firmware Router",
+      "Code máy giặt"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "context_switch",
+    "term": "Context Switching",
+    "fullName": "Chuyển ngữ cảnh",
+    "category": "Vi xử lý",
+    "definition": "Quá trình CPU lưu lại toàn bộ thanh ghi của Task A đang chạy để nạp và thực thi Task B (nhằm tạo cảm giác đa nhiệm).",
+    "applications": [
+      "Lõi RTOS",
+      "Hệ điều hành Linux"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "scheduler",
+    "term": "Scheduler",
+    "fullName": "Bộ lập lịch",
+    "category": "Vi xử lý",
+    "definition": "Thuật toán lõi của hệ điều hành quyết định Task (tiến trình) nào sẽ được cấp quyền sử dụng CPU trong khoảng thời gian tới.",
+    "applications": [
+      "Round-Robin",
+      "Preemptive Priority"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "priority_inversion",
+    "term": "Priority Inversion",
+    "fullName": "Đảo ngược mức ưu tiên",
+    "category": "Vi xử lý",
+    "definition": "Lỗi logic nguy hiểm khi Task ưu tiên cao bị block bởi Task ưu tiên thấp (do đang giữ Mutex), dẫn đến treo hệ thống thời gian thực.",
+    "applications": [
+      "Lỗi tàu vũ trụ Mars Pathfinder"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cmsis",
+    "term": "CMSIS",
+    "fullName": "Cortex Microcontroller Software Interface Standard",
+    "category": "Vi xử lý",
+    "definition": "Lớp trừu tượng phần cứng tiêu chuẩn của ARM, cung cấp giao diện API chung để lập trình vi điều khiển Cortex-M bất kể hãng sản xuất.",
+    "applications": [
+      "Thư viện HAL của STM32, NXP"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "hal_library",
+    "term": "HAL",
+    "fullName": "Hardware Abstraction Layer",
+    "category": "Vi xử lý",
+    "definition": "Lớp thư viện phần mềm che giấu đi độ phức tạp của các thanh ghi phần cứng cấp thấp, cung cấp các hàm C++ dễ gọi.",
+    "applications": [
+      "STM32 HAL",
+      "Arduino Core"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "assembly_language",
+    "term": "Assembly Language",
+    "fullName": "Hợp ngữ",
+    "category": "Vi xử lý",
+    "definition": "Ngôn ngữ lập trình bậc thấp giao tiếp sát sườn với kiến trúc tập lệnh ISA, mỗi lệnh Assembly tương ứng 1 lệnh mã máy (Machine Code).",
+    "applications": [
+      "Tối ưu vòng lặp ISR",
+      "Reverse Engineering"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "machine_code",
+    "term": "Machine Code",
+    "fullName": "Mã máy",
+    "category": "Vi xử lý",
+    "definition": "Chuỗi các bit 0 và 1 dạng nhị phân thô sơ nhất mà bóng bán dẫn phần cứng của CPU có thể trực tiếp hiểu và thực thi.",
+    "applications": [
+      "File .bin, .hex nạp xuống chip"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "cross_compiler",
+    "term": "Cross-Compiler",
+    "fullName": "Trình biên dịch chéo",
+    "category": "Vi xử lý",
+    "definition": "Trình biên dịch chạy trên nền tảng này (VD: x86 Windows) nhưng sinh ra mã máy để chạy trên kiến trúc khác (VD: ARM Cortex-M).",
+    "applications": [
+      "Lập trình nhúng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "linker_script",
+    "term": "Linker Script",
+    "fullName": "Kịch bản liên kết",
+    "category": "Vi xử lý",
+    "definition": "File định nghĩa bản đồ bộ nhớ (Memory Map) vật lý của chip, báo cho Linker biết RAM/Flash nằm ở đâu để đặt code/data vào đó.",
+    "applications": [
+      "File .ld trong dự án ARM GCC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "heap_memory",
+    "term": "Heap Memory",
+    "fullName": "Bộ nhớ Heap",
+    "category": "Vi xử lý",
+    "definition": "Vùng RAM dùng để cấp phát bộ nhớ động (dynamic allocation) trong lúc chương trình đang chạy bằng lệnh malloc()/free().",
+    "applications": [
+      "Hạn chế dùng trong lập trình nhúng vì dễ phân mảnh"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "stack_overflow",
+    "term": "Stack Overflow",
+    "fullName": "Tràn ngăn xếp",
+    "category": "Vi xử lý",
+    "definition": "Lỗi phần mềm nghiêm trọng xảy ra khi biến cục bộ hoặc hàm đệ quy xài lấn quá kích thước giới hạn của vùng nhớ Stack, ghi đè lên dữ liệu khác.",
+    "applications": [
+      "Treo vi điều khiển",
+      "Lỗ hổng bảo mật"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "memory_leak",
+    "term": "Memory Leak",
+    "fullName": "Rò rỉ bộ nhớ",
+    "category": "Vi xử lý",
+    "definition": "Hiện tượng xảy ra khi chương trình xin cấp phát RAM (malloc) nhưng quên giải phóng (free), làm cạn kiệt RAM theo thời gian.",
+    "applications": [
+      "Crashes sau nhiều ngày chạy"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "arm_cortex_a",
+    "term": "Cortex-A",
+    "fullName": "ARM Cortex-A Series",
+    "category": "Vi xử lý",
+    "definition": "Dòng lõi ARM hiệu năng cao tích hợp MMU phức tạp, chuyên dùng để chạy các hệ điều hành hoàn chỉnh như Linux/Android/iOS.",
+    "applications": [
+      "Raspberry Pi",
+      "Snapdragon"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "arm_cortex_r",
+    "term": "Cortex-R",
+    "fullName": "ARM Cortex-R Series",
+    "category": "Vi xử lý",
+    "definition": "Dòng lõi ARM chuyên biệt cho các hệ thống thời gian thực khắt khe (Real-time), độ trễ ngắt cực thấp và độ tin cậy tuyệt đối.",
+    "applications": [
+      "Phanh ABS",
+      "Bộ điều khiển ổ cứng HDD"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "big_little",
+    "term": "big.LITTLE",
+    "fullName": "Kiến trúc ARM big.LITTLE",
+    "category": "Vi xử lý",
+    "definition": "Công nghệ xử lý bất đối xứng ghép nối lõi hiệu năng cao ăn điện (Big) và lõi yếu tiết kiệm pin (Little) trên cùng một chip SoC.",
+    "applications": [
+      "Chip điện thoại thông minh tiết kiệm pin"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "npu",
+    "term": "NPU",
+    "fullName": "Neural Processing Unit",
+    "category": "Vi xử lý",
+    "definition": "Bộ xử lý thần kinh chuyên biệt có kiến trúc phần cứng tối ưu để nhân ma trận song song khối lượng khổng lồ cho AI/Machine Learning.",
+    "applications": [
+      "Chip Apple A-series",
+      "AI Camera"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "tpu",
+    "term": "TPU",
+    "fullName": "Tensor Processing Unit",
+    "category": "Vi xử lý",
+    "definition": "Dòng chip ASIC đặc thù do Google tự thiết kế phục vụ tăng tốc phần cứng cho các mạng neural học sâu (Deep Learning).",
+    "applications": [
+      "Máy chủ Google Cloud AI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "gpu_compute",
+    "term": "GPGPU",
+    "fullName": "General-Purpose computing on GPU",
+    "category": "Vi xử lý",
+    "definition": "Sử dụng Card đồ họa (GPU) chứa hàng nghìn nhân nhỏ bé để xử lý các bài toán khoa học song song thay vì chỉ render hình ảnh.",
+    "applications": [
+      "CUDA",
+      "OpenCL",
+      "Train AI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dsp_processor",
+    "term": "DSP",
+    "fullName": "Digital Signal Processor",
+    "category": "Vi xử lý",
+    "definition": "Vi xử lý chuyên dụng có kiến trúc Harvard và lệnh MAC (Multiply-Accumulate) thực thi trong 1 chu kỳ để tính toán tín hiệu liên tục.",
+    "applications": [
+      "Lọc nhiễu âm thanh",
+      "Giải mã video",
+      "Xử lý sóng Radar"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "mac_instruction",
+    "term": "MAC",
+    "fullName": "Multiply-Accumulate",
+    "category": "Vi xử lý",
+    "definition": "Câu lệnh phần cứng (A = A + B * C) cốt lõi của DSP, quyết định sức mạnh của chip trong việc tính toán bộ lọc kỹ thuật số FIR/IIR.",
+    "applications": [
+      "Bộ lọc kỹ thuật số",
+      "Thuật toán AI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fpga_soft_core",
+    "term": "Soft-Core Processor",
+    "fullName": "Vi xử lý lõi mềm",
+    "category": "Vi xử lý",
+    "definition": "Một lõi CPU ảo không có thật về mặt vật lý, mà được tổng hợp tạo ra từ mã Verilog/VHDL rồi chạy bên trong một chip FPGA.",
+    "applications": [
+      "Xilinx MicroBlaze",
+      "Nios II"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "hard_core_cpu",
+    "term": "Hard-Core Processor",
+    "fullName": "Lõi CPU cứng",
+    "category": "Vi xử lý",
+    "definition": "Lõi CPU vật lý thực thụ được đúc cứng cố định bằng silicon ngay bên trong khuôn chip FPGA để đảm bảo hiệu năng cao nhất.",
+    "applications": [
+      "Xilinx Zynq (ARM Cortex-A9)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "secure_boot",
+    "term": "Secure Boot",
+    "fullName": "Khởi động bảo mật",
+    "category": "Vi xử lý",
+    "definition": "Tính năng phần cứng dùng mã hóa xác thực chữ ký điện tử của Bootloader và Firmware trước khi cho chạy, chống mã độc nhúng.",
+    "applications": [
+      "Bo mạch chủ PC",
+      "Thiết bị IoT bảo mật"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "trustzone",
+    "term": "ARM TrustZone",
+    "fullName": "TrustZone",
+    "category": "Vi xử lý",
+    "definition": "Công nghệ phân chia chip vật lý thành hai thế giới cách ly: Môi trường an toàn (Secure) và Môi trường bình thường (Non-secure).",
+    "applications": [
+      "Lưu trữ mật khẩu",
+      "Xử lý vân tay/FaceID"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "smp",
+    "term": "SMP",
+    "fullName": "Symmetric Multiprocessing",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc hệ thống đa nhân đối xứng trong đó các nhân CPU giống hệt nhau, chia sẻ chung một hệ điều hành và bộ nhớ RAM chính.",
+    "applications": [
+      "PC Đa nhân thông thường"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "amp",
+    "term": "AMP",
+    "fullName": "Asymmetric Multiprocessing",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc hệ thống đa nhân bất đối xứng, mỗi nhân chạy một hệ điều hành hoặc task hoàn toàn độc lập (VD: 1 nhân Linux, 1 nhân RTOS).",
+    "applications": [
+      "Hệ thống điều khiển công nghiệp tích hợp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "soc_fpga",
+    "term": "SoC FPGA",
+    "fullName": "SoC FPGA",
+    "category": "Vi xử lý",
+    "definition": "Sự kết hợp hoàn hảo giữa một bộ xử lý ARM hiệu năng cao (Hard-core) và mạng cổng logic lập trình được (FPGA) trên cùng 1 con chip.",
+    "applications": [
+      "Xử lý tín hiệu tốc độ cao",
+      "Edge AI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dark_silicon",
+    "term": "Dark Silicon",
+    "fullName": "Silicon tối",
+    "category": "Vi xử lý",
+    "definition": "Hiện tượng mà vì giới hạn tản nhiệt nhiệt độ, một phần diện tích chip phải tắt hoặc hạ xung nhịp không thể bật full 100% tài nguyên cùng lúc.",
+    "applications": [
+      "Thách thức định luật Moore hiện đại"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "moore_law",
+    "term": "Moore's Law",
+    "fullName": "Định luật Moore",
+    "category": "Vi xử lý",
+    "definition": "Dự đoán thực nghiệm rằng số lượng bóng bán dẫn trên một vi mạch sẽ tăng gấp đôi sau mỗi hai năm, giúp chip nhanh hơn và rẻ hơn.",
+    "applications": [
+      "Định hướng ngành bán dẫn toàn cầu"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "finfet",
+    "term": "FinFET",
+    "fullName": "Fin Field-Effect Transistor",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc bóng bán dẫn 3D có cực cổng (gate) bao quanh thân kênh dẫn (kênh hình vây cá) giúp thu nhỏ CPU xuống tiến trình dưới 22nm.",
+    "applications": [
+      "Công nghệ sản xuất CPU Intel/AMD/TSMC hiện tại"
+    ]
   }
 ]

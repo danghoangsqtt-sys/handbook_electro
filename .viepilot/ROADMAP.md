@@ -33,4 +33,12 @@
 ### Phase 7: Automation Data Expansion
 - [x] Nạp 100 từ khóa chuyên ngành tự động hóa cấp cao (SCADA, Robotics, Control Systems, Industry 4.0)
 - [x] Thiết lập dữ liệu tĩnh độc nhất cho mục tự động hóa
+
+### Phase 8: Digital Electronics Data Expansion
+- [x] Nạp 100 từ khóa Kỹ thuật Số hiện đại (Đại số Boole, Mạch Logic, FPGA, IC Design, Memory)
+- [x] Củng cố dữ liệu chuyên sâu cho mục Điện tử số
+
+### Phase 9: Microprocessor Data Expansion
+- [x] Nạp 100 từ khóa Kiến trúc máy tính & Vi điều khiển (Cấu trúc CPU, Cache, Pipeline, Assembly, RTOS)
+- [x] Thiết lập dữ liệu tĩnh cao cấp cho mục Vi xử lý
 - [ ] Chạy tiến trình seeding toàn diện để làm giàu ngân hàng từ khóa.

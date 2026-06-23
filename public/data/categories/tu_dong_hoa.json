@@ -135,21 +135,6 @@
     "icon": "fa-solid fa-network-wired"
   },
   {
-    "id": "canbus",
-    "term": "CAN Bus",
-    "fullName": "Controller Area Network",
-    "category": "Tự động hóa",
-    "definition": "Mạng bus điều khiển nối tiếp mạnh mẽ chuyên sử dụng truyền nhận tín hiệu nhạy bén trên ô tô.",
-    "applications": [
-      "Hệ thống ECU xe hơi",
-      "Giao thức robot",
-      "Điện tử hàng không"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/FqLDpH_fEUU",
-    "youtubeUrl": "https://www.youtube.com/watch?v=FqLDpH_fEUU",
-    "icon": "fa-solid fa-car"
-  },
-  {
     "id": "ethercat",
     "term": "EtherCAT",
     "fullName": "Ethernet for Control Automation Technology",
@@ -508,21 +493,6 @@
     "youtubeEmbed": "https://www.youtube.com/embed/UR0hOmjaXX0",
     "youtubeUrl": "https://www.youtube.com/watch?v=UR0hOmjaXX0",
     "icon": "fa-solid fa-diagram-project"
-  },
-  {
-    "id": "siso",
-    "term": "SISO",
-    "fullName": "Single-Input Single-Output",
-    "category": "Tự động hóa",
-    "definition": "Mô hình điều khiển một ngõ vào, một ngõ ra cơ bản nhất để áp dụng trực tiếp thuật toán PID truyền thống.",
-    "applications": [
-      "Bể ổn nhiệt đơn giản",
-      "Hệ thống quạt thông gió đơn",
-      "Mạch tăng áp DC-DC"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/UR0hOmjaXX0",
-    "youtubeUrl": "https://www.youtube.com/watch?v=UR0hOmjaXX0",
-    "icon": "fa-solid fa-arrow-right-to-bracket"
   },
   {
     "id": "profinet",

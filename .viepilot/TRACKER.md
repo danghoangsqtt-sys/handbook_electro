@@ -13,6 +13,8 @@
 - [x] Phase 5: 100%
 - [x] Phase 6: 100%
 - [x] Phase 7: 100%
+- [x] Phase 8: 100%
+- [x] Phase 9: 100%
 
 ## Version Info
-- Current Version: 0.3.0
+- Current Version: 0.5.0

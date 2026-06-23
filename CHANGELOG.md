@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] - 2026-06-23
+
+### Added
+- Thêm 100 thuật ngữ chuyên gia cho chuyên ngành Vi xử lý (Kiến trúc CPU, Bus hệ thống, Pipeline, RTOS).
+- Cập nhật Project Phase lên Phase 9 (Microprocessor Data Expansion).
+
+## [0.4.0] - 2026-06-23
+
+### Added
+- Thêm 100 thuật ngữ chuyên sâu cho chuyên ngành Điện tử số (Kỹ thuật số, Mạch tổ hợp/tuần tự, FPGA).
+- Cập nhật Project Phase lên Phase 8 (Digital Electronics Data Expansion).
+
 ## [0.3.0] - 2026-06-23
 
 ### Added

@@ -448,5 +448,856 @@
     "youtubeEmbed": "https://www.youtube.com/embed/r7rKst3NmsY",
     "youtubeUrl": "https://www.youtube.com/watch?v=r7rKst3NmsY",
     "icon": "fa-solid fa-sliders"
+  },
+  {
+    "id": "logic_gate",
+    "term": "Logic Gate",
+    "fullName": "Cổng logic",
+    "category": "Điện tử số",
+    "definition": "Phần tử cơ sở cấu tạo nên mạch số, thực hiện các phép toán Boole trên một hoặc nhiều ngõ vào và tạo ra một ngõ ra duy nhất.",
+    "applications": [
+      "IC số",
+      "Vi xử lý"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "not_gate",
+    "term": "NOT Gate (Inverter)",
+    "fullName": "Cổng NOT / Cổng đảo",
+    "category": "Điện tử số",
+    "definition": "Cổng logic chỉ có 1 ngõ vào, đảo ngược trạng thái logic của ngõ vào (1 thành 0, 0 thành 1).",
+    "applications": [
+      "Tạo dao động vòng",
+      "Mạch bù"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "xnor_gate",
+    "term": "XNOR Gate",
+    "fullName": "Cổng XNOR",
+    "category": "Điện tử số",
+    "definition": "Cổng logic cho ngõ ra mức 1 khi các ngõ vào có trạng thái giống hệt nhau.",
+    "applications": [
+      "Mạch so sánh bằng (Comparator)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "truth_table",
+    "term": "Truth Table",
+    "fullName": "Bảng chân lý",
+    "category": "Điện tử số",
+    "definition": "Bảng liệt kê tất cả các tổ hợp có thể của biến ngõ vào và giá trị ngõ ra tương ứng của một hàm logic.",
+    "applications": [
+      "Thiết kế mạch tổ hợp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "demorgan_theorem",
+    "term": "De Morgan's Theorem",
+    "fullName": "Định lý De Morgan",
+    "category": "Điện tử số",
+    "definition": "Định lý quy đổi giữa phép AND và OR bằng cách đảo ngược các biến và toàn bộ biểu thức.",
+    "applications": [
+      "Chuyển đổi mạch AND/OR sang NAND/NOR"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "minterm",
+    "term": "Minterm",
+    "fullName": "Tích chuẩn (Minterm)",
+    "category": "Điện tử số",
+    "definition": "Một tích (AND) chứa tất cả các biến của hàm số, dùng để biểu diễn hàm logic dưới dạng Tổng các Tích (SOP).",
+    "applications": [
+      "Thiết kế bộ giải mã (Decoder)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "maxterm",
+    "term": "Maxterm",
+    "fullName": "Tổng chuẩn (Maxterm)",
+    "category": "Điện tử số",
+    "definition": "Một tổng (OR) chứa tất cả các biến, dùng để biểu diễn hàm logic dưới dạng Tích các Tổng (POS).",
+    "applications": [
+      "Tối giản mạch điện lớn"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sop",
+    "term": "Sum of Products (SOP)",
+    "fullName": "Dạng Tổng các Tích",
+    "category": "Điện tử số",
+    "definition": "Cách biểu diễn hàm logic bằng các cụm AND được cộng (OR) lại với nhau.",
+    "applications": [
+      "Cấu trúc phần cứng vi mạch"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "pos",
+    "term": "Product of Sums (POS)",
+    "fullName": "Dạng Tích các Tổng",
+    "category": "Điện tử số",
+    "definition": "Cách biểu diễn hàm logic bằng các cụm OR được nhân (AND) lại với nhau.",
+    "applications": [
+      "Xây dựng sơ đồ cổng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dont_care",
+    "term": "Don't Care Condition",
+    "fullName": "Trạng thái tùy định",
+    "category": "Điện tử số",
+    "definition": "Tổ hợp ngõ vào mà giá trị ngõ ra không quan trọng (có thể là 0 hoặc 1), giúp tối giản K-Map dễ dàng hơn.",
+    "applications": [
+      "Bộ giải mã BCD sang 7 đoạn"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fan_in",
+    "term": "Fan-in",
+    "fullName": "Hệ số Fan-in",
+    "category": "Điện tử số",
+    "definition": "Số lượng tối đa các ngõ vào mà một cổng logic có thể xử lý mà không làm ảnh hưởng tính năng điện.",
+    "applications": [
+      "Đánh giá thông số vi mạch"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "fan_out",
+    "term": "Fan-out",
+    "fullName": "Hệ số Fan-out",
+    "category": "Điện tử số",
+    "definition": "Số lượng ngõ vào của các cổng khác mà một cổng logic có thể kéo (drive) một cách an toàn.",
+    "applications": [
+      "Thiết kế bus tín hiệu"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "combinational_logic",
+    "term": "Combinational Logic",
+    "fullName": "Mạch logic tổ hợp",
+    "category": "Điện tử số",
+    "definition": "Loại mạch số mà ngõ ra tại một thời điểm chỉ phụ thuộc vào trạng thái ngõ vào tại chính thời điểm đó (không có bộ nhớ).",
+    "applications": [
+      "ALU",
+      "Mạch giải mã",
+      "Mạch cộng"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "encoder_circuit",
+    "term": "Encoder (Digital)",
+    "fullName": "Bộ mã hóa",
+    "category": "Điện tử số",
+    "definition": "Mạch biến đổi tín hiệu tại nhiều ngõ vào thành một mã nhị phân nhỏ hơn ở ngõ ra.",
+    "applications": [
+      "Mã hóa bàn phím",
+      "Mã hóa ưu tiên ngắt"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "decoder",
+    "term": "Decoder",
+    "fullName": "Bộ giải mã",
+    "category": "Điện tử số",
+    "definition": "Mạch dịch một mã nhị phân n-bit thành tối đa 2^n đường tín hiệu ngõ ra.",
+    "applications": [
+      "Giải mã địa chỉ bộ nhớ",
+      "Điều khiển LED 7 đoạn"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "ripple_carry_adder",
+    "term": "Ripple Carry Adder",
+    "fullName": "Bộ cộng gợn sóng",
+    "category": "Điện tử số",
+    "definition": "Chuỗi các bộ Full Adder ghép nối tiếp, cờ nhớ chạy (ripple) từ bit thấp lên bit cao gây ra độ trễ lớn.",
+    "applications": [
+      "Mạch cộng đơn giản, tốc độ thấp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "look_ahead_carry",
+    "term": "Carry Look-Ahead Adder",
+    "fullName": "Bộ cộng cờ nhớ nhìn trước",
+    "category": "Điện tử số",
+    "definition": "Bộ cộng tính toán trực tiếp cờ nhớ bằng mạch logic phức tạp để tránh độ trễ gợn sóng.",
+    "applications": [
+      "ALU tốc độ cao trong vi xử lý"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "subtractor",
+    "term": "Subtractor",
+    "fullName": "Bộ trừ",
+    "category": "Điện tử số",
+    "definition": "Mạch thực hiện phép trừ nhị phân, thường được thực hiện bằng bộ cộng kết hợp với mã bù 2.",
+    "applications": [
+      "Tính toán số học"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "comparator",
+    "term": "Digital Comparator",
+    "fullName": "Bộ so sánh số",
+    "category": "Điện tử số",
+    "definition": "Mạch so sánh độ lớn giữa 2 số nhị phân A và B, xuất ra các cờ A>B, A=B, A<B.",
+    "applications": [
+      "Kiểm tra điều kiện rẽ nhánh trong CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "alu",
+    "term": "ALU",
+    "fullName": "Arithmetic Logic Unit",
+    "category": "Điện tử số",
+    "definition": "Khối trung tâm của CPU thực hiện mọi phép tính số học (cộng, trừ) và phép tính logic (AND, OR, XOR).",
+    "applications": [
+      "Trái tim của Vi xử lý"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "parity_generator",
+    "term": "Parity Generator",
+    "fullName": "Mạch tạo bit chẵn lẻ",
+    "category": "Điện tử số",
+    "definition": "Mạch sử dụng cổng XOR để sinh ra bit parity (chẵn/lẻ) thêm vào luồng dữ liệu nhằm mục đích kiểm tra lỗi.",
+    "applications": [
+      "Truyền thông nối tiếp",
+      "Bộ nhớ ECC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "bcd",
+    "term": "BCD",
+    "fullName": "Binary Coded Decimal",
+    "category": "Điện tử số",
+    "definition": "Hệ thống mã hóa số thập phân trong đó mỗi chữ số (0-9) được biểu diễn bằng 4 bit nhị phân.",
+    "applications": [
+      "Đồng hồ số",
+      "Đồng hồ đo điện"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "gray_code",
+    "term": "Gray Code",
+    "fullName": "Mã Gray",
+    "category": "Điện tử số",
+    "definition": "Hệ thống mã nhị phân mà hai giá trị liền kề nhau chỉ sai khác duy nhất 1 bit, giúp chống lỗi nhiễu.",
+    "applications": [
+      "Encoder tuyệt đối",
+      "K-Map"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "two_s_complement",
+    "term": "Two's Complement",
+    "fullName": "Mã bù 2",
+    "category": "Điện tử số",
+    "definition": "Phương pháp phổ biến nhất để biểu diễn số nguyên âm trong máy tính, cho phép dùng bộ cộng để làm phép trừ.",
+    "applications": [
+      "Tính toán số học trong CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "seven_segment",
+    "term": "7-Segment Display",
+    "fullName": "LED 7 đoạn",
+    "category": "Điện tử số",
+    "definition": "Linh kiện hiển thị số từ 0-9 bằng cách bật tắt 7 thanh LED riêng biệt (a đến g).",
+    "applications": [
+      "Biển báo số",
+      "Máy tính bỏ túi"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "hazard",
+    "term": "Logic Hazard",
+    "fullName": "Hiện tượng chập chờn (Hazard)",
+    "category": "Điện tử số",
+    "definition": "Sự xuất hiện xung nhiễu ngắn (glitch) không mong muốn ở ngõ ra do độ trễ truyền tín hiệu khác nhau trong mạch tổ hợp.",
+    "applications": [
+      "Phân tích lỗi mạch tổ hợp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "glitch",
+    "term": "Glitch",
+    "fullName": "Xung nhiễu (Glitch)",
+    "category": "Điện tử số",
+    "definition": "Xung điện thế ngắn hạn xảy ra ngoài ý muốn trong mạch kỹ thuật số do hazard hoặc nhiễu bên ngoài.",
+    "applications": [
+      "Khắc phục lỗi bằng D-FlipFlop"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "bus_contention",
+    "term": "Bus Contention",
+    "fullName": "Xung đột Bus",
+    "category": "Điện tử số",
+    "definition": "Hiện tượng xảy ra khi nhiều linh kiện cùng cố gắng đẩy dữ liệu ngược chiều lên chung một đường truyền (bus).",
+    "applications": [
+      "Sử dụng bộ đệm 3 trạng thái (Tri-state buffer)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sequential_logic",
+    "term": "Sequential Logic",
+    "fullName": "Mạch logic tuần tự",
+    "category": "Điện tử số",
+    "definition": "Mạch số mà ngõ ra phụ thuộc cả vào ngõ vào hiện tại VÀ trạng thái cũ trong quá khứ (có bộ nhớ/hồi tiếp).",
+    "applications": [
+      "Ram",
+      "Bộ đếm",
+      "Thanh ghi"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sr_latch",
+    "term": "SR Latch",
+    "fullName": "Chốt Set-Reset",
+    "category": "Điện tử số",
+    "definition": "Chốt logic cấu tạo từ 2 cổng NOR/NAND chéo nhau, có ngõ vào Set (đặt lên 1) và Reset (đặt về 0).",
+    "applications": [
+      "Mạch khử rung nút bấm (Debounce)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "d_flip_flop",
+    "term": "D Flip-Flop",
+    "fullName": "Data Flip-Flop",
+    "category": "Điện tử số",
+    "definition": "Flip-Flop chốt lấy dữ liệu ở chân D truyền ra chân Q ngay tại khoảnh khắc sườn xung nhịp tới.",
+    "applications": [
+      "Thanh ghi CPU",
+      "Đồng bộ hóa dữ liệu"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "jk_flip_flop",
+    "term": "JK Flip-Flop",
+    "fullName": "JK Flip-Flop",
+    "category": "Điện tử số",
+    "definition": "Flip-Flop đa năng nâng cấp từ SR, khắc phục được trạng thái cấm, có khả năng lật trạng thái (toggle).",
+    "applications": [
+      "Thiết kế bộ đếm phức tạp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "t_flip_flop",
+    "term": "T Flip-Flop",
+    "fullName": "Toggle Flip-Flop",
+    "category": "Điện tử số",
+    "definition": "Flip-Flop lật trạng thái ngõ ra mỗi khi có một sườn xung nhịp đến nếu chân T=1.",
+    "applications": [
+      "Bộ chia đôi tần số",
+      "Bộ đếm nhị phân"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "clock_signal",
+    "term": "Clock (CLK)",
+    "fullName": "Xung nhịp Clock",
+    "category": "Điện tử số",
+    "definition": "Tín hiệu dao động vuông góc tạo nhịp điệu đồng bộ cho mọi hoạt động của các IC tuần tự trong hệ thống số.",
+    "applications": [
+      "Đồng bộ CPU",
+      "Giao tiếp SPI"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "edge_trigger",
+    "term": "Edge-Triggered",
+    "fullName": "Kích phát theo sườn",
+    "category": "Điện tử số",
+    "definition": "Cơ chế mà mạch chỉ thay đổi trạng thái tại đúng khoảnh khắc xung nhịp chuyển từ 0 lên 1 (sườn dương) hoặc ngược lại.",
+    "applications": [
+      "Flip-flop",
+      "Thanh ghi đồng bộ"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "level_trigger",
+    "term": "Level-Triggered",
+    "fullName": "Kích phát theo mức",
+    "category": "Điện tử số",
+    "definition": "Cơ chế mạch nhạy cảm và thay đổi liên tục khi tín hiệu điều khiển đang duy trì ở mức cao (1) hoặc thấp (0).",
+    "applications": [
+      "Latch"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "metastability",
+    "term": "Metastability",
+    "fullName": "Trạng thái siêu bền",
+    "category": "Điện tử số",
+    "definition": "Tình trạng lỗi vật lý khi Flip-Flop không chốt được 0 hay 1 rõ ràng do vi phạm Setup/Hold time, lơ lửng ở điện áp giữa.",
+    "applications": [
+      "Khắc phục bằng 2 tầng Flip-Flop"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "siso",
+    "term": "SISO",
+    "fullName": "Serial In Serial Out",
+    "category": "Điện tử số",
+    "definition": "Cấu hình thanh ghi dịch nạp dữ liệu nối tiếp từng bit và cũng đẩy dữ liệu ra nối tiếp.",
+    "applications": [
+      "Mạch trễ (delay line)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "piso",
+    "term": "PISO",
+    "fullName": "Parallel In Serial Out",
+    "category": "Điện tử số",
+    "definition": "Thanh ghi nhận dữ liệu song song nhiều bit cùng lúc và dịch đẩy ra ngoài từng bit một (chuyển đổi Song song sang Nối tiếp).",
+    "applications": [
+      "Truyền data từ CPU ra cáp USB"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sipo",
+    "term": "SIPO",
+    "fullName": "Serial In Parallel Out",
+    "category": "Điện tử số",
+    "definition": "Thanh ghi dịch nhận dữ liệu từng bit một rồi xuất toàn bộ đồng loạt (chuyển đổi Nối tiếp sang Song song).",
+    "applications": [
+      "IC mở rộng chân IO (VD: 74HC595)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "counter",
+    "term": "Counter",
+    "fullName": "Bộ đếm",
+    "category": "Điện tử số",
+    "definition": "Mạch tuần tự đếm số lượng xung nhịp đầu vào và biểu diễn kết quả bằng mã nhị phân.",
+    "applications": [
+      "Đồng hồ bấm giờ",
+      "Timer vi điều khiển"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "ripple_counter",
+    "term": "Ripple (Asynchronous) Counter",
+    "fullName": "Bộ đếm không đồng bộ (Bộ đếm gợn)",
+    "category": "Điện tử số",
+    "definition": "Bộ đếm trong đó xung clock chỉ cấp vào Flip-Flop đầu tiên, ngõ ra của FF trước làm clock cho FF sau.",
+    "applications": [
+      "Bộ chia tần siêu đơn giản"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "synchronous_counter",
+    "term": "Synchronous Counter",
+    "fullName": "Bộ đếm đồng bộ",
+    "category": "Điện tử số",
+    "definition": "Bộ đếm mà tất cả các Flip-Flop đều nhận cùng chung một xung clock, cập nhật đồng thời, không bị trễ gợn sóng.",
+    "applications": [
+      "Hệ thống số tốc độ cao"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "rom",
+    "term": "ROM",
+    "fullName": "Read-Only Memory",
+    "category": "Điện tử số",
+    "definition": "Bộ nhớ chỉ đọc, không mất dữ liệu khi cúp điện (Non-volatile), thường ghi dữ liệu vật lý một lần ở nhà máy.",
+    "applications": [
+      "Chứa Firmware sinh boot",
+      "Mask ROM"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "eeprom",
+    "term": "EEPROM",
+    "fullName": "Electrically Erasable Programmable ROM",
+    "category": "Điện tử số",
+    "definition": "ROM có thể xóa và lập trình lại bằng tín hiệu điện tử theo từng byte.",
+    "applications": [
+      "Lưu cấu hình hệ thống",
+      "Chip BIOS cũ"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "flash_memory_digital",
+    "term": "Flash Memory",
+    "fullName": "Bộ nhớ Flash",
+    "category": "Điện tử số",
+    "definition": "Hậu duệ của EEPROM nhưng ghi/xóa theo từng khối lớn (block) tốc độ cao, dùng MOSFET cổng nổi (Floating-gate).",
+    "applications": [
+      "Ổ cứng SSD",
+      "USB",
+      "Bộ nhớ chương trình MCU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sram",
+    "term": "SRAM",
+    "fullName": "Static RAM",
+    "category": "Điện tử số",
+    "definition": "RAM tĩnh cấu tạo từ cụm 6 Transistor (Flip-flop) để giữ 1 bit, tốc độ cực nhanh nhưng tốn diện tích, mất điện là mất dữ liệu.",
+    "applications": [
+      "Bộ nhớ đệm (Cache L1/L2/L3) trong CPU"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dram",
+    "term": "DRAM",
+    "fullName": "Dynamic RAM",
+    "category": "Điện tử số",
+    "definition": "RAM động dùng 1 Transistor + 1 Tụ điện lưu 1 bit, mật độ dung lượng rất lớn nhưng rò điện, phải có mạch làm mới (refresh) liên tục.",
+    "applications": [
+      "RAM máy tính DDR4, DDR5"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "soc",
+    "term": "SoC",
+    "fullName": "System on a Chip",
+    "category": "Điện tử số",
+    "definition": "Kiến trúc tích hợp toàn bộ các thành phần của máy tính (CPU, GPU, RAM, I/O) lên một viên Silicon duy nhất.",
+    "applications": [
+      "Chip Snapdragon (điện thoại)",
+      "Apple M Series"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "lut",
+    "term": "LUT",
+    "fullName": "Look-Up Table",
+    "category": "Điện tử số",
+    "definition": "Khối phần cứng cơ bản bên trong FPGA đóng vai trò như một bảng chân lý thu nhỏ RAM SRAM để giả lập bất kỳ cổng logic nào.",
+    "applications": [
+      "Cấu hình tính năng phần cứng FPGA"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "hdl",
+    "term": "HDL",
+    "fullName": "Hardware Description Language",
+    "category": "Điện tử số",
+    "definition": "Ngôn ngữ mô tả phần cứng dùng để mã hóa hành vi và cấu trúc của mạch điện tử số (Không phải ngôn ngữ lập trình phần mềm).",
+    "applications": [
+      "Verilog",
+      "VHDL",
+      "SystemVerilog"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "logic_synthesis",
+    "term": "Logic Synthesis",
+    "fullName": "Tổng hợp Logic",
+    "category": "Điện tử số",
+    "definition": "Quá trình biên dịch mã RTL (Verilog/VHDL) thành bản vẽ mạng logic các cổng kết nối vật lý (Netlist).",
+    "applications": [
+      "Bước đầu tạo phần cứng FPGA/ASIC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "testbench",
+    "term": "Testbench",
+    "fullName": "Module kiểm thử",
+    "category": "Điện tử số",
+    "definition": "Mã HDL viết riêng biệt để bơm tín hiệu mô phỏng ảo vào module thiết kế (DUT) nhằm kiểm chứng đúng sai trước khi đúc chip.",
+    "applications": [
+      "Mô phỏng phần cứng trên ModelSim"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "rtl",
+    "term": "RTL",
+    "fullName": "Register-Transfer Level",
+    "category": "Điện tử số",
+    "definition": "Mức thiết kế mô tả cách tín hiệu chạy giữa các thanh ghi thông qua các cụm logic tổ hợp tại mỗi chu kỳ xung nhịp.",
+    "applications": [
+      "Chuẩn mực code FPGA/ASIC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "vlsi",
+    "term": "VLSI",
+    "fullName": "Very Large Scale Integration",
+    "category": "Điện tử số",
+    "definition": "Kỹ thuật vi điện tử tích hợp hàng tỷ transistor lên một vi mạch silicon bé xíu.",
+    "applications": [
+      "Công nghệ lõi của vi xử lý Intel/AMD"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "adc_digital",
+    "term": "ADC",
+    "fullName": "Analog to Digital Converter",
+    "category": "Điện tử số",
+    "definition": "Mạch chuyển đổi một đại lượng vật lý liên tục (điện áp, âm thanh) thành các con số nhị phân rời rạc để vi xử lý đọc.",
+    "applications": [
+      "Ghi âm giọng nói",
+      "Cảm biến số"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "dac_digital",
+    "term": "DAC",
+    "fullName": "Digital to Analog Converter",
+    "category": "Điện tử số",
+    "definition": "Mạch biến các mã nhị phân thành mức điện áp tương tự liên tục theo thời gian.",
+    "applications": [
+      "Phát nhạc mp3 ra loa",
+      "Điều khiển VFD"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "sampling_rate",
+    "term": "Sampling Rate",
+    "fullName": "Tần số lấy mẫu",
+    "category": "Điện tử số",
+    "definition": "Số lần ADC lấy một giá trị tín hiệu (sample) trong một giây. Theo định lý Nyquist, phải cao gấp đôi tần số tối đa.",
+    "applications": [
+      "Âm thanh CD (44.1kHz)"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "quantization",
+    "term": "Quantization",
+    "fullName": "Lượng tử hóa",
+    "category": "Điện tử số",
+    "definition": "Quá trình làm tròn một giá trị điện áp lấy mẫu rơi vào các nấc mức logic rời rạc hữu hạn (ví dụ ADC 10-bit có 1024 nấc).",
+    "applications": [
+      "Biến đổi tín hiệu Analog sang Digital"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "pwm_digital",
+    "term": "PWM",
+    "fullName": "Pulse Width Modulation",
+    "category": "Điện tử số",
+    "definition": "Phương pháp tạo ra tín hiệu analog giả lập từ chân số bằng cách băm xung (thay đổi độ rộng T_on so với T_off).",
+    "applications": [
+      "Điều tốc quạt",
+      "Chỉnh độ sáng LED"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "uart",
+    "term": "UART",
+    "fullName": "Universal Asynchronous Receiver/Transmitter",
+    "category": "Điện tử số",
+    "definition": "Khối phần cứng truyền dẫn dữ liệu nối tiếp không đồng bộ (không cần đường clock) giữa 2 thiết bị TX-RX.",
+    "applications": [
+      "Giao tiếp COM port",
+      "Module Bluetooth"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "spi_bus",
+    "term": "SPI",
+    "fullName": "Serial Peripheral Interface",
+    "category": "Điện tử số",
+    "definition": "Giao thức bus 4 dây đồng bộ cực kỳ nhanh theo kiến trúc Master-Slave.",
+    "applications": [
+      "Giao tiếp màn hình LCD",
+      "IC thẻ nhớ SD"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "i2c_bus",
+    "term": "I2C",
+    "fullName": "Inter-Integrated Circuit",
+    "category": "Điện tử số",
+    "definition": "Giao thức bus 2 dây (SDA, SCL) đồng bộ, cấu trúc Multi-Master, kết nối hàng chục IC trên chung 1 bus dùng định chỉ.",
+    "applications": [
+      "Giao tiếp cảm biến",
+      "Màn hình OLED"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "can_bus",
+    "term": "CAN Bus",
+    "fullName": "Controller Area Network",
+    "category": "Điện tử số",
+    "definition": "Mạng bus vi điều khiển cực kỳ chống nhiễu, không có Master trung tâm, thiết kế nguyên bản cho ô tô.",
+    "applications": [
+      "Mạng linh kiện xe hơi",
+      "Robot công nghiệp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "rs232",
+    "term": "RS-232",
+    "fullName": "RS-232 Standard",
+    "category": "Điện tử số",
+    "definition": "Chuẩn giao tiếp UART bằng cáp COM ở mức điện áp cao (+/- 12V) thay vì 5V/3V3 TTL thông thường.",
+    "applications": [
+      "Máy móc CNC cũ",
+      "PC công nghiệp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "rs485",
+    "term": "RS-485",
+    "fullName": "RS-485 Standard",
+    "category": "Điện tử số",
+    "definition": "Chuẩn truyền thông công nghiệp dùng tín hiệu vi sai (Differential) trên cặp dây xoắn, truyền được xa hàng Km và chống nhiễu cực mạnh.",
+    "applications": [
+      "Mạng Modbus RTU công nghiệp"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "usb",
+    "term": "USB",
+    "fullName": "Universal Serial Bus",
+    "category": "Điện tử số",
+    "definition": "Chuẩn giao tiếp vi sai tốc độ cao có khả năng cắm nóng (hot-plug), thiết bị Plug-and-Play phức tạp.",
+    "applications": [
+      "Chuột phím",
+      "Truyền data PC"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "pcie",
+    "term": "PCIe",
+    "fullName": "Peripheral Component Interconnect Express",
+    "category": "Điện tử số",
+    "definition": "Bus máy tính tốc độ siêu cao giao tiếp điểm-điểm thông qua các làn (Lane).",
+    "applications": [
+      "Card màn hình GPU",
+      "Ổ cứng NVMe"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "pll",
+    "term": "PLL",
+    "fullName": "Phase-Locked Loop",
+    "category": "Điện tử số",
+    "definition": "Mạch khóa pha phản hồi dùng để nhân hoặc chia tần số xung nhịp đồng hồ, tạo ra xung nhịp cực kỳ ổn định bên trong IC.",
+    "applications": [
+      "CPU xung nhịp GHz",
+      "Sóng mang vô tuyến"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "astable_multivibrator",
+    "term": "Astable Multivibrator",
+    "fullName": "Mạch đa hài phiếm định",
+    "category": "Điện tử số",
+    "definition": "Mạch điện tử luôn dao động luân phiên giữa 2 trạng thái 0 và 1 mà không bao giờ ổn định, tạo ra xung vuông liên tục.",
+    "applications": [
+      "Mạch IC 555 chớp nháy LED"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "monostable_multivibrator",
+    "term": "Monostable",
+    "fullName": "Mạch đa hài đơn ổn",
+    "category": "Điện tử số",
+    "definition": "Mạch điện có 1 trạng thái ổn định. Khi có xung kích, nó đổi trạng thái trong 1 khoảng thời gian do R-C quyết định rồi tự về cũ.",
+    "applications": [
+      "Mạch tạo xung định mức thời gian",
+      "Chống rung phím"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "bistable_multivibrator",
+    "term": "Bistable",
+    "fullName": "Mạch đa hài lưỡng ổn",
+    "category": "Điện tử số",
+    "definition": "Mạch có 2 trạng thái bền vững (chính là bản chất của Flip-Flop). Lật trạng thái chỉ khi có ngoại lực kích vào.",
+    "applications": [
+      "Lưu trữ bit tĩnh"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "ic_555",
+    "term": "IC 555",
+    "fullName": "555 Timer IC",
+    "category": "Điện tử số",
+    "definition": "Vi mạch định thời đa năng huyền thoại của điện tử số, dùng chế tạo dao động, tạo xung delay, hay điều khiển PWM thủ công.",
+    "applications": [
+      "Mạch báo động",
+      "Mạch đồ án sinh viên"
+    ],
+    "youtubeUrl": ""
+  },
+  {
+    "id": "pull_up_resistor",
+    "term": "Pull-Up Resistor",
+    "fullName": "Điện trở kéo lên",
+    "category": "Điện tử số",
+    "definition": "Điện trở nối một tín hiệu số lên nguồn (VD: 5V), giúp xác lập chắc chắn trạng thái mức 1 khi không có ai bấm hay kích mạch.",
+    "applications": [
+      "Mạch I2C",
+      "Đọc nút nhấn MCU"
+    ]
   }
 ]
