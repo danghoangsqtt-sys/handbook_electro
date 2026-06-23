@@ -1,20 +1,5 @@
 [
   {
-    "id": "esp32",
-    "term": "ESP32",
-    "fullName": "ESP32 Wi-Fi & Bluetooth MCU",
-    "category": "Module & MCU",
-    "definition": "Dòng vi điều khiển Dual-core 32-bit mạnh mẽ tích hợp sẵn cả kết nối Wi-Fi và Bluetooth công suất thấp chuyên dùng cho các dự án IoT (Vạn vật kết nối).",
-    "applications": [
-      "Nhà thông minh điều khiển từ xa",
-      "Thu thập dữ liệu cảm biến gửi lên Cloud",
-      "Robot điều khiển qua giao diện web"
-    ],
-    "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
-    "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
-    "icon": "fa-solid fa-wifi"
-  },
-  {
     "id": "stm32",
     "term": "STM32",
     "fullName": "STM32 32-bit ARM Cortex-M MCU",

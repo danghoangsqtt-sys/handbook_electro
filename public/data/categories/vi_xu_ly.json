@@ -7498,5 +7498,190 @@
     "youtubeEmbed": "https://www.youtube.com/embed/7uKWhZ6M9qg",
     "youtubeUrl": "https://www.youtube.com/watch?v=7uKWhZ6M9qg",
     "icon": "fa-solid fa-gears"
+  },
+  {
+    "id": "superscalar",
+    "term": "Superscalar",
+    "fullName": "Kiến trúc siêu vô hướng",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc vi xử lý cho phép thực thi nhiều lệnh trong cùng một chu kỳ nhịp đồng hồ bằng cách phân bổ chúng vào nhiều đơn vị thực thi song song.",
+    "applications": [
+      "Intel Core series",
+      "AMD Ryzen",
+      "ARM Cortex-A series"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=superscalar"
+  },
+  {
+    "id": "out_of_order",
+    "term": "Out-of-Order Execution",
+    "fullName": "Thực thi ngoài thứ tự (OoOE)",
+    "category": "Vi xử lý",
+    "definition": "Kỹ thuật tối ưu hóa luồng lệnh, cho phép CPU thực thi các lệnh khi dữ liệu đầu vào sẵn sàng thay vì theo thứ tự gốc của chương trình.",
+    "applications": [
+      "Thiết kế CPU hiệu năng cao",
+      "Trình biên dịch tối ưu hóa"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=ooe_execution"
+  },
+  {
+    "id": "branch_prediction",
+    "term": "Branch Prediction",
+    "fullName": "Dự đoán rẽ nhánh",
+    "category": "Vi xử lý",
+    "definition": "Mạch logic bên trong CPU cố gắng dự đoán hướng đi của một lệnh rẽ nhánh (if/else) để nạp trước lệnh vào pipeline, giảm stall.",
+    "applications": [
+      "Vi kiến trúc CPU",
+      "Bảo mật (Meltdown/Spectre)"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=branch_pred"
+  },
+  {
+    "id": "cache_coherence",
+    "term": "Cache Coherence",
+    "fullName": "Tính nhất quán bộ đệm",
+    "category": "Vi xử lý",
+    "definition": "Cơ chế đảm bảo dữ liệu chung được lưu trữ trong các bộ đệm (cache) cục bộ của nhiều core luôn đồng nhất với nhau.",
+    "applications": [
+      "CPU Đa lõi (Multi-core)",
+      "Hệ thống đa xử lý SMP"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=cache_coherence"
+  },
+  {
+    "id": "mesi_protocol",
+    "term": "MESI Protocol",
+    "fullName": "Giao thức MESI",
+    "category": "Vi xử lý",
+    "definition": "Một giao thức nổi tiếng quản lý tính nhất quán bộ đệm, bao gồm 4 trạng thái: Modified, Exclusive, Shared, Invalid.",
+    "applications": [
+      "Kiến trúc bộ nhớ x86",
+      "Lập trình đa luồng cấp thấp"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=mesi"
+  },
+  {
+    "id": "tlb",
+    "term": "TLB",
+    "fullName": "Translation Lookaside Buffer",
+    "category": "Vi xử lý",
+    "definition": "Bộ đệm lưu trữ kết quả phân giải địa chỉ ảo sang địa chỉ vật lý gần nhất để tăng tốc độ truy cập bộ nhớ.",
+    "applications": [
+      "Quản lý bộ nhớ ảo",
+      "Hệ điều hành"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=tlb"
+  },
+  {
+    "id": "mmu",
+    "term": "MMU",
+    "fullName": "Memory Management Unit",
+    "category": "Vi xử lý",
+    "definition": "Thành phần phần cứng chịu trách nhiệm quản lý quyền truy cập bộ nhớ và phân giải địa chỉ ảo sang vật lý.",
+    "applications": [
+      "Tạo không gian nhớ an toàn",
+      "Bảo vệ bộ nhớ"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=mmu"
+  },
+  {
+    "id": "interrupt_latency",
+    "term": "Interrupt Latency",
+    "fullName": "Độ trễ ngắt",
+    "category": "Vi xử lý",
+    "definition": "Khoảng thời gian từ khi một tín hiệu ngắt phần cứng xuất hiện đến khi dòng lệnh đầu tiên của trình phục vụ ngắt (ISR) được thực thi.",
+    "applications": [
+      "Hệ điều hành thời gian thực (RTOS)",
+      "Lập trình nhúng ô tô"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=interrupt"
+  },
+  {
+    "id": "risc_v",
+    "term": "RISC-V",
+    "fullName": "RISC-V Architecture",
+    "category": "Vi xử lý",
+    "definition": "Tập lệnh (ISA) nguồn mở, cho phép bất cứ ai cũng có thể tự do thiết kế, sản xuất và bán bộ vi xử lý và phần mềm dựa trên nó.",
+    "applications": [
+      "Thiết kế chip tùy chỉnh",
+      "IoT Edge SoC"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=risc_v"
+  },
+  {
+    "id": "avx512",
+    "term": "AVX-512",
+    "fullName": "Advanced Vector Extensions 512",
+    "category": "Vi xử lý",
+    "definition": "Tập lệnh SIMD siêu rộng 512-bit của Intel, cho phép xử lý một lượng lớn dữ liệu (số học vector) trong một xung nhịp.",
+    "applications": [
+      "Máy chủ HPC",
+      "Mô phỏng khoa học",
+      "Trí tuệ nhân tạo"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=avx512"
+  },
+  {
+    "id": "pipeline_stall",
+    "term": "Pipeline Stall",
+    "fullName": "Nghẽn đường ống lệnh",
+    "category": "Vi xử lý",
+    "definition": "Trạng thái khi đường ống lệnh (pipeline) của CPU phải tạm dừng hoạt động chờ đợi để giải quyết xung đột dữ liệu hoặc điều khiển.",
+    "applications": [
+      "Tối ưu hóa mã Assembly",
+      "Thiết kế CPU pipeline"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=pipeline_stall"
+  },
+  {
+    "id": "hyper_threading",
+    "term": "Hyper-Threading",
+    "fullName": "Siêu phân luồng",
+    "category": "Vi xử lý",
+    "definition": "Công nghệ SMT (Simultaneous Multithreading) của Intel, cho phép một nhân vật lý chạy song song hai luồng dữ liệu logic.",
+    "applications": [
+      "Máy chủ ảo hóa",
+      "Render đồ họa",
+      "Xử lý đa nhiệm"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=hyperthreading"
+  },
+  {
+    "id": "numa",
+    "term": "NUMA",
+    "fullName": "Non-Uniform Memory Access",
+    "category": "Vi xử lý",
+    "definition": "Kiến trúc bộ nhớ máy tính đa xử lý, trong đó thời gian truy cập bộ nhớ cục bộ nhanh hơn so với truy cập bộ nhớ của bộ xử lý khác.",
+    "applications": [
+      "Data Center",
+      "Kiến trúc AMD Threadripper/EPYC"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=numa"
+  },
+  {
+    "id": "simd",
+    "term": "SIMD",
+    "fullName": "Single Instruction, Multiple Data",
+    "category": "Vi xử lý",
+    "definition": "Lớp máy tính thực thi một lệnh duy nhất đồng thời lên một mảng nhiều dữ liệu khác nhau, tối ưu cho xử lý song song mức dữ liệu.",
+    "applications": [
+      "Xử lý âm thanh/hình ảnh",
+      "Mã hóa video",
+      "Đồ họa 3D"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=simd"
+  },
+  {
+    "id": "cortex_m",
+    "term": "Cortex-M",
+    "fullName": "ARM Cortex-M Series",
+    "category": "Vi xử lý",
+    "definition": "Dòng vi điều khiển 32-bit RISC của ARM được thiết kế đặc biệt tối ưu cho độ trễ ngắt cực thấp, năng lượng thấp, dùng trong nhúng.",
+    "applications": [
+      "Thiết bị y tế cầm tay",
+      "Cảm biến IoT",
+      "Điều khiển động cơ"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=cortex_m"
   }
 ]

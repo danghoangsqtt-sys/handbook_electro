@@ -24,3 +24,7 @@
 - [x] Viết công cụ Batch Seeding (seed-terms.mjs) sinh dữ liệu qua Gemini API.
 - [x] Cập nhật giao diện (TermsList, QuizSystem, IntroStats).
 - [x] Mở rộng System Prompt cho AI Lab.
+
+## Phase 6: Data Enrichment & Full Categories
+- [x] Bổ sung các chuyên ngành còn thiếu vào hệ thống sinh dữ liệu (Tự động hóa, Cơ điện tử, Khoa học máy tính, Điện tử số).
+- [ ] Chạy tiến trình seeding toàn diện để làm giàu ngân hàng từ khóa.

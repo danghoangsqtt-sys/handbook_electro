@@ -1,0 +1,182 @@
+[
+  {
+    "id": "mqtt",
+    "term": "MQTT",
+    "fullName": "Message Queuing Telemetry Transport",
+    "category": "IoT",
+    "definition": "Giao thức truyền tin nhắn nhẹ nhàng theo mô hình publish/subscribe, tối ưu hóa cho các thiết bị IoT băng thông thấp.",
+    "applications": ["Smart Home", "Giám sát công nghiệp", "Thiết bị đo lường từ xa"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=EIxdz-2rhLs"
+  },
+  {
+    "id": "coap",
+    "term": "CoAP",
+    "fullName": "Constrained Application Protocol",
+    "category": "IoT",
+    "definition": "Giao thức truyền tải web đơn giản hóa (chạy trên UDP) được thiết kế đặc biệt cho thiết bị phần cứng hạn chế (constrained nodes).",
+    "applications": ["Smart Metering", "Chiếu sáng thông minh"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=4bMEJEBqFmA"
+  },
+  {
+    "id": "lorawan",
+    "term": "LoRaWAN",
+    "fullName": "Long Range Wide Area Network",
+    "category": "IoT",
+    "definition": "Mạng diện rộng năng lượng thấp (LPWAN) dùng để kết nối các thiết bị dùng pin, phủ sóng xa (hàng km) với tốc độ thấp.",
+    "applications": ["Nông nghiệp thông minh", "Theo dõi GPS", "Smart City"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=hSO_B-M8c-w"
+  },
+  {
+    "id": "nb_iot",
+    "term": "NB-IoT",
+    "fullName": "Narrowband IoT",
+    "category": "IoT",
+    "definition": "Công nghệ vô tuyến LPWAN do 3GPP phát triển, sử dụng dải tần được cấp phép mạng viễn thông để kết nối thiết bị với độ trễ thấp.",
+    "applications": ["Đồng hồ nước thông minh", "Bãi đỗ xe thông minh"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=gT6cR-n_qJ8"
+  },
+  {
+    "id": "zigbee",
+    "term": "Zigbee",
+    "fullName": "Zigbee Protocol",
+    "category": "IoT",
+    "definition": "Chuẩn mạng không dây cá nhân (WPAN) dựa trên IEEE 802.15.4, hỗ trợ mạng mesh dùng năng lượng thấp.",
+    "applications": ["Bóng đèn thông minh (Philips Hue)", "Cảm biến cửa", "Nhà thông minh"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=2eFhT6jX29U"
+  },
+  {
+    "id": "esp32",
+    "term": "ESP32",
+    "fullName": "ESP32 Microcontroller",
+    "category": "IoT",
+    "definition": "Dòng vi điều khiển giá rẻ, tiêu thụ ít điện năng, tích hợp sẵn cả Wi-Fi và Bluetooth lõi kép của Espressif.",
+    "applications": ["Gateway IoT", "Robot mini", "Hệ thống nhà kính"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=1b-b-uIu_7E"
+  },
+  {
+    "id": "thingsboard",
+    "term": "ThingsBoard",
+    "fullName": "ThingsBoard IoT Platform",
+    "category": "IoT",
+    "definition": "Nền tảng mã nguồn mở quản lý thiết bị, thu thập dữ liệu, xử lý logic và trực quan hóa Dashboard cho hệ thống IoT.",
+    "applications": ["Quản lý đội xe", "Giám sát điện năng", "Smart Farming"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=R3xT1JqJj9w"
+  },
+  {
+    "id": "edge_computing",
+    "term": "Edge Computing",
+    "fullName": "Điện toán biên",
+    "category": "IoT",
+    "definition": "Kiến trúc máy tính cho phép xử lý dữ liệu ở sát với nguồn tạo ra dữ liệu (như gateway, router) thay vì gửi hết lên Cloud.",
+    "applications": ["Camera AI nhận diện khuôn mặt", "Nhà máy tự động hóa", "Xe tự lái"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=3hqwzC4q2E4"
+  },
+  {
+    "id": "digital_twin",
+    "term": "Digital Twin",
+    "fullName": "Bản sao kỹ thuật số",
+    "category": "IoT",
+    "definition": "Mô hình số hóa mô phỏng chính xác trạng thái, vị trí và vòng đời của một đối tượng vật lý ngoài đời thực thông qua sensor data.",
+    "applications": ["Mô phỏng tuabin gió", "Giám sát động cơ máy bay", "Quy hoạch đô thị"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=2dCJsuqwEHA"
+  },
+  {
+    "id": "ota",
+    "term": "OTA",
+    "fullName": "Over-The-Air Update",
+    "category": "IoT",
+    "definition": "Công nghệ phân phối bản cập nhật phần mềm/firmware từ xa qua mạng Wi-Fi hoặc Cellular mà không cần cắm cáp.",
+    "applications": ["Cập nhật firmware ESP32", "Nâng cấp phần mềm Tesla", "Bảo mật thiết bị y tế"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=b4bM2Y0UoKw"
+  },
+  {
+    "id": "node_red",
+    "term": "Node-RED",
+    "fullName": "Node-RED",
+    "category": "IoT",
+    "definition": "Công cụ lập trình trực quan dựa trên luồng (flow-based) cho IoT, giúp kéo-thả các block để kết nối thiết bị và API.",
+    "applications": ["Kết nối MQTT sang cơ sở dữ liệu", "Thiết kế Dashboard nhanh", "Home Assistant"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=KSg_0uM1vjY"
+  },
+  {
+    "id": "ble",
+    "term": "BLE",
+    "fullName": "Bluetooth Low Energy",
+    "category": "IoT",
+    "definition": "Chuẩn kết nối Bluetooth thế hệ mới tiêu hao cực ít năng lượng, chuyên dùng cho thiết bị đeo và cảm biến tầm ngắn.",
+    "applications": ["Smartwatch", "Định vị Indoor (Beacon)", "Tai nghe không dây"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=Fj2s3y4r084"
+  },
+  {
+    "id": "rfid",
+    "term": "RFID",
+    "fullName": "Radio Frequency Identification",
+    "category": "IoT",
+    "definition": "Công nghệ nhận dạng đối tượng tự động qua sóng vô tuyến, gồm hệ thống Tag và Reader để đọc mã số.",
+    "applications": ["Kiểm soát kho bãi", "Thẻ quẹt mở cửa", "Theo dõi hành lý"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=1234567890"
+  },
+  {
+    "id": "aws_iot",
+    "term": "AWS IoT Core",
+    "fullName": "Amazon Web Services IoT",
+    "category": "IoT",
+    "definition": "Dịch vụ đám mây của Amazon cho phép kết nối hàng tỷ thiết bị IoT, định tuyến thông điệp an toàn vào nền tảng của AWS.",
+    "applications": ["Hệ thống quản lý năng lượng", "Dịch vụ y tế từ xa"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=zJvH_A4h6vY"
+  },
+  {
+    "id": "smart_meter",
+    "term": "Smart Meter",
+    "fullName": "Đồng hồ thông minh",
+    "category": "IoT",
+    "definition": "Thiết bị đo lường (điện, nước, gas) có khả năng thu thập và truyền dữ liệu tiêu thụ theo thời gian thực về máy chủ.",
+    "applications": ["Thu tiền điện tự động", "Phân tích tải điện lưới"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=o1Xj67D_r2M"
+  },
+  {
+    "id": "gateway_iot",
+    "term": "IoT Gateway",
+    "fullName": "Cổng kết nối IoT",
+    "category": "IoT",
+    "definition": "Thiết bị mạng đóng vai trò trung gian chuyển đổi giao thức, thu thập dữ liệu từ cảm biến trước khi đưa lên Cloud.",
+    "applications": ["Gateway kết nối LoRaWAN", "Raspberry Pi thu thập data", "Router công nghiệp"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=1a2b3c4d5e"
+  },
+  {
+    "id": "z_wave",
+    "term": "Z-Wave",
+    "fullName": "Z-Wave Protocol",
+    "category": "IoT",
+    "definition": "Giao thức truyền thông không dây chuyên biệt cho nhà thông minh, vận hành ở băng tần sub-GHz giúp tránh nhiễu Wi-Fi.",
+    "applications": ["Khóa cửa thông minh", "Cảm biến chống trộm"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=9h8g7f6e5d"
+  },
+  {
+    "id": "sigfox",
+    "term": "Sigfox",
+    "fullName": "Sigfox LPWAN",
+    "category": "IoT",
+    "definition": "Mạng không dây chuẩn LPWAN sử dụng công nghệ băng hẹp siêu hẹp (Ultra Narrowband) do công ty Sigfox phát triển.",
+    "applications": ["Định vị xe cộ", "Nông nghiệp ngoài trời"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=3x2y1z0a9b"
+  },
+  {
+    "id": "matter",
+    "term": "Matter",
+    "fullName": "Matter Standard",
+    "category": "IoT",
+    "definition": "Tiêu chuẩn kết nối mã nguồn mở thống nhất các hệ sinh thái Smart Home (Apple, Google, Amazon) hoạt động chung một mạng.",
+    "applications": ["Nhà thông minh đa nền tảng", "Công tắc, đèn thông minh"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=0p9o8i7u6y"
+  },
+  {
+    "id": "ip_camera",
+    "term": "IP Camera",
+    "fullName": "Internet Protocol Camera",
+    "category": "IoT",
+    "definition": "Camera an ninh có khả năng số hóa hình ảnh và truyền dữ liệu video qua mạng IP để giám sát từ xa.",
+    "applications": ["Giám sát giao thông", "Hệ thống an ninh gia đình"],
+    "youtubeUrl": "https://www.youtube.com/watch?v=p1o2i3u4y5"
+  }
+]

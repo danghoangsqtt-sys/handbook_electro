@@ -1,0 +1,239 @@
+[
+  {
+    "id": "5g",
+    "term": "5G",
+    "fullName": "5th Generation Mobile Network",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Mạng di động thế hệ thứ 5, cung cấp tốc độ truyền tải cực cao (eMBB), độ trễ siêu thấp (URLLC) và khả năng kết nối khổng lồ (mMTC).",
+    "applications": [
+      "Xe tự hành",
+      "Phẫu thuật từ xa",
+      "Thực tế ảo AR/VR"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=MC_PpgXeREo"
+  },
+  {
+    "id": "lte",
+    "term": "LTE",
+    "fullName": "Long-Term Evolution",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Tiêu chuẩn truyền thông không dây băng thông rộng dành cho các thiết bị di động, tiền đề cốt lõi của mạng 4G.",
+    "applications": [
+      "Mạng dữ liệu di động",
+      "VoLTE",
+      "Livestreaming"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=wz_Z9V7R1cE"
+  },
+  {
+    "id": "ofdm",
+    "term": "OFDM",
+    "fullName": "Orthogonal Frequency-Division Multiplexing",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Kỹ thuật điều chế ghép kênh phân chia theo tần số trực giao, chia luồng dữ liệu thành nhiều sóng mang phụ để chống nhiễu đa đường.",
+    "applications": [
+      "Wi-Fi 802.11",
+      "Truyền hình số DVB-T",
+      "Mạng 4G/5G"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=SyY5p-oI5Hk"
+  },
+  {
+    "id": "qam",
+    "term": "QAM",
+    "fullName": "Quadrature Amplitude Modulation",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Phương pháp điều chế kết hợp biến đổi cả biên độ và pha của sóng mang để tăng tốc độ bit trên một đơn vị băng thông.",
+    "applications": [
+      "Truyền hình cáp",
+      "Băng rộng không dây",
+      "Modem cáp quang"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=9x0c1b3y4z"
+  },
+  {
+    "id": "vswr",
+    "term": "VSWR",
+    "fullName": "Voltage Standing Wave Ratio",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Hệ số sóng đứng điện áp, đặc trưng cho mức độ phối hợp trở kháng giữa đường dây truyền tải và tải (như ăng-ten).",
+    "applications": [
+      "Đo kiểm ăng-ten",
+      "Thiết kế bộ khuếch đại RF"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=6v9a8b7c6d"
+  },
+  {
+    "id": "snr",
+    "term": "SNR",
+    "fullName": "Signal-to-Noise Ratio",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Tỷ số tín hiệu trên nhiễu, dùng để so sánh cường độ tín hiệu mong muốn so với mức độ tạp âm nền.",
+    "applications": [
+      "Đánh giá chất lượng kênh truyền",
+      "Đo kiểm Audio/Video"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=a1b2c3d4e5"
+  },
+  {
+    "id": "dbm",
+    "term": "dBm",
+    "fullName": "Decibel-Milliwatt",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Đơn vị đo lường công suất tín hiệu vô tuyến tính theo logarit, tham chiếu đến mức công suất 1 milliwatt.",
+    "applications": [
+      "Đo cường độ sóng Wi-Fi",
+      "Hiệu chuẩn trạm thu phát"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=m1n2o3p4q5"
+  },
+  {
+    "id": "antenna_yagi",
+    "term": "Yagi-Uda",
+    "fullName": "Ăng-ten Yagi-Uda",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Loại ăng-ten định hướng cao gồm một phần tử chấn tử dẫn xạ, một chấn tử bức xạ và nhiều phần tử dẫn hướng.",
+    "applications": [
+      "Thu sóng truyền hình",
+      "Kết nối Wi-Fi điểm-điểm",
+      "Radar thời tiết"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=y2z3x4w5v6"
+  },
+  {
+    "id": "ber",
+    "term": "BER",
+    "fullName": "Bit Error Rate",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Tỷ lệ lỗi bit, số lượng bit bị lỗi chia cho tổng số bit được truyền qua một kênh tín hiệu trong khoảng thời gian nhất định.",
+    "applications": [
+      "Kiểm tra cáp quang",
+      "Đánh giá kết nối di động"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=e1f2g3h4i5"
+  },
+  {
+    "id": "wavelength",
+    "term": "Wavelength",
+    "fullName": "Bước sóng (Lambda)",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Khoảng cách giữa hai điểm tương đồng liên tiếp trên một chu kỳ sóng vô tuyến, tỷ lệ nghịch với tần số.",
+    "applications": [
+      "Tính toán kích thước ăng-ten",
+      "Phân tích nhiễu xạ sóng"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=h1i2j3k4l5"
+  },
+  {
+    "id": "frequency_band",
+    "term": "Frequency Band",
+    "fullName": "Băng tần (RF Band)",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Một dải tần số liên tục trong phổ điện từ, được chia lô và phân bổ cho các dịch vụ viễn thông khác nhau (UHF, VHF, SHF).",
+    "applications": [
+      "Băng tần 2.4GHz Wi-Fi",
+      "Băng tần C cho vệ tinh"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=f1e2d3c4b5"
+  },
+  {
+    "id": "microwave",
+    "term": "Microwave",
+    "fullName": "Vi ba",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Sóng điện từ có tần số nằm trong khoảng từ 300 MHz đến 300 GHz, đặc trưng bởi khả năng truyền thẳng và băng thông lớn.",
+    "applications": [
+      "Vệ tinh viễn thông",
+      "Radar",
+      "Mạng trục Backhaul"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=m1i2c3r4o5"
+  },
+  {
+    "id": "cdma",
+    "term": "CDMA",
+    "fullName": "Code-Division Multiple Access",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Công nghệ đa truy cập phân chia theo mã, cho phép nhiều trạm phát gửi thông tin trên cùng một tần số bằng các mã giả ngẫu nhiên.",
+    "applications": [
+      "Mạng di động 3G",
+      "Hệ thống định vị GPS"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=c1d2m3a4b5"
+  },
+  {
+    "id": "modulation",
+    "term": "Modulation",
+    "fullName": "Điều chế tín hiệu",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Quá trình biến đổi đặc tính (biên độ, pha, tần số) của sóng mang tần số cao theo tín hiệu thông tin tần số thấp.",
+    "applications": [
+      "FM Radio",
+      "AM Radio",
+      "Truyền dẫn kỹ thuật số"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=m1o2d3u4l5"
+  },
+  {
+    "id": "baseband",
+    "term": "Baseband",
+    "fullName": "Băng tần cơ sở",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Dải tần số gốc chứa tín hiệu thông tin ban đầu (âm thanh, dữ liệu) chưa trải qua quá trình điều chế lên tần số cao.",
+    "applications": [
+      "Xử lý tín hiệu DSP",
+      "Giao tiếp LAN Ethernet"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=b1a2s3e4b5"
+  },
+  {
+    "id": "rf",
+    "term": "RF",
+    "fullName": "Radio Frequency",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Tần số vô tuyến, chỉ các tần số của sóng điện từ nằm trong khoảng 20 kHz đến 300 GHz.",
+    "applications": [
+      "Broadcasting",
+      "Máy bộ đàm",
+      "Hệ thống radar"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=r1f2s3p4a5"
+  },
+  {
+    "id": "microstrip",
+    "term": "Microstrip Patch",
+    "fullName": "Ăng-ten vi dải",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Loại ăng-ten siêu mỏng dạng bản in trên bảng mạch PCB, khối lượng nhẹ và chi phí thấp.",
+    "applications": [
+      "Ăng-ten trong smartphone",
+      "Thiết bị định vị GPS",
+      "Cảm biến radar xe"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=m1i2c3p4r5"
+  },
+  {
+    "id": "vlan",
+    "term": "VLAN",
+    "fullName": "Virtual Local Area Network",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Mạng LAN ảo dùng để phân chia một mạng vật lý thành nhiều vùng logic cách ly nhằm tăng bảo mật và hiệu suất.",
+    "applications": [
+      "Quản lý mạng doanh nghiệp",
+      "Phân chia IP Camera"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=v1l2a3n4m5"
+  },
+  {
+    "id": "ftth",
+    "term": "FTTH",
+    "fullName": "Fiber to the Home",
+    "category": "Vô tuyến & Viễn thông",
+    "definition": "Hệ thống mạng truy nhập quang, cung cấp đường truyền bằng cáp quang kéo trực tiếp đến tận nhà thuê bao.",
+    "applications": [
+      "Mạng Internet cáp quang",
+      "Truyền hình IPTV"
+    ],
+    "youtubeUrl": "https://www.youtube.com/watch?v=f1t2t3h4m5"
+  }
+]
