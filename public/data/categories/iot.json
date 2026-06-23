@@ -5,7 +5,11 @@
     "fullName": "Message Queuing Telemetry Transport",
     "category": "IoT",
     "definition": "Giao thức truyền tin nhắn nhẹ nhàng theo mô hình publish/subscribe, tối ưu hóa cho các thiết bị IoT băng thông thấp.",
-    "applications": ["Smart Home", "Giám sát công nghiệp", "Thiết bị đo lường từ xa"],
+    "applications": [
+      "Smart Home",
+      "Giám sát công nghiệp",
+      "Thiết bị đo lường từ xa"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=EIxdz-2rhLs"
   },
   {
@@ -14,7 +18,10 @@
     "fullName": "Constrained Application Protocol",
     "category": "IoT",
     "definition": "Giao thức truyền tải web đơn giản hóa (chạy trên UDP) được thiết kế đặc biệt cho thiết bị phần cứng hạn chế (constrained nodes).",
-    "applications": ["Smart Metering", "Chiếu sáng thông minh"],
+    "applications": [
+      "Smart Metering",
+      "Chiếu sáng thông minh"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=4bMEJEBqFmA"
   },
   {
@@ -23,7 +30,11 @@
     "fullName": "Long Range Wide Area Network",
     "category": "IoT",
     "definition": "Mạng diện rộng năng lượng thấp (LPWAN) dùng để kết nối các thiết bị dùng pin, phủ sóng xa (hàng km) với tốc độ thấp.",
-    "applications": ["Nông nghiệp thông minh", "Theo dõi GPS", "Smart City"],
+    "applications": [
+      "Nông nghiệp thông minh",
+      "Theo dõi GPS",
+      "Smart City"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=hSO_B-M8c-w"
   },
   {
@@ -32,7 +43,10 @@
     "fullName": "Narrowband IoT",
     "category": "IoT",
     "definition": "Công nghệ vô tuyến LPWAN do 3GPP phát triển, sử dụng dải tần được cấp phép mạng viễn thông để kết nối thiết bị với độ trễ thấp.",
-    "applications": ["Đồng hồ nước thông minh", "Bãi đỗ xe thông minh"],
+    "applications": [
+      "Đồng hồ nước thông minh",
+      "Bãi đỗ xe thông minh"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=gT6cR-n_qJ8"
   },
   {
@@ -41,7 +55,11 @@
     "fullName": "Zigbee Protocol",
     "category": "IoT",
     "definition": "Chuẩn mạng không dây cá nhân (WPAN) dựa trên IEEE 802.15.4, hỗ trợ mạng mesh dùng năng lượng thấp.",
-    "applications": ["Bóng đèn thông minh (Philips Hue)", "Cảm biến cửa", "Nhà thông minh"],
+    "applications": [
+      "Bóng đèn thông minh (Philips Hue)",
+      "Cảm biến cửa",
+      "Nhà thông minh"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=2eFhT6jX29U"
   },
   {
@@ -50,7 +68,11 @@
     "fullName": "ESP32 Microcontroller",
     "category": "IoT",
     "definition": "Dòng vi điều khiển giá rẻ, tiêu thụ ít điện năng, tích hợp sẵn cả Wi-Fi và Bluetooth lõi kép của Espressif.",
-    "applications": ["Gateway IoT", "Robot mini", "Hệ thống nhà kính"],
+    "applications": [
+      "Gateway IoT",
+      "Robot mini",
+      "Hệ thống nhà kính"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=1b-b-uIu_7E"
   },
   {
@@ -59,7 +81,11 @@
     "fullName": "ThingsBoard IoT Platform",
     "category": "IoT",
     "definition": "Nền tảng mã nguồn mở quản lý thiết bị, thu thập dữ liệu, xử lý logic và trực quan hóa Dashboard cho hệ thống IoT.",
-    "applications": ["Quản lý đội xe", "Giám sát điện năng", "Smart Farming"],
+    "applications": [
+      "Quản lý đội xe",
+      "Giám sát điện năng",
+      "Smart Farming"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=R3xT1JqJj9w"
   },
   {
@@ -68,7 +94,11 @@
     "fullName": "Điện toán biên",
     "category": "IoT",
     "definition": "Kiến trúc máy tính cho phép xử lý dữ liệu ở sát với nguồn tạo ra dữ liệu (như gateway, router) thay vì gửi hết lên Cloud.",
-    "applications": ["Camera AI nhận diện khuôn mặt", "Nhà máy tự động hóa", "Xe tự lái"],
+    "applications": [
+      "Camera AI nhận diện khuôn mặt",
+      "Nhà máy tự động hóa",
+      "Xe tự lái"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=3hqwzC4q2E4"
   },
   {
@@ -77,7 +107,11 @@
     "fullName": "Bản sao kỹ thuật số",
     "category": "IoT",
     "definition": "Mô hình số hóa mô phỏng chính xác trạng thái, vị trí và vòng đời của một đối tượng vật lý ngoài đời thực thông qua sensor data.",
-    "applications": ["Mô phỏng tuabin gió", "Giám sát động cơ máy bay", "Quy hoạch đô thị"],
+    "applications": [
+      "Mô phỏng tuabin gió",
+      "Giám sát động cơ máy bay",
+      "Quy hoạch đô thị"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=2dCJsuqwEHA"
   },
   {
@@ -86,7 +120,11 @@
     "fullName": "Over-The-Air Update",
     "category": "IoT",
     "definition": "Công nghệ phân phối bản cập nhật phần mềm/firmware từ xa qua mạng Wi-Fi hoặc Cellular mà không cần cắm cáp.",
-    "applications": ["Cập nhật firmware ESP32", "Nâng cấp phần mềm Tesla", "Bảo mật thiết bị y tế"],
+    "applications": [
+      "Cập nhật firmware ESP32",
+      "Nâng cấp phần mềm Tesla",
+      "Bảo mật thiết bị y tế"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=b4bM2Y0UoKw"
   },
   {
@@ -95,7 +133,11 @@
     "fullName": "Node-RED",
     "category": "IoT",
     "definition": "Công cụ lập trình trực quan dựa trên luồng (flow-based) cho IoT, giúp kéo-thả các block để kết nối thiết bị và API.",
-    "applications": ["Kết nối MQTT sang cơ sở dữ liệu", "Thiết kế Dashboard nhanh", "Home Assistant"],
+    "applications": [
+      "Kết nối MQTT sang cơ sở dữ liệu",
+      "Thiết kế Dashboard nhanh",
+      "Home Assistant"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=KSg_0uM1vjY"
   },
   {
@@ -104,7 +146,11 @@
     "fullName": "Bluetooth Low Energy",
     "category": "IoT",
     "definition": "Chuẩn kết nối Bluetooth thế hệ mới tiêu hao cực ít năng lượng, chuyên dùng cho thiết bị đeo và cảm biến tầm ngắn.",
-    "applications": ["Smartwatch", "Định vị Indoor (Beacon)", "Tai nghe không dây"],
+    "applications": [
+      "Smartwatch",
+      "Định vị Indoor (Beacon)",
+      "Tai nghe không dây"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=Fj2s3y4r084"
   },
   {
@@ -113,7 +159,11 @@
     "fullName": "Radio Frequency Identification",
     "category": "IoT",
     "definition": "Công nghệ nhận dạng đối tượng tự động qua sóng vô tuyến, gồm hệ thống Tag và Reader để đọc mã số.",
-    "applications": ["Kiểm soát kho bãi", "Thẻ quẹt mở cửa", "Theo dõi hành lý"],
+    "applications": [
+      "Kiểm soát kho bãi",
+      "Thẻ quẹt mở cửa",
+      "Theo dõi hành lý"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=1234567890"
   },
   {
@@ -122,7 +172,10 @@
     "fullName": "Amazon Web Services IoT",
     "category": "IoT",
     "definition": "Dịch vụ đám mây của Amazon cho phép kết nối hàng tỷ thiết bị IoT, định tuyến thông điệp an toàn vào nền tảng của AWS.",
-    "applications": ["Hệ thống quản lý năng lượng", "Dịch vụ y tế từ xa"],
+    "applications": [
+      "Hệ thống quản lý năng lượng",
+      "Dịch vụ y tế từ xa"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=zJvH_A4h6vY"
   },
   {
@@ -131,7 +184,10 @@
     "fullName": "Đồng hồ thông minh",
     "category": "IoT",
     "definition": "Thiết bị đo lường (điện, nước, gas) có khả năng thu thập và truyền dữ liệu tiêu thụ theo thời gian thực về máy chủ.",
-    "applications": ["Thu tiền điện tự động", "Phân tích tải điện lưới"],
+    "applications": [
+      "Thu tiền điện tự động",
+      "Phân tích tải điện lưới"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=o1Xj67D_r2M"
   },
   {
@@ -140,7 +196,11 @@
     "fullName": "Cổng kết nối IoT",
     "category": "IoT",
     "definition": "Thiết bị mạng đóng vai trò trung gian chuyển đổi giao thức, thu thập dữ liệu từ cảm biến trước khi đưa lên Cloud.",
-    "applications": ["Gateway kết nối LoRaWAN", "Raspberry Pi thu thập data", "Router công nghiệp"],
+    "applications": [
+      "Gateway kết nối LoRaWAN",
+      "Raspberry Pi thu thập data",
+      "Router công nghiệp"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=1a2b3c4d5e"
   },
   {
@@ -149,7 +209,10 @@
     "fullName": "Z-Wave Protocol",
     "category": "IoT",
     "definition": "Giao thức truyền thông không dây chuyên biệt cho nhà thông minh, vận hành ở băng tần sub-GHz giúp tránh nhiễu Wi-Fi.",
-    "applications": ["Khóa cửa thông minh", "Cảm biến chống trộm"],
+    "applications": [
+      "Khóa cửa thông minh",
+      "Cảm biến chống trộm"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=9h8g7f6e5d"
   },
   {
@@ -158,7 +221,10 @@
     "fullName": "Sigfox LPWAN",
     "category": "IoT",
     "definition": "Mạng không dây chuẩn LPWAN sử dụng công nghệ băng hẹp siêu hẹp (Ultra Narrowband) do công ty Sigfox phát triển.",
-    "applications": ["Định vị xe cộ", "Nông nghiệp ngoài trời"],
+    "applications": [
+      "Định vị xe cộ",
+      "Nông nghiệp ngoài trời"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=3x2y1z0a9b"
   },
   {
@@ -167,7 +233,10 @@
     "fullName": "Matter Standard",
     "category": "IoT",
     "definition": "Tiêu chuẩn kết nối mã nguồn mở thống nhất các hệ sinh thái Smart Home (Apple, Google, Amazon) hoạt động chung một mạng.",
-    "applications": ["Nhà thông minh đa nền tảng", "Công tắc, đèn thông minh"],
+    "applications": [
+      "Nhà thông minh đa nền tảng",
+      "Công tắc, đèn thông minh"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=0p9o8i7u6y"
   },
   {
@@ -176,7 +245,1049 @@
     "fullName": "Internet Protocol Camera",
     "category": "IoT",
     "definition": "Camera an ninh có khả năng số hóa hình ảnh và truyền dữ liệu video qua mạng IP để giám sát từ xa.",
-    "applications": ["Giám sát giao thông", "Hệ thống an ninh gia đình"],
+    "applications": [
+      "Giám sát giao thông",
+      "Hệ thống an ninh gia đình"
+    ],
     "youtubeUrl": "https://www.youtube.com/watch?v=p1o2i3u4y5"
+  },
+  {
+    "term": "AMQP",
+    "fullName": "Advanced Message Queuing Protocol",
+    "definition": "Giao thức tiêu chuẩn mở ở lớp ứng dụng dành cho middleware hướng thông điệp, chuyên dùng trong giao dịch tài chính và hệ thống doanh nghiệp.",
+    "applications": [
+      "Hệ thống ngân hàng cốt lõi",
+      "Tích hợp dịch vụ đám mây IoT",
+      "RabbitMQ"
+    ],
+    "id": "iot_rqdzi6f",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AMQP%20IoT%20explain"
+  },
+  {
+    "term": "XMPP",
+    "fullName": "Extensible Messaging and Presence Protocol",
+    "definition": "Giao thức dựa trên XML được thiết kế ban đầu cho nhắn tin tức thời nhưng được mở rộng mạnh mẽ sang viễn thông IoT và cấu trúc phân tán.",
+    "applications": [
+      "Ứng dụng nhắn tin tức thời (WhatsApp đời đầu)",
+      "Smart Grid",
+      "Quản trị thiết bị IoT hai chiều"
+    ],
+    "id": "iot_8hnpu2g",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=XMPP%20IoT%20explain"
+  },
+  {
+    "term": "DDS",
+    "fullName": "Data Distribution Service",
+    "definition": "Chuẩn middleware giao tiếp dữ liệu máy-máy trực tiếp phi tập trung với QoS cực cao, không cần broker trung tâm.",
+    "applications": [
+      "Xe tự hành",
+      "Hệ thống chiến đấu hải quân",
+      "Robotics tự động"
+    ],
+    "id": "iot_z46cvt1",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DDS%20IoT%20explain"
+  },
+  {
+    "term": "WebSockets",
+    "fullName": "WebSockets Protocol",
+    "definition": "Giao thức truyền thông hai chiều toàn phần (full-duplex) hoạt động trên một kết nối TCP duy nhất, cho phép trao đổi dữ liệu thời gian thực giữa client và server.",
+    "applications": [
+      "Dashboard IoT thời gian thực",
+      "Game online",
+      "Cập nhật dữ liệu cảm biến live"
+    ],
+    "id": "iot_kpx0zv6",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=WebSockets%20IoT%20explain"
+  },
+  {
+    "term": "REST API",
+    "fullName": "Representational State Transfer API",
+    "definition": "Giao thức kiến trúc tiêu chuẩn để tạo các dịch vụ web, dùng phương thức HTTP (GET, POST, PUT, DELETE) để điều khiển thiết bị IoT.",
+    "applications": [
+      "Ứng dụng điều khiển Smart Home",
+      "Đẩy dữ liệu lên Cloud",
+      "Webhooks IoT"
+    ],
+    "id": "iot_voisucd",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=REST%20API%20IoT%20explain"
+  },
+  {
+    "term": "GraphQL",
+    "fullName": "GraphQL",
+    "definition": "Ngôn ngữ truy vấn dữ liệu linh hoạt dành cho API, cho phép các thiết bị hoặc app IoT chỉ lấy chính xác các trường dữ liệu cảm biến mà chúng cần.",
+    "applications": [
+      "Mobile App điều khiển nhà thông minh",
+      "Nền tảng Cloud IoT",
+      "Tối ưu băng thông mạng"
+    ],
+    "id": "iot_zrrp2tv",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=GraphQL%20IoT%20explain"
+  },
+  {
+    "term": "Azure IoT",
+    "fullName": "Microsoft Azure IoT Hub",
+    "definition": "Nền tảng PaaS của Microsoft giúp thiết lập liên kết thông tin hai chiều an toàn, đáng tin cậy giữa hàng triệu thiết bị IoT và đám mây.",
+    "applications": [
+      "Cổng nhận dữ liệu đo lường từ xa",
+      "Quản trị cập nhật firmware",
+      "Điều khiển thiết bị công nghiệp"
+    ],
+    "id": "iot_nmcbppf",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Azure%20IoT%20IoT%20explain"
+  },
+  {
+    "term": "GCP IoT",
+    "fullName": "Google Cloud IoT Core",
+    "definition": "Dịch vụ của Google (hiện đã chuyển giao) cho phép kết nối, quản lý và thu thập dữ liệu thiết bị IoT trên quy mô toàn cầu an toàn.",
+    "applications": [
+      "Xử lý dữ liệu lớn (Big Data) IoT",
+      "Tích hợp Machine Learning cho cảm biến"
+    ],
+    "id": "iot_mvejl7h",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=GCP%20IoT%20IoT%20explain"
+  },
+  {
+    "term": "AWS Greengrass",
+    "fullName": "AWS IoT Greengrass",
+    "definition": "Phần mềm mã nguồn mở cho thiết bị biên (edge), giúp thiết bị cục bộ có thể chạy Lambda function, container Docker và học máy ngoại tuyến.",
+    "applications": [
+      "Gateway IoT công nghiệp ngoại tuyến",
+      "Camera AI cục bộ",
+      "Phân tích dữ liệu biên"
+    ],
+    "id": "iot_4fw1jbo",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AWS%20Greengrass%20IoT%20explain"
+  },
+  {
+    "term": "Watson IoT",
+    "fullName": "IBM Watson IoT Platform",
+    "definition": "Nền tảng điện toán đám mây của IBM chuyên quản lý kết nối IoT và áp dụng trực tiếp trí tuệ nhân tạo (AI) mạnh mẽ lên chuỗi dữ liệu.",
+    "applications": [
+      "Quản lý tòa nhà thông minh",
+      "Chuỗi cung ứng thông minh",
+      "Bảo trì dự đoán AI"
+    ],
+    "id": "iot_utv5014",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Watson%20IoT%20IoT%20explain"
+  },
+  {
+    "term": "ThingWorx",
+    "fullName": "PTC ThingWorx Platform",
+    "definition": "Nền tảng phát triển ứng dụng IoT công nghiệp hàng đầu, tập trung mạnh vào thiết kế quy trình sản xuất và bản sao kỹ thuật số (Digital Twin).",
+    "applications": [
+      "Ứng dụng IIoT nhà máy",
+      "Mô phỏng máy móc 3D",
+      "Trực quan hóa AR/VR cho kỹ sư"
+    ],
+    "id": "iot_yh1ux36",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ThingWorx%20IoT%20explain"
+  },
+  {
+    "term": "Blynk",
+    "fullName": "Blynk IoT Platform",
+    "definition": "Nền tảng IoT kéo-thả vô cùng thân thiện dùng để lập trình và thiết kế giao diện điều khiển thiết bị phần cứng từ smartphone một cách nhanh chóng.",
+    "applications": [
+      "Dự án DIY Arduino/ESP32",
+      "Nhà thông minh cá nhân",
+      "Quản lý thiết bị nông nghiệp quy mô nhỏ"
+    ],
+    "id": "iot_ykr6gre",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Blynk%20IoT%20explain"
+  },
+  {
+    "term": "Ubidots",
+    "fullName": "Ubidots Data Analytics",
+    "definition": "Nền tảng Cloud IoT chuyên dụng cho giáo dục và doanh nghiệp nhỏ để thu thập, phân tích và trực quan hóa dữ liệu cảm biến bằng các Widget đẹp mắt.",
+    "applications": [
+      "Trạm quan trắc thời tiết",
+      "Giám sát chất lượng không khí",
+      "Dashboard theo dõi năng lượng"
+    ],
+    "id": "iot_lhu195q",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Ubidots%20IoT%20explain"
+  },
+  {
+    "term": "Fog Computing",
+    "fullName": "Điện toán sương mù",
+    "definition": "Mô hình kiến trúc mở rộng điện toán đám mây xuống tới rìa mạng, tạo ra một lớp tính toán phân tán trung gian sát thiết bị IoT hơn điện toán biên.",
+    "applications": [
+      "Kiểm soát đèn giao thông thông minh",
+      "Xử lý dữ liệu video camera trước khi nén",
+      "Hệ thống lưới điện siêu nhỏ"
+    ],
+    "id": "iot_fgqz0lq",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Fog%20Computing%20IoT%20explain"
+  },
+  {
+    "term": "Cloud Computing",
+    "fullName": "Điện toán đám mây",
+    "definition": "Việc cung cấp các dịch vụ điện toán (máy chủ, lưu trữ, cơ sở dữ liệu, phân tích) qua Internet (\"đám mây\") phục vụ các hệ thống phân tán lớn.",
+    "applications": [
+      "Máy chủ nhận dữ liệu IoT toàn cầu",
+      "Xử lý AI mô hình lớn",
+      "Lưu trữ dữ liệu lịch sử"
+    ],
+    "id": "iot_czn8pbf",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Cloud%20Computing%20IoT%20explain"
+  },
+  {
+    "term": "Microservices",
+    "fullName": "Microservices Architecture",
+    "definition": "Cấu trúc phần mềm chia nhỏ một ứng dụng lớn thành các dịch vụ siêu nhỏ độc lập, dễ dàng thay đổi mã nguồn backend của hệ thống IoT Cloud.",
+    "applications": [
+      "Backend cho nền tảng IoT",
+      "Dịch vụ xử lý MQTT độc lập",
+      "Dịch vụ quản trị thiết bị"
+    ],
+    "id": "iot_szf3zuw",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Microservices%20IoT%20explain"
+  },
+  {
+    "term": "TSDB",
+    "fullName": "Time-Series Database",
+    "definition": "Cơ sở dữ liệu chuỗi thời gian, được thiết kế và tối ưu hóa đặc biệt để ghi nhận liên tục hàng triệu điểm dữ liệu theo dấu thời gian từ cảm biến IoT.",
+    "applications": [
+      "Lưu trữ biểu đồ nhiệt độ",
+      "Theo dõi điện áp nhà máy",
+      "Quản lý dữ liệu chứng khoán"
+    ],
+    "id": "iot_73do0r0",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=TSDB%20IoT%20explain"
+  },
+  {
+    "term": "InfluxDB",
+    "fullName": "InfluxDB",
+    "definition": "Một trong những cơ sở dữ liệu TSDB mã nguồn mở nổi tiếng nhất, có tốc độ ghi siêu tốc để phục vụ ghi nhật ký đo lường từ xa.",
+    "applications": [
+      "Dashboard Grafana",
+      "Giám sát hiệu suất máy chủ",
+      "Lưu trữ log cảm biến"
+    ],
+    "id": "iot_6qpy5nq",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=InfluxDB%20IoT%20explain"
+  },
+  {
+    "term": "Edge Server",
+    "fullName": "Máy chủ biên",
+    "definition": "Máy chủ máy tính cấp độ công nghiệp được lắp đặt ngay tại hiện trường (nhà máy, tháp viễn thông) để xử lý lượng lớn dữ liệu cục bộ.",
+    "applications": [
+      "Trạm BTS 5G",
+      "Xử lý dữ liệu Camera AI đô thị",
+      "Cụm điều khiển nhà máy thông minh"
+    ],
+    "id": "iot_c0z2chb",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Edge%20Server%20IoT%20explain"
+  },
+  {
+    "term": "RP2040",
+    "fullName": "Raspberry Pi Pico RP2040",
+    "definition": "Vi điều khiển lõi kép ARM Cortex-M0+ đầu tiên do chính Raspberry Pi thiết kế, siêu rẻ và linh hoạt với bộ máy trạng thái PIO lập trình được.",
+    "applications": [
+      "Bàn phím cơ tự chế",
+      "Mạch thu thập dữ liệu tốc độ cao",
+      "Điều khiển dải LED ma trận"
+    ],
+    "id": "iot_xkuk4hw",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RP2040%20IoT%20explain"
+  },
+  {
+    "term": "Arduino Mega",
+    "fullName": "Arduino Mega 2560",
+    "definition": "Phiên bản mở rộng của Arduino với bộ nhớ lớn hơn và có tới 54 chân I/O số, phù hợp cho các mô hình nhiều linh kiện ngoại vi.",
+    "applications": [
+      "Bo mạch chủ máy in 3D (RAMPS)",
+      "Robot nhiều chi tiết",
+      "Điều khiển hệ thống trồng cây tự động"
+    ],
+    "id": "iot_wfuqrb8",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Arduino%20Mega%20IoT%20explain"
+  },
+  {
+    "term": "nRF52832",
+    "fullName": "Nordic nRF52832",
+    "definition": "SoC đa giao thức của Nordic Semiconductor, chuyên hỗ trợ chuẩn Bluetooth Low Energy (BLE), ANT và băng tần 2.4GHz độc quyền cực kỳ tiết kiệm pin.",
+    "applications": [
+      "Vòng đeo tay thể thao fitness tracker",
+      "Thiết bị y tế cá nhân không dây",
+      "Đèn hiệu định vị Beacon"
+    ],
+    "id": "iot_smd5v8l",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=nRF52832%20IoT%20explain"
+  },
+  {
+    "term": "nRF52840",
+    "fullName": "Nordic nRF52840 SoC",
+    "definition": "Phiên bản SoC cao cấp hỗ trợ đầy đủ Bluetooth 5.0, Bluetooth Mesh, Thread và Zigbee cùng tính năng bảo mật CryptoCell.",
+    "applications": [
+      "Cổng gateway nhà thông minh Matter",
+      "Chuột và bàn phím gaming không dây",
+      "Thiết bị theo dõi kho bãi"
+    ],
+    "id": "iot_6ekk16d",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=nRF52840%20IoT%20explain"
+  },
+  {
+    "term": "SBC",
+    "fullName": "Single-Board Computer",
+    "definition": "Máy tính bo mạch đơn, một máy tính hoàn chỉnh được xây dựng trên một bảng mạch in duy nhất, có vi xử lý, RAM, cổng I/O và chạy hệ điều hành.",
+    "applications": [
+      "Raspberry Pi",
+      "Orange Pi",
+      "Odroid"
+    ],
+    "id": "iot_zb8tmyi",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SBC%20IoT%20explain"
+  },
+  {
+    "term": "ARM Cortex-M",
+    "fullName": "ARM Cortex-M Series",
+    "definition": "Nhóm các lõi vi xử lý RISC 32-bit được tối ưu hóa đặc biệt về mặt chi phí và hiệu năng cho thị trường vi điều khiển nhúng thời gian thực.",
+    "applications": [
+      "Nhúng trên chip STM32",
+      "NXP Kinetis",
+      "Texas Instruments MSP432"
+    ],
+    "id": "iot_06updvv",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ARM%20Cortex-M%20IoT%20explain"
+  },
+  {
+    "term": "BeagleBone",
+    "fullName": "BeagleBone Black",
+    "definition": "Bo mạch SBC hướng tới cộng đồng công nghiệp nguồn mở, trang bị vi xử lý xử lý thời gian thực (PRU) để điều khiển I/O phần cứng siêu tốc.",
+    "applications": [
+      "Mạch điều khiển máy CNC",
+      "Thiết bị y khoa mã nguồn mở",
+      "Robot hình người công nghiệp"
+    ],
+    "id": "iot_rakjamg",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=BeagleBone%20IoT%20explain"
+  },
+  {
+    "term": "Jetson Nano",
+    "fullName": "NVIDIA Jetson Nano",
+    "definition": "Bo mạch máy tính AI nhúng siêu nhỏ của NVIDIA mang sức mạnh GPU CUDA, chuyên chạy trực tiếp các mạng nơ-ron nhân tạo phức tạp ở vùng biên.",
+    "applications": [
+      "Camera đếm số lượng người",
+      "Robot nhặt rác nhận diện bằng hình ảnh",
+      "Hệ thống kiểm tra ngoại quan (AOI)"
+    ],
+    "id": "iot_mu8i5tw",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Jetson%20Nano%20IoT%20explain"
+  },
+  {
+    "term": "Coral TPU",
+    "fullName": "Google Coral Edge TPU",
+    "definition": "Bộ xử lý Tensor chuyên dụng (ASIC) được thiết kế bởi Google dùng để tăng tốc các mô hình máy học (TensorFlow Lite) với mức tiêu thụ điện thấp.",
+    "applications": [
+      "Module cắm USB vào Raspberry Pi",
+      "Bo mạch chủ camera AI thông minh",
+      "Thiết bị phân tích video tại chỗ"
+    ],
+    "id": "iot_owxou8r",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Coral%20TPU%20IoT%20explain"
+  },
+  {
+    "term": "GPU Edge",
+    "fullName": "Edge Graphics Processing Unit",
+    "definition": "Vi xử lý đồ họa được đưa xuống thiết bị biên để thực hiện các phép toán ma trận song song khối lượng lớn, đặc biệt cho học sâu (Deep Learning).",
+    "applications": [
+      "Box xử lý giao thông ngã tư",
+      "Màn hình quảng cáo nhận diện độ tuổi khách",
+      "Hệ thống giám sát drone tự động"
+    ],
+    "id": "iot_rek3fzc",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=GPU%20Edge%20IoT%20explain"
+  },
+  {
+    "term": "E-ink",
+    "fullName": "Electronic Paper Display",
+    "definition": "Màn hình giấy điện tử siêu tiết kiệm điện, chỉ tiêu thụ năng lượng khi thay đổi nội dung hiển thị, hình ảnh được giữ nguyên khi mất điện.",
+    "applications": [
+      "Máy đọc sách Kindle",
+      "Bảng giá điện tử trong siêu thị",
+      "Đồng hồ thông minh pin 1 tháng"
+    ],
+    "id": "iot_jzh4h5b",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=E-ink%20IoT%20explain"
+  },
+  {
+    "term": "PMIC",
+    "fullName": "Power Management IC",
+    "definition": "Vi mạch quản lý nguồn điện tích hợp, chịu trách nhiệm điều phối, biến đổi, và tối ưu hóa các mức điện áp khác nhau cho hệ thống IoT pin.",
+    "applications": [
+      "Smartphone",
+      "Đồng hồ smartwatch",
+      "Module quản lý pin Lithium"
+    ],
+    "id": "iot_jdgn1yj",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=PMIC%20IoT%20explain"
+  },
+  {
+    "term": "Watchdog",
+    "fullName": "Watchdog Timer",
+    "definition": "Bộ định thời giám sát tự động kích hoạt reset hệ thống thiết bị IoT để phục hồi hoạt động nếu chương trình phần mềm bị treo dài hạn.",
+    "applications": [
+      "Trạm quan trắc tự động trên núi",
+      "Vệ tinh quỹ đạo thấp",
+      "Bộ điều khiển lò nướng"
+    ],
+    "id": "iot_y8yc8g0",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Watchdog%20IoT%20explain"
+  },
+  {
+    "term": "Modbus RTU",
+    "fullName": "Modbus Remote Terminal Unit",
+    "definition": "Giao thức truyền thông chuẩn công nghiệp de facto lâu đời, chạy qua nền tảng nối tiếp RS-485, có cấu trúc master/slave đơn giản và tin cậy.",
+    "applications": [
+      "Thu thập số liệu đồng hồ đo điện",
+      "Cảm biến môi trường nhà kính lớn",
+      "Tích hợp thiết bị với HMI/SCADA"
+    ],
+    "id": "iot_8hf9aup",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Modbus%20RTU%20IoT%20explain"
+  },
+  {
+    "term": "Modbus TCP",
+    "fullName": "Modbus TCP/IP",
+    "definition": "Phiên bản nâng cấp của giao thức Modbus truyền thống hoạt động trên nền tảng mạng Ethernet TCP/IP, tận dụng tốc độ của mạng cáp quang cục bộ.",
+    "applications": [
+      "Trạm điện mặt trời lớn",
+      "Hệ thống xử lý nước thải",
+      "Nhà máy sản xuất thực phẩm"
+    ],
+    "id": "iot_l7zlm3p",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Modbus%20TCP%20IoT%20explain"
+  },
+  {
+    "term": "1-Wire",
+    "fullName": "1-Wire Protocol",
+    "definition": "Giao thức mạng bus của hãng Dallas Semiconductor giao tiếp nhiều vi mạch linh kiện điện tử tốc độ thấp với vi điều khiển chỉ sử dụng duy nhất 1 dây tín hiệu (cộng dây mass).",
+    "applications": [
+      "Cảm biến nhiệt độ DS18B20",
+      "Pin thông minh máy laptop",
+      "Hệ thống thẻ iButton quản lý nhân sự"
+    ],
+    "id": "iot_9oi5szh",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=1-Wire%20IoT%20explain"
+  },
+  {
+    "term": "I2S",
+    "fullName": "Inter-IC Sound",
+    "definition": "Giao thức truyền tải dữ liệu âm thanh số kỹ thuật số chất lượng cao (Digital Audio) song song liên kết giữa các thiết bị vi mạch xử lý âm thanh.",
+    "applications": [
+      "Kết nối Microphone MEMS số",
+      "Mạch amply loa Bluetooth IC",
+      "Thiết bị thu âm chuyên nghiệp"
+    ],
+    "id": "iot_lfcmd2o",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=I2S%20IoT%20explain"
+  },
+  {
+    "term": "6LoWPAN",
+    "fullName": "IPv6 over Low-Power Wireless PAN",
+    "definition": "Kỹ thuật nén dữ liệu cho phép truyền và định tuyến nguyên bản các gói tin giao thức IPv6 trực tiếp qua mạng không dây chuẩn IEEE 802.15.4 năng lượng thấp.",
+    "applications": [
+      "Mạng lưới Thread",
+      "Thiết bị đo lường không dây công nghiệp",
+      "Internet kết nối thiết bị đeo sinh học"
+    ],
+    "id": "iot_cvufbk8",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=6LoWPAN%20IoT%20explain"
+  },
+  {
+    "term": "BLE Mesh",
+    "fullName": "Bluetooth Mesh Profile",
+    "definition": "Kiến trúc mạng liên kết đa điểm của Bluetooth (nhiều kết nối với nhiều) tạo thành lưới để định tuyến tin nhắn, rất thích hợp cấu hình mạng diện rộng.",
+    "applications": [
+      "Hệ thống chiếu sáng thông minh tòa nhà (Bluetooth SIG)",
+      "Quản lý phòng họp khách sạn",
+      "Mạng cảm biến nhiệt độ nhà máy"
+    ],
+    "id": "iot_wwe63er",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=BLE%20Mesh%20IoT%20explain"
+  },
+  {
+    "term": "Wi-Fi 6",
+    "fullName": "IEEE 802.11ax",
+    "definition": "Chuẩn Wi-Fi thế hệ mới ứng dụng công nghệ mạng di động OFDMA giúp tăng mật độ hàng chục thiết bị IoT kết nối đồng thời mà không nghẽn mạng.",
+    "applications": [
+      "Router Gigabit gia đình",
+      "Sân bay và ga tàu thông minh",
+      "Kết nối hệ thống AR doanh nghiệp"
+    ],
+    "id": "iot_xmo3qqv",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Wi-Fi%206%20IoT%20explain"
+  },
+  {
+    "term": "Wi-Fi HaLow",
+    "fullName": "IEEE 802.11ah",
+    "definition": "Chuẩn Wi-Fi chuyên IoT vận hành ở dải băng tần dưới 1 GHz (sub-GHz), mang lại khả năng xuyên tường mạnh và khoảng cách xa hàng km nhưng tốc độ thấp.",
+    "applications": [
+      "Camera an ninh ngoài trời xa nhà",
+      "Mạng cảm biến nông trại",
+      "Kết nối thiết bị ngầm dưới kho"
+    ],
+    "id": "iot_ak5s5he",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Wi-Fi%20HaLow%20IoT%20explain"
+  },
+  {
+    "term": "NFC",
+    "fullName": "Near-Field Communication",
+    "definition": "Công nghệ kết nối không dây tầm siêu ngắn (dưới 4 cm) sử dụng cảm ứng từ trường để các thiết bị trao đổi lượng nhỏ thông tin cực nhanh.",
+    "applications": [
+      "Thanh toán Apple Pay/Google Pay",
+      "Ghép nối tai nghe Bluetooth tự động",
+      "Chạm thẻ từ vào cửa văn phòng"
+    ],
+    "id": "iot_svpnnr6",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=NFC%20IoT%20explain"
+  },
+  {
+    "term": "Ethernet",
+    "fullName": "Ethernet (IEEE 802.3)",
+    "definition": "Công nghệ mạng cục bộ có dây lâu đời và phổ biến nhất, đảm bảo tính ổn định tối thượng và băng thông lớn không bị nhiễu sóng bên ngoài.",
+    "applications": [
+      "Camera IP cao cấp",
+      "Máy chủ Edge Server",
+      "Bộ điều khiển trung tâm Smart Home"
+    ],
+    "id": "iot_ke4nikm",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Ethernet%20IoT%20explain"
+  },
+  {
+    "term": "PoE",
+    "fullName": "Power over Ethernet",
+    "definition": "Công nghệ mạng cho phép cáp mạng lõi đồng thông thường có thể mang theo cả tín hiệu dữ liệu tốc độ cao lẫn nguồn điện một chiều cấp cho thiết bị.",
+    "applications": [
+      "Camera IP an ninh",
+      "Bộ phát Wi-Fi (Access Point) ốp trần",
+      "Điện thoại VoIP văn phòng"
+    ],
+    "id": "iot_u2rrtpi",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=PoE%20IoT%20explain"
+  },
+  {
+    "term": "IPv6",
+    "fullName": "Internet Protocol version 6",
+    "definition": "Phiên bản thế hệ thứ 6 của Giao thức Internet mở rộng không gian địa chỉ IP lên con số khổng lồ vô hạn, cung cấp IP định tuyến trực tiếp cho từng thiết bị IoT nhỏ nhất.",
+    "applications": [
+      "Triển khai hạ tầng 5G chuẩn mới",
+      "Cấu trúc mạng Thread Smart Home",
+      "Định danh thiết bị vạn vật kết nối"
+    ],
+    "id": "iot_750j6eu",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=IPv6%20IoT%20explain"
+  },
+  {
+    "term": "MPTCP",
+    "fullName": "Multipath TCP",
+    "definition": "Bản nâng cấp mở rộng của giao thức điều khiển truyền vận TCP cho phép một kết nối duy nhất dùng đồng thời nhiều đường dẫn mạng (vd: cả 4G và Wi-Fi).",
+    "applications": [
+      "Livestream video không gián đoạn trên di động",
+      "Robot tự hành chuyển vùng liên tục",
+      "Aggregated bandwidth cho tải file lớn"
+    ],
+    "id": "iot_wyq7vus",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=MPTCP%20IoT%20explain"
+  },
+  {
+    "term": "DTLS",
+    "fullName": "Datagram Transport Layer Security",
+    "definition": "Phiên bản của giao thức bảo mật TLS nhưng được tinh chỉnh đặc biệt để vận hành trơn tru trên gói tin UDP siêu nhẹ của CoAP.",
+    "applications": [
+      "Bảo mật đường truyền CoAP",
+      "Truyền phát video WebRTC mã hóa",
+      "Hệ thống M2M bảo mật mạng hạn chế"
+    ],
+    "id": "iot_rd7x57b",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DTLS%20IoT%20explain"
+  },
+  {
+    "term": "TLS",
+    "fullName": "Transport Layer Security",
+    "definition": "Giao thức tiêu chuẩn ngành cho an ninh mật mã để mã hóa kết nối giữa thiết bị IoT và máy chủ đám mây, chống giả mạo hay đánh cắp dữ liệu.",
+    "applications": [
+      "Truy cập Website HTTPS an toàn",
+      "Mã hóa luồng dữ liệu MQTT (MQTTS)",
+      "Nền tảng thanh toán ngân hàng"
+    ],
+    "id": "iot_ydpk61x",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=TLS%20IoT%20explain"
+  },
+  {
+    "term": "PKI",
+    "fullName": "Public Key Infrastructure",
+    "definition": "Hạ tầng khóa công khai, một hệ thống toàn diện xác thực và quản lý chứng thư số (Certificate) dùng để cấp định danh an toàn chống giả mạo cho hàng triệu máy móc IoT.",
+    "applications": [
+      "Chứng thực thiết bị AWS IoT",
+      "Xác thực thẻ căn cước gắn chip",
+      "Chữ ký số doanh nghiệp mạng"
+    ],
+    "id": "iot_pprbian",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=PKI%20IoT%20explain"
+  },
+  {
+    "term": "TPM",
+    "fullName": "Trusted Platform Module",
+    "definition": "Vi mạch vi điều khiển bảo mật tiêu chuẩn chuyên dụng gắn trên mainboard thiết kế để bảo mật phần cứng qua các phím mật mã mã hóa nhúng từ khi sản xuất.",
+    "applications": [
+      "Bảo vệ mã hóa ổ cứng BitLocker",
+      "Xác minh toàn vẹn khởi động máy chủ",
+      "Hệ thống thanh toán POS an toàn"
+    ],
+    "id": "iot_utwri98",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=TPM%20IoT%20explain"
+  },
+  {
+    "term": "HSM",
+    "fullName": "Hardware Security Module",
+    "definition": "Thiết bị vật lý điện toán vững chắc dùng xử lý mã hóa chuyên sâu (tạo khóa bí mật lớn) quản lý hệ thống bảo vệ vòng ngoài cho server IoT Data.",
+    "applications": [
+      "Quản lý khóa AWS KMS Core",
+      "Trung tâm chứng thực ngân hàng nhà nước",
+      "Bảo vệ khóa gốc DNSSEC"
+    ],
+    "id": "iot_1hutsxz",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=HSM%20IoT%20explain"
+  },
+  {
+    "term": "AES-128",
+    "fullName": "Advanced Encryption Standard 128-bit",
+    "definition": "Thuật toán mã hóa khóa đối xứng khối (Block cipher) tiêu chuẩn toàn cầu vừa vặn cân bằng cho vi điều khiển tính toán không trễ và độ an toàn thực tế cực mạnh.",
+    "applications": [
+      "Mã hóa dữ liệu WPA2 Wi-Fi",
+      "Lưu trữ cấu hình firmware IoT",
+      "Mã hóa giao thức Bluetooth BLE"
+    ],
+    "id": "iot_aqjd4x5",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AES-128%20IoT%20explain"
+  },
+  {
+    "term": "RSA",
+    "fullName": "Rivest–Shamir–Adleman",
+    "definition": "Thuật toán mã hóa khóa bất đối xứng ra đời sớm nhất vẫn là trụ cột cho công nghệ chữ ký số xác thực khởi tạo kênh trao đổi khóa nhưng chậm chạp về tính toán.",
+    "applications": [
+      "Thiết lập phiên bảo mật kết nối TLS",
+      "Mã hóa File PGP máy tính cá nhân",
+      "Xác thực chữ ký hợp đồng số"
+    ],
+    "id": "iot_th0l8hy",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RSA%20IoT%20explain"
+  },
+  {
+    "term": "ECC",
+    "fullName": "Elliptic-Curve Cryptography",
+    "definition": "Kỹ thuật mật mã đường cong elliptic tiên tiến đem lại cấp độ bảo mật cao y hệt RSA nhưng chìa khóa ngắn hơn rất nhiều, hoàn hảo cho năng lượng máy móc IoT.",
+    "applications": [
+      "Chứng chỉ xác thực TLS 1.3 nhẹ nhàng",
+      "Giao dịch ví điện tử tiền mã hóa",
+      "Bảo mật hệ sinh thái Apple HomeKit"
+    ],
+    "id": "iot_0dcgtzw",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ECC%20IoT%20explain"
+  },
+  {
+    "term": "JWT",
+    "fullName": "JSON Web Token",
+    "definition": "Tiêu chuẩn mạng chuẩn quy chuẩn mã hóa các khai báo JSON (claims) chứa thông tin phân quyền phiên làm việc để giao tiếp với API Server thay thế cookie.",
+    "applications": [
+      "Xác thực tài khoản hệ thống Dashboard",
+      "Phân quyền gọi API của App di động",
+      "Phiên đăng nhập ứng dụng Web SPA"
+    ],
+    "id": "iot_1kkz2s4",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=JWT%20IoT%20explain"
+  },
+  {
+    "term": "OAuth 2.0",
+    "fullName": "Open Authorization 2.0",
+    "definition": "Tiêu chuẩn mở công nghiệp cho ủy quyền ứng dụng, cho phép ứng dụng bên thứ ba truy cập tài nguyên máy chủ bảo mật an toàn mà không cần cung cấp mật khẩu chủ.",
+    "applications": [
+      "Đăng nhập Google/Facebook Single Sign-On",
+      "Liên kết thiết bị Xiaomi vào Google Home",
+      "Giao thức ủy quyền API Github"
+    ],
+    "id": "iot_j6kt505",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=OAuth%202.0%20IoT%20explain"
+  },
+  {
+    "term": "Device Shadow",
+    "fullName": "AWS Device Shadow",
+    "definition": "Khái niệm kỹ thuật tạo ra cấu trúc tài liệu JSON thường trú trên đám mây để sao lưu lại và lưu giữ đồng bộ trạng thái mong muốn mới nhất của các thiết bị IoT.",
+    "applications": [
+      "Điều khiển lệnh ngoại tuyến thông qua AWS",
+      "Giao diện app Smart Home phản hồi nhanh",
+      "Hệ thống lưu giữ cài đặt điều hòa Cloud"
+    ],
+    "id": "iot_jzddqih",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Device%20Shadow%20IoT%20explain"
+  },
+  {
+    "term": "M2M",
+    "fullName": "Machine-to-Machine",
+    "definition": "Hệ thống liên lạc chia sẻ dữ liệu hai chiều trực tiếp khép kín giữa các máy móc phần cứng chuyên biệt mà không có bất kỳ tương tác hỗ trợ nào từ con người.",
+    "applications": [
+      "Máy bán hàng tự động báo hết hàng",
+      "Đồng hồ nước báo số liệu định kỳ về trạm",
+      "Hệ thống kiểm soát nhiệt độ kho lạnh"
+    ],
+    "id": "iot_j81hort",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=M2M%20IoT%20explain"
+  },
+  {
+    "term": "Zero Trust",
+    "fullName": "Zero Trust Architecture for IoT",
+    "definition": "Triết lý mô hình cấu trúc bảo mật hệ thống thông tin không bao giờ tin cậy và luôn xác minh từng giao dịch ngay cả khi thiết bị đã được định tuyến nằm bên trong mạng nội bộ LAN.",
+    "applications": [
+      "Bảo vệ chống xâm nhập cơ sở hạ tầng cấp cao",
+      "Bảo mật điện toán đám mây cho nhà máy điện",
+      "Nền tảng mạng VPN phân cấp"
+    ],
+    "id": "iot_gq6ewpo",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Zero%20Trust%20IoT%20explain"
+  },
+  {
+    "term": "FOTA",
+    "fullName": "Firmware-Over-The-Air",
+    "definition": "Thuật ngữ riêng biệt mô tả kỹ thuật cập nhật nạp lại nhân lõi hệ điều hành firmware của thiết bị thông qua kết nối truyền dẫn vô tuyến OTA.",
+    "applications": [
+      "Nâng cấp vá lỗi thiết bị định vị hộp đen xe ô tô",
+      "Tesla nâng cấp tính năng Autopilot mới",
+      "Nâng cấp giao thức router nhà mạng từ xa"
+    ],
+    "id": "iot_hrsfhyl",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=FOTA%20IoT%20explain"
+  },
+  {
+    "term": "Provisioning",
+    "fullName": "IoT Device Provisioning",
+    "definition": "Quá trình tiền kết nối cung cấp đăng ký cấu hình ban đầu, kết nối nhận dạng chứng chỉ cho một thiết bị nguyên bản sản xuất lên hệ thống quản trị để nó chính thức đi vào hoạt động.",
+    "applications": [
+      "Hệ thống thiết lập Wi-Fi cho bóng đèn thông minh Smart Life",
+      "Dịch vụ cấp giấy chứng nhận nhận diện AWS IoT",
+      "Đồng bộ dây chuyền sản xuất đồng hồ đo"
+    ],
+    "id": "iot_itbws8a",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Provisioning%20IoT%20explain"
+  },
+  {
+    "term": "Root of Trust",
+    "fullName": "Hardware Root of Trust",
+    "definition": "Nền móng hạt nhân phần cứng an toàn vô điều kiện thực hiện các hoạt động tính toán bảo mật cốt lõi bên trong nền tảng chip SOC để không thể bị phần mềm chiếm quyền hack.",
+    "applications": [
+      "Khởi động an toàn mạch điện thoại iPhone",
+      "Chứng thực máy cà thẻ thanh toán ngân hàng",
+      "Khóa xác minh khởi động router Cisco"
+    ],
+    "id": "iot_9e9wm09",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Root%20of%20Trust%20IoT%20explain"
+  },
+  {
+    "term": "IDS/IPS",
+    "fullName": "Intrusion Detection/Prevention System",
+    "definition": "Hệ thống phòng chống xâm nhập thông minh phân tích các luồng gói dữ liệu mạng để phát hiện sớm các dị thường và tự động ngăn chặn cuộc tấn công DoS đánh vào cụm IoT.",
+    "applications": [
+      "Giám sát hệ thống mạng ngân hàng nhà nước",
+      "Phát hiện mã độc Mirai Botnet ở IoT",
+      "Hệ thống tường lửa bảo vệ máy chủ cấp cơ sở"
+    ],
+    "id": "iot_9lvevh5",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=IDS%2FIPS%20IoT%20explain"
+  },
+  {
+    "term": "Port Forwarding",
+    "fullName": "NAT Port Forwarding",
+    "definition": "Thiết lập quy tắc chuyển tiếp tĩnh ánh xạ một cổng dữ liệu mạng định sẵn trên Gateway công cộng để truy cập thẳng vào cấu hình mạng LAN cục bộ thiết bị bên trong riêng tư.",
+    "applications": [
+      "Mở cổng ứng dụng chạy máy chủ web IoT tại nhà",
+      "Cho phép Camera IPCamera xem trực tiếp internet",
+      "Mở cổng chia sẻ kết nối cho bộ điều khiển NAS"
+    ],
+    "id": "iot_vkexid5",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Port%20Forwarding%20IoT%20explain"
+  },
+  {
+    "term": "NAT",
+    "fullName": "Network Address Translation",
+    "definition": "Biên dịch địa chỉ định tuyến thay thế địa chỉ IP ẩn mạng nội bộ thành địa chỉ IP công cộng duy nhất khi thiết bị ra lệnh gọi lên internet.",
+    "applications": [
+      "Các modem Wi-Fi cấp mạng tại nhà",
+      "Thiết lập cấu trúc liên kết mạng IPv4 phân tầng",
+      "Ngụy trang mạng cá nhân cục bộ an toàn"
+    ],
+    "id": "iot_jxdd8fy",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=NAT%20IoT%20explain"
+  },
+  {
+    "term": "Smart Grid",
+    "fullName": "Smart Power Grid",
+    "definition": "Mạng lưới điện quốc gia kỹ thuật số tiên tiến dùng cảm biến thu thập tự động các hành vi để tối ưu hiệu suất cung cấp tiết kiệm điện năng cho toàn vùng.",
+    "applications": [
+      "Tự động cân bằng cắt giảm tải điện mùa hè",
+      "Tích hợp tấm pin năng lượng mặt trời nối lưới",
+      "Đo lường điện số điện tự động toàn dân"
+    ],
+    "id": "iot_jmxsnxw",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Grid%20IoT%20explain"
+  },
+  {
+    "term": "Telematics",
+    "fullName": "Vehicle Telematics",
+    "definition": "Ngành công nghệ kỹ thuật phân tích đo lường kết hợp công nghệ định vị toàn cầu GPS truyền thông không dây để theo dõi các thiết bị di động đặc biệt là hệ thống phương tiện.",
+    "applications": [
+      "Giám sát đánh giá hành vi hệ thống hộp đen xe khách",
+      "Báo cáo tiêu hao nhiên liệu máy kéo công nghiệp",
+      "Công ty bảo hiểm tự tính cước rủi ro lái xe"
+    ],
+    "id": "iot_hl3jnf1",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Telematics%20IoT%20explain"
+  },
+  {
+    "term": "V2X",
+    "fullName": "Vehicle-to-Everything",
+    "definition": "Khái niệm trao đổi liên kết toàn diện cho phép xe ô tô điện tử tự hành có khả năng phát và nhận thông tin từ các phương tiện giao thông khác và hạ tầng đường bộ để tự xử lý tình huống.",
+    "applications": [
+      "Mạng lưới điều hướng tự động chống đâm va xe cộ",
+      "Xe hơi nhận thông tin báo chuyển đèn giao thông từ xa",
+      "Cảnh báo tự động xe cứu thương đang ưu tiên"
+    ],
+    "id": "iot_ddlehqp",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=V2X%20IoT%20explain"
+  },
+  {
+    "term": "V2V",
+    "fullName": "Vehicle-to-Vehicle",
+    "definition": "Kết nối trực tiếp liên lạc tốc độ siêu cao giữa hai chiếc xe ô tô với nhau chia sẻ vị trí vận tốc mà không cần đến mạng 5G phủ sóng từ trung tâm.",
+    "applications": [
+      "Các công nghệ Cruise Control thích ứng (ACC) bám đuôi tự động",
+      "Phanh khẩn cấp giảm thiểu điểm mù ngã tư",
+      "Phát hiện khoảng cách làn đường vượt xe tự hành"
+    ],
+    "id": "iot_cmaqr9n",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=V2V%20IoT%20explain"
+  },
+  {
+    "term": "Smart City",
+    "fullName": "Thành phố thông minh",
+    "definition": "Tầm nhìn đô thị tương lai tích hợp sâu rộng các dữ liệu thu thập từ thiết bị cảm biến vạn vật và camera phân tích vào hệ thống quy hoạch vận hành để nâng cấp tiêu chuẩn quản lý xã hội sống.",
+    "applications": [
+      "Bãi đỗ xe hệ thống nhận diện tự động",
+      "Chiếu sáng cột đèn công cộng điều tiết lưu lượng người",
+      "Hệ thống cảnh báo sớm báo động triều cường ngập lụt nước"
+    ],
+    "id": "iot_k8oonbp",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20City%20IoT%20explain"
+  },
+  {
+    "term": "Smart Home",
+    "fullName": "Nhà thông minh",
+    "definition": "Sinh thái nhà ở tự động tích hợp các trang thiết bị kỹ thuật điện tử gia dụng được kết nối và điều khiển từ xa một cách tập trung, tăng thêm an toàn và sự sang trọng.",
+    "applications": [
+      "Trợ lý ảo điều khiển bằng giọng nói Alexa/Siri",
+      "Rèm cửa động cơ máy lạnh tự động mở đón ánh sáng",
+      "Camera khóa cửa AI tự mở nhận dạng chủ nhân"
+    ],
+    "id": "iot_kl2pi55",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Home%20IoT%20explain"
+  },
+  {
+    "term": "Smart Agri",
+    "fullName": "Smart Agriculture",
+    "definition": "Tích hợp hiện đại quy trình công nghệ điều khiển tự động thiết bị thông minh giám sát các yếu tố vi khí hậu nâng cao năng suất sản lượng trong ngành trồng trọt công nghệ cao.",
+    "applications": [
+      "Mạng lưới thiết bị tưới nhỏ giọt kiểm soát phân bón tự động IoT",
+      "Nhà màng cảm biến hệ thống đóng mở nhiệt độ thông gió",
+      "Drone tự động siêu phun thuốc theo bản đồ quét sâu bệnh"
+    ],
+    "id": "iot_egkgfbo",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Agri%20IoT%20explain"
+  },
+  {
+    "term": "Precision Farming",
+    "fullName": "Precision Agriculture",
+    "definition": "Canh tác độ chuẩn xác cao là chiến lược tiếp cận nông nghiệp vi phân từng mét vuông ứng dụng theo dõi sinh trưởng cá thể dựa trên ảnh phân tích bằng dữ liệu lớn thực tế để tiết kiệm hóa chất.",
+    "applications": [
+      "Máy cày nông cụ điều khiển GPS tọa độ chính xác",
+      "Cảm biến quang học đo nồng độ độ ẩm lá xanh",
+      "Thu hoạch robot táo quả nhận diện AI"
+    ],
+    "id": "iot_77w994m",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Precision%20Farming%20IoT%20explain"
+  },
+  {
+    "term": "Wearables",
+    "fullName": "Thiết bị đeo thông minh",
+    "definition": "Thiết bị điện tử công nghệ sinh trắc học tích hợp vi xử lý siêu nhỏ mặc trực tiếp mang trên cơ thể người dùng suốt ngày đêm thu nhận các chỉ số đo sức khỏe di động liên tục.",
+    "applications": [
+      "Apple Watch phân tích điện tâm đồ (ECG)",
+      "Thiết bị đo độ bão hòa oxy máu SpO2 y tế thông minh",
+      "Mắt kính thực tế hỗn hợp đo tương tác cử chỉ mắt"
+    ],
+    "id": "iot_ck2b06a",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Wearables%20IoT%20explain"
+  },
+  {
+    "term": "Smart Contract",
+    "fullName": "Hợp đồng thông minh",
+    "definition": "Đoạn mã lập trình bảo mật bằng thuật toán chuỗi khối Blockchain ứng dụng trong IoT kích hoạt điều khoản hợp đồng thanh toán giá trị tiền điện tử tự động máy-đến-máy phi tập trung.",
+    "applications": [
+      "Mạng lưới mua bán trao đổi lượng điện mặt trời phi tập trung hộ gia đình",
+      "Kiểm duyệt xuất xứ chuỗi cung ứng thực phẩm sạch không thể sửa đổi",
+      "Hệ thống trạm thu phí cổng tự thanh toán Blockchain IoT"
+    ],
+    "id": "iot_3flacgv",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Smart%20Contract%20IoT%20explain"
+  },
+  {
+    "term": "RFID Reader",
+    "fullName": "Đầu đọc RFID",
+    "definition": "Máy quét thiết bị dùng ăng-ten để kích sóng đọc tín hiệu giải mã thông tin số danh tính lưu trữ ẩn trên những chiếc tem mác thụ động rất mỏng được gắn cho sản phẩm.",
+    "applications": [
+      "Hệ thống thu phí xe tự động BOT cao tốc Epass không dừng",
+      "Cổng chống ăn cắp hệ thống an ninh siêu thị quần áo",
+      "Phân loại chuyển phát nhanh kho logistics hàng ngàn bưu kiện"
+    ],
+    "id": "iot_tyl0pnc",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RFID%20Reader%20IoT%20explain"
+  },
+  {
+    "term": "AMI",
+    "fullName": "Advanced Metering Infrastructure",
+    "definition": "Kiến trúc hệ thống truyền thông hạ tầng toàn diện tập hợp đo lường mạng lưới kết nối các loại công tơ đồng hồ tiêu thụ truyền dữ liệu và nhận lệnh quản lý từ nhà cung cấp từ xa.",
+    "applications": [
+      "Hệ thống đồng hồ điện tử tự báo cước của EVN hằng tháng",
+      "Kiểm soát van rò rỉ đồng hồ nước thông minh không dây thành phố",
+      "Mạng đo tiêu thụ khí gas thông minh tòa nhà"
+    ],
+    "id": "iot_2ga4m5e",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AMI%20IoT%20explain"
+  },
+  {
+    "term": "Connected Car",
+    "fullName": "Xe hơi kết nối",
+    "definition": "Khái niệm phương tiện xe ô tô thông minh hiện đại gắn sim eSIM liên tục truy cập với Internet để cung cấp tương tác kết nối WiFi cho hành khách và trao đổi phần mềm hệ thống báo cáo.",
+    "applications": [
+      "Chia sẻ chìa khóa số kỹ thuật số NFC cho người khác tự vào xe",
+      "Bản đồ hiển thị cảnh báo ách tắc thời gian thực trên màn xe",
+      "Dịch vụ liên lạc gọi cứu hộ tự động khẩn cấp eCall"
+    ],
+    "id": "iot_5u9c4lv",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Connected%20Car%20IoT%20explain"
+  },
+  {
+    "term": "Fleet Management",
+    "fullName": "Hệ thống quản lý đội xe",
+    "definition": "Giải pháp ứng dụng phần mềm điều hành kết hợp cảm biến GPS giám sát quản lý trực tuyến định vị liên tục lịch trình toàn bộ trạng thái phương tiện hàng hóa của doanh nghiệp vận tải.",
+    "applications": [
+      "Phần mềm quản lý ứng dụng gọi xe như Uber, Grab",
+      "Báo cáo lộ trình lịch sử công ty giao nhận tiết kiệm xăng",
+      "Giám sát camera trạng thái tỉnh táo của tài xế xe tải đường dài"
+    ],
+    "id": "iot_qp6bvr3",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Fleet%20Management%20IoT%20explain"
+  },
+  {
+    "term": "Predictive Maint",
+    "fullName": "Predictive Maintenance",
+    "definition": "Bảo trì mô hình dự đoán trí tuệ sử dụng học máy (Machine Learning) dựa trên dữ liệu siêu âm rung động độ ồn để phát hiện cảnh báo hỏng hóc sớm nhất trước khi máy móc phải ngừng chạy sự cố.",
+    "applications": [
+      "Giám sát hệ thống vòng bi động cơ điện cỡ lớn phân xưởng",
+      "Chuẩn đoán hư hỏng hộp số cơ khí tuabin quạt gió nhà máy",
+      "Báo động thay thế sớm linh kiện băng tải trong môi trường bụi"
+    ],
+    "id": "iot_16swhkl",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Predictive%20Maint%20IoT%20explain"
+  },
+  {
+    "term": "Asset Tracking",
+    "fullName": "Theo dõi tài sản",
+    "definition": "Công nghệ định vị theo vết dựa trên kết hợp tín hiệu gắn cảm biến IoT siêu nhỏ di động dùng theo dõi chuyển động, trạng thái bảo quản định vị kho bãi của các hàng hóa đắt tiền nhất định.",
+    "applications": [
+      "Hệ thống kiểm soát định vị dây chuyền máy trợ tim cá nhân di chuyển",
+      "Giám sát định vị vị trí xe đạp công cộng dùng chung GPS năng lượng mặt trời",
+      "Quản lý giám sát vị trí nhiệt độ lô vắc xin vận chuyển toàn cầu chuẩn GMP"
+    ],
+    "id": "iot_13xhb0r",
+    "category": "IoT",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Asset%20Tracking%20IoT%20explain"
   }
 ]

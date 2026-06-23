@@ -45,4 +45,7 @@
 
 ### Phase 10: Telecommunications Data Expansion
 - [x] Nạp 100 từ khóa Vô tuyến & Viễn thông (Anten, Băng thông, 5G, Truyền dẫn, RFID)
-- [ ] Tích hợp hiển thị danh mục mở rộng này lên hệ thống tìm kiếm
+
+### Phase 11: IoT Data Expansion
+- [x] Bổ sung 100 từ khóa chuyên ngành IoT (Cloud, Protocols, WSN, Hardware, Security)
+- [x] Sử dụng script tự động để chèn trực tiếp không qua API Key.
