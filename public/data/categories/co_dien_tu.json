@@ -523,5 +523,1044 @@
     "youtubeEmbed": "https://www.youtube.com/embed/eyqwLiowZiU",
     "youtubeUrl": "https://www.youtube.com/watch?v=eyqwLiowZiU",
     "icon": "fa-solid fa-network-wired"
+  },
+  {
+    "term": "Cartesian Robot",
+    "fullName": "Cartesian Coordinate Robot",
+    "definition": "Robot tịnh tiến tuyến tính hoạt động hoàn toàn trên hệ trục tọa độ vuông góc X, Y, Z.",
+    "applications": [
+      "Máy in 3D FDM",
+      "Máy cắt laser công nghiệp",
+      "Cẩu trục gắp container"
+    ],
+    "id": "mech_qbqwukr",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Cartesian%20Robot%20mechatronics%20engineering"
+  },
+  {
+    "term": "Humanoid Robot",
+    "fullName": "Humanoid Robot",
+    "definition": "Robot hình người mô phỏng cấu trúc sinh học con người với hai tay, hai chân để đi lại và làm việc trong môi trường sống.",
+    "applications": [
+      "Robot Tesla Optimus",
+      "Nghiên cứu AI tương tác",
+      "Chăm sóc người già"
+    ],
+    "id": "mech_zhcehoc",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Humanoid%20Robot%20mechatronics%20engineering"
+  },
+  {
+    "term": "Exoskeleton",
+    "fullName": "Robotic Exoskeleton",
+    "definition": "Khung xương robot ngoài có thể mặc lên người giúp trợ lực cơ khí khuếch đại sức mạnh hoặc hỗ trợ phục hồi chức năng.",
+    "applications": [
+      "Nâng vật nặng trong nhà máy",
+      "Hỗ trợ người khuyết tật đi bộ",
+      "Trang bị quân sự siêu chiến binh"
+    ],
+    "id": "mech_rngb6np",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Exoskeleton%20mechatronics%20engineering"
+  },
+  {
+    "term": "Hexapod",
+    "fullName": "Hexapod Robot / Stewart Platform",
+    "definition": "Robot sáu chân hoặc bệ mô phỏng động học song song với 6 xi lanh điều khiển tạo ra 6 bậc tự do cực kì vững chắc.",
+    "applications": [
+      "Buồng mô phỏng bay phi công",
+      "Kính viễn vọng tự căn chỉnh",
+      "Robot nhện dò mìn"
+    ],
+    "id": "mech_odb4i5t",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hexapod%20mechatronics%20engineering"
+  },
+  {
+    "term": "Swarm Robotics",
+    "fullName": "Swarm Robotics",
+    "definition": "Robot bầy đàn, hệ thống bao gồm hàng trăm robot nhỏ phối hợp tập thể tạo ra trí tuệ quần thể giống đàn kiến hay bầy ong.",
+    "applications": [
+      "Drone trình diễn ánh sáng",
+      "Tìm kiếm cứu nạn diện rộng",
+      "Thám hiểm hành tinh ngoài Trái Đất"
+    ],
+    "id": "mech_lm639cn",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Swarm%20Robotics%20mechatronics%20engineering"
+  },
+  {
+    "term": "Soft Robotics",
+    "fullName": "Soft Robotics",
+    "definition": "Chế tạo robot bằng vật liệu mềm đàn hồi (như silicone, cao su) thay vì kim loại cứng, mô phỏng cơ bắp sinh học.",
+    "applications": [
+      "Gắp trái cây dễ dập nát",
+      "Robot y tế nội soi tàng hình",
+      "Robot bạch tuộc dưới biển sâu"
+    ],
+    "id": "mech_hjiokd2",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Soft%20Robotics%20mechatronics%20engineering"
+  },
+  {
+    "term": "ASRS",
+    "fullName": "Automated Storage and Retrieval System",
+    "definition": "Hệ thống nhà kho tự động kết hợp giá đỡ khổng lồ và robot trượt để cất và lấy hàng hóa cực kì tối ưu không cần xe nâng tay.",
+    "applications": [
+      "Tổng kho Amazon",
+      "Kho lạnh lưu trữ dược phẩm",
+      "Kho phụ tùng ô tô khổng lồ"
+    ],
+    "id": "mech_ltggmge",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ASRS%20mechatronics%20engineering"
+  },
+  {
+    "term": "Conveyor System",
+    "fullName": "Automated Conveyor System",
+    "definition": "Hệ thống băng chuyền vận tải tự động liên tục điều hướng, di chuyển vật liệu giữa các trạm máy công nghiệp.",
+    "applications": [
+      "Băng chuyền hành lý sân bay",
+      "Dây chuyền khai thác than",
+      "Kiểm hàng siêu thị"
+    ],
+    "id": "mech_n1cic10",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Conveyor%20System%20mechatronics%20engineering"
+  },
+  {
+    "term": "Pick and Place",
+    "fullName": "Pick and Place System",
+    "definition": "Hệ thống máy chuyên dụng thực hiện thao tác nhặt một linh kiện ở vị trí A và đặt chính xác xuống vị trí B liên tục.",
+    "applications": [
+      "Máy cắm linh kiện SMD (SMT)",
+      "Đóng hộp sô-cô-la",
+      "Sắp xếp thẻ từ"
+    ],
+    "id": "mech_4w9io5r",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Pick%20and%20Place%20mechatronics%20engineering"
+  },
+  {
+    "term": "Robotic Welding",
+    "fullName": "Robotic Welding",
+    "definition": "Công nghệ hàn tự động hóa bằng cánh tay robot cho độ chính xác vết hàn và tốc độ cực cao.",
+    "applications": [
+      "Khung sườn xe Toyota",
+      "Hàn đóng tàu",
+      "Hàn vi mạch điện tử"
+    ],
+    "id": "mech_k67zclu",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Robotic%20Welding%20mechatronics%20engineering"
+  },
+  {
+    "term": "Gripper",
+    "fullName": "Mechanical Gripper",
+    "definition": "Bàn tay kẹp cơ khí, công cụ phổ biến nhất gắn ở đầu robot để tạo lực kẹp kẹp chặt phôi liệu.",
+    "applications": [
+      "Tay kẹp nhôm",
+      "Kẹp gắp chi tiết nhựa nóng",
+      "Bàn tay robot 3 ngón"
+    ],
+    "id": "mech_q75gg7e",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Gripper%20mechatronics%20engineering"
+  },
+  {
+    "term": "Vacuum Gripper",
+    "fullName": "Vacuum Suction Gripper",
+    "definition": "Giác hút chân không, sử dụng lực hút áp suất âm để nhấc các mặt phẳng, tấm kính hay hộp giấy mà không làm hỏng bề mặt.",
+    "applications": [
+      "Bốc xếp thùng Carton",
+      "Lắp ráp kính chắn gió ô tô",
+      "Gắp màn hình TV"
+    ],
+    "id": "mech_elampc8",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Vacuum%20Gripper%20mechatronics%20engineering"
+  },
+  {
+    "term": "Force Torque",
+    "fullName": "Force/Torque Sensor (F/T)",
+    "definition": "Cảm biến đo lực và mô men xoắn tại khớp cổ tay robot giúp robot cảm nhận được lực ấn mạnh hay nhẹ khi tiếp xúc vật thể.",
+    "applications": [
+      "Đánh bóng bề mặt kim loại",
+      "Lắp ráp bánh răng xe hơi",
+      "Gắp trứng không vỡ"
+    ],
+    "id": "mech_aigxqm2",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Force%20Torque%20mechatronics%20engineering"
+  },
+  {
+    "term": "Vision Guided",
+    "fullName": "Vision Guided Robotics (VGR)",
+    "definition": "Robot dẫn đường bằng thị giác, gắn camera để mắt thấy và tự động điều chỉnh đường đi theo vị trí ngẫu nhiên của sản phẩm.",
+    "applications": [
+      "Gắp sản phẩm lộn xộn trong thùng (Bin Picking)",
+      "Lắp vít tự động",
+      "Theo dõi vật thể trên băng chuyền"
+    ],
+    "id": "mech_fvntor7",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Vision%20Guided%20mechatronics%20engineering"
+  },
+  {
+    "term": "Laser Scanner",
+    "fullName": "Safety Laser Scanner",
+    "definition": "Thiết bị quét tia laser lập vùng an toàn 2D xung quanh khu vực máy nguy hiểm, tự dừng máy nếu có người bước vào.",
+    "applications": [
+      "Bảo vệ trạm robot hàn",
+      "Mắt thần chống va chạm cho AGV",
+      "Kiểm soát an ninh kho"
+    ],
+    "id": "mech_dl12art",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Laser%20Scanner%20mechatronics%20engineering"
+  },
+  {
+    "term": "Light Curtain",
+    "fullName": "Safety Light Curtain",
+    "definition": "Rèm tia sáng hồng ngoại, màn chắn vô hình bằng ánh sáng tự động ngắt nguồn điện máy dập nếu bàn tay công nhân đưa vào.",
+    "applications": [
+      "Bảo vệ máy dập kim loại",
+      "Lối vào khu vực tự động hóa",
+      "Cửa an toàn kho hàng"
+    ],
+    "id": "mech_2s8cpqj",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Light%20Curtain%20mechatronics%20engineering"
+  },
+  {
+    "term": "E-Stop",
+    "fullName": "Emergency Stop",
+    "definition": "Nút bấm dừng khẩn cấp màu đỏ, cắt đứt hoàn toàn nguồn điện động lực ngay lập tức trong trường hợp máy móc gặp sự cố nguy hiểm.",
+    "applications": [
+      "Nút đỏ trên tủ điện điều khiển",
+      "Dừng băng chuyền khi kẹt hàng",
+      "Trang bị bắt buộc trên mọi máy CNC"
+    ],
+    "id": "mech_3dvimry",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=E-Stop%20mechatronics%20engineering"
+  },
+  {
+    "term": "Optical Encoder",
+    "fullName": "Optical Rotary Encoder",
+    "definition": "Cảm biến mã hóa quang học đo góc quay và tốc độ động cơ bằng cách đếm số khe sáng bị che khuất trên một đĩa quay.",
+    "applications": [
+      "Phản hồi tốc độ Servo Motor",
+      "Đo chiều dài cáp kéo",
+      "Bánh xe chuột máy tính"
+    ],
+    "id": "mech_p5v39rk",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Optical%20Encoder%20mechatronics%20engineering"
+  },
+  {
+    "term": "Magnetic Encoder",
+    "fullName": "Magnetic Rotary Encoder",
+    "definition": "Bộ mã hóa từ tính, đọc sự thay đổi từ trường của cực nam châm xoay để xác định góc quay, bền bỉ hơn trong môi trường bụi bẩn.",
+    "applications": [
+      "Động cơ bước lai",
+      "Khớp robot chống bụi nước",
+      "Hệ thống lái trợ lực điện"
+    ],
+    "id": "mech_8v6l2qc",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Magnetic%20Encoder%20mechatronics%20engineering"
+  },
+  {
+    "term": "Incremental",
+    "fullName": "Incremental Encoder",
+    "definition": "Mã hóa tương đối đếm các xung (A/B) để biết động cơ quay được bao nhiêu vòng, nhưng cần phải Home lại điểm 0 khi khởi động.",
+    "applications": [
+      "Động cơ DC Servo",
+      "Đo vòng quay bánh xe điện",
+      "Máy in giấy"
+    ],
+    "id": "mech_gbnw779",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Incremental%20mechatronics%20engineering"
+  },
+  {
+    "term": "Hall Sensor",
+    "fullName": "Hall Effect Sensor",
+    "definition": "Cảm biến hiệu ứng Hall đo lường biến thiên từ trường để phát hiện từ tính, dòng điện hoặc vị trí của nam châm.",
+    "applications": [
+      "Đo tốc độ xe đạp điện",
+      "Cảm biến vị trí Rotor BLDC",
+      "Đo dòng điện một chiều kẹp kìm"
+    ],
+    "id": "mech_8x8gg63",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hall%20Sensor%20mechatronics%20engineering"
+  },
+  {
+    "term": "Capacitive Prox",
+    "fullName": "Capacitive Proximity Sensor",
+    "definition": "Cảm biến tiệm cận điện dung phát hiện vật thể ở gần (kể cả phi kim như nhựa, nước, gỗ) bằng sự thay đổi hằng số điện môi.",
+    "applications": [
+      "Báo cạn mức nước trong bồn",
+      "Phím cảm ứng điện thoại",
+      "Phát hiện hộp sữa giấy trên băng tải"
+    ],
+    "id": "mech_8ql7qhi",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Capacitive%20Prox%20mechatronics%20engineering"
+  },
+  {
+    "term": "Inductive Prox",
+    "fullName": "Inductive Proximity Sensor",
+    "definition": "Cảm biến tiệm cận cảm ứng từ chuyên dùng để phát hiện kim loại sắt từ ở khoảng cách gần mà không cần chạm.",
+    "applications": [
+      "Đếm số lượng vỏ lon bia kim loại",
+      "Công tắc hành trình cửa sắt",
+      "Công tắc Z-Probe máy in 3D"
+    ],
+    "id": "mech_y52hcsg",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Inductive%20Prox%20mechatronics%20engineering"
+  },
+  {
+    "term": "Photoelectric",
+    "fullName": "Photoelectric Sensor",
+    "definition": "Cảm biến quang điện dùng tia hồng ngoại hoặc tia laser phát và thu tín hiệu ánh sáng để phát hiện sự có mặt của vật thể từ xa.",
+    "applications": [
+      "Cảm biến chống kẹt cửa thang máy",
+      "Băng chuyền đếm sản phẩm",
+      "Kiểm tra màng bọc nilong"
+    ],
+    "id": "mech_0zk8caa",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Photoelectric%20mechatronics%20engineering"
+  },
+  {
+    "term": "Ultrasonic",
+    "fullName": "Ultrasonic Sensor",
+    "definition": "Cảm biến siêu âm phát sóng âm thanh tần số cao và đo thời gian vọng lại để tính khoảng cách tới vật cản.",
+    "applications": [
+      "Radar lùi xe ô tô",
+      "Đo mức nước bể chứa hóa chất",
+      "Tránh vật cản drone"
+    ],
+    "id": "mech_zzzlsie",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Ultrasonic%20mechatronics%20engineering"
+  },
+  {
+    "term": "Thermistor",
+    "fullName": "Thermistor (NTC/PTC)",
+    "definition": "Điện trở nhiệt bằng vật liệu bán dẫn (NTC/PTC) thay đổi điện trở cực mạnh theo nhiệt độ, giá thành cực rẻ nhưng đo phi tuyến tính.",
+    "applications": [
+      "Đo nhiệt độ nước máy giặt",
+      "Nhiệt kế điện tử kẹp nách",
+      "Bảo vệ quá nhiệt bo mạch"
+    ],
+    "id": "mech_1y90ofj",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Thermistor%20mechatronics%20engineering"
+  },
+  {
+    "term": "Piezoelectric",
+    "fullName": "Piezoelectric Sensor",
+    "definition": "Cảm biến áp điện biến lực ấn cơ học hoặc rung động đột ngột thành điện áp nhờ hiệu ứng tinh thể thạch anh.",
+    "applications": [
+      "Microphone điện rung",
+      "Cảm biến phát hiện kích nổ động cơ xe",
+      "Đầu đánh lửa bếp gas"
+    ],
+    "id": "mech_74db3d1",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Piezoelectric%20mechatronics%20engineering"
+  },
+  {
+    "term": "Piezo Actuator",
+    "fullName": "Piezoelectric Actuator",
+    "definition": "Cơ cấu chấp hành áp điện biến điện áp thành biến dạng tịnh tiến siêu nhỏ (cấp độ nanomet) nhưng với lực cực mạnh.",
+    "applications": [
+      "Kim phun nhiên liệu Diesel siêu tốc",
+      "Chỉnh nét ống kính camera hiển vi",
+      "Bơm định lượng hóa chất y tế"
+    ],
+    "id": "mech_y5m4q1m",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Piezo%20Actuator%20mechatronics%20engineering"
+  },
+  {
+    "term": "Linear Motor",
+    "fullName": "Linear Motor",
+    "definition": "Động cơ tuyến tính, thực chất là một động cơ quay được 'trải phẳng' ra để tạo chuyển động tịnh tiến trực tiếp mà không cần vít me bi.",
+    "applications": [
+      "Tàu đệm từ Maglev",
+      "Cửa trượt tàu điện ngầm",
+      "Trục X máy mounter tốc độ cao"
+    ],
+    "id": "mech_eykad72",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Linear%20Motor%20mechatronics%20engineering"
+  },
+  {
+    "term": "Voice Coil",
+    "fullName": "Voice Coil Motor (VCM)",
+    "definition": "Động cơ cuộn dây âm thanh chuyển động tịnh tiến nhanh, êm ái nhờ lực đẩy từ trường giống nguyên lý loa điện động.",
+    "applications": [
+      "Lấy nét tự động Autofocus Camera iPhone",
+      "Máy thở y tế",
+      "Ổ đĩa cứng HDD"
+    ],
+    "id": "mech_izv0uew",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Voice%20Coil%20mechatronics%20engineering"
+  },
+  {
+    "term": "AC Servo",
+    "fullName": "AC Servo Motor",
+    "definition": "Động cơ xoay chiều sử dụng kết hợp với Encoder và mạch Driver hồi tiếp tạo ra chuyển động quay có vị trí và mô men cực kỳ chuẩn xác.",
+    "applications": [
+      "Khớp cánh tay Robot công nghiệp",
+      "Trục nạp giấy máy in công nghiệp",
+      "Máy phay CNC 5 trục"
+    ],
+    "id": "mech_k3xtvop",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AC%20Servo%20mechatronics%20engineering"
+  },
+  {
+    "term": "DC Servo",
+    "fullName": "DC Servo Motor",
+    "definition": "Động cơ một chiều tích hợp vòng lặp điều khiển kín, kích thước gọn nhẹ dùng cho các hệ thống nhỏ cần chính xác.",
+    "applications": [
+      "Khớp tay chân Robot mô hình",
+      "Cánh tà máy bay điều khiển RC",
+      "Máy quay phim tự động quay góc"
+    ],
+    "id": "mech_7fw9n0k",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DC%20Servo%20mechatronics%20engineering"
+  },
+  {
+    "term": "Pneumatic Motor",
+    "fullName": "Pneumatic Air Motor",
+    "definition": "Động cơ khí nén dùng áp lực luồng khí nén đi qua cánh gạt để làm xoay trục cơ học, an toàn tuyệt đối do không có tia lửa điện.",
+    "applications": [
+      "Súng vặn ốc lốp xe ô tô",
+      "Môi trường hóa chất dễ nổ",
+      "Dụng cụ nha khoa tốc độ cao"
+    ],
+    "id": "mech_8ycjhlv",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Pneumatic%20Motor%20mechatronics%20engineering"
+  },
+  {
+    "term": "Proportional P",
+    "fullName": "Proportional Control",
+    "definition": "Khâu tỷ lệ P trong điều khiển, xuất tín hiệu điều chỉnh tỷ lệ thuận với mức độ sai số hiện tại của hệ thống.",
+    "applications": [
+      "Bơm nước tăng áp",
+      "Điều chỉnh lò xo cơ học",
+      "Mô phỏng van tuyến tính"
+    ],
+    "id": "mech_47af5tp",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Proportional%20P%20mechatronics%20engineering"
+  },
+  {
+    "term": "Integral I",
+    "fullName": "Integral Control",
+    "definition": "Khâu tích phân I tự động cộng dồn sai số tích lũy theo thời gian nhằm triệt tiêu hoàn toàn sai số xác lập (Steady State Error).",
+    "applications": [
+      "Duy trì quỹ đạo tên lửa",
+      "Cân bằng mức nước bồn chứa ổn định",
+      "Khắc phục lực cản gió của Drone"
+    ],
+    "id": "mech_jme7af9",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Integral%20I%20mechatronics%20engineering"
+  },
+  {
+    "term": "Derivative D",
+    "fullName": "Derivative Control",
+    "definition": "Khâu vi phân D tính toán tốc độ biến thiên của sai số để dự đoán tương lai, giúp hãm phanh chống vọt lố (Overshoot) quá đà.",
+    "applications": [
+      "Giảm sóc chủ động xe hơi",
+      "Chống dao động tay robot khi dừng gấp",
+      "Quạt làm mát siêu nhạy"
+    ],
+    "id": "mech_f9yw3nl",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Derivative%20D%20mechatronics%20engineering"
+  },
+  {
+    "term": "Adaptive",
+    "fullName": "Adaptive Control",
+    "definition": "Hệ thống điều khiển thích nghi có khả năng tự động thay đổi thông số PID bên trong để phù hợp với môi trường động học đang bị biến đổi.",
+    "applications": [
+      "Điều khiển máy bay khi rụng một cánh",
+      "Cẩu trục khi bốc vật quá nặng tải",
+      "Robot thay đổi công cụ gắp"
+    ],
+    "id": "mech_jfmdcau",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Adaptive%20mechatronics%20engineering"
+  },
+  {
+    "term": "H-infinity",
+    "fullName": "H-infinity Control",
+    "definition": "Lý thuyết điều khiển bền vững cao cấp giúp tổng hợp bộ điều khiển chịu đựng được mức độ sai số mô hình và nhiễu cực đoan lớn nhất.",
+    "applications": [
+      "Trực thăng chiến đấu",
+      "Khung gầm vệ tinh",
+      "Hệ thống truyền tải năng lượng mạnh"
+    ],
+    "id": "mech_gq9v2nm",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=H-infinity%20mechatronics%20engineering"
+  },
+  {
+    "term": "Robust Control",
+    "fullName": "Robust Control",
+    "definition": "Điều khiển bền vững thiết kế các bộ điều khiển tĩnh đảm bảo hoạt động an toàn ngay cả khi thông số vật lý của máy bị sai lệch giới hạn.",
+    "applications": [
+      "Ổn định điện áp lưới điện quốc gia",
+      "Phản ứng hạt nhân",
+      "Động cơ máy bơm công suất lớn"
+    ],
+    "id": "mech_gk4xwbk",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Robust%20Control%20mechatronics%20engineering"
+  },
+  {
+    "term": "Steady Error",
+    "fullName": "Steady State Error",
+    "definition": "Sai số xác lập (sai số vĩnh cửu), phần chênh lệch vẫn còn tồn tại giữa mục tiêu và thực tế sau khi hệ thống đã đi vào trạng thái tĩnh.",
+    "applications": [
+      "Nhiệt độ phòng luôn lệch 1 độ C so với cài đặt trên điều khiển",
+      "Động cơ quay chậm hơn mong muốn"
+    ],
+    "id": "mech_5zziqvb",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Steady%20Error%20mechatronics%20engineering"
+  },
+  {
+    "term": "Overshoot",
+    "fullName": "Overshoot (Độ vọt lố)",
+    "definition": "Mức độ giá trị thực tế của hệ thống bị vọt vượt qua điểm đích cài đặt ban đầu trong quá trình quá độ chuyển trạng thái.",
+    "applications": [
+      "Xe điện phanh gấp bị trượt dài",
+      "Lò nướng bánh quá nhiệt độ cháy mặt",
+      "Kim đồng hồ tốc độ rung mạnh"
+    ],
+    "id": "mech_it3npjp",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Overshoot%20mechatronics%20engineering"
+  },
+  {
+    "term": "Settling Time",
+    "fullName": "Settling Time",
+    "definition": "Thời gian thiết lập, khoảng thời gian chờ cần thiết để hệ thống dao động hội tụ ổn định nằm lọt trong biên độ sai số cho phép.",
+    "applications": [
+      "Đợi cân điện tử ngừng nhảy số",
+      "Khớp tay robot hết rung lắc",
+      "Thời gian làm lạnh tủ đông"
+    ],
+    "id": "mech_yw7cp40",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Settling%20Time%20mechatronics%20engineering"
+  },
+  {
+    "term": "Rise Time",
+    "fullName": "Rise Time",
+    "definition": "Thời gian lên, thời gian để đầu ra hệ thống vọt từ 10% lên 90% giá trị đích mong muốn, thể hiện tính đáp ứng nhanh nhạy.",
+    "applications": [
+      "Tốc độ bứt tốc 0-100km/h ô tô điện",
+      "Thời gian xilanh đẩy ra hết cỡ",
+      "Khởi động mô tơ quạt"
+    ],
+    "id": "mech_xala4m9",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Rise%20Time%20mechatronics%20engineering"
+  },
+  {
+    "term": "Transfer Func",
+    "fullName": "Transfer Function",
+    "definition": "Hàm truyền đạt biến đổi Laplace tỷ lệ giữa tín hiệu ngõ ra và ngõ vào, mô tả toán học đặc tính động học của hệ thống tuyến tính.",
+    "applications": [
+      "Mô phỏng máy bay trên phần mềm Matlab",
+      "Thiết kế mạch lọc điện tử RLC",
+      "Giảng dạy tự động hóa"
+    ],
+    "id": "mech_u7vyy57",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Transfer%20Func%20mechatronics%20engineering"
+  },
+  {
+    "term": "Z-Transform",
+    "fullName": "Z-Transform",
+    "definition": "Phép biến đổi Z rời rạc toán học dùng để chuyển từ miền thời gian mẫu rời rạc sang miền tần số, nền tảng của xử lý tín hiệu số DSP.",
+    "applications": [
+      "Lập trình Filter âm thanh kỹ thuật số",
+      "Thiết kế bộ điều khiển PID số vào vi điều khiển",
+      "Nén ảnh JPEG"
+    ],
+    "id": "mech_s47yzoi",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Z-Transform%20mechatronics%20engineering"
+  },
+  {
+    "term": "Gear Ratio",
+    "fullName": "Gear Ratio",
+    "definition": "Tỷ số truyền động bánh răng đo lường mức độ giảm tốc độ quay để đổi lấy sự tăng cường mô men xoắn (lực kéo).",
+    "applications": [
+      "Hộp số lùi ô tô (Gear 1, 2, 3...)",
+      "Hộp giảm tốc mô tơ cửa cuốn",
+      "Đĩa líp xe đạp leo dốc"
+    ],
+    "id": "mech_eg9q6qs",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Gear%20Ratio%20mechatronics%20engineering"
+  },
+  {
+    "term": "Rack Pinion",
+    "fullName": "Rack and Pinion",
+    "definition": "Cơ cấu Bánh răng - Thanh răng, biến chuyển động quay tròn của bánh răng nhỏ thành chuyển động tịnh tiến dọc của một thanh răng phẳng.",
+    "applications": [
+      "Hệ thống lái vô lăng xe ô tô",
+      "Cơ cấu trượt cửa cổng điện",
+      "Trục tịnh tiến máy cắt plasma CNC dài"
+    ],
+    "id": "mech_6ownnhb",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Rack%20Pinion%20mechatronics%20engineering"
+  },
+  {
+    "term": "Planetary Gear",
+    "fullName": "Planetary Gearbox",
+    "definition": "Hộp số hành tinh cực kỳ nhỏ gọn, bánh răng trung tâm (Mặt trời) truyền lực ra các bánh răng xung quanh (Hành tinh) bao bọc bởi vành răng ngoài.",
+    "applications": [
+      "Mô tơ giảm tốc máy khoan pin cầm tay",
+      "Đùm số bánh sau xe đạp điện cao cấp",
+      "Cánh tay robot công nghiệp nhẹ"
+    ],
+    "id": "mech_25f8mk4",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Planetary%20Gear%20mechatronics%20engineering"
+  },
+  {
+    "term": "Worm Gear",
+    "fullName": "Worm Gear Drive",
+    "definition": "Trục vít và Bánh vít truyền động cắt nhau 90 độ, có tính năng tự hãm đặc biệt khiến bánh vít không thể quay ngược trục vít.",
+    "applications": [
+      "Máy tời kéo cáp nâng hàng",
+      "Dây đàn ghi ta chỉnh âm",
+      "Trục điều khiển nghiêng tấm pin mặt trời"
+    ],
+    "id": "mech_ufmiwgc",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Worm%20Gear%20mechatronics%20engineering"
+  },
+  {
+    "term": "Bevel Gear",
+    "fullName": "Bevel Gear",
+    "definition": "Bánh răng côn dạng nón dùng để truyền động lực học chuyển đổi góc truyền lực (thường là 90 độ) giữa hai trục giao nhau.",
+    "applications": [
+      "Cầu sau vi sai ô tô dẫn động",
+      "Mô tơ cắt góc máy cưa đĩa",
+      "Hộp số đuôi máy bay trực thăng"
+    ],
+    "id": "mech_wgw2n1c",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Bevel%20Gear%20mechatronics%20engineering"
+  },
+  {
+    "term": "Helical Gear",
+    "fullName": "Helical Gear",
+    "definition": "Bánh răng nghiêng có các rãnh cắt xéo góc, diện tích tiếp xúc lớn hơn giúp chạy êm ái, giảm tiếng ồn và tải trọng cao hơn bánh răng thẳng.",
+    "applications": [
+      "Hộp số tự động xe hơi chạy tốc độ cao",
+      "Hộp số máy bơm công nghiệp",
+      "Băng truyền tải quặng nặng"
+    ],
+    "id": "mech_aqd7gba",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Helical%20Gear%20mechatronics%20engineering"
+  },
+  {
+    "term": "Geneva Mech",
+    "fullName": "Geneva Mechanism",
+    "definition": "Cơ cấu Geneva (cơ cấu chữ thập) biến đổi chuyển động quay liên tục thành một chuyển động quay dừng ngắt quãng chu kỳ chính xác.",
+    "applications": [
+      "Bộ nạp phim cuộn máy chiếu rạp cổ",
+      "Đồng hồ cơ khí Thụy Sĩ",
+      "Máy dập viên thuốc nhiều trạm"
+    ],
+    "id": "mech_rgrkznl",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Geneva%20Mech%20mechatronics%20engineering"
+  },
+  {
+    "term": "Cam Follower",
+    "fullName": "Cam and Follower",
+    "definition": "Cơ cấu Cam lệch tâm tì vào một con đội, thiết kế hình dạng cam khác nhau sẽ tạo ra quỹ đạo tịnh tiến nhấp nhô cực kỳ phức tạp.",
+    "applications": [
+      "Trục cam mở van xú páp động cơ đốt trong",
+      "Máy may quần áo cơ học",
+      "Bơm màng chất lỏng"
+    ],
+    "id": "mech_q5nbvi9",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Cam%20Follower%20mechatronics%20engineering"
+  },
+  {
+    "term": "Four Bar",
+    "fullName": "Four-bar Linkage",
+    "definition": "Cơ cấu tay quay con trượt bốn thanh liên kết, hệ thống chuyển động khớp nối cơ bản và phổ biến nhất trong cơ học kỹ thuật.",
+    "applications": [
+      "Cơ cấu gạt nước kính chắn gió ô tô",
+      "Khóa ngàm Visegrip",
+      "Bơm giếng dầu mỏ gật gù"
+    ],
+    "id": "mech_qmic8eu",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Four%20Bar%20mechatronics%20engineering"
+  },
+  {
+    "term": "Crankshaft",
+    "fullName": "Crankshaft",
+    "definition": "Trục khuỷu lệch tâm khổng lồ, chuyên biến đổi toàn bộ động lực tịnh tiến đập lên xuống của piston thành momen quay tròn trục động cơ.",
+    "applications": [
+      "Động cơ xe máy xăng",
+      "Máy nén khí Piston",
+      "Động cơ tàu thủy Diesel khổng lồ"
+    ],
+    "id": "mech_0m3p3z8",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Crankshaft%20mechatronics%20engineering"
+  },
+  {
+    "term": "Universal Joint",
+    "fullName": "Universal Joint (U-Joint)",
+    "definition": "Khớp nối chữ thập vạn năng, cho phép truyền lực xoắn qua một trục cơ khí có thể bẻ cong nhiều góc độ khác nhau mà không bị gãy.",
+    "applications": [
+      "Trục các đăng xe tải truyền lực xuống cầu sau",
+      "Trục lái vô lăng nghiêng",
+      "Dụng cụ khẩu cờ lê ngoằn ngoèo"
+    ],
+    "id": "mech_pbxy81h",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Universal%20Joint%20mechatronics%20engineering"
+  },
+  {
+    "term": "Flex Coupling",
+    "fullName": "Flexible Coupling",
+    "definition": "Khớp nối mềm có lớp đệm cao su hoặc lò xo, giúp nối hai trục động cơ lại với nhau đồng thời bù đắp dung sai bị lệch tâm nhẹ.",
+    "applications": [
+      "Nối trục bơm nước ly tâm với động cơ",
+      "Khớp trục Z máy in 3D",
+      "Trục quay máy nén lạnh"
+    ],
+    "id": "mech_1abnnoa",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Flex%20Coupling%20mechatronics%20engineering"
+  },
+  {
+    "term": "Rigid Coupling",
+    "fullName": "Rigid Coupling",
+    "definition": "Khớp nối cứng kẹp chặt hai trục lại thành một khối thép liền mạch hoàn hảo, dùng khi cần độ đồng tâm tuyệt đối không sai lệch.",
+    "applications": [
+      "Trục tuabin phát điện gió khổng lồ",
+      "Trục quay tàu biển",
+      "Hệ thống truyền động trực tiếp CNC tĩnh"
+    ],
+    "id": "mech_k81rulk",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Rigid%20Coupling%20mechatronics%20engineering"
+  },
+  {
+    "term": "Linear Guide",
+    "fullName": "Linear Guide Rail",
+    "definition": "Thanh ray trượt tuyến tính hình chữ H hoặc tròn, trên đó có con trượt bi ôm chặt để dẫn hướng chi tiết trượt thẳng tắp.",
+    "applications": [
+      "Thanh ray trượt cửa máy CNC",
+      "Bàn di chuyển linh kiện tự động",
+      "Ngăn kéo tủ sắt siêu nhẹ"
+    ],
+    "id": "mech_4h4ffre",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Linear%20Guide%20mechatronics%20engineering"
+  },
+  {
+    "term": "Linear Bearing",
+    "fullName": "Linear Bearing",
+    "definition": "Vòng bi tuyến tính trượt dọc trên trục tròn trơn với các dãy bi nhỏ tiếp xúc trượt, rẻ tiền và phổ biến cho tải nhẹ.",
+    "applications": [
+      "Máy in 3D Prusa RepRap",
+      "Thanh trượt ghế ô tô",
+      "Mô hình robot sinh viên học tập"
+    ],
+    "id": "mech_xxguxij",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Linear%20Bearing%20mechatronics%20engineering"
+  },
+  {
+    "term": "Rotary Bearing",
+    "fullName": "Ball / Roller Bearing",
+    "definition": "Ổ lăn vòng bi cơ bản gồm các viên bi cầu/đũa nằm giữa hai vòng khuyên, dùng đỡ trục quay nhằm giảm ma sát trượt thành ma sát lăn.",
+    "applications": [
+      "Trục quay bánh xe đạp/xe máy",
+      "Ổ đỡ quạt trần dân dụng",
+      "Con lăn băng tải nhà máy"
+    ],
+    "id": "mech_eq78ij2",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Rotary%20Bearing%20mechatronics%20engineering"
+  },
+  {
+    "term": "Thrust Bearing",
+    "fullName": "Thrust Bearing",
+    "definition": "Ổ bi chặn trục chuyên dụng để chịu tải lực đẩy ép dọc thẳng đứng dọc theo phương của trục xoay thay vì tải lực ngang.",
+    "applications": [
+      "Khớp xoay ụ pháo xe tăng",
+      "Ghế xoay văn phòng có đệm bi",
+      "Cột ăng ten xoay cỡ lớn chịu gió"
+    ],
+    "id": "mech_5oteiwm",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Thrust%20Bearing%20mechatronics%20engineering"
+  },
+  {
+    "term": "Journal Bearing",
+    "fullName": "Journal Bearing / Plain Bearing",
+    "definition": "Ổ trượt (bạc lót) không có viên bi, trục quay trực tiếp nổi trên một lớp màng chất lỏng dầu bôi trơn siêu mỏng dưới áp suất cao.",
+    "applications": [
+      "Gối đỡ trục khuỷu động cơ ô tô (Miểng dên)",
+      "Tuabin thủy điện khổng lồ",
+      "Tuabin máy bay phản lực siêu tốc"
+    ],
+    "id": "mech_maavx76",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Journal%20Bearing%20mechatronics%20engineering"
+  },
+  {
+    "term": "Lead Screw",
+    "fullName": "Lead Screw",
+    "definition": "Trục vít me hệ ren thang ma sát trượt dùng chuyển quay thành tiến, kém mượt hơn Ball screw nhưng có tính tự hãm rẻ tiền.",
+    "applications": [
+      "Bàn ê tô kẹp nguội cơ khí",
+      "Trục nâng hạ máy cưa gỗ",
+      "Máy ép thủy lực thủ công bằng tay"
+    ],
+    "id": "mech_ja81td7",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Lead%20Screw%20mechatronics%20engineering"
+  },
+  {
+    "term": "Timing Belt",
+    "fullName": "Timing Belt / Toothed Belt",
+    "definition": "Dây curoa đai răng có khớp lồi lõm ăn khớp với puli bánh răng, truyền động không bao giờ bị trượt và truyền tốc độ đồng bộ chính xác.",
+    "applications": [
+      "Đai cam (Timing belt) chia thì động cơ xe hơi",
+      "Trục X/Y máy in 3D / cắt Laser",
+      "Băng tải đóng gói nhỏ nhẹ nhanh"
+    ],
+    "id": "mech_q53ragn",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Timing%20Belt%20mechatronics%20engineering"
+  },
+  {
+    "term": "CAD",
+    "fullName": "Computer-Aided Design",
+    "definition": "Phần mềm thiết kế trợ giúp bằng máy tính tạo bản vẽ 2D/3D mô phỏng trực quan hình học của bộ phận cơ khí trước khi chế tạo.",
+    "applications": [
+      "AutoCAD vẽ mặt bằng nhà xưởng",
+      "SolidWorks vẽ chi tiết máy CNC",
+      "Thiết kế vỏ hộp nhựa sản phẩm"
+    ],
+    "id": "mech_azyhxqj",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CAD%20mechatronics%20engineering"
+  },
+  {
+    "term": "CAM",
+    "fullName": "Computer-Aided Manufacturing",
+    "definition": "Phần mềm tính toán tự động sinh ra đường chạy dao G-code từ bản vẽ CAD để ra lệnh cho máy móc cơ khí đục đẽo kim loại.",
+    "applications": [
+      "Mastercam lập trình phay CNC 5 trục",
+      "Phần mềm máy cắt Laser SheetMetal",
+      "Phay khuôn đúc vỏ nhôm động cơ"
+    ],
+    "id": "mech_hyu4em3",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CAM%20mechatronics%20engineering"
+  },
+  {
+    "term": "CAE",
+    "fullName": "Computer-Aided Engineering",
+    "definition": "Phần mềm phân tích kỹ thuật ảo kiểm định chịu lực, tản nhiệt tĩnh/động học (FEA/CFD) trên môi trường mô phỏng vật lý chân thực.",
+    "applications": [
+      "Ansys kiểm tra độ võng cầu thép",
+      "Mô phỏng khí động học vỏ xe hơi",
+      "Kiểm tra giới hạn gãy cánh quạt"
+    ],
+    "id": "mech_7zwamuc",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CAE%20mechatronics%20engineering"
+  },
+  {
+    "term": "Industry 4.0",
+    "fullName": "Fourth Industrial Revolution",
+    "definition": "Cuộc cách mạng công nghiệp thứ 4 ứng dụng IoT, AI, Cloud và Dữ liệu lớn biến nhà máy cơ khí truyền thống thành nhà máy thông minh tự trị.",
+    "applications": [
+      "Nhà máy sản xuất thông minh của Siemens",
+      "Giao tiếp máy - máy (M2M)",
+      "Tự động phân tích sản lượng dây chuyền qua App"
+    ],
+    "id": "mech_dbb4u8r",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Industry%204.0%20mechatronics%20engineering"
+  },
+  {
+    "term": "FDM",
+    "fullName": "Fused Deposition Modeling",
+    "definition": "Công nghệ in 3D kinh điển hoạt động bằng cách nung chảy và đùn đắp dây nhựa thành từng lớp cắt mỏng chồng lên nhau.",
+    "applications": [
+      "In vỏ hộp mô hình thử nghiệm",
+      "Sản xuất đồ chơi linh kiện nhỏ nhựa PLA",
+      "Làm đồ kẹp gá DIY lắp ráp"
+    ],
+    "id": "mech_rdr212l",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=FDM%20mechatronics%20engineering"
+  },
+  {
+    "term": "SLA",
+    "fullName": "Stereolithography 3D Printing",
+    "definition": "Công nghệ in 3D quang học dùng tia Laser tia tử ngoại (UV) quét lên bề mặt bồn nhựa lỏng resin để đóng rắn từng lớp với độ nét cực cao.",
+    "applications": [
+      "In răng giả y khoa nha khoa",
+      "In khuôn sáp đúc trang sức nhẫn vàng",
+      "Chi tiết cơ khí mô hình cực bé gọn"
+    ],
+    "id": "mech_kb12krf",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SLA%20mechatronics%20engineering"
+  },
+  {
+    "term": "SLS",
+    "fullName": "Selective Laser Sintering",
+    "definition": "Công nghệ in 3D sử dụng tia Laser cực mạnh bắn tan chảy và thiêu kết bột nylon/kim loại siêu mịn thành khối cứng mà không cần giá đỡ.",
+    "applications": [
+      "In linh kiện chịu lực máy bay",
+      "In ruột ống xả tản nhiệt phức tạp",
+      "Chế tạo nhanh vỏ điện thoại chịu va đập"
+    ],
+    "id": "mech_4wolcm5",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SLS%20mechatronics%20engineering"
+  },
+  {
+    "term": "CNC Milling",
+    "fullName": "CNC Milling (Phay)",
+    "definition": "Gia công cắt gọt kim loại bằng dao phay xoay tròn đa rãnh di chuyển đục đẽo bóc tách trên khối phôi kim loại hình hộp đứng yên.",
+    "applications": [
+      "Phay lốc máy động cơ nhôm",
+      "Gia công rãnh trượt khuôn đúc",
+      "Phay chi tiết linh kiện robot chữ nhật"
+    ],
+    "id": "mech_cf6e1a0",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CNC%20Milling%20mechatronics%20engineering"
+  },
+  {
+    "term": "CNC Turning",
+    "fullName": "CNC Turning (Tiện)",
+    "definition": "Gia công cắt gọt kim loại trên máy tiện xoay phôi kim loại trụ tròn liên tục trong khi mũi dao đứng yên cắt tiến tịnh tiến vào.",
+    "applications": [
+      "Tiện trục vít me",
+      "Làm bu lông, trục cam, xi lanh",
+      "Tiện vỏ đạn, puly ròng rọc"
+    ],
+    "id": "mech_ec1zk1y",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CNC%20Turning%20mechatronics%20engineering"
+  },
+  {
+    "term": "CMM",
+    "fullName": "Coordinate Measuring Machine",
+    "definition": "Máy đo tọa độ quang học/chạm tiếp xúc 3D siêu chính xác dùng kiểm tra kích thước thành phẩm cơ khí xem có sai số thiết kế không.",
+    "applications": [
+      "Đo độ lệch trục động cơ cấp micrometer",
+      "Phòng QA/QC linh kiện máy bay không gian",
+      "Quét ngược Reverse Engineering mẫu"
+    ],
+    "id": "mech_0u8bu0u",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CMM%20mechatronics%20engineering"
+  },
+  {
+    "term": "Tolerance",
+    "fullName": "Engineering Tolerance",
+    "definition": "Dung sai kỹ thuật. Khoảng sai số chênh lệch kích thước tối đa cho phép trong sản xuất để hai chi tiết vẫn lắp ráp vừa khít vào nhau.",
+    "applications": [
+      "Dung sai lắp ghép H7/g6 ổ bi",
+      "Quy định sai số lỗ trục",
+      "Giá thành gia công cơ khí tăng theo độ dung sai"
+    ],
+    "id": "mech_kz9ll3r",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Tolerance%20mechatronics%20engineering"
+  },
+  {
+    "term": "Surface Rough",
+    "fullName": "Surface Roughness",
+    "definition": "Độ nhám bề mặt. Đánh giá mức độ nhấp nhô của vết cắt gọt trên mặt kim loại, ảnh hưởng đến thẩm mỹ và ma sát mài mòn.",
+    "applications": [
+      "Mài bóng trục khuỷu xe máy",
+      "Phay thô bề mặt đế sắt móng",
+      "Đánh giá chất lượng bôi trơn dăm bào"
+    ],
+    "id": "mech_j1oj3jo",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Surface%20Rough%20mechatronics%20engineering"
+  },
+  {
+    "term": "GD&T",
+    "fullName": "Geometric Dimensioning and Tolerancing",
+    "definition": "Hệ thống ký hiệu bản vẽ quốc tế tiêu chuẩn dùng định nghĩa quy cách, kích thước, độ phẳng, song song, đồng tâm của chi tiết.",
+    "applications": [
+      "Bản vẽ cơ khí toàn cầu",
+      "Thiết kế đồ gá Jig kẹp",
+      "Tránh hiểu lầm khi gia công máy"
+    ],
+    "id": "mech_cab1dwg",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=GD%26T%20mechatronics%20engineering"
+  },
+  {
+    "term": "Poka-Yoke",
+    "fullName": "Poka-Yoke (Mistake Proofing)",
+    "definition": "Nguyên lý thiết kế chống lầm lỗi của Nhật Bản, chế tạo các ngàm/rãnh cơ khí ngăn cản hoàn toàn việc công nhân cắm/lắp ráp ngược vật tư.",
+    "applications": [
+      "Rãnh cắm ổ cứng USB chống ngược",
+      "Chui cắm điện ba chấu",
+      "Khuôn gá JIG chỉ kẹp được một mặt duy nhất"
+    ],
+    "id": "mech_zi01bp9",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Poka-Yoke%20mechatronics%20engineering"
+  },
+  {
+    "term": "Kaizen",
+    "fullName": "Kaizen (Continuous Improvement)",
+    "definition": "Triết lý cải tiến liên tục không ngừng nghỉ nhằm tối ưu hóa từng bước nhỏ nhặt nhất trong dây chuyền sản xuất để tăng năng suất lâu dài.",
+    "applications": [
+      "Sắp xếp lại dụng cụ thao tác 5S Toyota",
+      "Giảm 1 giây thao tác vặn vít mỗi máy",
+      "Khuyến khích công nhân phát hiện lỗi vặt"
+    ],
+    "id": "mech_a8ukc2e",
+    "category": "Cơ điện tử",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Kaizen%20mechatronics%20engineering"
   }
 ]

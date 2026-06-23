@@ -53,3 +53,7 @@
 ### Phase 12: Computer Science Data Expansion
 - [x] Bổ sung 100 từ khóa chuyên ngành Khoa học máy tính (Data Structures, Algorithms, OS, Networking, AI).
 - [x] Thực thi tự động bằng kịch bản AI trực tiếp.
+
+### Phase 13: Mechatronics Data Expansion
+- [x] Bổ sung 100 từ khóa chuyên ngành Cơ điện tử (Robotics, Control, Actuators, Integration).
+- [x] Thực thi tự động bằng kịch bản AI trực tiếp.

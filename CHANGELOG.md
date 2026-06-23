@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2026-06-23
+
+### Added
+- Sinh trực tiếp 100 từ khóa chuyên ngành Cơ điện tử (Mechatronics) bằng AI.
+- Cập nhật Project Phase lên Phase 13 (Mechatronics Data Expansion).
+
 ## [0.8.0] - 2026-06-23
 
 ### Added
