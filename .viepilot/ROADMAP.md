@@ -25,6 +25,12 @@
 - [x] Cập nhật giao diện (TermsList, QuizSystem, IntroStats).
 - [x] Mở rộng System Prompt cho AI Lab.
 
-## Phase 6: Data Enrichment & Full Categories
-- [x] Bổ sung các chuyên ngành còn thiếu vào hệ thống sinh dữ liệu (Tự động hóa, Cơ điện tử, Khoa học máy tính, Điện tử số).
+### Phase 6: Data Enrichment & Full Categories
+- [x] Tạo file sinh dữ liệu riêng cho từng danh mục
+- [x] Triển khai global `excludeList` để chặn AI sinh từ trùng lặp
+- [x] Mở rộng danh mục: IoT, Vi xử lý, Vô tuyến & Viễn thông
+
+### Phase 7: Automation Data Expansion
+- [x] Nạp 100 từ khóa chuyên ngành tự động hóa cấp cao (SCADA, Robotics, Control Systems, Industry 4.0)
+- [x] Thiết lập dữ liệu tĩnh độc nhất cho mục tự động hóa
 - [ ] Chạy tiến trình seeding toàn diện để làm giàu ngân hàng từ khóa.
