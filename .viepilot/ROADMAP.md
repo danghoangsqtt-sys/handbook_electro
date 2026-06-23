@@ -72,3 +72,8 @@
 - [x] Tích hợp nút "Copy Code" cho các đoạn code snippets.
 - [x] Định dạng hiển thị Table và Typography chuẩn Markdown.
 - [x] Auto-test và đẩy lên Github.
+
+### Phase 17: Project Branding & Favicon
+- [x] Auto-gen Logo/Favicon cho website bằng mô hình AI.
+- [x] Tích hợp icon vào Next.js App Router metadata.
+- [x] Cập nhật giao diện thanh điều hướng để hiển thị Logo nếu cần.
