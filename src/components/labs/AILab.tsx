@@ -9,6 +9,51 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useEffect, useRef, useState } from 'react';
 import PinLogin from '../auth/PinLogin';
 
+const CodeBlock = ({ inline, className, children, ...props }: any) => {
+    const [isCopied, setIsCopied] = useState(false);
+    const match = /language-(\w+)/.exec(className || '');
+    
+    if (!inline && match) {
+        const codeContent = String(children).replace(/\n$/, '');
+        const handleCopy = () => {
+            navigator.clipboard.writeText(codeContent);
+            setIsCopied(true);
+            setTimeout(() => setIsCopied(false), 2000);
+        };
+        
+        return (
+            <div className="my-4 rounded-xl overflow-hidden shadow-lg border border-slate-700/50">
+                <div className="bg-slate-800 px-4 py-2 text-xs text-slate-400 font-mono flex items-center justify-between">
+                    <span className="uppercase tracking-wider font-semibold">{match[1]}</span>
+                    <button 
+                        onClick={handleCopy}
+                        className="hover:text-white transition-colors flex items-center gap-1.5 bg-slate-700/50 hover:bg-slate-700 px-2.5 py-1 rounded-md"
+                        title="Copy code"
+                    >
+                        {isCopied ? <><i className="fa-solid fa-check text-green-400"></i> <span className="text-green-400">Copied!</span></> : <><i className="fa-regular fa-copy"></i> Copy</>}
+                    </button>
+                </div>
+                <SyntaxHighlighter
+                    style={vscDarkPlus as any}
+                    language={match[1]}
+                    PreTag="div"
+                    className="!m-0 !bg-[#1E1E1E]"
+                    showLineNumbers={true}
+                    customStyle={{ margin: 0, borderRadius: 0, fontSize: '13px' }}
+                    {...props}
+                >
+                    {codeContent}
+                </SyntaxHighlighter>
+            </div>
+        );
+    }
+    return (
+        <code className={`${className} bg-slate-200/80 dark:bg-slate-700/80 px-1.5 py-0.5 rounded-md text-pink-600 dark:text-pink-400 font-mono text-sm break-all`} {...props}>
+            {children}
+        </code>
+    );
+};
+
 export default function AILab() {
     const [authenticated, setAuthenticated] = useState<boolean | null>(null);
 
@@ -140,31 +185,13 @@ export default function AILab() {
                                 <ReactMarkdown 
                                     remarkPlugins={[remarkGfm]}
                                     components={{
-                                        code({inline, className, children, ...props}: any) {
-                                            const match = /language-(\w+)/.exec(className || '');
-                                            return !inline && match ? (
-                                                <div className="my-4 rounded-xl overflow-hidden shadow-lg border border-slate-700/50">
-                                                    <div className="bg-slate-800 px-4 py-1.5 text-xs text-slate-400 font-mono flex items-center justify-between">
-                                                        <span>{match[1]}</span>
-                                                    </div>
-                                                    <SyntaxHighlighter
-                                                        style={vscDarkPlus as any}
-                                                        language={match[1]}
-                                                        PreTag="div"
-                                                        className="!m-0 !bg-[#1E1E1E]"
-                                                        showLineNumbers={true}
-                                                        customStyle={{ margin: 0, borderRadius: 0 }}
-                                                        {...props}
-                                                    >
-                                                        {String(children).replace(/\n$/, '')}
-                                                    </SyntaxHighlighter>
-                                                </div>
-                                            ) : (
-                                                <code className={`${className} bg-slate-200/80 dark:bg-slate-700/80 px-1.5 py-0.5 rounded-md text-pink-600 dark:text-pink-400 font-mono text-sm`} {...props}>
-                                                    {children}
-                                                </code>
-                                            )
-                                        }
+                                        code: CodeBlock,
+                                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                                        table: ({node, ...props}) => <div className="overflow-x-auto my-4 rounded-lg border border-slate-200 dark:border-slate-700/80 shadow-sm"><table className="w-full text-sm text-left border-collapse" {...props} /></div>,
+                                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                                        th: ({node, ...props}) => <th className="bg-slate-50 dark:bg-slate-800/80 p-3 font-semibold text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700/80" {...props} />,
+                                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                                        td: ({node, ...props}) => <td className="p-3 border-b border-slate-100 dark:border-slate-800/50 text-slate-600 dark:text-slate-300" {...props} />
                                     }}
                                 >
                                     {m.content || m.parts?.filter((p: any) => p.type === 'text').map((p: any) => p.text).join('')}

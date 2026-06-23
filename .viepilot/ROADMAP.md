@@ -67,3 +67,8 @@
 - [x] Hỗ trợ Responsive đa thiết bị (Máy tính, Điện thoại - loại bỏ chiều cao cố định).
 - [x] Tích hợp Syntax Highlighting cho Code blocks trong Chat.
 - [x] Auto-test và kiểm tra bugs tự động.
+
+### Phase 16: AI Lab Advanced Features
+- [x] Tích hợp nút "Copy Code" cho các đoạn code snippets.
+- [x] Định dạng hiển thị Table và Typography chuẩn Markdown.
+- [x] Auto-test và đẩy lên Github.
