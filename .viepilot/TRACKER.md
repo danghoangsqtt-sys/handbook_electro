@@ -15,6 +15,7 @@
 - [x] Phase 7: 100%
 - [x] Phase 8: 100%
 - [x] Phase 9: 100%
+- [ ] Phase 10: 50% (Đã cấu hình, chờ seed data)
 
 ## Version Info
-- Current Version: 0.5.0
+- Current Version: 0.6.0

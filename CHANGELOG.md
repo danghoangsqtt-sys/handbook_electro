@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0] - 2026-06-23
+
+### Added
+- Cấu hình seeding và kế hoạch cập nhật 100 từ khóa chuyên ngành Vô tuyến & Viễn thông.
+- Cập nhật Project Phase lên Phase 10 (Telecommunications Data Expansion).
+
 ## [0.5.0] - 2026-06-23
 
 ### Added

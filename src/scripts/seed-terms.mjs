@@ -97,9 +97,9 @@ async function seed() {
   console.log(`Đã load ${globalExistingTermNames.size} từ khóa hiện tại để làm bộ lọc chống trùng lặp.`);
 
   // Cấu hình danh mục cần sinh thêm
-  const TARGET_CATEGORIES = ["IoT", "Vi xử lý", "Vô tuyến & Viễn thông"];
+  const TARGET_CATEGORIES = ["Vô tuyến & Viễn thông"];
   const TERMS_PER_BATCH = 20; 
-  const BATCHES_PER_CATEGORY = 3; // 60 từ mỗi danh mục
+  const BATCHES_PER_CATEGORY = 5; // 100 từ mỗi danh mục
 
   for (const category of TARGET_CATEGORIES) {
       console.log(`\n>>> Bắt đầu xử lý danh mục: ${category}`);

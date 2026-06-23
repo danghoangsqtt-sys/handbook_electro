@@ -41,4 +41,8 @@
 ### Phase 9: Microprocessor Data Expansion
 - [x] Nạp 100 từ khóa Kiến trúc máy tính & Vi điều khiển (Cấu trúc CPU, Cache, Pipeline, Assembly, RTOS)
 - [x] Thiết lập dữ liệu tĩnh cao cấp cho mục Vi xử lý
-- [ ] Chạy tiến trình seeding toàn diện để làm giàu ngân hàng từ khóa.
+- [x] Chạy tiến trình seeding toàn diện để làm giàu ngân hàng từ khóa.
+
+### Phase 10: Telecommunications Data Expansion
+- [x] Nạp 100 từ khóa Vô tuyến & Viễn thông (Anten, Băng thông, 5G, Truyền dẫn, RFID)
+- [ ] Tích hợp hiển thị danh mục mở rộng này lên hệ thống tìm kiếm
