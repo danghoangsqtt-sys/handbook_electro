@@ -17,6 +17,7 @@
 - [x] Phase 9: 100%
 - [x] Phase 10: 100% (Manual AI Brainstorm Seed)
 - [x] Phase 11: 100% (Manual AI Brainstorm Seed IoT)
+- [x] Phase 12: 100% (Manual AI Brainstorm Seed Computer Science)
 
 ## Version Info
-- Current Version: 0.7.0
+- Current Version: 0.8.0

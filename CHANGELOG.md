@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2026-06-23
+
+### Added
+- Sinh trực tiếp 100 từ khóa chuyên ngành Khoa học Máy tính bằng AI.
+- Cập nhật Project Phase lên Phase 12 (Computer Science Data Expansion).
+
 ## [0.7.0] - 2026-06-23
 
 ### Added

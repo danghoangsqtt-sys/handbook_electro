@@ -49,3 +49,7 @@
 ### Phase 11: IoT Data Expansion
 - [x] Bổ sung 100 từ khóa chuyên ngành IoT (Cloud, Protocols, WSN, Hardware, Security)
 - [x] Sử dụng script tự động để chèn trực tiếp không qua API Key.
+
+### Phase 12: Computer Science Data Expansion
+- [x] Bổ sung 100 từ khóa chuyên ngành Khoa học máy tính (Data Structures, Algorithms, OS, Networking, AI).
+- [x] Thực thi tự động bằng kịch bản AI trực tiếp.

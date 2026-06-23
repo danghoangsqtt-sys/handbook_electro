@@ -523,5 +523,1162 @@
     "youtubeEmbed": "https://www.youtube.com/embed/s7wkuA2m26U",
     "youtubeUrl": "https://www.youtube.com/watch?v=s7wkuA2m26U",
     "icon": "fa-solid fa-plug"
+  },
+  {
+    "term": "Array",
+    "fullName": "Array Data Structure",
+    "definition": "Mảng, cấu trúc dữ liệu lưu trữ một tập hợp các phần tử có cùng kiểu dữ liệu tại các vị trí bộ nhớ liền kề nhau.",
+    "applications": [
+      "Lưu trữ danh sách cố định",
+      "Bộ nhớ đệm pixel màn hình",
+      "Lập ma trận toán học"
+    ],
+    "id": "cs_fsaw98z",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Array%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Linked List",
+    "fullName": "Singly Linked List",
+    "definition": "Danh sách liên kết, tập hợp các nút mà mỗi nút chứa dữ liệu và con trỏ trỏ tới vị trí của nút tiếp theo trong bộ nhớ.",
+    "applications": [
+      "Quản lý bộ nhớ động",
+      "Thực thi cấu trúc Stack/Queue",
+      "Lịch sử duyệt web cơ bản"
+    ],
+    "id": "cs_wjh0xjx",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Linked%20List%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Doubly Linked List",
+    "fullName": "Doubly Linked List",
+    "definition": "Danh sách liên kết kép, mỗi nút chứa hai con trỏ trỏ về cả nút phía trước và phía sau nó.",
+    "applications": [
+      "Nút Forward/Back của trình duyệt",
+      "Trình phát nhạc (Next/Prev)",
+      "Undo/Redo nâng cao"
+    ],
+    "id": "cs_p4tefbm",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Doubly%20Linked%20List%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Circular Linked",
+    "fullName": "Circular Linked List",
+    "definition": "Danh sách liên kết vòng, trong đó nút cuối cùng trỏ ngược lại nút đầu tiên tạo thành một vòng khép kín.",
+    "applications": [
+      "Điều phối CPU (Round Robin)",
+      "Trò chơi cờ nhiều người xoay vòng",
+      "Danh sách bài hát lặp lại"
+    ],
+    "id": "cs_2rkesm7",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Circular%20Linked%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Priority Queue",
+    "fullName": "Priority Queue",
+    "definition": "Hàng đợi ưu tiên, mỗi phần tử có một mức độ ưu tiên, phần tử ưu tiên cao nhất sẽ được lấy ra trước bất kể thứ tự vào.",
+    "applications": [
+      "Lập lịch ngắt CPU",
+      "Thuật toán tìm đường Dijkstra",
+      "Xử lý sự kiện trong OS"
+    ],
+    "id": "cs_lxmro9s",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Priority%20Queue%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Deque",
+    "fullName": "Double-ended Queue",
+    "definition": "Hàng đợi hai đầu, cho phép chèn và xóa các phần tử ở cả hai đầu (trước và sau) với độ phức tạp O(1).",
+    "applications": [
+      "Thuật toán đồ thị đặc biệt",
+      "Quản lý luồng tác vụ song song",
+      "Bộ nhớ đệm giới hạn kích thước"
+    ],
+    "id": "cs_79ub36q",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Deque%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Max Heap",
+    "fullName": "Max Heap Tree",
+    "definition": "Cây nhị phân hoàn chỉnh mà giá trị của nút cha luôn lớn hơn hoặc bằng giá trị của các nút con.",
+    "applications": [
+      "Hàng đợi ưu tiên max",
+      "Thuật toán HeapSort",
+      "Tìm K phần tử lớn nhất"
+    ],
+    "id": "cs_n214otq",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Max%20Heap%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Min Heap",
+    "fullName": "Min Heap Tree",
+    "definition": "Cây nhị phân hoàn chỉnh mà giá trị của nút cha luôn nhỏ hơn hoặc bằng giá trị của các nút con.",
+    "applications": [
+      "Thuật toán mã hóa Huffman",
+      "Thuật toán đường đi ngắn nhất",
+      "Hàng đợi sự kiện thời gian"
+    ],
+    "id": "cs_l0kdapz",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Min%20Heap%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Trie",
+    "fullName": "Prefix Tree (Trie)",
+    "definition": "Cây tiền tố, cấu trúc dữ liệu dạng cây chuyên dùng để lưu trữ và tra cứu các xâu ký tự (chuỗi) cực kỳ nhanh chóng.",
+    "applications": [
+      "Gợi ý từ khóa Autocomplete",
+      "Kiểm tra lỗi chính tả",
+      "Định tuyến IP trong Router"
+    ],
+    "id": "cs_v7e4vmy",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Trie%20computer%20science%20tutorial"
+  },
+  {
+    "term": "B-Tree",
+    "fullName": "B-Tree Data Structure",
+    "definition": "Cây tìm kiếm tự cân bằng mở rộng, trong đó một nút có thể có nhiều hơn hai nút con, được thiết kế chuyên biệt cho hệ thống lưu trữ đĩa.",
+    "applications": [
+      "Cơ sở dữ liệu MySQL",
+      "Hệ thống tệp NTFS",
+      "Quản lý Index của ổ cứng"
+    ],
+    "id": "cs_v67xp4p",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=B-Tree%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Red-Black Tree",
+    "fullName": "Red-Black Tree",
+    "definition": "Cây tìm kiếm nhị phân tự cân bằng thông qua việc tô màu các nút (đỏ/đen) để đảm bảo chiều cao cây luôn ở mức O(log n).",
+    "applications": [
+      "Map/Set trong C++ STL",
+      "Lịch trình Completely Fair của Linux",
+      "Index dữ liệu trong nhớ"
+    ],
+    "id": "cs_xwg2cky",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Red-Black%20Tree%20computer%20science%20tutorial"
+  },
+  {
+    "term": "AVL Tree",
+    "fullName": "Adelson-Velsky Landis Tree",
+    "definition": "Cây nhị phân tự cân bằng khắt khe nhất, luôn giữ độ chênh lệch chiều cao giữa hai cây con của mọi nút tối đa là 1.",
+    "applications": [
+      "Cơ sở dữ liệu In-memory",
+      "Hệ thống từ điển tĩnh",
+      "Danh bạ điện thoại phần mềm"
+    ],
+    "id": "cs_neisnaf",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AVL%20Tree%20computer%20science%20tutorial"
+  },
+  {
+    "term": "DFS",
+    "fullName": "Depth-First Search",
+    "definition": "Tìm kiếm theo chiều sâu, thuật toán duyệt đồ thị hoặc cây bằng cách đi sâu xuống một nhánh xa nhất có thể trước khi lùi lại.",
+    "applications": [
+      "Giải bài toán Mê cung",
+      "Sắp xếp Topo",
+      "Tìm thành phần liên thông"
+    ],
+    "id": "cs_n1kgzts",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DFS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "BFS",
+    "fullName": "Breadth-First Search",
+    "definition": "Tìm kiếm theo chiều rộng, duyệt qua tất cả các nút cùng một độ sâu trước khi chuyển xuống độ sâu tiếp theo của đồ thị.",
+    "applications": [
+      "Tìm đường đi ngắn nhất đồ thị không trọng số",
+      "Crawl dữ liệu Web",
+      "Game dò mìn (Minesweeper)"
+    ],
+    "id": "cs_pgpvj5a",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=BFS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Dijkstra",
+    "fullName": "Dijkstra's Algorithm",
+    "definition": "Thuật toán kinh điển tìm đường đi ngắn nhất từ một đỉnh đến các đỉnh còn lại trong đồ thị có trọng số không âm.",
+    "applications": [
+      "Bản đồ Google Maps",
+      "Định tuyến mạng OSPF",
+      "Mạng viễn thông"
+    ],
+    "id": "cs_jki8x5o",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dijkstra%20computer%20science%20tutorial"
+  },
+  {
+    "term": "A* Algorithm",
+    "fullName": "A* Search Algorithm",
+    "definition": "Thuật toán tìm đường đi ngắn nhất được tối ưu bằng hàm Heuristic để hướng tới mục tiêu nhanh hơn thay vì tỏa tròn như Dijkstra.",
+    "applications": [
+      "Đường đi AI trong Game",
+      "Quy hoạch quỹ đạo Robot",
+      "Điều hướng xe tự hành"
+    ],
+    "id": "cs_dvmo715",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=A*%20Algorithm%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Dynamic Prog",
+    "fullName": "Dynamic Programming (Quy hoạch động)",
+    "definition": "Kỹ thuật chia một bài toán phức tạp thành các bài toán con chồng chéo và lưu trữ kết quả để tránh tính toán lại.",
+    "applications": [
+      "Bài toán Cái ba lô (Knapsack)",
+      "Chuỗi DNA sinh học",
+      "So sánh văn bản Diff"
+    ],
+    "id": "cs_ps91iwk",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Dynamic%20Prog%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Greedy",
+    "fullName": "Greedy Algorithm (Thuật toán tham lam)",
+    "definition": "Phương pháp giải quyết bài toán bằng cách luôn đưa ra lựa chọn tối ưu cục bộ tốt nhất tại mỗi bước với hy vọng đạt được tối ưu toàn cục.",
+    "applications": [
+      "Nén dữ liệu Huffman",
+      "Cây khung nhỏ nhất (Kruskal/Prim)",
+      "Bài toán chia tiền lẻ"
+    ],
+    "id": "cs_avwbd7q",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Greedy%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Backtracking",
+    "fullName": "Backtracking Algorithm (Quay lui)",
+    "definition": "Thuật toán thử từng khả năng, nếu phát hiện sai hướng sẽ quay lui lại ngã rẽ trước đó để thử con đường khác.",
+    "applications": [
+      "Giải Sudoku",
+      "Bài toán 8 quân hậu",
+      "Phân tích cú pháp Compiler"
+    ],
+    "id": "cs_h59nkxl",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Backtracking%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Divide Conquer",
+    "fullName": "Divide and Conquer (Chia để trị)",
+    "definition": "Chia bài toán lớn thành các bài toán con hoàn toàn độc lập, giải quyết chúng và gộp kết quả lại.",
+    "applications": [
+      "Sắp xếp QuickSort / MergeSort",
+      "Thuật toán biến đổi Fourier (FFT)",
+      "Nhân ma trận siêu tốc"
+    ],
+    "id": "cs_7lgmbtx",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Divide%20Conquer%20computer%20science%20tutorial"
+  },
+  {
+    "term": "OSI Model",
+    "fullName": "Open Systems Interconnection Model",
+    "definition": "Mô hình quy chiếu 7 lớp mô tả các tiêu chuẩn giao tiếp mạng máy tính từ lớp vật lý (Physical) đến lớp ứng dụng (Application).",
+    "applications": [
+      "Học tập mạng máy tính",
+      "Thiết kế giao thức mạng",
+      "Chẩn đoán sự cố mạng theo tầng"
+    ],
+    "id": "cs_lmogs9y",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=OSI%20Model%20computer%20science%20tutorial"
+  },
+  {
+    "term": "TCP/IP",
+    "fullName": "TCP/IP Model",
+    "definition": "Mô hình mạng 4 lớp thực tế đang vận hành mạng Internet toàn cầu, bao gồm Network Access, Internet, Transport và Application.",
+    "applications": [
+      "Mạng Internet toàn cầu",
+      "Mạng nội bộ LAN",
+      "Cấu hình IP máy tính"
+    ],
+    "id": "cs_qasldej",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=TCP%2FIP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "UDP",
+    "fullName": "User Datagram Protocol",
+    "definition": "Giao thức truyền dữ liệu không kết nối, tốc độ cực cao do không kiểm tra lỗi và không đảm bảo gói tin đến đích.",
+    "applications": [
+      "Gọi video trực tuyến",
+      "Game online thời gian thực",
+      "Livestream sự kiện"
+    ],
+    "id": "cs_lux6es9",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=UDP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "DNS",
+    "fullName": "Domain Name System",
+    "definition": "Hệ thống phân giải tên miền, đóng vai trò như danh bạ Internet biến tên miền dễ nhớ thành địa chỉ IP.",
+    "applications": [
+      "Gõ google.com để truy cập",
+      "Cấu hình mạng gia đình",
+      "Tránh tấn công DNS Spoofing"
+    ],
+    "id": "cs_7hyru01",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DNS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "DHCP",
+    "fullName": "Dynamic Host Configuration Protocol",
+    "definition": "Giao thức tự động cấp phát địa chỉ IP và các thông số mạng tĩnh khác cho các thiết bị khi chúng kết nối vào mạng.",
+    "applications": [
+      "Modem WiFi nhà cấp IP cho điện thoại",
+      "Mạng khách sạn",
+      "Phòng máy trường học"
+    ],
+    "id": "cs_ldv5ryl",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DHCP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "HTTP",
+    "fullName": "Hypertext Transfer Protocol",
+    "definition": "Giao thức cốt lõi của World Wide Web dùng để truyền tải các văn bản siêu liên kết (HTML) giữa Client và Server.",
+    "applications": [
+      "Lướt web thông thường",
+      "Gọi API RESTful",
+      "Tải tài nguyên hình ảnh web"
+    ],
+    "id": "cs_ps9np2o",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=HTTP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "HTTPS",
+    "fullName": "HTTP Secure",
+    "definition": "Phiên bản bảo mật của HTTP, dữ liệu được mã hóa toàn bộ bằng TLS/SSL bảo vệ khỏi việc bị đánh cắp trên đường truyền.",
+    "applications": [
+      "Web ngân hàng",
+      "Trang đăng nhập",
+      "Thương mại điện tử"
+    ],
+    "id": "cs_pk8j99l",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=HTTPS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "FTP",
+    "fullName": "File Transfer Protocol",
+    "definition": "Giao thức mạng tiêu chuẩn dùng để tải tệp tin và thư mục lên xuống giữa máy chủ và máy khách.",
+    "applications": [
+      "Quản lý Hosting Web",
+      "Chia sẻ file Server nội bộ",
+      "Sao lưu dữ liệu đám mây"
+    ],
+    "id": "cs_awqp55r",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=FTP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "SMTP",
+    "fullName": "Simple Mail Transfer Protocol",
+    "definition": "Giao thức mạng tiêu chuẩn dùng riêng cho việc gửi thư điện tử (email) từ máy khách lên máy chủ hoặc giữa các máy chủ.",
+    "applications": [
+      "Gửi email Gmail",
+      "Hệ thống thư điện tử công ty",
+      "Gửi thông báo tự động (Alert)"
+    ],
+    "id": "cs_z1gapab",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SMTP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "IMAP",
+    "fullName": "Internet Message Access Protocol",
+    "definition": "Giao thức cho phép ứng dụng khách truy cập và quản lý email trực tiếp trên máy chủ mà không cần tải hết về máy cục bộ.",
+    "applications": [
+      "Đồng bộ email trên nhiều điện thoại",
+      "Ứng dụng Outlook",
+      "Quản lý hộp thư nhóm"
+    ],
+    "id": "cs_zk3l0io",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=IMAP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "POP3",
+    "fullName": "Post Office Protocol v3",
+    "definition": "Giao thức tải toàn bộ thư điện tử từ máy chủ về máy khách cục bộ, thường xóa luôn bản gốc trên máy chủ.",
+    "applications": [
+      "Sử dụng email offline",
+      "Lưu trữ thư nội bộ cá nhân",
+      "Tiết kiệm dung lượng server"
+    ],
+    "id": "cs_7ti9q62",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=POP3%20computer%20science%20tutorial"
+  },
+  {
+    "term": "SSH",
+    "fullName": "Secure Shell",
+    "definition": "Giao thức mạng mã hóa cấp phép đăng nhập từ xa dòng lệnh để quản trị an toàn các máy chủ Linux/Unix.",
+    "applications": [
+      "Quản trị VPS đám mây",
+      "Lệnh Git qua SSH",
+      "Bảo trì máy chủ từ xa"
+    ],
+    "id": "cs_lq19l42",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SSH%20computer%20science%20tutorial"
+  },
+  {
+    "term": "BGP",
+    "fullName": "Border Gateway Protocol",
+    "definition": "Giao thức định tuyến lõi của Internet, giúp các hệ thống tự trị (ISP) trao đổi thông tin định tuyến để tìm đường đi toàn cầu.",
+    "applications": [
+      "Định tuyến mạng trục quốc gia",
+      "Chống sự cố đứt cáp quang biển",
+      "Quản lý hạ tầng mạng lớn"
+    ],
+    "id": "cs_eapnxdb",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=BGP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "ARP",
+    "fullName": "Address Resolution Protocol",
+    "definition": "Giao thức chuyển đổi địa chỉ IP (lớp mạng) thành địa chỉ MAC (lớp liên kết dữ liệu) cục bộ trong cùng một mạng LAN.",
+    "applications": [
+      "Giao tiếp mạng LAN",
+      "Phát hiện giả mạo ARP Spoofing",
+      "Tìm máy in trong mạng"
+    ],
+    "id": "cs_stxe0a3",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ARP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "MAC Address",
+    "fullName": "Media Access Control Address",
+    "definition": "Địa chỉ vật lý duy nhất toàn cầu gồm 48-bit được nhà sản xuất ghi cứng (burn) vào phần cứng card mạng của thiết bị.",
+    "applications": [
+      "Bảo mật lọc địa chỉ MAC WiFi",
+      "Định danh thiết bị cứng",
+      "Hỗ trợ DHCP cấp IP cố định"
+    ],
+    "id": "cs_v6rxvvl",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=MAC%20Address%20computer%20science%20tutorial"
+  },
+  {
+    "term": "IP Address",
+    "fullName": "Internet Protocol Address",
+    "definition": "Chuỗi số logic định danh vị trí của một thiết bị trên mạng máy tính (IPv4 hoặc IPv6).",
+    "applications": [
+      "Định tuyến Internet",
+      "Hosting Website",
+      "Chặn IP độc hại"
+    ],
+    "id": "cs_ncotswc",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=IP%20Address%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Subnet Mask",
+    "fullName": "Subnet Mask (Mặt nạ mạng)",
+    "definition": "Chuỗi 32-bit dùng chung với IP để phân tách phần nào là địa chỉ Mạng (Network) và phần nào là địa chỉ Máy (Host).",
+    "applications": [
+      "Thiết lập dải IP công ty",
+      "Cách ly các phòng ban",
+      "Quy hoạch không gian mạng"
+    ],
+    "id": "cs_1v00mns",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Subnet%20Mask%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Load Balancing",
+    "fullName": "Load Balancing (Cân bằng tải)",
+    "definition": "Hệ thống phân phối lưu lượng truy cập mạng đều đặn lên nhiều máy chủ backend để tránh quá tải một máy chủ duy nhất.",
+    "applications": [
+      "Máy chủ web Facebook/Google",
+      "Hệ thống thương mại điện tử lớn",
+      "Kiến trúc đám mây Cloud"
+    ],
+    "id": "cs_cyqofwe",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Load%20Balancing%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Harvard",
+    "fullName": "Harvard Architecture",
+    "definition": "Kiến trúc tách biệt hoàn toàn bộ nhớ Lệnh và bộ nhớ Dữ liệu với các bus riêng, cho phép đọc lệnh và dữ liệu cùng lúc.",
+    "applications": [
+      "Vi điều khiển AVR",
+      "Bộ xử lý tín hiệu DSP",
+      "Nhân chip ARM Cortex"
+    ],
+    "id": "cs_kga8lja",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Harvard%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Pipelining",
+    "fullName": "Instruction Pipelining",
+    "definition": "Kỹ thuật đường ống trong CPU cho phép thực hiện song song các giai đoạn (Fetch, Decode, Execute) của nhiều lệnh khác nhau.",
+    "applications": [
+      "Tăng tốc vi xử lý hiện đại",
+      "Tối ưu hóa vòng đời xung nhịp CPU",
+      "Thiết kế lõi ARM"
+    ],
+    "id": "cs_ippkmyy",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Pipelining%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Context Switch",
+    "fullName": "Context Switching (Chuyển ngữ cảnh)",
+    "definition": "Quá trình hệ điều hành lưu trạng thái của tiến trình hiện tại và khôi phục trạng thái của tiến trình tiếp theo để CPU thực thi luân phiên.",
+    "applications": [
+      "Hệ điều hành đa nhiệm đa luồng",
+      "Đồng hồ định thời CPU",
+      "Hoạt động ngắt (Interrupt)"
+    ],
+    "id": "cs_6kfi8rk",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Context%20Switch%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Segmentation",
+    "fullName": "Memory Segmentation",
+    "definition": "Cơ chế chia bộ nhớ theo các khối có kích thước không đều, phù hợp với góc nhìn logic của lập trình viên (vùng Code, Data, Stack).",
+    "applications": [
+      "Cấu trúc file nhị phân PE/ELF",
+      "Bảo vệ các đoạn code không bị ghi đè",
+      "Hệ điều hành x86 cũ"
+    ],
+    "id": "cs_z1dan6f",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Segmentation%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Thrashing",
+    "fullName": "Thrashing",
+    "definition": "Hiện tượng thảm họa khi hệ thống thiếu RAM trầm trọng, CPU tốn toàn bộ thời gian chỉ để đổi trang (swap) dữ liệu ổ cứng mà không tính toán được gì.",
+    "applications": [
+      "Máy tính bị treo cứng do thiếu RAM",
+      "Phát hiện tắc nghẽn server",
+      "Tối ưu hóa kích thước Pagefile"
+    ],
+    "id": "cs_ko41cdx",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Thrashing%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Polling",
+    "fullName": "Polling Mechanism",
+    "definition": "Kỹ thuật phần mềm liên tục vòng lặp kiểm tra trạng thái của thiết bị ngoại vi xem nó đã sẵn sàng hay chưa, gây lãng phí CPU.",
+    "applications": [
+      "Đọc nút bấm Arduino cơ bản",
+      "Hệ thống không hỗ trợ Interrupt",
+      "Giao tiếp thiết bị ngoại vi quá chậm"
+    ],
+    "id": "cs_nz578fd",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Polling%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Multiprocessing",
+    "fullName": "Multiprocessing",
+    "definition": "Kiến trúc phần cứng và hệ điều hành cho phép thực thi ứng dụng đồng thời trên hai hay nhiều nhân vật lý CPU riêng biệt.",
+    "applications": [
+      "Render Video 3D",
+      "Máy chủ Cơ sở dữ liệu đa nhân",
+      "Học sâu Neural Network"
+    ],
+    "id": "cs_92eit2p",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Multiprocessing%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Multithreading",
+    "fullName": "Multithreading",
+    "definition": "Khả năng của một tiến trình duy nhất tự chia nhỏ mình thành nhiều luồng chạy song song để khai thác tối đa CPU.",
+    "applications": [
+      "Web Browser mở nhiều tab",
+      "Chương trình Game Engine 3D",
+      "Máy chủ Node.js nâng cao"
+    ],
+    "id": "cs_kpviyng",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Multithreading%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Concurrency",
+    "fullName": "Concurrency (Đồng thời)",
+    "definition": "Khái niệm thiết kế phần mềm xử lý nhiều tác vụ bằng cách chuyển đổi nhanh chóng giữa chúng, tạo ảo giác chúng chạy cùng lúc.",
+    "applications": [
+      "Golang Goroutines",
+      "Lập trình bất đồng bộ Async/Await",
+      "Giao diện UI không bị đơ"
+    ],
+    "id": "cs_dhw9cw6",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Concurrency%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Hypervisor",
+    "fullName": "Virtual Machine Monitor",
+    "definition": "Phần mềm hệ thống hoặc phần cứng dùng để tạo ra, chạy và cô lập hoàn toàn các Máy ảo (VM) trên cùng một máy chủ vật lý.",
+    "applications": [
+      "VMware ESXi",
+      "Microsoft Hyper-V",
+      "Đám mây AWS EC2"
+    ],
+    "id": "cs_ksn3s9x",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hypervisor%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Container",
+    "fullName": "Docker Container",
+    "definition": "Công nghệ ảo hóa cấp hệ điều hành siêu nhẹ, đóng gói ứng dụng và tất cả thư viện liên quan thành một khối duy nhất, khởi động mất vài mili-giây.",
+    "applications": [
+      "Phát triển Web Docker",
+      "Triển khai Kubernetes (K8s)",
+      "Đồng bộ môi trường Dev/Prod"
+    ],
+    "id": "cs_z2gb7dv",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Container%20computer%20science%20tutorial"
+  },
+  {
+    "term": "File System",
+    "fullName": "File System",
+    "definition": "Hệ thống tập tin của hệ điều hành chịu trách nhiệm phân tích không gian ổ cứng vật lý thành các File và Folder có cấu trúc cây.",
+    "applications": [
+      "NTFS trên Windows",
+      "EXT4 trên Linux",
+      "APFS trên máy Mac"
+    ],
+    "id": "cs_t5dr1h9",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=File%20System%20computer%20science%20tutorial"
+  },
+  {
+    "term": "System Call",
+    "fullName": "System Call (Syscall)",
+    "definition": "Giao diện phần mềm để một chương trình ứng dụng người dùng (User Mode) yêu cầu hệ điều hành nhân (Kernel Mode) thực hiện các tác vụ đặc quyền.",
+    "applications": [
+      "Đọc/ghi file ra ổ cứng",
+      "Tạo luồng tiến trình mới",
+      "Mở cổng mạng Socket"
+    ],
+    "id": "cs_8mxziw3",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=System%20Call%20computer%20science%20tutorial"
+  },
+  {
+    "term": "RDBMS",
+    "fullName": "Relational Database Management System",
+    "definition": "Hệ quản trị cơ sở dữ liệu quan hệ, dữ liệu lưu trong các bảng (hàng, cột) liên kết với nhau thông qua khóa ngoại chặt chẽ.",
+    "applications": [
+      "MySQL",
+      "PostgreSQL",
+      "Oracle Database"
+    ],
+    "id": "cs_eoe0okj",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RDBMS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "NoSQL",
+    "fullName": "Not Only SQL Database",
+    "definition": "Các loại cơ sở dữ liệu phi quan hệ, lưu trữ dữ liệu dưới dạng linh hoạt (Tài liệu, Key-Value, Đồ thị) giúp mở rộng ngang dễ dàng.",
+    "applications": [
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "id": "cs_t58dtb5",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=NoSQL%20computer%20science%20tutorial"
+  },
+  {
+    "term": "SQL",
+    "fullName": "Structured Query Language",
+    "definition": "Ngôn ngữ truy vấn có cấu trúc, chuẩn công nghiệp để giao tiếp, chèn, xóa và truy xuất dữ liệu từ các RDBMS.",
+    "applications": [
+      "Phân tích dữ liệu Data Analyst",
+      "Viết câu truy vấn JOIN",
+      "Báo cáo thông minh BI"
+    ],
+    "id": "cs_0zwqtcc",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SQL%20computer%20science%20tutorial"
+  },
+  {
+    "term": "ACID",
+    "fullName": "Atomicity, Consistency, Isolation, Durability",
+    "definition": "4 tính chất cốt lõi (Nguyên tử, Nhất quán, Cô lập, Bền vững) đảm bảo mọi giao dịch cơ sở dữ liệu luôn đáng tin cậy tuyệt đối.",
+    "applications": [
+      "Chuyển khoản ngân hàng",
+      "Giao dịch thanh toán giỏ hàng",
+      "Đảm bảo không mất tiền khi cúp điện"
+    ],
+    "id": "cs_vtyiih6",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=ACID%20computer%20science%20tutorial"
+  },
+  {
+    "term": "CAP Theorem",
+    "fullName": "CAP Theorem",
+    "definition": "Định lý CAP chứng minh hệ thống phân tán chỉ có thể chọn tối đa 2 trong 3 tính chất: Consistency (Nhất quán), Availability (Sẵn sàng) và Partition Tolerance (Chịu chia cắt).",
+    "applications": [
+      "Thiết kế cấu trúc NoSQL",
+      "Cân nhắc đánh đổi hệ thống Blockchain",
+      "Thiết kế Data Center đa vùng"
+    ],
+    "id": "cs_v1ijjr9",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CAP%20Theorem%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Sharding",
+    "fullName": "Database Sharding",
+    "definition": "Kỹ thuật phân mảnh cơ sở dữ liệu theo chiều ngang, chia một bảng dữ liệu siêu khổng lồ ra thành nhiều máy chủ DB nhỏ hơn.",
+    "applications": [
+      "Mở rộng cơ sở dữ liệu Facebook",
+      "Lưu trữ tin nhắn Twitter",
+      "MongoDB Sharded Cluster"
+    ],
+    "id": "cs_11yg4lg",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Sharding%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Replication",
+    "fullName": "Database Replication",
+    "definition": "Bản sao lưu dữ liệu tự động giữa một máy chủ Master sang nhiều máy chủ Slave để đảm bảo dự phòng và chia sẻ tải đọc.",
+    "applications": [
+      "Đảm bảo tính sẵn sàng cao (HA)",
+      "Đọc dữ liệu nhanh hơn (Read Replica)",
+      "Khôi phục thảm họa (Disaster Recovery)"
+    ],
+    "id": "cs_24nc06l",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Replication%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Normalization",
+    "fullName": "Database Normalization (Chuẩn hóa)",
+    "definition": "Quy trình thiết kế bảng DB nhằm giảm thiểu tối đa việc lặp lại dữ liệu thừa và tránh các dị thường khi thêm/xóa/sửa.",
+    "applications": [
+      "Thiết kế cấu trúc DB 3NF",
+      "Thiết kế phần mềm kế toán",
+      "Quản lý kho bãi ERP"
+    ],
+    "id": "cs_aeu3cyq",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Normalization%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Foreign Key",
+    "fullName": "Foreign Key (Khóa ngoại)",
+    "definition": "Một trường trong bảng CSDL quan hệ tham chiếu trực tiếp tới Khóa chính (Primary Key) của một bảng khác tạo thành mối quan hệ chặt chẽ.",
+    "applications": [
+      "Liên kết User với Order",
+      "Kiểm tra ràng buộc toàn vẹn",
+      "Xóa tầng Cascade Delete"
+    ],
+    "id": "cs_sze09d7",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Foreign%20Key%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Primary Key",
+    "fullName": "Primary Key (Khóa chính)",
+    "definition": "Định danh độc nhất vô nhị (không được trùng, không được Null) dành cho mỗi bản ghi trong một bảng cơ sở dữ liệu.",
+    "applications": [
+      "Cột ID tự tăng",
+      "Mã số sinh viên/Căn cước công dân",
+      "Lập chỉ mục tìm kiếm cực nhanh"
+    ],
+    "id": "cs_dacu74r",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Primary%20Key%20computer%20science%20tutorial"
+  },
+  {
+    "term": "MapReduce",
+    "fullName": "MapReduce Framework",
+    "definition": "Mô hình lập trình phân tán kinh điển của Google dùng để xử lý dữ liệu lớn bằng cách ánh xạ (Map) và thu gọn (Reduce) song song.",
+    "applications": [
+      "Apache Hadoop",
+      "Đếm tần suất xuất hiện từ khóa Web",
+      "Phân tích nhật ký log Big Data"
+    ],
+    "id": "cs_ovks46g",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=MapReduce%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Hadoop",
+    "fullName": "Apache Hadoop",
+    "definition": "Hệ sinh thái mã nguồn mở nổi tiếng nhất dùng lưu trữ và phân tích khối lượng Dữ liệu lớn (Big Data) trên các cụm máy tính phần cứng rẻ tiền.",
+    "applications": [
+      "Lưu trữ HDFS",
+      "Hệ thống gợi ý mua hàng",
+      "Phân tích mạng xã hội"
+    ],
+    "id": "cs_7mwesrh",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Hadoop%20computer%20science%20tutorial"
+  },
+  {
+    "term": "RESTful API",
+    "fullName": "RESTful Web Services",
+    "definition": "Phong cách thiết kế API chuẩn mực trên web sử dụng danh từ thay vì động từ và kết hợp cùng phương thức HTTP chuẩn GET/POST/PUT/DELETE.",
+    "applications": [
+      "Kết nối Frontend React với Backend",
+      "Cung cấp Public API cho lập trình viên",
+      "Kiến trúc Web App hiện đại"
+    ],
+    "id": "cs_8qpqrsp",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RESTful%20API%20computer%20science%20tutorial"
+  },
+  {
+    "term": "RPC",
+    "fullName": "Remote Procedure Call",
+    "definition": "Gọi hàm từ xa. Kỹ thuật cho phép một chương trình gọi thủ tục chạy trên một máy tính khác thông qua mạng cứ như thể gọi hàm ở máy cục bộ.",
+    "applications": [
+      "Giao thức gRPC của Google",
+      "Hệ thống Microservices tốc độ cao",
+      "Thực thi hàm phân tán"
+    ],
+    "id": "cs_2v6hl9a",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=RPC%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Message Queue",
+    "fullName": "Message Queue",
+    "definition": "Hàng đợi thông điệp là các phần mềm trung gian nhận, lưu giữ tạm thời và phân phối các gói tin từ dịch vụ này sang dịch vụ khác giúp giảm tải bất đồng bộ.",
+    "applications": [
+      "Kafka, RabbitMQ, SQS",
+      "Xử lý ảnh Upload ngầm",
+      "Hệ thống gửi Email hàng loạt"
+    ],
+    "id": "cs_9jn22y5",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Message%20Queue%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Distributed Sys",
+    "fullName": "Distributed System",
+    "definition": "Hệ thống phân tán bao gồm rất nhiều máy tính độc lập liên kết qua mạng, hoạt động và phối hợp trông như một máy tính lớn duy nhất.",
+    "applications": [
+      "Mạng lưới Blockchain",
+      "Đám mây máy tính AWS",
+      "Mạng chia sẻ Torrent P2P"
+    ],
+    "id": "cs_0gyl23g",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Distributed%20Sys%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Consensus",
+    "fullName": "Consensus Algorithm (Đồng thuận)",
+    "definition": "Thuật toán giúp mạng lưới các máy tính không tin cậy nhau đạt được một thỏa thuận chung về trạng thái của hệ thống.",
+    "applications": [
+      "Proof of Work (Bitcoin)",
+      "Giao thức Raft cho máy chủ phân tán",
+      "Đồng thuận Proof of Stake"
+    ],
+    "id": "cs_tqyq6a2",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Consensus%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Blockchain",
+    "fullName": "Blockchain Technology",
+    "definition": "Sổ cái điện tử phân tán, bất biến, mã hóa chặt chẽ nối với nhau bằng mã băm, không một máy chủ trung tâm nào thao túng được.",
+    "applications": [
+      "Tiền mã hóa Crypto",
+      "Truy xuất nguồn gốc chuỗi cung ứng nông sản",
+      "Hợp đồng thông minh Smart Contract"
+    ],
+    "id": "cs_hae0hw3",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Blockchain%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Paxos",
+    "fullName": "Paxos Algorithm",
+    "definition": "Giao thức đồng thuận phân tán phức tạp nổi tiếng được nghiên cứu đầu tiên để giải quyết vấn đề đồng ý trạng thái trong mạng lỗi.",
+    "applications": [
+      "Apache ZooKeeper",
+      "Hệ thống Google Chubby Lock",
+      "Cơ sở dữ liệu phân tán Spanner"
+    ],
+    "id": "cs_d7eqwsh",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Paxos%20computer%20science%20tutorial"
+  },
+  {
+    "term": "AI",
+    "fullName": "Artificial Intelligence",
+    "definition": "Trí tuệ nhân tạo, ngành Khoa học Máy tính nhằm tạo ra máy móc có khả năng bắt chước tư duy, nhận thức và giải quyết vấn đề của não người.",
+    "applications": [
+      "Trợ lý ảo thông minh Siri/Alexa",
+      "Cờ vua máy tính đánh bại nhà vô địch",
+      "Bot chăm sóc khách hàng"
+    ],
+    "id": "cs_v9htd1w",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=AI%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Machine Learning",
+    "fullName": "Machine Learning (ML)",
+    "definition": "Nhánh của AI tập trung vào việc tự động học hỏi, cải thiện hiệu suất thông qua phân tích lượng lớn dữ liệu mà không cần lập trình luật cố định.",
+    "applications": [
+      "Gợi ý phim Netflix",
+      "Lọc Email rác Spam",
+      "Nhận diện rủi ro tín dụng ngân hàng"
+    ],
+    "id": "cs_1m3c0t3",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Machine%20Learning%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Deep Learning",
+    "fullName": "Deep Learning",
+    "definition": "Nhánh sâu nhất của ML sử dụng Mạng Nơ-ron nhân tạo đa lớp (Deep Neural Networks) có khả năng tự động trích xuất đặc trưng cực khó.",
+    "applications": [
+      "Nhận diện khuôn mặt FaceID",
+      "Phân tích ung thư qua ảnh chụp X-Quang",
+      "Dịch thuật giọng nói thời gian thực"
+    ],
+    "id": "cs_qhfkji6",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Deep%20Learning%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Neural Network",
+    "fullName": "Artificial Neural Network (ANN)",
+    "definition": "Mạng Nơ-ron nhân tạo lấy cảm hứng từ mạng lưới tế bào thần kinh sinh học con người, cấu tạo từ các Nút và Trọng số toán học.",
+    "applications": [
+      "Thuật toán nhận dạng chữ số viết tay MNIST",
+      "Điều khiển xe tự lái hệ thống thị giác",
+      "Chuyển văn bản thành giọng nói (TTS)"
+    ],
+    "id": "cs_n6317xf",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Neural%20Network%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Supervised",
+    "fullName": "Supervised Learning",
+    "definition": "Học có giám sát, phương pháp AI mà con người phải cung cấp sẵn dữ liệu đầu vào đã được gán nhãn kết quả đúng (Label) để máy học theo.",
+    "applications": [
+      "Dự đoán giá nhà dựa trên diện tích",
+      "Phân loại giống chó mèo từ ảnh",
+      "Nhận diện bệnh tiểu đường"
+    ],
+    "id": "cs_mp2raf0",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Supervised%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Unsupervised",
+    "fullName": "Unsupervised Learning",
+    "definition": "Học không giám sát, máy móc tự động tìm ra các quy luật, sự phân cụm ẩn giấu bên trong một đống dữ liệu hoàn toàn không có nhãn.",
+    "applications": [
+      "Phân khúc khách hàng mua sắm (Clustering)",
+      "Phát hiện giao dịch thẻ tín dụng dị thường",
+      "Giảm chiều dữ liệu PCA"
+    ],
+    "id": "cs_c58ezdi",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Unsupervised%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Reinforcement",
+    "fullName": "Reinforcement Learning",
+    "definition": "Học tăng cường, mô hình đào tạo theo kiểu 'Thử và Sai', AI được thưởng hoặc phạt dựa trên hành động nó thực hiện trong một môi trường ảo.",
+    "applications": [
+      "AI chơi Game AlphaGo",
+      "Robot tự học cách bước đi",
+      "Lập lịch điều hướng giao thông tự động"
+    ],
+    "id": "cs_xtjix7a",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Reinforcement%20computer%20science%20tutorial"
+  },
+  {
+    "term": "NLP",
+    "fullName": "Natural Language Processing",
+    "definition": "Xử lý ngôn ngữ tự nhiên, kỹ thuật giao thoa giữa Ngôn ngữ học và Khoa học máy tính giúp máy móc hiểu, đọc và tạo ra văn bản/giọng nói con người.",
+    "applications": [
+      "Google Dịch",
+      "Phân tích cảm xúc bình luận Facebook",
+      "Chatbot trả lời tự động"
+    ],
+    "id": "cs_ow6llfg",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=NLP%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Computer Vision",
+    "fullName": "Computer Vision",
+    "definition": "Thị giác máy tính, lĩnh vực chuyên biệt giúp AI có thể 'nhìn' và phân tích trích xuất dữ liệu logic từ hình ảnh số hoặc video.",
+    "applications": [
+      "Đọc biển số xe phạt nguội",
+      "Chẩn đoán y tế tự động",
+      "Bảo mật chấm công khuôn mặt"
+    ],
+    "id": "cs_v3zkfv5",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Computer%20Vision%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Generative AI",
+    "fullName": "Generative Artificial Intelligence",
+    "definition": "AI tạo sinh, hệ thống có khả năng tự sáng tạo ra văn bản, hình ảnh, mã code, hoặc video hoàn toàn mới từ lời nhắc văn bản (Prompt).",
+    "applications": [
+      "Vẽ tranh bằng Midjourney/DALL-E",
+      "Viết mã lập trình Copilot",
+      "Tạo giọng nói giả lập Deepfake"
+    ],
+    "id": "cs_2vo1tts",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Generative%20AI%20computer%20science%20tutorial"
+  },
+  {
+    "term": "LLM",
+    "fullName": "Large Language Model",
+    "definition": "Mô hình ngôn ngữ lớn, một dạng AI mạng nơ-ron Transformer được huấn luyện trên hàng nghìn tỷ từ ngữ để hiểu biết sâu sắc văn cảnh loài người.",
+    "applications": [
+      "ChatGPT của OpenAI",
+      "Gemini của Google",
+      "Claude của Anthropic"
+    ],
+    "id": "cs_inx2814",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=LLM%20computer%20science%20tutorial"
+  },
+  {
+    "term": "CI/CD",
+    "fullName": "Continuous Integration / Continuous Deployment",
+    "definition": "Phương pháp kỹ thuật phần mềm tự động hóa toàn bộ khâu kiểm thử (Tích hợp liên tục) và tự động triển khai mã lên máy chủ (Phân phối liên tục).",
+    "applications": [
+      "Quy trình DevOps Github Actions",
+      "Jenkins CI",
+      "Tự động Test App Mobile và Đẩy lên Store"
+    ],
+    "id": "cs_vu355oo",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=CI%2FCD%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Agile",
+    "fullName": "Agile Methodology",
+    "definition": "Phương pháp luận phát triển phần mềm linh hoạt, chia dự án thành các giai đoạn lặp đi lặp lại ngắn (Sprint) để liên tục giao sản phẩm và thích ứng thay đổi.",
+    "applications": [
+      "Quản lý dự án Tech Startup",
+      "Họp Stand-up buổi sáng",
+      "Thích nghi nhanh với yêu cầu khách hàng"
+    ],
+    "id": "cs_o783gai",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Agile%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Scrum",
+    "fullName": "Scrum Framework",
+    "definition": "Khung quản lý quy trình phát triển phổ biến nhất của Agile, định nghĩa rõ ràng các vai trò (Product Owner, Scrum Master, Team) và các sự kiện Sprint.",
+    "applications": [
+      "Quản lý thẻ Jira/Trello",
+      "Họp Retrospective cuối tuần",
+      "Đánh giá Sprint Review"
+    ],
+    "id": "cs_pjuudl7",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Scrum%20computer%20science%20tutorial"
+  },
+  {
+    "term": "DevOps",
+    "fullName": "Development and Operations",
+    "definition": "Văn hóa và tập hợp công nghệ xóa nhòa ranh giới giữa bộ phận Lập trình (Dev) và Vận hành (Ops), giúp ra mắt tính năng nhanh, an toàn hơn.",
+    "applications": [
+      "Kỹ sư hệ thống Cloud",
+      "Quản lý hạ tầng bằng Code (IaC)",
+      "Giám sát Log hệ thống liên tục"
+    ],
+    "id": "cs_01xu97o",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=DevOps%20computer%20science%20tutorial"
+  },
+  {
+    "term": "VCS",
+    "fullName": "Version Control System",
+    "definition": "Hệ thống quản lý phiên bản mã nguồn, ghi lại mọi thay đổi của từng dòng code theo thời gian để có thể khôi phục nhánh bất cứ lúc nào.",
+    "applications": [
+      "Hợp tác lập trình hàng ngàn người",
+      "Git, SVN, Mercurial",
+      "Sao lưu an toàn mã dự án"
+    ],
+    "id": "cs_j5edk9p",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=VCS%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Git",
+    "fullName": "Git Distributed Version Control",
+    "definition": "Công cụ quản lý phiên bản phân tán miễn phí phổ biến nhất thế giới do Linus Torvalds tạo ra, nền tảng của GitHub và GitLab.",
+    "applications": [
+      "Lệnh git commit/push/pull",
+      "Giải quyết Conflict khi gộp mã (Merge)",
+      "Tạo nhánh Branch cho tính năng mới"
+    ],
+    "id": "cs_a6xd3ia",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Git%20computer%20science%20tutorial"
+  },
+  {
+    "term": "Design Patterns",
+    "fullName": "Software Design Patterns",
+    "definition": "Các mẫu thiết kế chuẩn mực kinh điển được đúc kết lại để giải quyết các vấn đề cấu trúc phổ biến khi lập trình phần mềm OOP lớn.",
+    "applications": [
+      "Mẫu Singleton (Duy nhất)",
+      "Mẫu Factory Method (Nhà máy)",
+      "Mẫu Observer (Người quan sát - ReactJS)"
+    ],
+    "id": "cs_df6zf7u",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=Design%20Patterns%20computer%20science%20tutorial"
+  },
+  {
+    "term": "SOLID",
+    "fullName": "SOLID Principles",
+    "definition": "Năm nguyên lý vàng cốt lõi của Lập trình Hướng đối tượng (Single responsibility, Open-closed, Liskov, Interface segregation, Dependency inversion) giúp mã dễ bảo trì.",
+    "applications": [
+      "Viết mã sạch (Clean Code)",
+      "Kiến trúc hệ thống lớn",
+      "Nguyên tắc thiết kế Backend Java/C#"
+    ],
+    "id": "cs_4dcjt28",
+    "category": "Khoa học máy tính",
+    "youtubeUrl": "https://www.youtube.com/results?search_query=SOLID%20computer%20science%20tutorial"
   }
 ]
