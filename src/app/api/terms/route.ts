@@ -2,7 +2,22 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+// Memory cache for all terms
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let cachedTerms: any[] | null = null;
+
+function removeAccents(str: string): string {
+    if (!str) return '';
+    return str
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D');
+}
+
 function getAllTerms() {
+    if (cachedTerms) return cachedTerms;
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let allTerms: any[] = [];
     const categoriesDir = path.join(process.cwd(), 'public/data/categories');
@@ -18,12 +33,14 @@ function getAllTerms() {
             }
         }
     }
+    cachedTerms = allTerms;
     return allTerms;
 }
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
-    const query = (searchParams.get('q') || '').toLowerCase();
+    const rawQuery = searchParams.get('q') || '';
+    const query = removeAccents(rawQuery).toLowerCase();
     const category = searchParams.get('category') || 'all';
 
     let results = getAllTerms();
@@ -33,11 +50,19 @@ export async function GET(request: Request) {
     }
 
     if (query) {
-        results = results.filter(t => 
-            t.term.toLowerCase().includes(query) || 
-            (t.fullName && t.fullName.toLowerCase().includes(query)) ||
-            (t.definition && t.definition.toLowerCase().includes(query))
-        );
+        results = results.filter(t => {
+            const termRaw = t.term || '';
+            const fullNameRaw = t.fullName || '';
+            const defRaw = t.definition || '';
+            const appsRaw = t.applications ? t.applications.join(' ') : '';
+            
+            const termMatches = removeAccents(termRaw).toLowerCase().includes(query);
+            const fullNameMatches = removeAccents(fullNameRaw).toLowerCase().includes(query);
+            const defMatches = removeAccents(defRaw).toLowerCase().includes(query);
+            const appsMatches = removeAccents(appsRaw).toLowerCase().includes(query);
+
+            return termMatches || fullNameMatches || defMatches || appsMatches;
+        });
     }
 
     return NextResponse.json(results);

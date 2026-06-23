@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.14.0] - 2026-06-23
+
+### Added
+- Bổ sung Phase 18 (Search Optimization & Caching).
+- Triển khai ENH-001 để tối ưu thuật toán tìm kiếm tiếng Việt không dấu.
+- Cập nhật đồng bộ hệ thống lên 0.14.0.
+
 ## [0.10.0] - 2026-06-23
 
 ### Changed

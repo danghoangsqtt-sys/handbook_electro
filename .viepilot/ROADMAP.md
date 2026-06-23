@@ -77,3 +77,8 @@
 - [x] Auto-gen Logo/Favicon cho website bằng mô hình AI.
 - [x] Tích hợp icon vào Next.js App Router metadata.
 - [x] Cập nhật giao diện thanh điều hướng để hiển thị Logo nếu cần.
+
+### Phase 18: Search Optimization & Caching
+- [x] Xây dựng tiện ích `removeAccents` để hỗ trợ tìm kiếm không dấu Tiếng Việt.
+- [x] Cập nhật API tìm kiếm để quét dữ liệu mảng `applications`.
+- [x] Triển khai cơ chế Memory Cache cho danh sách thuật ngữ, thay thế thao tác đọc file I/O đồng bộ.

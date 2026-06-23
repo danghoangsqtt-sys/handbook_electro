@@ -1,7 +1,7 @@
 # Progress Tracker
 
 ## Current State
-- **Phase 17 (Project Branding):** Đã hoàn tất việc tự động tạo Logo bằng AI và thiết lập thành công Favicon cho ứng dụng web.
+- **Phase 18 (Search Optimization):** Bắt đầu xây dựng cơ chế tìm kiếm tiếng Việt không dấu, bổ sung ứng dụng và bộ nhớ đệm Cache JSON.
 
 ## Progress Overview
 - [x] Phase 1: 100%
@@ -21,6 +21,14 @@
 - [x] Phase 15: 100% (AI Lab UI/UX Premium & Responsive)
 - [x] Phase 16: 100% (AI Lab Advanced Features)
 - [x] Phase 17: 100% (Project Branding & Favicon)
+- [x] Phase 18: 100% (Search Optimization & Caching)
 
 ## Version Info
-- Current Version: 0.13.0 (Minor Bump for Evolution)
+- Current Version: 0.14.0 (Minor Bump for Evolution)
+
+## Backlog
+
+### Pending Requests
+| ID | Type | Title | Priority | Status |
+|----|------|-------|----------|--------|
+| ENH-001 | 🔧 | Cải thiện thuật toán tìm kiếm từ khóa | high | done |

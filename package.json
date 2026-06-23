@@ -1,6 +1,6 @@
 {
   "name": "handbook_electro",
-  "version": "0.10.0",
+  "version": "0.14.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
