@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] - 2026-06-23
+
+### Changed
+- Refactor AI Lab (`AILab.tsx`): Bổ sung tính năng lưu giữ Lịch sử trò chuyện thông qua `localStorage` và thêm nút xóa hội thoại.
+- Refactor Chat API (`route.ts`): Cải tiến gọi API Github bằng biến môi trường `GITHUB_TOKEN` để ngăn chặn lỗi Rate Limit.
+- Cập nhật Project Phase lên Phase 14.
+
 ## [0.9.0] - 2026-06-23
 
 ### Added

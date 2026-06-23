@@ -19,6 +19,7 @@
 - [x] Phase 11: 100% (Manual AI Brainstorm Seed IoT)
 - [x] Phase 12: 100% (Manual AI Brainstorm Seed Computer Science)
 - [x] Phase 13: 100% (Manual AI Brainstorm Seed Mechatronics)
+- [ ] Phase 14: 0% (Đang thực hiện AI Lab Refactoring)
 
 ## Version Info
-- Current Version: 0.9.0
+- Current Version: 0.10.0

@@ -14,12 +14,14 @@ export default function AILab() {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [input, setInput] = useState('');
 
-    const { messages, sendMessage, status, error } = useChat({
+    const { messages, sendMessage, status, error, setMessages } = useChat({
         generateId: () => Math.random().toString(36).substring(2, 15)
     });
     const isLoading = status === 'submitted' || status === 'streaming';
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const formRef = useRef<HTMLFormElement>(null);
+
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         // Check auth status
@@ -27,7 +29,25 @@ export default function AILab() {
             if (res.ok) setAuthenticated(true);
             else setAuthenticated(false);
         });
-    }, []);
+
+        // Load messages from localStorage
+        const saved = localStorage.getItem('ai_lab_messages');
+        if (saved) {
+            try {
+                setMessages(JSON.parse(saved));
+            } catch (e) {
+                console.error("Failed to parse saved messages");
+            }
+        }
+        setIsLoaded(true);
+    }, [setMessages]);
+
+    // Save to localStorage when messages change
+    useEffect(() => {
+        if (isLoaded) {
+            localStorage.setItem('ai_lab_messages', JSON.stringify(messages));
+        }
+    }, [messages, isLoaded]);
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -50,14 +70,28 @@ export default function AILab() {
                         <p className="text-xs text-slate-500 dark:text-slate-400">Powered by Gemini 2.5 Flash</p>
                     </div>
                 </div>
-                <button 
-                    onClick={() => {
-                        fetch(`/api/auth`, { method: 'DELETE' }).then(() => setAuthenticated(false));
-                    }}
-                    className="text-xs px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all font-semibold text-slate-600 dark:text-slate-300"
-                >
-                    Đăng xuất
-                </button>
+                <div className="flex items-center gap-2">
+                    <button 
+                        onClick={() => {
+                            if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử trò chuyện?')) {
+                                setMessages([]);
+                                localStorage.removeItem('ai_lab_messages');
+                            }
+                        }}
+                        className="text-xs px-3 py-1.5 rounded-lg border border-red-200 dark:border-red-900/30 bg-red-50 dark:bg-red-900/10 hover:bg-red-100 dark:hover:bg-red-900/30 text-red-600 dark:text-red-400 transition-all font-semibold"
+                        title="Xóa lịch sử"
+                    >
+                        <i className="fa-solid fa-trash-can mr-1"></i> Xóa
+                    </button>
+                    <button 
+                        onClick={() => {
+                            fetch(`/api/auth`, { method: 'DELETE' }).then(() => setAuthenticated(false));
+                        }}
+                        className="text-xs px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all font-semibold text-slate-600 dark:text-slate-300"
+                    >
+                        Đăng xuất
+                    </button>
+                </div>
             </div>
 
             {/* Chat Area */}

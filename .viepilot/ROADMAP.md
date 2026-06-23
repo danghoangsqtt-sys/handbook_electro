@@ -57,3 +57,7 @@
 ### Phase 13: Mechatronics Data Expansion
 - [x] Bổ sung 100 từ khóa chuyên ngành Cơ điện tử (Robotics, Control, Actuators, Integration).
 - [x] Thực thi tự động bằng kịch bản AI trực tiếp.
+
+### Phase 14: AI Lab Refactoring
+- [ ] Nâng cấp độ ổn định cho tính năng AI Lab (Rate limit Github).
+- [ ] Cải thiện UX Frontend (Lưu lịch sử chat vào localStorage).

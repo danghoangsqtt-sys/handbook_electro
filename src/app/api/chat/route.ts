@@ -21,6 +21,11 @@ export async function POST(request: Request) {
         // Convert UI messages from useChat to ModelMessages that streamText understands
         const coreMessages = await convertToModelMessages(messages);
 
+        const githubHeaders: Record<string, string> = { 'User-Agent': 'AILab-Bot' };
+        if (process.env.GITHUB_TOKEN) {
+            githubHeaders['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`;
+        }
+
         const result = await streamText({
             model: google('gemini-2.5-flash'),
             system: SYSTEM_PROMPT,
@@ -36,7 +41,7 @@ export async function POST(request: Request) {
                         try {
                             // Dùng search repositories thay vì code search vì code search có thể dính rate limit hoặc bắt buộc auth
                             const githubRes = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(query + ' 3d print stl case')}&sort=stars&per_page=3`, {
-                                headers: { 'User-Agent': 'AILab-Bot' }
+                                headers: githubHeaders
                             });
                             
                             let githubRepos: { name: string; repo: string; url: string; description: string }[] = [];
@@ -80,7 +85,7 @@ export async function POST(request: Request) {
                     execute: async ({ query }) => {
                         try {
                             const res = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=stars&per_page=3`, {
-                                headers: { 'User-Agent': 'AILab-Bot' }
+                                headers: githubHeaders
                             });
                             if (!res.ok) return { items: [], error: 'Lỗi khi gọi Github API' };
                             const data = await res.json();
@@ -109,7 +114,7 @@ export async function POST(request: Request) {
                         try {
                             // Fetch README
                             const readmeRes = await fetch(`https://api.github.com/repos/${repoFullName}/readme`, {
-                                headers: { 'User-Agent': 'AILab-Bot' }
+                                headers: githubHeaders
                             });
                             let readmeContent = 'Không tìm thấy file README';
                             if (readmeRes.ok) {
