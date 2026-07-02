@@ -1,6 +1,31 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
 
+// Helper to extract File ID from various GDrive links
+function getGDriveDirectLink(url: string) {
+  if (!url) return '';
+  if (url.includes('drive.google.com/uc')) return url;
+  
+  let fileId = '';
+  // match /d/FILE_ID/
+  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (match && match[1]) {
+    fileId = match[1];
+  } else {
+    // match id=FILE_ID
+    const idMatch = url.match(/id=([a-zA-Z0-9_-]+)/);
+    if (idMatch && idMatch[1]) {
+      fileId = idMatch[1];
+    }
+  }
+  
+  if (fileId) {
+    // lh3.googleusercontent.com/d/FILE_ID is the most reliable way to hotlink GDrive images in 2024+
+    return `https://lh3.googleusercontent.com/d/${fileId}`;
+  }
+  return url;
+}
+
 export default function TermFormModal({ 
   isOpen, 
   onClose, 
@@ -149,12 +174,23 @@ export default function TermFormModal({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Link Youtube (Tùy chọn)</label>
-              <input value={formData.youtubeUrl} onChange={e => setFormData({...formData, youtubeUrl: e.target.value})} placeholder="https://youtube.com/watch?v=..." className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Youtube Video (URL)</label>
+              <input value={formData.youtubeUrl} onChange={e => setFormData({...formData, youtubeUrl: e.target.value})} placeholder="https://youtube.com/..." className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Icon FontAwesome</label>
-              <input value={formData.icon} onChange={e => setFormData({...formData, icon: e.target.value})} placeholder="VD: fa-solid fa-microchip" className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Icon Hình ảnh (URL)</label>
+              <input 
+                value={formData.icon} 
+                onChange={e => setFormData({...formData, icon: e.target.value})} 
+                onBlur={e => {
+                  const directLink = getGDriveDirectLink(e.target.value);
+                  if (directLink !== e.target.value) {
+                    setFormData({...formData, icon: directLink});
+                  }
+                }}
+                placeholder="https://... Tự động nhận diện link Google Drive" 
+                className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              />
             </div>
           </div>
 

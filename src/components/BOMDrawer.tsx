@@ -119,7 +119,7 @@ export default function BOMDrawer() {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0A0A] space-y-3">
+          <div className="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-3">
             <button 
               className="w-full flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg py-2.5 font-bold tracking-wider text-[11px] transition-colors"
             >

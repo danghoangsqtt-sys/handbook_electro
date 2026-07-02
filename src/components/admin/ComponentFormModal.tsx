@@ -20,7 +20,8 @@ function getGDriveDirectLink(url: string) {
   }
   
   if (fileId) {
-    return `https://drive.google.com/uc?export=view&id=${fileId}`;
+    // lh3.googleusercontent.com/d/FILE_ID is the most reliable way to hotlink GDrive images in 2024+
+    return `https://lh3.googleusercontent.com/d/${fileId}`;
   }
   return url;
 }
@@ -166,8 +167,19 @@ export default function ComponentFormModal({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Link Ảnh (Google Drive / URL)</label>
-              <input value={formData.image_url} onChange={e => setFormData({...formData, image_url: e.target.value})} placeholder="Dán link share GDrive..." className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Hình ảnh (URL)</label>
+              <input 
+                value={formData.image_url} 
+                onChange={e => setFormData({...formData, image_url: e.target.value})} 
+                onBlur={e => {
+                  const directLink = getGDriveDirectLink(e.target.value);
+                  if (directLink !== e.target.value) {
+                    setFormData({...formData, image_url: directLink});
+                  }
+                }}
+                placeholder="https://... Tự động nhận diện link Google Drive" 
+                className="w-full border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Link Datasheet PDF</label>

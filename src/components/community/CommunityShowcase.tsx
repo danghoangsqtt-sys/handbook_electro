@@ -82,19 +82,26 @@ function EmptyState({ onAdd, isLoggedIn }: { onAdd: () => void; isLoggedIn: bool
         );
     }
     return (
-        <div className="flex flex-col items-center justify-center py-24 px-4 text-center">
-            <div className="w-20 h-20 rounded-3xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center mb-6">
-                <i className="fa-solid fa-folder-plus text-[#2D9CDB] text-3xl"></i>
+        <div className="flex flex-col items-center justify-center pt-16 pb-12 md:py-20 px-4 text-center mt-4 relative overflow-hidden">
+            {/* Background Blur Effect */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-400/10 dark:bg-blue-600/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            
+            <div className="w-16 h-16 md:w-28 md:h-28 rounded-2xl md:rounded-[2rem] bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 border border-slate-200/80 dark:border-slate-700/80 shadow-[0_10px_40px_rgba(45,156,219,0.15)] flex items-center justify-center mb-4 md:mb-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#2D9CDB]/10 to-[#00D4FF]/10 rounded-2xl md:rounded-[2rem]"></div>
+                <i className="fa-solid fa-folder-plus text-transparent bg-clip-text bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-2xl md:text-5xl drop-shadow-md"></i>
             </div>
-            <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Chưa có dự án nào</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md mb-6">
-                Bắt đầu lưu trữ dự án đầu tiên của bạn. Hãy dùng Phòng Thí Nghiệm AI để tạo dự án hoặc thêm thủ công.
+            
+            <h3 className="text-lg md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 mb-2 md:mb-4">Chưa có dự án nào</h3>
+            
+            <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 max-w-lg mb-8 md:mb-10 leading-relaxed px-4">
+                Bắt đầu lưu trữ dự án điện tử đầu tiên của bạn. Sử dụng <strong className="text-[#2D9CDB]">Phòng Thí Nghiệm AI</strong> để tạo dự án tự động hoặc tạo thủ công.
             </p>
+            
             <button
                 onClick={onAdd}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all"
+                className="flex items-center gap-2 md:gap-3 px-5 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:from-[#2582b5] hover:to-[#00b5d9] text-white font-bold rounded-xl md:rounded-2xl text-sm md:text-base shadow-[0_8px_25px_rgba(45,156,219,0.35)] hover:shadow-[0_15px_35px_rgba(45,156,219,0.45)] transition-all transform hover:-translate-y-1 active:translate-y-0"
             >
-                <i className="fa-solid fa-plus"></i> Thêm Dự Án Mới
+                <i className="fa-solid fa-plus md:text-lg"></i> Tạo Dự Án Mới
             </button>
         </div>
     );
@@ -131,7 +138,10 @@ export default function ProjectLibrary() {
         setLoading(false);
     }, []);
 
-    useEffect(() => { fetchProjects(); }, [fetchProjects]);
+    useEffect(() => { 
+        const timer = setTimeout(() => { fetchProjects(); }, 0);
+        return () => clearTimeout(timer);
+    }, [fetchProjects]);
 
     const handleDelete = async (id: string) => {
         setDeletingId(id);
@@ -175,55 +185,57 @@ export default function ProjectLibrary() {
     const formatDate = (iso: string) => new Date(iso).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#0D1117] pb-20">
+        <div className="min-h-screen bg-slate-50 dark:bg-[#0D1117] pb-32 md:pb-20">
             {/* Page Header */}
-            <div className="bg-white dark:bg-[#0D1117] border-b border-slate-200 dark:border-[#30363D] sticky top-16 z-30">
-                <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="bg-white/80 dark:bg-[#0D1117]/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-[#30363D]/50 sticky top-16 z-30 shadow-sm">
+                <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 md:py-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         {/* Title */}
-                        <div className="flex items-center gap-3 flex-1">
-                            <div className="w-10 h-10 rounded-xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center">
-                                <i className="fa-solid fa-folder-open text-[#2D9CDB]"></i>
+                        <div className="flex items-center gap-3 md:gap-4 flex-1">
+                            <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-2xl bg-gradient-to-br from-[#2D9CDB] to-[#00D4FF] shadow-[0_4px_10px_rgba(45,156,219,0.3)] md:shadow-[0_8px_20px_rgba(45,156,219,0.3)] flex items-center justify-center shrink-0">
+                                <i className="fa-solid fa-folder-open text-white text-sm md:text-2xl"></i>
                             </div>
                             <div>
-                                <h2 className="text-lg font-black text-slate-800 dark:text-slate-100">Thư Viện Dự Án</h2>
-                                <p className="text-xs text-slate-500 dark:text-slate-400">
-                                    {loading ? '...' : `${projects.length} dự án đã lưu`}
+                                <h2 className="text-base md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 leading-tight">Thư Viện Dự Án</h2>
+                                <p className="text-[11px] md:text-base font-medium text-slate-500 dark:text-slate-400 mt-0.5">
+                                    {loading ? 'Đang tải...' : `${projects.length} dự án đã lưu`}
                                 </p>
                             </div>
                         </div>
 
                         {/* Search + Controls */}
-                        <div className="flex items-center gap-2">
-                            <div className="relative">
-                                <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+                            <div className="relative w-full sm:w-auto">
+                                <i className="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
                                 <input
                                     type="text"
                                     value={searchQuery}
                                     onChange={e => setSearchQuery(e.target.value)}
                                     placeholder="Tìm kiếm dự án..."
-                                    className="pl-8 pr-4 py-2 bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 w-44"
+                                    className="pl-10 pr-4 py-2 md:py-2.5 w-full sm:w-64 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB]/50 dark:text-slate-200 transition-all shadow-inner"
                                 />
                             </div>
-                            <select
-                                value={sort}
-                                onChange={e => setSort(e.target.value as SortOption)}
-                                className="px-3 py-2 bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-xs focus:outline-none dark:text-slate-200"
-                            >
-                                <option value="newest">Mới nhất</option>
-                                <option value="oldest">Cũ nhất</option>
-                                <option value="name_az">Tên A-Z</option>
-                            </select>
-
-                            {isLoggedIn && (
-                                <button
-                                    onClick={() => { setEditingProject(null); setShowFormModal(true); }}
-                                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 hover:opacity-90 transition-all whitespace-nowrap"
+                            <div className="flex items-center gap-2 md:gap-3 w-full sm:w-auto">
+                                <select
+                                    value={sort}
+                                    onChange={e => setSort(e.target.value as SortOption)}
+                                    className="px-3 md:px-4 py-2 md:py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none dark:text-slate-200 shadow-sm cursor-pointer w-[40%] sm:w-auto"
                                 >
-                                    <i className="fa-solid fa-plus"></i>
-                                    <span className="hidden sm:inline">Thêm Dự Án</span>
-                                </button>
-                            )}
+                                    <option value="newest">Mới nhất</option>
+                                    <option value="oldest">Cũ nhất</option>
+                                    <option value="name_az">Tên A-Z</option>
+                                </select>
+
+                                {isLoggedIn && (
+                                    <button
+                                        onClick={() => { setEditingProject(null); setShowFormModal(true); }}
+                                        className="flex items-center justify-center gap-1.5 md:gap-2 px-3 md:px-5 py-2 md:py-2.5 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:from-[#2582b5] hover:to-[#00b5d9] text-white font-bold rounded-xl text-xs md:text-sm shadow-[0_8px_20px_rgba(45,156,219,0.3)] hover:shadow-[0_12px_25px_rgba(45,156,219,0.4)] transition-all transform hover:-translate-y-0.5 whitespace-nowrap w-[60%] sm:w-auto"
+                                    >
+                                        <i className="fa-solid fa-plus"></i>
+                                        <span>Thêm Dự Án</span>
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>

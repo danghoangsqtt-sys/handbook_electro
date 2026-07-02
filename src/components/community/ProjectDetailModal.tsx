@@ -120,7 +120,8 @@ export default function ProjectDetailModal({
     const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
     const [schematicFullscreen, setSchematicFullscreen] = useState(false);
     const diagramRef = useRef<HTMLDivElement>(null);
-    const { addItem, setIsProjectStudioOpen } = useBOMStore();
+    const { addItem, setIsProjectStudioOpen, setCurrentProjectId } = useBOMStore();
+    const [isOpening, setIsOpening] = useState(false);
 
     // Parse code_snippets
     const codeSnippets: CodeSnippet[] = (() => {
@@ -155,9 +156,12 @@ export default function ProjectDetailModal({
     // Auto-select best sub-tab when opening diagram tab
     useEffect(() => {
         if (activeTab === 'diagram') {
-            if (project?.schematic_image_url) setDiagramSubTab('schematic');
-            else if (pinConnections.length > 0) setDiagramSubTab('pinout');
-            else setDiagramSubTab('block');
+            const timer = setTimeout(() => {
+                if (project?.schematic_image_url) setDiagramSubTab('schematic');
+                else if (pinConnections.length > 0) setDiagramSubTab('pinout');
+                else setDiagramSubTab('block');
+            }, 0);
+            return () => clearTimeout(timer);
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeTab, project?.id]);
@@ -194,10 +198,49 @@ export default function ProjectDetailModal({
         renderDiagram();
     }, [activeTab, diagramSubTab, project]);
 
-    const handleCloneAll = () => {
-        bomItems.forEach(item => addItem({ ...item, image_url: item.image_url ?? null }));
-        setIsProjectStudioOpen(true);
-        onClose();
+    const handleOpenInAILab = async () => {
+        if (!project) return;
+        setIsOpening(true);
+        try {
+            // Format code snippets back to markdown
+            let sampleCodeStr = '';
+            codeSnippets.forEach(snip => {
+                const label = snip.label ? `// ${snip.label}\n` : '';
+                sampleCodeStr += `${label}\`\`\`${snip.language || 'c'}\n${snip.code}\n\`\`\`\n\n`;
+            });
+
+            const result = {
+                compatibility_analysis: 'Dự án được phục hồi từ Thư Viện.',
+                wiring_diagram: project.diagram_code || '',
+                sample_code: sampleCodeStr.trim()
+            };
+
+            const res = await fetch('/api/project-sessions', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: project.title,
+                    idea: project.description,
+                    items: bomItems,
+                    result: result
+                })
+            });
+            const data = await res.json();
+            if (data && data.id) {
+                setCurrentProjectId(data.id);
+                // Also add items to store as fallback
+                bomItems.forEach(item => addItem({ ...item, image_url: item.image_url ?? null }));
+                setIsProjectStudioOpen(true);
+                onClose();
+            } else {
+                alert('Có lỗi xảy ra khi tạo phiên làm việc mới.');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Lỗi kết nối.');
+        } finally {
+            setIsOpening(false);
+        }
     };
 
     const handleAddSingle = (item: BOMItem) => {
@@ -334,11 +377,12 @@ export default function ProjectDetailModal({
                                     <div className="flex items-center justify-between mb-4">
                                         <span className="text-sm text-slate-500">{bomItems.length} linh kiện</span>
                                         <button
-                                            onClick={handleCloneAll}
-                                            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 transition-all"
+                                            onClick={handleOpenInAILab}
+                                            disabled={isOpening}
+                                            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 transition-all disabled:opacity-50"
                                         >
-                                            <i className="fa-solid fa-code-branch"></i>
-                                            Clone tất cả vào dự án
+                                            <i className={isOpening ? "fa-solid fa-spinner fa-spin" : "fa-solid fa-flask"}></i>
+                                            {isOpening ? 'Đang mở...' : 'Mở trong Phòng Thí Nghiệm'}
                                         </button>
                                     </div>
                                     <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-[#30363D]">

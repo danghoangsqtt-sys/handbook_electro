@@ -90,75 +90,88 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
                     <i className={`fa-solid ${theme === 'dark' ? 'fa-sun text-amber-400' : 'fa-moon text-slate-600'}`}></i>
                 </button>
 
-                {/* Mobile Menu Toggle */}
-                {setActiveTab && (
-                  <button 
-                    onClick={() => setIsMobileMenuOpen(true)}
-                    className="lg:hidden w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors"
-                  >
-                    <i className="fa-solid fa-bars"></i>
-                  </button>
-                )}
             </div>
         </div>
       </header>
 
-      {/* Mobile Side Drawer Menu */}
+      {/* Mobile Bottom Navigation */}
+      {setActiveTab && (
+        <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 lg:hidden px-2 pb-2 pt-2 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
+          <div className="flex items-center justify-around h-14">
+            {[
+              { id: 'components', label: 'Linh Kiện', icon: 'fa-microchip' },
+              { id: 'dictionary', label: 'Từ Điển', icon: 'fa-language' },
+              { id: 'labs', label: 'AI Lab', icon: 'fa-vial' },
+              { id: 'quiz', label: 'Flashcard', icon: 'fa-layer-group' },
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => { if (setActiveTab) setActiveTab(tab.id as NonNullable<HeaderProps['activeTab']>); setIsMobileMenuOpen(false); }}
+                className={`flex flex-col items-center justify-center w-full h-full gap-1 transition-all ${
+                  activeTab === tab.id 
+                    ? 'text-blue-600 dark:text-blue-400' 
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                }`}
+              >
+                <div className={`w-8 h-8 flex items-center justify-center rounded-xl transition-all ${activeTab === tab.id ? 'bg-blue-50 dark:bg-blue-500/10' : ''}`}>
+                  <i className={`fa-solid ${tab.icon} ${activeTab === tab.id ? 'text-lg' : 'text-base'}`}></i>
+                </div>
+                <span className="text-[10px] font-semibold">{tab.label}</span>
+              </button>
+            ))}
+            
+            {/* Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`flex flex-col items-center justify-center w-full h-full gap-1 transition-all ${
+                isMobileMenuOpen
+                  ? 'text-blue-600 dark:text-blue-400' 
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+              }`}
+            >
+              <div className={`w-8 h-8 flex items-center justify-center rounded-xl transition-all ${isMobileMenuOpen ? 'bg-blue-50 dark:bg-blue-500/10' : ''}`}>
+                <i className={`fa-solid fa-bars ${isMobileMenuOpen ? 'text-lg' : 'text-base'}`}></i>
+              </div>
+              <span className="text-[10px] font-semibold">Thêm</span>
+            </button>
+          </div>
+        </nav>
+      )}
+
+      {/* Mobile Bottom Sheet (Menu Mở rộng) */}
       {isMobileMenuOpen && setActiveTab && (
-        <div className="fixed inset-0 z-50 lg:hidden flex">
+        <div className="fixed inset-0 z-40 lg:hidden flex flex-col justify-end">
           {/* Backdrop */}
           <div 
-            className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" 
+            className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm animate-fade-in" 
             onClick={() => setIsMobileMenuOpen(false)}
           ></div>
           
-          {/* Drawer */}
-          <div className="relative w-4/5 max-w-sm h-full bg-white dark:bg-slate-900 shadow-2xl flex flex-col ml-auto animate-slide-in-right">
-            <div className="p-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-950">
-              <h2 className="font-bold text-slate-900 dark:text-white">Menu Điều Hướng</h2>
-              <button 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-400"
+          {/* Sheet Content */}
+          <div className="relative w-full bg-white dark:bg-slate-900 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)] flex flex-col animate-fade-in pb-24 pt-4">
+            <div className="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-4"></div>
+            
+            <div className="px-6 flex flex-col gap-4">
+              <h3 className="font-bold text-slate-900 dark:text-white mb-2">Chức năng mở rộng</h3>
+              
+              <button
+                onClick={() => {
+                  setActiveTab('community');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full p-4 rounded-2xl text-left font-semibold text-sm transition-all flex items-center gap-4 border border-slate-100 dark:border-slate-800 shadow-sm ${
+                  activeTab === 'community' 
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 border-blue-200 dark:border-blue-800' 
+                    : 'text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 bg-white dark:bg-slate-900'
+                }`}
               >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-            
-            <div className="p-4 flex flex-col gap-2 overflow-y-auto custom-scrollbar">
-              {[
-                { id: 'components', label: 'Thư viện Linh kiện', icon: 'fa-microchip' },
-                { id: 'dictionary', label: 'Tra Cứu Từ Điển', icon: 'fa-language' },
-                { id: 'labs', label: 'Phòng Thí Nghiệm AI', icon: 'fa-vial' },
-                { id: 'quiz', label: 'Flashcard', icon: 'fa-layer-group' },
-                { id: 'community', label: 'Thư Viện Dự Án', icon: 'fa-folder-open' },
-                { id: 'profile', label: 'Hồ sơ cá nhân', icon: 'fa-user' }
-              ].map(tab => (
-                <button
-                  key={tab.id}
-                  onClick={() => {
-                    setActiveTab(tab.id as 'components' | 'dictionary' | 'labs' | 'quiz' | 'community' | 'profile');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`w-full p-3 md:p-4 rounded-xl text-left font-semibold text-sm transition-all flex items-center gap-3 ${
-                    activeTab === tab.id 
-                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10' 
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
-                  }`}
-                >
-                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${activeTab === tab.id ? 'bg-blue-100 dark:bg-blue-900/50' : 'bg-slate-100 dark:bg-slate-800'}`}>
-                    <i className={`fa-solid ${tab.icon}`}></i>
-                  </div>
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-            
-            <div className="mt-auto p-4 border-t border-slate-200 dark:border-slate-800">
-              <button className="w-full p-3 rounded-xl text-left font-bold text-sm transition-all flex items-center gap-3 text-white bg-gradient-to-r from-emerald-500 to-emerald-400 shadow-md">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/20">
-                    <i className="fa-solid fa-layer-group"></i>
-                  </div>
-                  Flashcard Ngẫu Nhiên
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${activeTab === 'community' ? 'bg-blue-100 dark:bg-blue-900/50' : 'bg-slate-100 dark:bg-slate-800'}`}>
+                  <i className="fa-solid fa-folder-open text-lg"></i>
+                </div>
+                <div>
+                    <div className="text-base">Thư Viện Dự Án</div>
+                    <div className="text-xs text-slate-500 font-normal mt-0.5">Cộng đồng chia sẻ dự án IoT</div>
+                </div>
               </button>
             </div>
           </div>

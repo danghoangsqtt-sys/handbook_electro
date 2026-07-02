@@ -133,7 +133,7 @@ export default function ComponentLibrary() {
       <main className="flex-1 min-w-0">
         <div className="sticky top-0 z-30 -mx-4 px-4 sm:mx-0 sm:px-0 py-4 mb-6 bg-slate-50/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <i className="fa-solid fa-microchip text-blue-600"></i>
               Thư viện Linh kiện
             </h1>
@@ -149,12 +149,12 @@ export default function ComponentLibrary() {
                 placeholder="Tìm kiếm linh kiện..." 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white shadow-sm transition-shadow focus:shadow-blue-500/20"
+                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg pl-9 sm:pl-10 pr-3 sm:pr-4 py-2 sm:py-2.5 text-[13px] sm:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-900 dark:text-white shadow-sm transition-shadow focus:shadow-blue-500/20"
               />
-              <i className="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <i className="fa-solid fa-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
             </div>
-            <button onClick={() => setIsFilterOpen(true)} className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800/50 flex-shrink-0 transition-colors">
-              <i className="fa-solid fa-filter"></i>
+            <button onClick={() => setIsFilterOpen(true)} className="md:hidden flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800/50 flex-shrink-0 transition-colors">
+              <i className="fa-solid fa-filter text-sm"></i>
             </button>
           </div>
         </div>

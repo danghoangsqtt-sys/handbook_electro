@@ -93,7 +93,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
             const validPins = pinRows.filter(r => r.component.trim() && r.component_pin.trim() && r.mcu_pin.trim());
 
             // Parse code snippets (support JSON or plain string)
-            let parsedCode: string | null = codeSnippets.trim() || null;
+            const parsedCode: string | null = codeSnippets.trim() || null;
 
             setUploadProgress(mode === 'add' ? 'Đang lưu dự án...' : 'Đang cập nhật...');
 

@@ -50,4 +50,10 @@
 | FEAT-004 | ✨ | AI Project Studio (Phân tích BOM, Sơ đồ Mermaid, Code mẫu) | high | done |
 | FEAT-005 | ✨ | AI phân tích hình ảnh sơ đồ mạch | high | planned |
 | FEAT-006 | ✨ | Chuyển đổi mã PIN thành hệ thống Account thực (Email/OAuth) | high | planned |
+| FEAT-007 | ✨ | Admin: Thêm tính năng Search và cải thiện UI Sort | medium | done |
+| FEAT-008 | ✨ | Admin: Thêm bộ lọc phân loại (Category Filter) | medium | done |
+| FEAT-009 | ✨ | Tối ưu hoá giao diện Admin cho thiết bị di động (Mobile UI) | high | done |
+| FEAT-010 | ✨ | Tối ưu hoá Typography và Density trên Mobile UI (theo chuẩn vp-frontend-design) | high | done |
+| FEAT-011 | ✨ | Tái thiết kế Giao diện Admin (Refined Modern Elegance) | high | planned |
 | ENH-002 | 🔧 | Thay thế Quiz cũ bằng dạng Flashcard lật thẻ | medium | planned |
+| ENH-003 | 🔧 | Admin: Thêm tính năng Sort bảng và đổi màu xanh dương đậm | medium | done |

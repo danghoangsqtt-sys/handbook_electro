@@ -80,13 +80,13 @@ export default function ProjectStudioWorkspace() {
 
   const handleAnalyze = async () => {
     if (projectItems.length === 0) {
-      setError('Vui l├▓ng th├¬m linh kiß╗çn v├áo dß╗▒ ├ín tr╞░ß╗¢c khi ph├ón t├¡ch.');
+      setError('Vui lòng thêm linh kiện vào dự án trước khi phân tích.');
       return;
     }
 
     const currentHash = JSON.stringify(projectItems) + '|' + projectIdea;
     if (currentHash === lastAnalyzedHash && result) {
-      alert("Dß╗» liß╗çu kh├┤ng thay ─æß╗òi. Vui l├▓ng th├¬m linh kiß╗çn hoß║╖c sß╗¡a ├╜ t╞░ß╗ƒng ─æß╗â ph├ón t├¡ch lß║íi!");
+      alert("Dữ liệu không thay đổi. Vui lòng thêm linh kiện hoặc sửa ý tưởng để phân tích lại!");
       return;
     }
 
@@ -101,8 +101,8 @@ export default function ProjectStudioWorkspace() {
       });
 
       if (!res.ok) {
-         if (res.status === 429) throw new Error('Hß╗ç thß╗æng AI ─æang qu├í tß║úi. Vui l├▓ng thß╗¡ lß║íi sau gi├óy l├ít!');
-         throw new Error('C├│ lß╗ùi xß║úy ra khi kß║┐t nß╗æi vß╗¢i AI.');
+         if (res.status === 429) throw new Error('Hệ thống AI đang quá tải. Vui lòng thử lại sau giây lát!');
+         throw new Error('Có lỗi xảy ra khi kết nối với AI.');
       }
 
       const data = await res.json();
@@ -110,7 +110,7 @@ export default function ProjectStudioWorkspace() {
       setActiveTab('overview');
       setLastAnalyzedHash(currentHash);
 
-      const sessionTitle = `Dß╗▒ ├ín: ${projectIdea || projectItems.map(i => i.name).join(', ')}`.substring(0, 40);
+      const sessionTitle = `Dự án: ${projectIdea || projectItems.map(i => i.name).join(', ')}`.substring(0, 40);
       const saveRes = await fetch('/api/project-sessions', {
         method: currentProjectId ? 'PATCH' : 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -130,7 +130,7 @@ export default function ProjectStudioWorkspace() {
           window.dispatchEvent(new Event('reloadSessions'));
       }
     } catch (err) {
-      setError((err as Error).message || 'Lß╗ùi kh├┤ng x├íc ─æß╗ïnh.');
+      setError((err as Error).message || 'Lỗi không xác định.');
     } finally {
       setIsLoading(false);
     }
@@ -156,13 +156,13 @@ export default function ProjectStudioWorkspace() {
     return <code className={`${className} bg-slate-800 px-1.5 py-0.5 rounded text-cyan-400 text-sm font-mono`} {...props}>{children}</code>;
   };
   return (
-    <div className="flex-1 flex flex-col w-full h-full bg-white dark:bg-[#0A0A0A] overflow-hidden text-slate-700 dark:text-slate-300 font-sans relative z-10">
+    <div className="flex-1 flex flex-col w-full h-full bg-white dark:bg-slate-900 overflow-hidden text-slate-700 dark:text-slate-300 font-sans relative z-10">
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
         {/* Left Panel: Explorer */}
-        <div className="w-full md:w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#050505] flex flex-col flex-shrink-0">
-          <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-100/50 dark:bg-[#0A0A0A]">
+        <div className={`w-full md:w-64 md:h-auto md:max-h-none border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 flex flex-col flex-shrink-0 ${!result && !isLoading ? 'flex-1' : 'h-[45vh]'}`}>
+          <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-100/50 dark:bg-slate-900">
             <h3 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
-              Giß╗Å Linh Kiß╗çn
+              Giỏ Linh Kiện
             </h3>
             <div className="flex items-center gap-2">
               <span className="text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-1.5 py-0.5 rounded font-mono">
@@ -170,19 +170,36 @@ export default function ProjectStudioWorkspace() {
               </span>
               <button
                 onClick={() => {
-                  const header = ['ID,T├¬n Linh Kiß╗çn,Danh Mß╗Ñc,Sß╗æ L╞░ß╗úng'];
-                  const rows = projectItems.map(item => `${item.id},"${item.name}","${item.category}",${item.quantity}`);
-                  const csvContent = "data:text/csv;charset=utf-8,\uFEFF" + header.concat(rows).join("\n");
-                  const encodedUri = encodeURI(csvContent);
+                  const date = new Date().toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                  const projectName = projectIdea ? projectIdea.replace(/"/g, '""') : 'Dự án mới';
+                  
+                  let csvStr = `"BẢNG KÊ LINH KIỆN (BOM) - PROJECT STUDIO"\n`;
+                  csvStr += `"Ngày xuất:","${date}"\n`;
+                  csvStr += `"Dự án:","${projectName}"\n\n`;
+                  
+                  csvStr += `"STT","Mã ID","Tên Linh Kiện","Danh Mục","Số Lượng","Đơn Vị","Trạng Thái","Ghi Chú","Link Tham Khảo"\n`;
+                  
+                  projectItems.forEach((item, index) => {
+                    const name = item.name.replace(/"/g, '""');
+                    const category = (item.category || '').replace(/"/g, '""');
+                    const link = item.shopee_link || '';
+                    csvStr += `"${index + 1}","${item.id}","${name}","${category}","${item.quantity}","Cái","[ ] Chưa mua","","${link}"\n`;
+                  });
+                  
+                  csvStr += `\n"Tổng cộng:","${projectItems.length} loại linh kiện"`;
+                  
+                  const blob = new Blob(["\uFEFF" + csvStr], { type: 'text/csv;charset=utf-8;' });
+                  const url = URL.createObjectURL(blob);
                   const link = document.createElement("a");
-                  link.setAttribute("href", encodedUri);
-                  link.setAttribute("download", "bom_export.csv");
+                  link.setAttribute("href", url);
+                  link.setAttribute("download", `BOM_Export_${date.replace(/\//g, '')}.csv`);
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
+                  URL.revokeObjectURL(url);
                 }}
                 className="text-slate-400 hover:text-green-500 transition-colors"
-                title="Xuß║Ñt Danh S├ích (CSV)"
+                title="Xuất Danh Sách (CSV)"
               >
                 <i className="fa-solid fa-file-csv"></i>
               </button>
@@ -191,7 +208,7 @@ export default function ProjectStudioWorkspace() {
                   onClick={() => {
                      // eslint-disable-next-line @typescript-eslint/no-unused-vars
                      projectItems.forEach(({ quantity, ...rest }) => addItem(rest));
-                     alert("─É├ú th├¬m to├án bß╗Ö linh kiß╗çn cß╗ºa dß╗▒ ├ín n├áy v├áo Giß╗Å h├áng hiß╗çn tß║íi!");
+                     alert("Đã thêm toàn bộ linh kiện của dự án này vào Giỏ hàng hiện tại!");
                   }}
                   className="text-slate-400 hover:text-cyan-500 transition-colors"
                   title="Copy to Cart"
@@ -221,11 +238,11 @@ export default function ProjectStudioWorkspace() {
               </div>
             ))}
             {projectItems.length === 0 && (
-              <p className="text-[10px] text-slate-500 italic px-4 mt-2">Ch╞░a c├│ linh kiß╗çn n├áo.</p>
+              <p className="text-[10px] text-slate-500 italic px-4 mt-2">Chưa có linh kiện nào.</p>
             )}
 
             <div className="mt-4 border-t border-slate-200 dark:border-slate-800">
-               <div className="px-4 py-2 bg-slate-100/50 dark:bg-[#0A0A0A] border-b border-slate-200 dark:border-slate-800">
+               <div className="px-4 py-2 bg-slate-100/50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
                  <h3 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
                    Project Context
                  </h3>
@@ -242,7 +259,7 @@ export default function ProjectStudioWorkspace() {
             </div>
           </div>
 
-          <div className="p-2 border-t border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-[#0A0A0A]">
+          <div className="p-2 border-t border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900">
             <button
               onClick={handleAnalyze}
               disabled={isLoading || projectItems.length === 0}
@@ -258,19 +275,19 @@ export default function ProjectStudioWorkspace() {
         </div>
 
         {/* Right Panel: Editor Area */}
-        <div className="flex-1 flex flex-col min-w-0 bg-white dark:bg-[#0A0A0A] relative">
+        <div className={`flex-1 flex-col min-w-0 bg-white dark:bg-slate-900 relative overflow-hidden ${!result && !isLoading ? 'hidden md:flex' : 'flex'}`}>
           {!result && !isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-50/50 dark:from-cyan-900/10 via-slate-50 dark:via-[#0A0A0A] to-slate-50 dark:to-[#0A0A0A]">
-              <i className="fa-solid fa-code text-cyan-500/30 dark:text-cyan-500/10 text-6xl mb-6"></i>
-              <h3 className="text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest mb-3">Workspace Ready</h3>
-              <p className="text-slate-400 dark:text-slate-500 text-xs font-mono max-w-sm leading-relaxed">
-                Th├¬m linh kiß╗çn v├áo <span className="text-cyan-600 dark:text-cyan-400">Giß╗Å Linh Kiß╗çn</span> v├á nhß║Ñn <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> ─æß╗â tß║ío s╞í ─æß╗ô mß║ích v├á code.
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 sm:p-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-50/50 dark:from-cyan-900/10 via-slate-50 dark:via-slate-900 to-slate-50 dark:to-slate-900">
+              <i className="fa-solid fa-code text-cyan-500/30 dark:text-cyan-500/10 text-6xl mb-4 sm:mb-6 hidden sm:block"></i>
+              <h3 className="text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest mb-2 sm:mb-3">Workspace Ready</h3>
+              <p className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-xs font-mono max-w-sm leading-relaxed">
+                Thêm linh kiện vào <span className="text-cyan-600 dark:text-cyan-400">Giỏ Linh Kiện</span> và nhấn <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> để tạo sơ đồ mạch.
               </p>
             </div>
           )}
 
           {isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 dark:bg-[#0A0A0A]/80 backdrop-blur-sm z-10 font-mono">
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm z-10 font-mono">
               <div className="text-cyan-500 flex gap-2 text-xl mb-4">
                 <i className="fa-solid fa-terminal animate-pulse"></i>
               </div>
@@ -283,7 +300,7 @@ export default function ProjectStudioWorkspace() {
           {result && !isLoading && (
             <>
               {/* Tabs Header (VS Code Style) */}
-              <div className="flex border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#050505] overflow-x-auto custom-scrollbar flex-shrink-0 items-center justify-between">
+              <div className="flex border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 overflow-x-auto custom-scrollbar flex-shrink-0 items-center justify-between">
                 <div className="flex">
                   {[
                     { id: 'overview', icon: 'fa-info-circle', label: 'readme.md' },
@@ -296,8 +313,8 @@ export default function ProjectStudioWorkspace() {
                       onClick={() => setActiveTab(tab.id as 'overview' | 'wiring' | 'code' | 'buy')}
                       className={`px-4 py-2.5 font-mono text-[11px] tracking-wide transition-colors border-t-2 border-r border-r-slate-200 dark:border-r-slate-800 flex items-center gap-2 whitespace-nowrap ${
                         activeTab === tab.id 
-                          ? 'border-t-cyan-500 text-cyan-600 dark:text-cyan-400 bg-white dark:bg-[#0A0A0A]' 
-                          : 'border-t-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 bg-slate-50 dark:bg-[#050505]'
+                          ? 'border-t-cyan-500 text-cyan-600 dark:text-cyan-400 bg-white dark:bg-slate-900' 
+                          : 'border-t-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 bg-slate-50 dark:bg-slate-950'
                       }`}
                     >
                       <i className={`fa-solid ${tab.icon} ${activeTab === tab.id ? 'text-cyan-500' : ''}`}></i> {tab.label}
@@ -333,7 +350,7 @@ export default function ProjectStudioWorkspace() {
               </div>
 
               {/* Tab Content */}
-              <div id="project-studio-content" className="flex-1 overflow-y-auto p-6 md:p-8 custom-scrollbar bg-white dark:bg-[#0A0A0A] text-slate-800 dark:text-slate-200">
+              <div id="project-studio-content" className="flex-1 overflow-y-auto p-6 md:p-8 custom-scrollbar bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200">
                 {activeTab === 'overview' && (
                   <div className="max-w-4xl mx-auto prose prose-sm dark:prose-invert prose-headings:text-cyan-600 dark:prose-headings:text-cyan-400 prose-headings:font-bold prose-headings:font-mono prose-a:text-cyan-600 dark:prose-a:text-cyan-400">
                     <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ code: CodeBlock }}>
@@ -353,7 +370,7 @@ export default function ProjectStudioWorkspace() {
                     <div className="bg-amber-50/50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 text-amber-700 dark:text-amber-500/90 text-xs font-mono flex gap-3">
                       <i className="fa-solid fa-triangle-exclamation mt-0.5"></i>
                       <div className="leading-relaxed">
-                        Nß╗Öi dung do AI tß║ío tß╗▒ ─æß╗Öng. Kiß╗âm tra kß╗╣ tr╞░ß╗¢c khi triß╗ân khai thß╗▒c tß║┐.
+                        Nội dung do AI tạo tự động. Kiểm tra kỹ trước khi triển khai thực tế.
                       </div>
                     </div>
                     

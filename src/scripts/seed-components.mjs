@@ -23,7 +23,7 @@ const sampleComponents = [
     category: 'MCU',
     interface: 'Wi-Fi, Bluetooth, I2C, SPI',
     specs: { vcc: '3.3V', pkg: 'SMD', clock: '240MHz' },
-    image_url: 'https://via.placeholder.com/300x200?text=ESP32',
+    image_url: 'https://placehold.co/300x200?text=ESP32',
     datasheet_url: '#',
     description: 'Vi điều khiển ESP32 hỗ trợ Wi-Fi và Bluetooth.'
   },
@@ -32,7 +32,7 @@ const sampleComponents = [
     category: 'Sensor',
     interface: 'Digital (1-Wire)',
     specs: { vcc: '3.3V-5V', temp_range: '-40~80°C', humidity_range: '0-100%' },
-    image_url: 'https://via.placeholder.com/300x200?text=DHT22',
+    image_url: 'https://placehold.co/300x200?text=DHT22',
     datasheet_url: '#',
     description: 'Cảm biến nhiệt độ và độ ẩm kỹ thuật số.'
   },
@@ -41,7 +41,7 @@ const sampleComponents = [
     category: 'Display',
     interface: 'I2C',
     specs: { vcc: '5V', cols: 16, rows: 2 },
-    image_url: 'https://via.placeholder.com/300x200?text=LCD+1602',
+    image_url: 'https://placehold.co/300x200?text=LCD+1602',
     datasheet_url: '#',
     description: 'Màn hình LCD 16x2 sử dụng giao tiếp I2C.'
   },
@@ -50,7 +50,7 @@ const sampleComponents = [
     category: 'Module',
     interface: 'Digital/PWM',
     specs: { vcc: '5V-35V', max_current: '2A' },
-    image_url: 'https://via.placeholder.com/300x200?text=L298N',
+    image_url: 'https://placehold.co/300x200?text=L298N',
     datasheet_url: '#',
     description: 'Module điều khiển động cơ DC kép và bước.'
   },
@@ -59,7 +59,7 @@ const sampleComponents = [
     category: 'Sensor',
     interface: 'I2C, SPI',
     specs: { vcc: '3.3V', temp: 'yes', humidity: 'yes', pressure: 'yes' },
-    image_url: 'https://via.placeholder.com/300x200?text=BME280',
+    image_url: 'https://placehold.co/300x200?text=BME280',
     datasheet_url: '#',
     description: 'Cảm biến môi trường 3 trong 1 (Nhiệt độ, Độ ẩm, Áp suất).'
   }

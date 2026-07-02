@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Header from "@/components/layout/Header";
-import IntroStats from "@/components/dashboard/IntroStats";
 import TermsList, { Term } from "@/components/dictionary/TermsList";
 import TermDetail from "@/components/dictionary/TermDetail";
 import AILab from "@/components/labs/AILab";
@@ -22,8 +21,7 @@ export default function Home() {
   return (
     <div className={`flex flex-col ${activeTab === 'labs' ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className={`flex-1 flex flex-col w-full mx-auto ${activeTab === 'labs' ? 'max-w-none px-0 py-0 gap-0' : 'max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-6 gap-8'}`}>
-        {activeTab === 'dictionary' && <IntroStats />}
+      <main className={`flex-1 flex flex-col w-full mx-auto pb-32 lg:pb-0 ${activeTab === 'labs' ? 'max-w-none px-0 py-0 gap-0' : 'max-w-screen-2xl px-2 sm:px-6 lg:px-8 py-3 sm:py-6 gap-4 sm:gap-8'}`}>
 
         {activeTab === 'components' && (
             <section>
@@ -68,7 +66,7 @@ export default function Home() {
       </main>
       
       {activeTab !== 'labs' && (
-        <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 transition-all">
+        <footer className="hidden md:block bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 transition-all">
           <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-xs text-slate-500 dark:text-slate-400">&copy; 2026 Electro Creative — Electronics Engineering Hub. Nền tảng học tập và nghiên cứu điện tử.</p>
               <div className="flex gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">

@@ -214,7 +214,7 @@ export default function AILab() {
     if (authenticated === null) return <div className="h-[800px] flex items-center justify-center"><i className="fa-solid fa-spinner animate-spin text-2xl text-blue-500"></i></div>;
 
     return (
-        <div className="relative flex-1 w-full h-full bg-white dark:bg-slate-900 flex overflow-hidden">
+        <div className="relative flex-1 w-full h-full bg-white dark:bg-slate-900 flex overflow-hidden pb-[60px] lg:pb-0">
             {!authenticated && <AuthModal onSuccess={() => { setAuthenticated(true); loadSessions(); }} />}
             
             <AILabSidebar 
@@ -230,7 +230,7 @@ export default function AILab() {
 
             <div className="flex-1 flex flex-col min-w-0">
                 {/* Unified IDE Top Bar */}
-                <div className="relative h-12 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0A0A] flex justify-between items-center px-4 flex-shrink-0 z-20">
+                <div className="relative h-12 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex justify-between items-center px-4 flex-shrink-0 z-20">
                     {/* Left: Menu & Brand */}
                     <div className="flex items-center gap-3">
                         <button 
@@ -280,16 +280,17 @@ export default function AILab() {
                         <div className="flex-1 overflow-y-auto p-4 md:p-6 flex flex-col gap-4 md:gap-6 custom-scrollbar">
                             {(!messages || messages.length === 0) && (
                                 <div className="flex-1 flex flex-col items-center justify-center text-center max-w-md mx-auto">
-                                    <i className="fa-solid fa-microchip text-3xl md:text-4xl text-slate-300 dark:text-slate-600 mb-3 md:mb-4"></i>
+                                    <i className="fa-solid fa-microchip text-3xl md:text-4xl text-slate-300 dark:text-slate-600 mb-2 md:mb-4"></i>
                                     <h3 className="text-base md:text-lg font-bold text-slate-700 dark:text-slate-300">Bạn cần tư vấn gì hôm nay?</h3>
-                                    <p className="text-xs md:text-sm text-slate-500 mt-1 md:mt-2 mb-4 md:mb-6 px-4">Hãy hỏi tôi về cách thiết kế mạch, phân tích sơ đồ khối, hoặc tìm kiếm mã nguồn trên GitHub.</p>
+                                    <p className="text-xs text-slate-500 mt-1 mb-4 md:mb-6 px-4 hidden sm:block">Hãy hỏi tôi về cách thiết kế mạch, phân tích sơ đồ khối, hoặc tìm kiếm mã nguồn trên GitHub.</p>
+                                    <p className="text-[11px] text-slate-500 mt-1 mb-4 px-2 sm:hidden">Hỏi về thiết kế mạch, mã nguồn hoặc kiến thức IoT.</p>
                                     
-                                    <div className="flex flex-wrap justify-center gap-2">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 w-full max-w-sm mx-auto gap-2 px-2">
                                         {[
-                                            "Tìm các repo GitHub về IoT ESP32",
+                                            "Tìm repo GitHub về IoT ESP32",
                                             "Phân tích sơ đồ khối dự án",
-                                            "Tìm file in 3D cho vỏ hộp ESP32",
-                                            "Cách kết nối cảm biến siêu âm HC-SR04"
+                                            "Tìm vỏ in 3D cho hộp ESP32",
+                                            "Kết nối cảm biến siêu âm"
                                         ].map((sug, i) => (
                                             <button
                                                 key={i}
@@ -297,10 +298,10 @@ export default function AILab() {
                                                     setInput(sug);
                                                     sendMessage({ text: sug }, { body: { sessionId: currentSessionId }});
                                                 }}
-                                                className="px-2.5 md:px-3 py-1.5 md:py-2 bg-slate-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-blue-900/30 text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 text-[11px] md:text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-800 transition-all text-left"
+                                                className="p-3 bg-slate-50 hover:bg-slate-100 dark:bg-slate-800/50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/50 hover:border-blue-300 dark:hover:border-blue-700 rounded-xl text-left text-[11px] md:text-xs text-slate-700 dark:text-slate-300 flex items-center gap-3 transition-colors shadow-sm"
                                             >
-                                                <i className="fa-solid fa-sparkles mr-1.5 md:mr-2 text-blue-500"></i>
-                                                {sug}
+                                                <i className="fa-solid fa-sparkles text-blue-500 shrink-0"></i>
+                                                <span className="truncate">{sug}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -426,8 +427,8 @@ export default function AILab() {
                                 </button>
                                 </div>
                             </form>
-                            <div className="text-center mt-2 text-[10px] text-slate-400 font-medium uppercase tracking-wider">
-                                AI có thể mắc sai lầm. Hãy kiểm tra lại các thông số linh kiện thực tế.
+                            <div className="text-center mt-1.5 text-[9px] text-slate-400 font-normal lowercase first-letter:capitalize">
+                                AI có thể mắc sai lầm. Kiểm tra lại thông số linh kiện thực tế.
                             </div>
                         </div>
                     </>

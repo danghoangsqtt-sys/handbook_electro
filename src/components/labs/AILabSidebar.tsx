@@ -81,30 +81,30 @@ export default function AILabSidebar({
             )}
 
             {/* Sidebar Container */}
-            <div className={`fixed md:static inset-y-0 left-0 z-50 w-72 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border-r border-slate-200/50 dark:border-slate-800/50 flex flex-col transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none rounded-l-3xl ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'} md:w-80 h-full`}>
+            <div className={`fixed md:static inset-y-0 left-0 z-50 w-72 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border-r border-slate-200/50 dark:border-slate-800/50 flex flex-col transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none pb-[70px] md:pb-0 ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'} md:w-80 h-full`}>
                 
                 {/* Header / New Chat */}
-                <div className="p-4 border-b border-slate-200/50 dark:border-slate-800/50 flex justify-between items-center bg-slate-50/50 dark:bg-slate-950/30 backdrop-blur-md">
+                <div className="p-3 md:p-4 border-b border-slate-200/50 dark:border-slate-800/50 flex justify-between items-center bg-slate-50/50 dark:bg-slate-950/30 backdrop-blur-md">
                     <button 
                         onClick={onNewSession}
-                        className="flex-1 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                        className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold rounded-lg md:rounded-xl shadow-sm md:shadow-md transition-all flex items-center justify-center gap-2"
                     >
                         <i className="fa-solid fa-plus"></i>
                         Đoạn chat mới
                     </button>
                     <button 
                         onClick={() => setIsOpen(false)}
-                        className="md:hidden ml-2 w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500"
+                        className="md:hidden ml-2 w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                     >
-                        <i className="fa-solid fa-xmark"></i>
+                        <i className="fa-solid fa-xmark text-sm"></i>
                     </button>
                 </div>
 
                 {/* Session List */}
                 <div className="flex-1 overflow-y-auto p-3 custom-scrollbar">
                     {sessions.length === 0 ? (
-                        <div className="text-center mt-10 text-slate-400 text-sm">
-                            <i className="fa-solid fa-inbox text-3xl mb-3 opacity-50"></i>
+                        <div className="text-center mt-8 text-slate-400 text-xs md:text-sm">
+                            <i className="fa-solid fa-inbox text-2xl md:text-3xl mb-2 opacity-50"></i>
                             <p>Chưa có đoạn chat nào.</p>
                         </div>
                     ) : (
@@ -133,7 +133,7 @@ export default function AILabSidebar({
                 </div>
                 
                 {/* Sidebar Footer */}
-                <div className="p-4 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-950/30 text-xs text-slate-500 text-center">
+                <div className="p-3 md:p-4 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50/50 dark:bg-slate-950/30 text-[10px] md:text-xs text-slate-500 text-center">
                     Lịch sử được lưu trữ bảo mật qua mã PIN cá nhân.
                 </div>
             </div>
