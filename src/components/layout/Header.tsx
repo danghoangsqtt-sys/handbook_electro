@@ -57,7 +57,7 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
                         { id: 'dictionary', label: 'Tra Cứu Từ Điển', icon: 'fa-language' },
                         { id: 'labs', label: 'Phòng Thí Nghiệm AI', icon: 'fa-vial' },
                         { id: 'quiz', label: 'Flashcard', icon: 'fa-layer-group' },
-                        { id: 'community', label: 'Cộng đồng', icon: 'fa-globe' }
+                        { id: 'community', label: 'Thu Vien Du An', icon: 'fa-folder-open' }
                       ].map(tab => (
                         <button
                           key={tab.id}
@@ -133,7 +133,7 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
                 { id: 'dictionary', label: 'Tra Cứu Từ Điển', icon: 'fa-language' },
                 { id: 'labs', label: 'Phòng Thí Nghiệm AI', icon: 'fa-vial' },
                 { id: 'quiz', label: 'Flashcard', icon: 'fa-layer-group' },
-                { id: 'community', label: 'Cộng đồng', icon: 'fa-globe' },
+                { id: 'community', label: 'Thu Vien Du An', icon: 'fa-folder-open' },
                 { id: 'profile', label: 'Hồ sơ cá nhân', icon: 'fa-user' }
               ].map(tab => (
                 <button

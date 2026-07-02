@@ -327,7 +327,7 @@ export default function ProjectStudioWorkspace() {
                     onClick={() => setShowPublishModal(true)}
                     className="px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded text-xs font-bold transition-all shadow-sm flex items-center gap-2"
                   >
-                    <i className="fa-solid fa-cloud-arrow-up"></i> Publish to Community
+                    <i className="fa-solid fa-folder-plus"></i> Luu vao Thu Vien
                   </button>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useBOMStore, BOMItem } from '@/store/useBOMStore';
-import CommentSection from './CommentSection';
+
 
 // BOMItem is imported from @/store/useBOMStore
 
@@ -33,18 +33,12 @@ interface CommunityProject {
     pin_connections: PinConnection[] | null;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code_snippets: any;
-    likes_count: number;
-    comments_count?: number;
     created_at: string;
-    profiles: { display_name: string; avatar_url: string | null } | null;
 }
 
 interface ProjectDetailModalProps {
     project: CommunityProject | null;
     onClose: () => void;
-    likedProjects: Set<string>;
-    onLike: (projectId: string, currentLikes: number) => void;
-    likingId: string | null;
 }
 
 type TabId = 'overview' | 'bom' | 'diagram' | 'code';
@@ -132,9 +126,6 @@ function PinConnectionTable({ pins }: { pins: PinConnection[] }) {
 export default function ProjectDetailModal({
     project,
     onClose,
-    likedProjects,
-    onLike,
-    likingId
 }: ProjectDetailModalProps) {
     const [activeTab, setActiveTab] = useState<TabId>('overview');
     const [diagramSubTab, setDiagramSubTab] = useState<DiagramSubTab>('schematic');
@@ -263,7 +254,6 @@ export default function ProjectDetailModal({
     const availableSubTabs = diagramSubTabs.filter(t => t.available);
     const hasDiagramData = availableSubTabs.length > 0;
 
-    const isLiked = likedProjects.has(project.id);
 
     return (
         <>
@@ -286,47 +276,25 @@ export default function ProjectDetailModal({
                         <i className="fa-solid fa-xmark text-sm"></i>
                     </button>
 
-                    {/* Author */}
-                    <div className="flex items-center gap-3 mb-3">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src={project.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(project.profiles?.display_name || 'A')}&background=2D9CDB&color=fff`}
-                            alt="avatar"
-                            className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20"
-                        />
-                        <div>
-                            <p className="font-semibold text-sm">{project.profiles?.display_name || 'Anonymous'}</p>
-                            <p className="text-xs text-blue-200/70">
-                                {new Date(project.created_at).toLocaleDateString('vi-VN', { day: '2-digit', month: 'long', year: 'numeric' })}
-                            </p>
+                    {/* Project meta */}
+                    <div className="flex items-center gap-2 mb-3">
+                        <div className="w-8 h-8 rounded-xl bg-[#2D9CDB]/20 border border-[#2D9CDB]/30 flex items-center justify-center">
+                            <i className="fa-solid fa-folder text-[#2D9CDB] text-sm"></i>
                         </div>
-
-                        {/* Like & Stats */}
-                        <div className="ml-auto flex items-center gap-2">
-                            <button
-                                onClick={() => onLike(project.id, project.likes_count)}
-                                disabled={likingId === project.id}
-                                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-                                    isLiked
-                                        ? 'bg-white text-red-500'
-                                        : 'bg-white/10 hover:bg-white/20 border border-white/10 text-white'
-                                }`}
-                            >
-                                <i className={`fa-${isLiked ? 'solid' : 'regular'} fa-heart`}></i>
-                                {project.likes_count}
-                            </button>
-                        </div>
+                        <p className="text-xs text-blue-200/70 font-mono">
+                            {new Date(project.created_at).toLocaleDateString('vi-VN', { day: '2-digit', month: 'long', year: 'numeric' })}
+                        </p>
                     </div>
 
                     <h2 className="text-lg font-black leading-snug pr-10">{project.title}</h2>
 
                     {/* Quick stats */}
                     <div className="flex items-center gap-3 mt-2 text-xs text-blue-200/60 flex-wrap">
-                        <span><i className="fa-solid fa-microchip mr-1 text-[#2D9CDB]"></i>{bomItems.length} linh kiện</span>
-                        {project.schematic_image_url && <span><i className="fa-solid fa-image mr-1 text-emerald-400"></i>Sơ đồ nguyên lý</span>}
-                        {pinConnections.length > 0 && <span><i className="fa-solid fa-plug mr-1 text-amber-400"></i>{pinConnections.length} kết nối chân</span>}
-                        {project.diagram_code && <span><i className="fa-solid fa-share-nodes mr-1 text-violet-400"></i>Sơ đồ khối</span>}
-                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1 text-cyan-400"></i>{codeSnippets.length} đoạn code</span>}
+                        <span><i className="fa-solid fa-microchip mr-1 text-[#2D9CDB]"></i>{bomItems.length} linh kien</span>
+                        {project.schematic_image_url && <span><i className="fa-solid fa-image mr-1 text-emerald-400"></i>So do nguyen ly</span>}
+                        {pinConnections.length > 0 && <span><i className="fa-solid fa-plug mr-1 text-amber-400"></i>{pinConnections.length} ket noi chan</span>}
+                        {project.diagram_code && <span><i className="fa-solid fa-share-nodes mr-1 text-violet-400"></i>So do khoi</span>}
+                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1 text-cyan-400"></i>{codeSnippets.length} doan code</span>}
                     </div>
                 </div>
 
@@ -360,16 +328,10 @@ export default function ProjectDetailModal({
 
                     {/* Tab: Mô tả */}
                     {activeTab === 'overview' && (
-                        <div>
-                            <div className="prose prose-sm dark:prose-invert max-w-none">
-                                <p className="text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-wrap text-sm">
-                                    {project.description || 'Không có mô tả.'}
-                                </p>
-                            </div>
-                            {/* Comment section dưới overview */}
-                            <div className="border-t border-slate-100 dark:border-white/5 pt-6 mt-6">
-                                <CommentSection projectId={project.id} />
-                            </div>
+                        <div className="prose prose-sm dark:prose-invert max-w-none">
+                            <p className="text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-wrap text-sm">
+                                {project.description || 'Chua co mo ta.'}
+                            </p>
                         </div>
                     )}
 
