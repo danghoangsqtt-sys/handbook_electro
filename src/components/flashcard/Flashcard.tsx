@@ -20,7 +20,7 @@ export default function Flashcard({ term }: FlashcardProps) {
                 <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 rounded-2xl md:rounded-3xl shadow-xl p-4 md:p-8 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
                     <div className="text-center">
                         <span className="text-[10px] md:text-xs uppercase font-extrabold tracking-widest text-slate-400 dark:text-slate-500 mb-2 md:mb-5 block">{term.category}</span>
-                        <h2 className="text-3xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 mb-2 md:mb-5 drop-shadow-sm">{term.term}</h2>
+                        <h2 className="text-2xl md:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 mb-2 md:mb-5 drop-shadow-sm px-2">{term.term}</h2>
                         {term.fullName && (
                             <p className="text-[10px] md:text-sm font-mono text-slate-500 dark:text-slate-400 bg-slate-100/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 inline-block px-3 py-1 md:px-5 md:py-2 rounded-xl shadow-inner">
                                 {term.fullName}
@@ -36,7 +36,7 @@ export default function Flashcard({ term }: FlashcardProps) {
                 {/* Back */}
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 flex flex-col items-center justify-center bg-blue-600 dark:bg-blue-900 border-2 border-blue-500 dark:border-blue-700 rounded-2xl md:rounded-3xl shadow-xl p-4 md:p-8 text-white">
                     <div className="w-full max-w-xl mx-auto h-full flex flex-col justify-center">
-                        <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 border-b border-blue-400/30 pb-2 md:pb-4 text-center">{term.term}</h3>
+                        <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4 border-b border-blue-400/30 pb-2 md:pb-4 text-center">{term.term}</h3>
                         <div className="overflow-y-auto custom-scrollbar pr-2 max-h-[70%] flex flex-col gap-3 md:gap-4">
                             <p className="text-sm md:text-lg leading-relaxed">{term.definition}</p>
                             {term.applications && term.applications.length > 0 && (

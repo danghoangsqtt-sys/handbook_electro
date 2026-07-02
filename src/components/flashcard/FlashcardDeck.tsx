@@ -64,10 +64,10 @@ export default function FlashcardDeck() {
                 <div className="inline-flex items-center justify-center p-2 md:p-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl md:rounded-2xl mb-2 md:mb-5 shadow-inner">
                     <i className="fa-solid fa-layer-group text-xl md:text-3xl text-blue-500 dark:text-blue-400"></i>
                 </div>
-                <h2 className="text-xl md:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300">
+                <h2 className="text-lg md:text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300">
                     Flashcard Ôn Tập
                 </h2>
-                <p className="text-xs md:text-base font-medium text-slate-500 dark:text-slate-400 mt-1 md:mt-3">Học ngẫu nhiên 5 thuật ngữ mỗi lần</p>
+                <p className="text-[11px] md:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 md:mt-3">Học ngẫu nhiên 5 thuật ngữ mỗi lần</p>
             </div>
 
             <div className="w-full mb-5 md:mb-8">

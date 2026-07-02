@@ -65,19 +65,19 @@ function EmptyState({ onAdd, isLoggedIn }: { onAdd: () => void; isLoggedIn: bool
     if (!isLoggedIn) {
         return (
             <div className="flex flex-col items-center justify-center py-24 px-4 text-center">
-                <div className="w-20 h-20 rounded-3xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center mb-6">
-                    <i className="fa-solid fa-folder-open text-[#2D9CDB] text-3xl"></i>
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center mb-6">
+                    <i className="fa-solid fa-folder-open text-[#2D9CDB] text-2xl md:text-3xl"></i>
                 </div>
-                <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Thư Viện Dự Án Ca Nhan</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md mb-6">
+                <h3 className="text-lg md:text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Thư Viện Dự Án Cá Nhân</h3>
+                <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 max-w-md mb-6">
                     Đăng nhập để lưu trữ và quản lý tất cả dự án điện tử của bạn.
                 </p>
-                <button
-                    onClick={() => supabase.auth.signInWithOAuth({ provider: 'google' })}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all"
+                <a
+                    href="/admin/login"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-xs md:text-sm shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all"
                 >
-                    <i className="fa-brands fa-google"></i> Đăng nhập với Google
-                </button>
+                    <i className="fa-solid fa-right-to-bracket"></i> Đăng nhập vào web
+                </a>
             </div>
         );
     }
