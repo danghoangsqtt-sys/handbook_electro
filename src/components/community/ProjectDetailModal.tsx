@@ -2,9 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useBOMStore, BOMItem } from '@/store/useBOMStore';
-
-
-// BOMItem is imported from @/store/useBOMStore
+import type { BOMDataItem, PinConnectionItem, CodeSnippets } from './CommunityShowcase';
 
 interface CodeSnippet {
     language: string;
@@ -12,27 +10,15 @@ interface CodeSnippet {
     code: string;
 }
 
-interface PinConnection {
-    component: string;
-    component_pin: string;
-    mcu: string;
-    mcu_pin: string;
-    protocol: string;
-    voltage?: string;
-    note?: string;
-}
-
 interface CommunityProject {
     id: string;
     title: string;
     description: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    bom_data: any[];
+    bom_data: BOMDataItem[];
     diagram_code: string | null;
     schematic_image_url: string | null;
-    pin_connections: PinConnection[] | null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code_snippets: any;
+    pin_connections: PinConnectionItem[] | null;
+    code_snippets: CodeSnippets;
     created_at: string;
 }
 
@@ -65,7 +51,7 @@ function ProtocolBadge({ protocol }: { protocol: string }) {
     );
 }
 
-function PinConnectionTable({ pins }: { pins: PinConnection[] }) {
+function PinConnectionTable({ pins }: { pins: PinConnectionItem[] }) {
     if (!pins || pins.length === 0) {
         return (
             <div className="text-center py-12 text-slate-400">
@@ -80,7 +66,7 @@ function PinConnectionTable({ pins }: { pins: PinConnection[] }) {
         if (!acc[pin.component]) acc[pin.component] = [];
         acc[pin.component].push(pin);
         return acc;
-    }, {} as Record<string, PinConnection[]>);
+    }, {} as Record<string, PinConnectionItem[]>);
 
     return (
         <div className="space-y-5">
@@ -109,7 +95,7 @@ function PinConnectionTable({ pins }: { pins: PinConnection[] }) {
                                         <td className="px-3 py-2.5 font-mono font-semibold text-slate-700 dark:text-slate-200">{row.component_pin}</td>
                                         <td className="px-3 py-2.5 text-slate-500 dark:text-slate-400 hidden sm:table-cell">{row.mcu}</td>
                                         <td className="px-3 py-2.5 font-mono text-[#2D9CDB] font-bold">{row.mcu_pin}</td>
-                                        <td className="px-3 py-2.5"><ProtocolBadge protocol={row.protocol} /></td>
+                                        <td className="px-3 py-2.5"><ProtocolBadge protocol={row.protocol || 'GPIO'} /></td>
                                         <td className="px-3 py-2.5 text-slate-500 dark:text-slate-400 hidden md:table-cell">{row.voltage || '—'}</td>
                                         <td className="px-3 py-2.5 text-slate-400 hidden lg:table-cell">{row.note || '—'}</td>
                                     </tr>
@@ -157,7 +143,7 @@ export default function ProjectDetailModal({
     })();
 
     // Parse pin_connections
-    const pinConnections: PinConnection[] = (() => {
+    const pinConnections: PinConnectionItem[] = (() => {
         if (!project?.pin_connections) return [];
         if (typeof project.pin_connections === 'string') {
             try { return JSON.parse(project.pin_connections); } catch { return []; }

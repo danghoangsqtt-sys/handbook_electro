@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
+import type { BOMDataItem, PinConnectionItem, CodeSnippets } from './CommunityShowcase';
 
 interface PinRow {
     component: string;
@@ -17,13 +18,10 @@ export interface ProjectFormData {
     title: string;
     description: string;
     schematic_image_url: string | null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    pin_connections: any[] | null;
+    pin_connections: PinConnectionItem[] | null;
     diagram_code: string | null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code_snippets: any;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    bom_data: any[];
+    code_snippets: CodeSnippets;
+    bom_data: BOMDataItem[];
 }
 
 interface Props {

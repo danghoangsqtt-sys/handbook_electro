@@ -442,8 +442,7 @@ function PublishProjectModal({
     projectIdea, projectItems, diagramCode, onClose,
 }: {
     projectIdea: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    projectItems: any[];
+    projectItems: BOMItem[];
     diagramCode: string;
     onClose: () => void;
 }) {

@@ -5,18 +5,36 @@ import { createClient } from '@/lib/supabase/client';
 import ProjectDetailModal from './ProjectDetailModal';
 import ProjectFormModal from './ProjectFormModal';
 
+export interface BOMDataItem {
+    name: string;
+    quantity: number;
+    category?: string;
+    shopee_link?: string;
+    image_url?: string;
+    [key: string]: unknown;
+}
+
+export interface PinConnectionItem {
+    component: string;
+    component_pin: string;
+    mcu: string;
+    mcu_pin: string;
+    protocol?: string;
+    voltage?: string;
+    note?: string;
+}
+
+export type CodeSnippets = Record<string, string> | null;
+
 export interface MyProject {
     id: string;
     title: string;
     description: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    bom_data: any[];
+    bom_data: BOMDataItem[];
     diagram_code: string | null;
     schematic_image_url: string | null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    pin_connections: any[] | null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code_snippets: any;
+    pin_connections: PinConnectionItem[] | null;
+    code_snippets: CodeSnippets;
     created_at: string;
     updated_at?: string;
 }
