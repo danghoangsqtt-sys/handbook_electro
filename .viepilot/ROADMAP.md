@@ -110,3 +110,69 @@
   - Tạo Component `<AILabSidebar />` chứa danh sách cuộc trò chuyện phân nhóm "Đã ghim" và "Gần đây".
   - Refactor `<AILab />` (xóa cơ chế `localStorage`, đồng bộ `sessionId` cho `useChat` và hiển thị ảnh Markdown đính kèm).
   - Hỗ trợ responsive layout (ấn menu trên thiết bị di động).
+
+### Phase 22: Thư viện Linh kiện & Quản lý BOM (Bill of Materials) (v0.17.0)
+
+**Goal:** Sao chép các tính năng trực quan từ EleSelect, cung cấp kho linh kiện có ảnh và datasheet, đồng thời cho phép người dùng thêm vào giỏ BOM.
+
+- [x] Thiết kế bảng `components` trên Supabase (chứa specs, datasheet_url, image_url).
+- [x] Xây dựng giao diện Grid Card hiển thị danh sách linh kiện.
+- [x] Xây dựng tính năng "Thêm vào BOM" (Lưu giỏ hàng bằng Zustand hoặc LocalStorage).
+- [x] Thiết kế giao diện Drawer/Sidebar để quản lý BOM.
+
+### Phase 23: AI Project Studio (v0.18.0)
+
+**Goal:** Nâng cấp AI Lab thành AI Project Studio, tích hợp Mermaid.js để vẽ sơ đồ đấu nối và đánh giá tính tương thích của linh kiện dựa trên BOM.
+
+- [x] Tích hợp tính năng truyền danh sách BOM vào prompt AI.
+- [x] Xây dựng System Prompt chuyên sâu tư vấn linh kiện và sinh sơ đồ cắm chân.
+- [x] Xây dựng giao diện AI Project Studio (3 Tab: Tổng quan tương thích, Sơ đồ cắm chân (Wiring Diagram), Code mẫu).
+- [x] Tích hợp bộ render Mermaid.js an toàn trong Markdown của AI Lab.
+
+### Phase 24: Component Filtering & Seeding (v0.19.0)
+
+**Goal:** Hoàn thiện trải nghiệm Thư viện linh kiện, cho phép tìm kiếm và lọc nâng cao, cũng như tự động hóa dữ liệu.
+
+- [x] Bổ sung logic lọc đa điều kiện (Theo danh mục, Theo giao tiếp I2C/SPI, Theo từ khóa tìm kiếm).
+- [x] Tạo kịch bản Node.js tự động nạp dữ liệu linh kiện (Seed script `seed-components.mjs`).
+- [x] Xử lý trạng thái Empty UI khi không tìm thấy kết quả.
+
+### Phase 25: Admin Dashboard & Quản trị Dữ liệu (v0.20.0)
+
+**Goal:** Cung cấp công cụ quản trị mạnh mẽ để tự chủ thêm mới linh kiện, thuật ngữ và kiếm tiền.
+
+- [x] Nâng cấp Database Schema bổ sung `shopee_link`, `is_active`.
+- [x] Xây dựng trang đăng nhập Admin bằng Supabase Auth.
+- [x] Thiết kế layout độc lập và trang Dashboard thống kê cho `/admin`.
+- [x] Phát triển form CRUD quản lý linh kiện, tích hợp convert ảnh Google Drive.
+- [x] Cập nhật UI thư viện bổ sung tính năng Mua trên Shopee và Tải Datasheet.
+
+### Phase 26: Hoàn thiện Admin CMS & Cấu trúc lại Dữ liệu Thuật ngữ (v0.21.0)
+
+**Goal:** Quản lý tập trung toàn bộ hệ thống "Thuật ngữ" (Terms) trên Supabase để thay thế cho file JSON cục bộ.
+
+- [x] Tạo bảng `terms` trên Supabase với cấu trúc đầy đủ.
+- [x] Phát triển giao diện `admin/terms` hỗ trợ CRUD thuật ngữ.
+- [x] Viết công cụ Import JSON (đẩy toàn bộ JSON cũ lên Supabase).
+- [x] Cập nhật API lấy thuật ngữ sang kết nối với Supabase, tích hợp In-memory Caching để đảm bảo tốc độ.
+
+### Phase 27: User Accounts, AI Image Analysis & Flashcard Quiz (v0.22.0)
+
+**Goal:** Chuyển đổi mã PIN sang hệ thống tài khoản thực (Email/OAuth), hỗ trợ tải ảnh sơ đồ mạch cho AI phân tích, và thay thế Quiz trắc nghiệm bằng dạng Flashcard.
+
+- [x] Thiết lập Supabase Auth và tạo giao diện Đăng nhập/Đăng ký.
+- [x] Migrate dữ liệu (chat_sessions, bookmarks) sang Auth UUID mới thay vì chuỗi PIN.
+- [x] Bổ sung nút Upload ảnh vào giao diện Chat AI Lab và kết nối Gemini Vision API.
+- [x] Gỡ bỏ các component Quiz cũ.
+- [x] Xây dựng tính năng học thuật ngữ qua thẻ lật Flashcard (ngẫu nhiên 5 từ).
+
+### Phase 28: User Profile, Community Showcase, OAuth, Export PDF/BOM, PDF Analysis (v0.23.0)
+
+**Goal:** Xây dựng hồ sơ người dùng, cộng đồng chia sẻ dự án, đăng nhập mạng xã hội, xuất báo cáo và hỗ trợ upload PDF cho AI.
+
+- [x] Tích hợp OAuth Google/GitHub.
+- [x] Tạo SQL script cho Profiles và Public Projects.
+- [x] Phát triển User Profile.
+- [x] Phát triển Community Showcase.
+- [x] Thêm tính năng Export PDF và Export CSV.
+- [x] Cập nhật AILab hỗ trợ file PDF.

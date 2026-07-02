@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ESP32-WROOM-32",
+    "description": "Wi-Fi & Bluetooth MCU module\nVCC: 2.2-3.6V, IMAX: 500mA",
+    "image_url": "https://raw.githubusercontent.com/espressif/arduino-esp32/master/docs/assets/esp32_wroom_32.jpg",
+    "local_image": "/downloads/esp32_wroom_32.jpg"
+  },
+  {
+    "name": "ATmega328P",
+    "description": "8-bit AVR Microcontroller\nVCC: 1.8-5.5V, IMAX: 20mA",
+    "image_url": "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=200",
+    "local_image": "/downloads/atmega328p.jpg"
+  }
+]

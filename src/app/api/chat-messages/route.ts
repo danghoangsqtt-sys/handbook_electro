@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
-import { supabase } from '@/lib/supabase';
+import { createClient } from '@/lib/supabase/server';
 
 export async function GET(request: Request) {
-    const cookieStore = await cookies();
-    const token = cookieStore.get('auth_user_id')?.value;
-    if (!token) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    const userPin = token.replace('mock_user_id_', '');
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
     try {
         const { searchParams } = new URL(request.url);
@@ -18,7 +17,7 @@ export async function GET(request: Request) {
             .from('chat_sessions')
             .select('id')
             .eq('id', sessionId)
-            .eq('user_pin', userPin)
+            .eq('user_id', user.id)
             .single();
 
         if (sessionError || !sessionData) {

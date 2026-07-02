@@ -42,4 +42,4 @@ TechDict v5.0 (Handbook Electro) là từ điển thuật ngữ kỹ thuật đi
 Mở [http://localhost:3000](http://localhost:3000) trên trình duyệt để sử dụng hệ thống.
 
 ## Phiên bản
-- Hiện tại: `v0.10.0`
+- Hiện tại: `v0.22.0`

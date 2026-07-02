@@ -1,6 +1,6 @@
 {
   "name": "handbook_electro",
-  "version": "0.16.0",
+  "version": "0.22.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,19 +14,24 @@
     "@ai-sdk/react": "^3.0.210",
     "@fortawesome/fontawesome-free": "^7.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.108.2",
     "@types/react-syntax-highlighter": "^15.5.13",
     "ai": "^6.0.208",
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.2",
+    "html2canvas": "^1.4.1",
     "js-cookie": "^3.0.8",
+    "jspdf": "^4.2.1",
+    "mermaid": "^11.16.0",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^16.1.1",
     "remark-gfm": "^4.0.1",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

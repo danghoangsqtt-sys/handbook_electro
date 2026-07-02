@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: "Sổ tay bách khoa công nghệ số, hỗ trợ kỹ sư và sinh viên tra cứu thuật ngữ, module, và làm dự án với AI.",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,9 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${plusJakarta.variable} ${firaCode.variable} h-full antialiased dark`}>
-      <body className="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col font-sans">
+      <body suppressHydrationWarning className="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col font-sans">
         <ProgressProvider>
             {children}
+
         </ProgressProvider>
       </body>
     </html>

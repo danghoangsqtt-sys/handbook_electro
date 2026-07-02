@@ -148,7 +148,7 @@ async function main() {
           existingTerms.add(item.term.toLowerCase().trim());
         }
       }
-    } catch (e) {}
+    } catch {}
   }
 
   console.log("Tong so tu khoa he thong hien tai:", existingTerms.size);

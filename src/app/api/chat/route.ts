@@ -2,7 +2,12 @@ import { google } from '@ai-sdk/google';
 import { streamText, tool, convertToModelMessages } from 'ai';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { supabase } from '@/lib/supabase';
+// keeping for storage usage if needed, but better use server client
+import { createClient } from '@/lib/supabase/server';
+import { RateLimiter } from '@/lib/rateLimit';
+import { headers } from 'next/headers';
+
+const limiter = new RateLimiter(60 * 1000, 5); // 5 requests per minute
 
 const SYSTEM_PROMPT = `Bạn là một Cố vấn Kỹ thuật cấp cao, chuyên sâu về Cơ điện tử, Tự động hóa, Vi xử lý, Khoa học máy tính, Vô tuyến điện, Viễn thông, và Anten.
 Nhiệm vụ của bạn:
@@ -17,7 +22,22 @@ Nhiệm vụ của bạn:
 
 export async function POST(request: Request) {
     try {
-        const { messages, sessionId } = await request.json();
+        const supabase = await createClient();
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        const headerStore = await headers();
+        const ip = headerStore.get('x-forwarded-for') || '127.0.0.1';
+        
+        const identifier = user?.id || ip;
+        const { success } = limiter.limit(identifier);
+        
+        if (!success) {
+            return NextResponse.json({ error: 'Bạn thao tác quá nhanh, vui lòng đợi một lát.' }, { status: 429 });
+        }
+
+        // Must clone the request or read it once
+        const body = await request.json();
+        const { messages, sessionId } = body;
         
         // Save user message
         if (sessionId && messages.length > 0) {
@@ -77,7 +97,6 @@ export async function POST(request: Request) {
                     // @ts-expect-error: TS incompatibility with Zod and AI SDK
                     execute: async ({ query }) => {
                         try {
-                            // Dùng search repositories thay vì code search vì code search có thể dính rate limit hoặc bắt buộc auth
                             const githubRes = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(query + ' 3d print stl case')}&sort=stars&per_page=3`, {
                                 headers: githubHeaders
                             });
@@ -150,7 +169,6 @@ export async function POST(request: Request) {
                     // @ts-expect-error: TS incompatibility with Zod and AI SDK
                     execute: async ({ repoFullName }) => {
                         try {
-                            // Fetch README
                             const readmeRes = await fetch(`https://api.github.com/repos/${repoFullName}/readme`, {
                                 headers: githubHeaders
                             });
@@ -158,7 +176,6 @@ export async function POST(request: Request) {
                             if (readmeRes.ok) {
                                 const readmeData = await readmeRes.json();
                                 readmeContent = Buffer.from(readmeData.content, 'base64').toString('utf-8');
-                                // Truncate README if too long
                                 if (readmeContent.length > 3000) {
                                     readmeContent = readmeContent.substring(0, 3000) + '... (nội dung đã bị cắt bớt)';
                                 }
@@ -178,9 +195,12 @@ export async function POST(request: Request) {
                 console.error('streamText internal error:', error);
             },
             onFinish: async ({ text }) => {
-                const { sessionId } = await request.json().catch(() => ({ sessionId: null }));
                 if (sessionId && text) {
-                    await supabase.from('chat_messages').insert([{
+                    // Create a separate supabase client since the request scope might be closed
+                    const { createClient } = await import('@supabase/supabase-js');
+                    const sbAdmin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
+                    
+                    await sbAdmin.from('chat_messages').insert([{
                         session_id: sessionId,
                         role: 'assistant',
                         content: text

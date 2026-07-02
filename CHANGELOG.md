@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- [Phase 27] Thiết lập Supabase Auth (Email/OAuth) thay thế mã PIN.
+- [Phase 27] AI Lab tích hợp tính năng phân tích hình ảnh sơ đồ mạch sử dụng Gemini Vision.
+- [Phase 27] Thay thế tính năng Trắc nghiệm cũ bằng Quiz Flashcard lật thẻ (5 từ ngẫu nhiên).
+
+## [0.21.0] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 26 (Hoàn thiện Admin CMS & Cấu trúc lại Dữ liệu Thuật ngữ).
+- Tạo bảng `terms` trên Supabase với cấu trúc đầy đủ.
+- Phát triển giao diện `admin/terms` hỗ trợ CRUD thuật ngữ.
+- Viết công cụ Import JSON (đẩy toàn bộ JSON cũ lên Supabase).
+- Cập nhật API lấy thuật ngữ sang kết nối với Supabase, tích hợp In-memory Caching để đảm bảo tốc độ.
+
+## [0.20.0] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 25 (Admin Dashboard & Quản trị Dữ liệu).
+- Nâng cấp Database Schema bổ sung `shopee_link`, `is_active`.
+- Xây dựng trang đăng nhập Admin bằng Supabase Auth.
+- Thiết kế layout độc lập và trang Dashboard thống kê cho `/admin`.
+- Phát triển form CRUD quản lý linh kiện, tích hợp convert ảnh Google Drive.
+- Cập nhật UI thư viện bổ sung tính năng Mua trên Shopee và Tải Datasheet.
+
+## [0.19.0] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 24 (Component Filtering & Seeding).
+- Bổ sung logic lọc đa điều kiện (Theo danh mục, Theo giao tiếp I2C/SPI, Theo từ khóa tìm kiếm).
+- Tạo kịch bản Node.js tự động nạp dữ liệu linh kiện (Seed script `seed-components.mjs`).
+- Xử lý trạng thái Empty UI khi không tìm thấy kết quả.
+
+## [0.18.0] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 23 (AI Project Studio).
+- Tích hợp tính năng truyền danh sách BOM vào prompt AI.
+- Xây dựng System Prompt chuyên sâu tư vấn linh kiện và sinh sơ đồ cắm chân.
+- Xây dựng giao diện AI Project Studio (3 Tab: Tổng quan tương thích, Sơ đồ cắm chân, Code mẫu).
+- Tích hợp bộ render Mermaid.js an toàn trong Markdown của AI Lab.
+
+## [0.17.0] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 22 (Thư viện Linh kiện & Quản lý BOM).
+- Thiết kế bảng `components` trên Supabase (chứa specs, datasheet_url, image_url).
+- Xây dựng giao diện Grid Card hiển thị danh sách linh kiện.
+- Xây dựng tính năng "Thêm vào BOM" (Lưu giỏ hàng bằng Zustand hoặc LocalStorage).
+- Thiết kế giao diện Drawer/Sidebar để quản lý BOM.
+
+## [0.16.1] - 2026-07-02
+
+### Added
+- Khởi chạy Phase 21 (AI Lab Chat History & Supabase Integration).
+- Tạo bảng `chat_sessions` và `chat_messages` trên Supabase.
+- Bổ sung Storage Bucket lưu trữ file ảnh upload từ User.
+- Xây dựng các tính năng CRUD API và đồng bộ Sidebar.
+
 ## [0.16.0] - 2026-06-23
 
 ### Added

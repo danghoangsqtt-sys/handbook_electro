@@ -5,6 +5,7 @@ export interface ChatSession {
     title: string;
     is_pinned: boolean;
     updated_at: string;
+    type?: 'chat' | 'project';
 }
 
 interface SidebarProps {
@@ -44,7 +45,7 @@ export default function AILabSidebar({
                 }`}
             >
                 <div className="flex items-center gap-3 overflow-hidden">
-                    <i className="fa-regular fa-message text-sm opacity-70"></i>
+                    <i className={`fa-solid ${session.type === 'project' ? 'fa-microchip text-cyan-500 dark:text-cyan-400' : 'fa-message opacity-70'}`}></i>
                     <span className="text-sm font-medium truncate">{session.title}</span>
                 </div>
                 

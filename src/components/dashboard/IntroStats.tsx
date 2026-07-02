@@ -8,7 +8,7 @@ export default function IntroStats() {
     const progressPercent = Math.min(100, Math.round((readTerms.length / TOTAL_TERMS) * 100));
 
     return (
-        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl border border-indigo-500/10">
+        <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl sm:rounded-3xl p-4 sm:p-8 text-white relative overflow-hidden shadow-xl border border-indigo-500/10">
             <div className="absolute right-0 top-0 opacity-10 pointer-events-none">
                 <svg width="400" height="400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
                     <circle cx="50" cy="50" r="40"/>
@@ -18,11 +18,11 @@ export default function IntroStats() {
                 </svg>
             </div>
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-center">
                 <div className="lg:col-span-8">
-                    <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 rounded-full text-xs font-semibold uppercase tracking-wider">Hệ Thống Tri Thức Toàn Diện</span>
-                    <h2 className="text-2xl sm:text-4xl font-extrabold mt-3 tracking-tight">Từ Điển Bách Khoa Công Nghệ Số</h2>
-                    <p className="text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
+                    <span className="hidden sm:inline-block px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 rounded-full text-xs font-semibold uppercase tracking-wider mb-2 sm:mb-0">Hệ Thống Tri Thức Toàn Diện</span>
+                    <h2 className="text-xl sm:text-4xl font-extrabold sm:mt-3 tracking-tight">Từ Điển Bách Khoa Công Nghệ Số</h2>
+                    <p className="hidden sm:block text-slate-300 mt-2 text-sm sm:text-base leading-relaxed">
                         Hơn <span className="text-cyan-300 font-bold">3000 thuật ngữ cốt lõi và thực tiễn</span> được giải nghĩa chi tiết kèm mô phỏng tương tác. Phân loại theo 7 chủ điểm: Cơ điện tử, Tự động hóa, Khoa học máy tính, Vi xử lý, Điện tử số, Vô tuyến & Viễn thông, và Module/Linh kiện nhúng.
                     </p>
                 </div>

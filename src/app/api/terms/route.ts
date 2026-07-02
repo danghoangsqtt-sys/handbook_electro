@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+
+
+import { supabase } from '@/lib/supabase';
 
 // Memory cache for all terms
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let cachedTerms: any[] | null = null;
+let lastFetchTime = 0;
+const CACHE_TTL = 1000 * 60 * 5; // 5 minutes
 
 function removeAccents(str: string): string {
     if (!str) return '';
@@ -15,26 +18,21 @@ function removeAccents(str: string): string {
         .replace(/Đ/g, 'D');
 }
 
-function getAllTerms() {
-    if (cachedTerms) return cachedTerms;
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let allTerms: any[] = [];
-    const categoriesDir = path.join(process.cwd(), 'public/data/categories');
-    
-    if (fs.existsSync(categoriesDir)) {
-        const files = fs.readdirSync(categoriesDir);
-        for (const file of files) {
-            if (file.endsWith('.json')) {
-                const data = fs.readFileSync(path.join(categoriesDir, file), 'utf8');
-                try {
-                    allTerms = allTerms.concat(JSON.parse(data));
-                } catch {}
-            }
-        }
+async function getAllTerms() {
+    if (cachedTerms && (Date.now() - lastFetchTime < CACHE_TTL)) {
+        return cachedTerms;
     }
-    cachedTerms = allTerms;
-    return allTerms;
+
+    const { data, error } = await supabase.from('terms').select('*').eq('is_active', true);
+    
+    if (error) {
+        console.error('Error fetching terms from Supabase:', error);
+        return cachedTerms || [];
+    }
+
+    cachedTerms = data || [];
+    lastFetchTime = Date.now();
+    return cachedTerms;
 }
 
 export async function GET(request: Request) {
@@ -43,10 +41,16 @@ export async function GET(request: Request) {
     const query = removeAccents(rawQuery).toLowerCase();
     const category = searchParams.get('category') || 'all';
 
-    let results = getAllTerms();
+    let results = await getAllTerms();
 
-    if (category && category !== 'all') {
+    if (category && category !== 'all' && category !== 'Tất cả') {
         results = results.filter(t => t.category === category);
+    }
+
+    const randomLimit = parseInt(searchParams.get('random') || '0', 10);
+    if (randomLimit > 0) {
+        const shuffled = [...results].sort(() => 0.5 - Math.random());
+        return NextResponse.json(shuffled.slice(0, randomLimit));
     }
 
     if (query) {

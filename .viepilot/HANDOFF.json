@@ -1,25 +1,24 @@
 {
   "version": "1.0",
-  "timestamp": "2026-06-23T16:44:30Z",
-  "phase": "20",
-  "phase_name": "Core Vocabulary Enrichment",
+  "timestamp": "2026-07-01T13:12:00Z",
+  "phase": "26",
+  "phase_name": "Hoàn thiện Admin CMS & Cấu trúc lại Dữ liệu Thuật ngữ",
   "task": "Completed",
-  "total_tasks": "3",
-  "status": "paused",
+  "total_tasks": "4",
+  "status": "completed",
   "completed_tasks": [
-    "Khởi tạo kịch bản tự động sinh từ khóa",
-    "Nạp 353 từ vựng nền tảng vào 7 chuyên mục",
-    "Khắc phục lỗi rác từ khóa (junk data)",
-    "Nâng cấp bộ lọc tìm kiếm (ignore short query noise)"
+    "Tạo bảng terms trên Supabase với cấu trúc đầy đủ",
+    "Phát triển giao diện admin/terms hỗ trợ CRUD thuật ngữ",
+    "Viết công cụ Import JSON",
+    "Cập nhật API lấy thuật ngữ sang kết nối với Supabase"
   ],
   "remaining_tasks": [],
   "blockers": [],
   "human_actions_pending": [],
   "decisions": [
-    "Sử dụng kỹ thuật split Markdown Plan để nạp dữ liệu",
-    "Lọc chuỗi query < 3 ký tự để tránh nhiễu API Search"
+    "Quản lý tập trung toàn bộ hệ thống Thuật ngữ trên Supabase thay vì JSON cục bộ."
   ],
   "uncommitted_files": [],
-  "next_action": "/vp-evolve để bắt đầu Phase 21 hoặc /vp-docs để tổng hợp tài liệu",
-  "context_notes": "Phase 20 đã xong hoàn toàn. Hệ thống đã hoạt động ổn định với lượng từ vựng dồi dào. Sẵn sàng nghỉ ngơi."
+  "next_action": "Chuyển sang Phase tiếp theo hoặc Feature mới",
+  "context_notes": "Phase 26 đã hoàn thành và kiểm tra thành công."
 }

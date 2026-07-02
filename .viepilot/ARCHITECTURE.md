@@ -45,5 +45,6 @@ flowchart TD
 ## Technology Decisions
 - **Next.js (App Router):** Chosen for its Server-Side Rendering capabilities, excellent SEO (vital for a dictionary), and seamless Vercel deployment.
 - **Tailwind CSS:** For rapid mobile-first UI development, allowing easy translation from the user's `root.html` prototype.
-- **Supabase:** Provides an instant PostgreSQL database with row-level security and JSON storage, perfect for storing varied module specs and chat histories.
+- **Supabase:** Provides an instant PostgreSQL database with row-level security and JSON storage, perfect for storing varied module specs and chat histories. Added `components` table for EleSelect-like features (Phase 22).
 - **Gemini API:** Selected for its advanced reasoning capabilities to act as an engineering mentor.
+- **Mermaid.js:** Used dynamically in AI Project Studio to render electronic wiring diagrams seamlessly from Gemini AI output (Phase 23).
