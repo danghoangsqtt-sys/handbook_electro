@@ -327,7 +327,7 @@ export default function ProjectStudioWorkspace() {
                     onClick={() => setShowPublishModal(true)}
                     className="px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded text-xs font-bold transition-all shadow-sm flex items-center gap-2"
                   >
-                    <i className="fa-solid fa-folder-plus"></i> Luu vao Thu Vien
+                    <i className="fa-solid fa-folder-plus"></i> Lưu vào Thư Viện
                   </button>
                 </div>
               </div>
@@ -462,15 +462,15 @@ function PublishProjectModal({
         setPinRows(p => p.map((r, idx) => idx === i ? { ...r, [f]: v } : r));
 
     const handlePublish = async () => {
-        if (!title.trim()) { alert('Vui long nhap ten du an!'); return; }
+        if (!title.trim()) { alert('Vui lòng nhập tên dự án!'); return; }
         setPublishing(true);
         try {
             const supabase = (await import('@/lib/supabase/client')).createClient();
             const { data: { user } } = await supabase.auth.getUser();
-            if (!user) { alert('Ban can dang nhap!'); setPublishing(false); return; }
+            if (!user) { alert('Bạn cần đăng nhập!'); setPublishing(false); return; }
             let finalSchematicUrl: string | null = schematicUrl.trim() || null;
             if (uploadFile) {
-                setUploadProgress('Uploading schematic...');
+                setUploadProgress('Đang upload sơ đồ...');
                 const ext = uploadFile.name.split('.').pop();
                 const path = `${user.id}/${Date.now()}.${ext}`;
                 const { error: ue } = await supabase.storage.from('schematics').upload(path, uploadFile, { upsert: true });
@@ -479,17 +479,17 @@ function PublishProjectModal({
                 finalSchematicUrl = publicUrl;
             }
             const validPins = pinRows.filter(r => r.component.trim() && r.component_pin.trim() && r.mcu_pin.trim());
-            setUploadProgress('Publishing...');
+            setUploadProgress('Đang lưu...');
             const { error } = await supabase.from('public_projects').insert([{
                 title: title.trim(),
-                description: description.trim() || 'No description',
+                description: description.trim() || 'Không có mô tả',
                 bom_data: projectItems,
                 diagram_code: diagramCode || null,
                 schematic_image_url: finalSchematicUrl,
                 pin_connections: validPins.length > 0 ? validPins : null,
                 user_id: user.id,
             }]);
-            if (error) alert('Publish error: ' + error.message);
+            if (error) alert('Lỗi: ' + error.message);
             else setSuccess(true);
         } finally { setPublishing(false); setUploadProgress(''); }
     };
@@ -500,8 +500,8 @@ function PublishProjectModal({
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4">
                     <i className="fa-solid fa-check text-emerald-400 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-black dark:text-slate-100 mb-2">Published!</h3>
-                <p className="text-sm text-slate-500 mb-6">Project is now in the Community Library.</p>
+                <h3 className="text-xl font-black dark:text-slate-100 mb-2">Đã lưu thành công!</h3>
+                <p className="text-sm text-slate-500 mb-6">Dự án đã được lưu vào Thư Viện.</p>
                 <button onClick={onClose} className="w-full py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl">Close</button>
             </div>
         </div>
@@ -514,9 +514,9 @@ function PublishProjectModal({
                 <div className="flex items-center justify-between p-5 border-b border-slate-200 dark:border-white/5 flex-shrink-0">
                     <div>
                         <h2 className="font-black dark:text-slate-100 text-lg flex items-center gap-2">
-                            <i className="fa-solid fa-cloud-arrow-up text-[#2D9CDB]"></i> Publish Project
+                            <i className="fa-solid fa-cloud-arrow-up text-[#2D9CDB]"></i> Lưu Dự Án
                         </h2>
-                        <p className="text-xs text-slate-400 mt-0.5">Share your project with the engineering community</p>
+                        <p className="text-xs text-slate-400 mt-0.5">Lưu dự án vào thư viện cá nhân của bạn</p>
                     </div>
                     <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
                         <i className="fa-solid fa-xmark text-slate-500 dark:text-slate-400 text-sm"></i>
@@ -528,31 +528,31 @@ function PublishProjectModal({
                     {/* Info */}
                     <div className="space-y-3">
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Project Name *</label>
-                            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="e.g. IoT Weather Station with ESP32" className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"/>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Tên Dự Án *</label>
+                            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="VD: Trạm Thời Tiết IoT với ESP32" className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"/>
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Description</label>
-                            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="Brief description..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"/>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Mô tả</label>
+                            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="Mô tả ngắn về dự án..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"/>
                         </div>
                     </div>
 
                     {/* Schematic Upload */}
                     <div>
                         <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-1.5">
-                            <i className="fa-solid fa-image text-emerald-400"></i> Schematic Diagram (optional)
+                            <i className="fa-solid fa-image text-emerald-400"></i> Sơ Đồ Nguyên Lý (tùy chọn)
                         </label>
                         <div className="space-y-2">
                             <label className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-[#161B22] border border-dashed border-slate-300 dark:border-[#30363D] rounded-xl cursor-pointer hover:border-[#2D9CDB] transition-colors group">
                                 <i className="fa-solid fa-cloud-arrow-up text-slate-400 group-hover:text-[#2D9CDB]"></i>
                                 <div className="flex-1 min-w-0">
-                                    <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{uploadFile ? uploadFile.name : 'Upload PNG/JPG from KiCad, EasyEDA, Fritzing...'}</p>
-                                    {!uploadFile && <p className="text-[10px] text-slate-400">Max 5MB</p>}
+                                    <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{uploadFile ? uploadFile.name : 'Upload PNG/JPG từ KiCad, EasyEDA, Fritzing...'}</p>
+                                    {!uploadFile && <p className="text-[10px] text-slate-400">Tối đa 5MB</p>}
                                 </div>
                                 <input type="file" accept="image/*" className="hidden" onChange={e => { setUploadFile(e.target.files?.[0] || null); if (e.target.files?.[0]) setSchematicUrl(''); }}/>
                                 {uploadFile && <button onClick={e => { e.preventDefault(); setUploadFile(null); }} className="text-xs text-red-400"><i className="fa-solid fa-xmark"></i></button>}
                             </label>
-                            <div className="flex items-center gap-2"><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div><span className="text-xs text-slate-400">or URL</span><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div></div>
+                            <div className="flex items-center gap-2"><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div><span className="text-xs text-slate-400">hoặc URL</span><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div></div>
                             <input type="url" value={schematicUrl} onChange={e => { setSchematicUrl(e.target.value); if (e.target.value) setUploadFile(null); }} placeholder="https://easyeda.com/..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200"/>
                         </div>
                     </div>
@@ -561,19 +561,19 @@ function PublishProjectModal({
                     <div>
                         <div className="flex items-center justify-between mb-2">
                             <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                                <i className="fa-solid fa-plug text-amber-400"></i> Pin Connections (optional)
+                                <i className="fa-solid fa-plug text-amber-400"></i> Kết Nối Chân (tùy chọn)
                             </label>
                             <button onClick={addPin} className="text-xs text-[#2D9CDB] font-bold flex items-center gap-1">
-                                <i className="fa-solid fa-plus text-[10px]"></i> Add row
+                                <i className="fa-solid fa-plus text-[10px]"></i> Thêm dòng
                             </button>
                         </div>
                         <div className="rounded-xl border border-slate-200 dark:border-[#30363D] overflow-hidden">
                             <div className="grid grid-cols-12 text-[9px] font-bold uppercase tracking-widest text-slate-400 bg-slate-50 dark:bg-[#161B22] px-2 py-1.5">
-                                <span className="col-span-2">Component</span>
+                                <span className="col-span-2">Linh kiện</span>
                                 <span className="col-span-2">Pin</span>
                                 <span className="col-span-2">MCU</span>
-                                <span className="col-span-2">MCU Pin</span>
-                                <span className="col-span-2">Protocol</span>
+                                <span className="col-span-2">Chân MCU</span>
+                                <span className="col-span-2">Giao thức</span>
                                 <span className="col-span-1">Vcc</span>
                                 <span className="col-span-1"></span>
                             </div>
@@ -595,17 +595,17 @@ function PublishProjectModal({
                                 ))}
                             </div>
                         </div>
-                        <p className="text-[10px] text-slate-400 mt-1.5">Only rows with Component + Pin + MCU Pin will be saved.</p>
+                        <p className="text-[10px] text-slate-400 mt-1.5">Only rows with Linh kiện + Pin + Chân MCU will be saved.</p>
                     </div>
                 </div>
 
                 {/* Footer */}
                 <div className="flex-shrink-0 p-5 border-t border-slate-200 dark:border-white/5 flex items-center gap-3 justify-end">
                     {uploadProgress && <span className="text-xs text-[#2D9CDB] flex items-center gap-1.5 mr-auto"><i className="fa-solid fa-spinner fa-spin text-[10px]"></i>{uploadProgress}</span>}
-                    <button onClick={onClose} className="px-5 py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 transition-all">Cancel</button>
+                    <button onClick={onClose} className="px-5 py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 transition-all">Hủy</button>
                     <button onClick={handlePublish} disabled={publishing} className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-sm disabled:opacity-50 shadow-md shadow-blue-500/20 transition-all">
                         <i className={`fa-solid ${publishing ? 'fa-spinner fa-spin' : 'fa-cloud-arrow-up'}`}></i>
-                        {publishing ? 'Publishing...' : 'Publish'}
+                        {publishing ? 'Đang lưu...' : 'Publish'}
                     </button>
                 </div>
             </div>

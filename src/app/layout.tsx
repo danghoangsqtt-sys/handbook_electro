@@ -15,7 +15,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
-  title: "TechDict 5.0 - Từ Điển Bách Khoa Cơ Điện Tử & IT",
+  title: "Electro Creative - Electronics Engineering Hub",
   description: "Sổ tay bách khoa công nghệ số, hỗ trợ kỹ sư và sinh viên tra cứu thuật ngữ, module, và làm dự án với AI.",
 };
 

@@ -290,11 +290,11 @@ export default function ProjectDetailModal({
 
                     {/* Quick stats */}
                     <div className="flex items-center gap-3 mt-2 text-xs text-blue-200/60 flex-wrap">
-                        <span><i className="fa-solid fa-microchip mr-1 text-[#2D9CDB]"></i>{bomItems.length} linh kien</span>
-                        {project.schematic_image_url && <span><i className="fa-solid fa-image mr-1 text-emerald-400"></i>So do nguyen ly</span>}
-                        {pinConnections.length > 0 && <span><i className="fa-solid fa-plug mr-1 text-amber-400"></i>{pinConnections.length} ket noi chan</span>}
-                        {project.diagram_code && <span><i className="fa-solid fa-share-nodes mr-1 text-violet-400"></i>So do khoi</span>}
-                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1 text-cyan-400"></i>{codeSnippets.length} doan code</span>}
+                        <span><i className="fa-solid fa-microchip mr-1 text-[#2D9CDB]"></i>{bomItems.length} linh kiện</span>
+                        {project.schematic_image_url && <span><i className="fa-solid fa-image mr-1 text-emerald-400"></i>Sơ đồ nguyên lý</span>}
+                        {pinConnections.length > 0 && <span><i className="fa-solid fa-plug mr-1 text-amber-400"></i>{pinConnections.length} kết nối chân</span>}
+                        {project.diagram_code && <span><i className="fa-solid fa-share-nodes mr-1 text-violet-400"></i>Sơ đồ khối</span>}
+                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1 text-cyan-400"></i>{codeSnippets.length} đoạn code</span>}
                     </div>
                 </div>
 
@@ -330,7 +330,7 @@ export default function ProjectDetailModal({
                     {activeTab === 'overview' && (
                         <div className="prose prose-sm dark:prose-invert max-w-none">
                             <p className="text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-wrap text-sm">
-                                {project.description || 'Chua co mo ta.'}
+                                {project.description || 'Chưa có mô tả.'}
                             </p>
                         </div>
                     )}

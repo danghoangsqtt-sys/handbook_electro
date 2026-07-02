@@ -70,7 +70,7 @@ export default function Home() {
       {activeTab !== 'labs' && (
         <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 mt-12 transition-all">
           <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-slate-500 dark:text-slate-400">&copy; 2026 TechDict 5.0 - Từ điển bách khoa hệ thống thông tin, tự động hóa và cơ điện tử.</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">&copy; 2026 Electro Creative — Electronics Engineering Hub. Nền tảng học tập và nghiên cứu điện tử.</p>
               <div className="flex gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
                   <span className="font-mono bg-blue-500/10 text-blue-600 dark:text-blue-400 px-2 py-0.5 rounded">3000+ Terms Database</span>
               </div>

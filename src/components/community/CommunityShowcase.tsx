@@ -50,15 +50,15 @@ function EmptyState({ onAdd, isLoggedIn }: { onAdd: () => void; isLoggedIn: bool
                 <div className="w-20 h-20 rounded-3xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center mb-6">
                     <i className="fa-solid fa-folder-open text-[#2D9CDB] text-3xl"></i>
                 </div>
-                <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Thu Vien Du An Ca Nhan</h3>
+                <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Thư Viện Dự Án Ca Nhan</h3>
                 <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md mb-6">
-                    Dang nhap de luu tru va quan ly tat ca du an dien tu cua ban.
+                    Đăng nhập để lưu trữ và quản lý tất cả dự án điện tử của bạn.
                 </p>
                 <button
                     onClick={() => supabase.auth.signInWithOAuth({ provider: 'google' })}
                     className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all"
                 >
-                    <i className="fa-brands fa-google"></i> Dang nhap voi Google
+                    <i className="fa-brands fa-google"></i> Đăng nhập với Google
                 </button>
             </div>
         );
@@ -68,15 +68,15 @@ function EmptyState({ onAdd, isLoggedIn }: { onAdd: () => void; isLoggedIn: bool
             <div className="w-20 h-20 rounded-3xl bg-[#2D9CDB]/10 border border-[#2D9CDB]/20 flex items-center justify-center mb-6">
                 <i className="fa-solid fa-folder-plus text-[#2D9CDB] text-3xl"></i>
             </div>
-            <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Chua co du an nao</h3>
+            <h3 className="text-xl font-black text-slate-800 dark:text-slate-100 mb-2">Chưa có dự án nào</h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md mb-6">
-                Bat dau luu tru du an dau tien cua ban. Hay su dung Phong Thi Nghiem AI de tao du an hoac them thu cong.
+                Bắt đầu lưu trữ dự án đầu tiên của bạn. Hãy dùng Phòng Thí Nghiệm AI để tạo dự án hoặc thêm thủ công.
             </p>
             <button
                 onClick={onAdd}
                 className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-500/20 hover:opacity-90 transition-all"
             >
-                <i className="fa-solid fa-plus"></i> Them Du An Moi
+                <i className="fa-solid fa-plus"></i> Thêm Dự Án Mới
             </button>
         </div>
     );
@@ -168,9 +168,9 @@ export default function ProjectLibrary() {
                                 <i className="fa-solid fa-folder-open text-[#2D9CDB]"></i>
                             </div>
                             <div>
-                                <h2 className="text-lg font-black text-slate-800 dark:text-slate-100">Thu Vien Du An</h2>
+                                <h2 className="text-lg font-black text-slate-800 dark:text-slate-100">Thư Viện Dự Án</h2>
                                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                                    {loading ? '...' : `${projects.length} du an da luu`}
+                                    {loading ? '...' : `${projects.length} dự án đã lưu`}
                                 </p>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ export default function ProjectLibrary() {
                                     type="text"
                                     value={searchQuery}
                                     onChange={e => setSearchQuery(e.target.value)}
-                                    placeholder="Tim kiem du an..."
+                                    placeholder="Tìm kiếm dự án..."
                                     className="pl-8 pr-4 py-2 bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 w-44"
                                 />
                             </div>
@@ -192,9 +192,9 @@ export default function ProjectLibrary() {
                                 onChange={e => setSort(e.target.value as SortOption)}
                                 className="px-3 py-2 bg-slate-100 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-xs focus:outline-none dark:text-slate-200"
                             >
-                                <option value="newest">Moi nhat</option>
-                                <option value="oldest">Cu nhat</option>
-                                <option value="name_az">Ten A-Z</option>
+                                <option value="newest">Mới nhất</option>
+                                <option value="oldest">Cũ nhất</option>
+                                <option value="name_az">Tên A-Z</option>
                             </select>
 
                             {isLoggedIn && (
@@ -203,7 +203,7 @@ export default function ProjectLibrary() {
                                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 hover:opacity-90 transition-all whitespace-nowrap"
                                 >
                                     <i className="fa-solid fa-plus"></i>
-                                    <span className="hidden sm:inline">Them Du An</span>
+                                    <span className="hidden sm:inline">Thêm Dự Án</span>
                                 </button>
                             )}
                         </div>
@@ -222,7 +222,7 @@ export default function ProjectLibrary() {
                 ) : filtered.length === 0 ? (
                     <div className="text-center py-20">
                         <i className="fa-solid fa-magnifying-glass text-slate-300 dark:text-slate-700 text-4xl mb-4"></i>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm">Khong tim thay du an nao voi tu khoa <span className="font-bold">&quot;{searchQuery}&quot;</span></p>
+                        <p className="text-slate-500 dark:text-slate-400 text-sm">Không tìm thấy dự án nào với từ khóa <span className="font-bold">&quot;{searchQuery}&quot;</span></p>
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -276,8 +276,8 @@ export default function ProjectLibrary() {
                         <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mx-auto mb-4">
                             <i className="fa-solid fa-trash text-red-400 text-lg"></i>
                         </div>
-                        <h3 className="text-base font-black text-slate-800 dark:text-slate-100 text-center mb-2">Xoa Du An?</h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 text-center mb-5">Hanh dong nay khong the hoan tac. Du an se bi xoa vinh vien.</p>
+                        <h3 className="text-base font-black text-slate-800 dark:text-slate-100 text-center mb-2">Xóa Dự Án?</h3>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 text-center mb-5">Hành động này không thể hoàn tác. Dự án sẽ bị xóa vĩnh viễn.</p>
                         <div className="flex gap-3">
                             <button onClick={() => setConfirmDeleteId(null)} className="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-50 dark:hover:bg-white/5 transition-all">
                                 Huy
@@ -333,7 +333,7 @@ function ProjectCard({
                     <button
                         onClick={e => { e.stopPropagation(); onEdit(); }}
                         className="w-7 h-7 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 flex items-center justify-center transition-colors"
-                        title="Chinh sua"
+                        title="Chỉnh sửa"
                     >
                         <i className="fa-solid fa-pen text-amber-400 text-[10px]"></i>
                     </button>
@@ -353,7 +353,7 @@ function ProjectCard({
 
             {/* Description */}
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2 mb-3 flex-1">
-                {project.description || 'Chua co mo ta.'}
+                {project.description || 'Chưa có mô tả.'}
             </p>
 
             {/* Component tags */}
@@ -401,7 +401,7 @@ function ProjectCard({
                 onClick={onView}
                 className="w-full py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-xs font-bold text-slate-600 dark:text-slate-400 hover:border-[#2D9CDB] hover:text-[#2D9CDB] hover:bg-[#2D9CDB]/5 transition-all flex items-center justify-center gap-1.5"
             >
-                <i className="fa-solid fa-eye text-[10px]"></i> Xem Chi Tiet
+                <i className="fa-solid fa-eye text-[10px]"></i> Xem Chi Tiết
             </button>
         </div>
     );

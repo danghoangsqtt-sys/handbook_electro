@@ -71,23 +71,23 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
         setPinRows(p => p.map((r, idx) => idx === i ? { ...r, [f]: v } : r));
 
     const handleSave = async () => {
-        if (!title.trim()) { alert('Please enter a project name!'); return; }
+        if (!title.trim()) { alert('Vui lòng nhập tên dự án!'); return; }
         setSaving(true);
         try {
             const supabase = createClient();
             const { data: { user } } = await supabase.auth.getUser();
-            if (!user) { alert('Please log in to save projects!'); setSaving(false); return; }
+            if (!user) { alert('Bạn cần đăng nhập để lưu dự án!'); setSaving(false); return; }
 
             // Upload schematic if file selected
             let finalSchematicUrl: string | null = schematicUrl.trim() || null;
             if (uploadFile) {
-                setUploadProgress('Uploading schematic image...');
+                setUploadProgress('Đang upload sơ đồ...');
                 const ext = uploadFile.name.split('.').pop();
                 const path = `${user.id}/${Date.now()}.${ext}`;
                 const { error: ue } = await supabase.storage
                     .from('schematics')
                     .upload(path, uploadFile, { upsert: true });
-                if (ue) { alert('Upload error: ' + ue.message); setSaving(false); setUploadProgress(''); return; }
+                if (ue) { alert('Lỗi upload: ' + ue.message); setSaving(false); setUploadProgress(''); return; }
                 const { data: { publicUrl } } = supabase.storage.from('schematics').getPublicUrl(path);
                 finalSchematicUrl = publicUrl;
             }
@@ -97,11 +97,11 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
             // Parse code snippets (support JSON or plain string)
             let parsedCode: string | null = codeSnippets.trim() || null;
 
-            setUploadProgress(mode === 'add' ? 'Saving project...' : 'Updating project...');
+            setUploadProgress(mode === 'add' ? 'Đang lưu dự án...' : 'Đang cập nhật...');
 
             const payload = {
                 title: title.trim(),
-                description: description.trim() || 'No description',
+                description: description.trim() || 'Không có mô tả',
                 diagram_code: diagramCode.trim() || null,
                 schematic_image_url: finalSchematicUrl,
                 pin_connections: validPins.length > 0 ? validPins : null,
@@ -124,10 +124,10 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
     };
 
     const SECTIONS = [
-        { id: 'info', label: 'Thong Tin', icon: 'fa-circle-info' },
+        { id: 'info', label: 'Thông Tin', icon: 'fa-circle-info' },
         { id: 'schematic', label: 'So Do', icon: 'fa-image' },
-        { id: 'pins', label: 'Ket Noi Chan', icon: 'fa-plug' },
-        { id: 'code', label: 'Ma Nguon', icon: 'fa-code' },
+        { id: 'pins', label: 'Kết Nối Chân', icon: 'fa-plug' },
+        { id: 'code', label: 'Mã Nguồn', icon: 'fa-code' },
     ] as const;
 
     return (
@@ -139,10 +139,10 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                     <div>
                         <h2 className="font-black dark:text-slate-100 text-lg flex items-center gap-2">
                             <i className={`fa-solid ${mode === 'add' ? 'fa-folder-plus text-[#2D9CDB]' : 'fa-pen-to-square text-amber-400'}`}></i>
-                            {mode === 'add' ? 'Them Du An Moi' : 'Chinh Sua Du An'}
+                            {mode === 'add' ? 'Thêm Dự Án Mới' : 'Chỉnh Sửa Dự Án'}
                         </h2>
                         <p className="text-xs text-slate-400 mt-0.5">
-                            {mode === 'add' ? 'Luu tru du an vao thu vien ca nhan' : 'Cap nhat thong tin du an'}
+                            {mode === 'add' ? 'Lưu trữ dự án vào thư viện cá nhân' : 'Cập nhật thông tin dự án'}
                         </p>
                     </div>
                     <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
@@ -175,11 +175,11 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                     {activeSection === 'info' && (
                         <div className="space-y-4">
                             <div>
-                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Ten Du An *</label>
+                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Tên Dự Án *</label>
                                 <input
                                     value={title}
                                     onChange={e => setTitle(e.target.value)}
-                                    placeholder="e.g. Tram Thoi Tiet IoT voi ESP32"
+                                    placeholder="VD: Trạm Thời Tiết IoT với ESP32"
                                     className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"
                                 />
                             </div>
@@ -189,13 +189,13 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                                     value={description}
                                     onChange={e => setDescription(e.target.value)}
                                     rows={4}
-                                    placeholder="Mo ta ngan ve du an, muc dich, tinh nang chinh..."
+                                    placeholder="Mô tả ngắn về dự án, mục đích, tính năng chính..."
                                     className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"
                                 />
                             </div>
                             <div>
                                 <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider flex items-center gap-1.5">
-                                    <i className="fa-solid fa-diagram-project text-purple-400"></i> So Do Khoi (Mermaid)
+                                    <i className="fa-solid fa-diagram-project text-purple-400"></i> Sơ Đồ Khối (Mermaid)
                                 </label>
                                 <textarea
                                     value={diagramCode}
@@ -211,7 +211,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                     {/* SECTION: Schematic */}
                     {activeSection === 'schematic' && (
                         <div className="space-y-3">
-                            <p className="text-xs text-slate-500 dark:text-slate-400">Upload anh so do nguyen ly tu KiCad, EasyEDA, Fritzing hoac nhap URL truc tiep.</p>
+                            <p className="text-xs text-slate-500 dark:text-slate-400">Upload ảnh sơ đồ nguyên lý từ KiCad, EasyEDA, Fritzing hoặc nhập URL trực tiếp.</p>
                             <label className="flex items-center gap-3 p-4 bg-slate-50 dark:bg-[#161B22] border border-dashed border-slate-300 dark:border-[#30363D] rounded-xl cursor-pointer hover:border-[#2D9CDB] transition-colors group">
                                 <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
                                     <i className="fa-solid fa-cloud-arrow-up text-emerald-400 text-lg group-hover:scale-110 transition-transform"></i>
@@ -220,7 +220,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                                     <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
                                         {uploadFile ? uploadFile.name : 'Upload PNG / JPG / SVG'}
                                     </p>
-                                    {!uploadFile && <p className="text-xs text-slate-400 mt-0.5">Toi da 5MB — So do nguyen ly</p>}
+                                    {!uploadFile && <p className="text-xs text-slate-400 mt-0.5">Tối đa 5MB — Sơ đồ nguyên lý</p>}
                                     {uploadFile && (
                                         <p className="text-xs text-emerald-500 mt-0.5">{(uploadFile.size / 1024).toFixed(0)} KB</p>
                                     )}
@@ -245,7 +245,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                             </div>
 
                             <div>
-                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">URL Anh</label>
+                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">URL Ảnh</label>
                                 <input
                                     type="url"
                                     value={schematicUrl}
@@ -259,7 +259,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                                 <div className="p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/20 flex items-center gap-2">
                                     <i className="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
                                     <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-                                        {uploadFile ? `File: ${uploadFile.name}` : 'URL da nhap'}
+                                        {uploadFile ? `File: ${uploadFile.name}` : 'URL đã nhập'}
                                     </span>
                                 </div>
                             )}
@@ -270,18 +270,18 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                     {activeSection === 'pins' && (
                         <div>
                             <div className="flex items-center justify-between mb-3">
-                                <p className="text-xs text-slate-500 dark:text-slate-400">Nhap bang ket noi chan giua linh kien va vi dieu khien.</p>
+                                <p className="text-xs text-slate-500 dark:text-slate-400">Nhập bảng kết nối chân giữa linh kiện và vi điều khiển.</p>
                                 <button onClick={addPin} className="flex items-center gap-1.5 text-xs text-[#2D9CDB] font-bold hover:text-cyan-400 transition-colors">
-                                    <i className="fa-solid fa-plus text-[10px]"></i> Them dong
+                                    <i className="fa-solid fa-plus text-[10px]"></i> Thêm dòng
                                 </button>
                             </div>
                             <div className="rounded-xl border border-slate-200 dark:border-[#30363D] overflow-hidden">
                                 <div className="grid grid-cols-12 text-[9px] font-bold uppercase tracking-widest text-slate-400 bg-slate-50 dark:bg-[#161B22] px-2 py-2">
-                                    <span className="col-span-2">Linh Kien</span>
-                                    <span className="col-span-2">Chan LK</span>
+                                    <span className="col-span-2">Linh Kiện</span>
+                                    <span className="col-span-2">Chân LK</span>
                                     <span className="col-span-2">MCU</span>
-                                    <span className="col-span-2">Chan MCU</span>
-                                    <span className="col-span-2">GThuc</span>
+                                    <span className="col-span-2">Chân MCU</span>
+                                    <span className="col-span-2">Giao Thức</span>
                                     <span className="col-span-1">Vcc</span>
                                     <span className="col-span-1"></span>
                                 </div>
@@ -303,14 +303,14 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                                     ))}
                                 </div>
                             </div>
-                            <p className="text-[10px] text-slate-400 mt-2">Chi dong co du Linh Kien + Chan LK + Chan MCU moi duoc luu.</p>
+                            <p className="text-[10px] text-slate-400 mt-2">Chi dong co du Linh Kiện + Chân LK + Chân MCU moi duoc luu.</p>
                         </div>
                     )}
 
                     {/* SECTION: Code */}
                     {activeSection === 'code' && (
                         <div className="space-y-3">
-                            <p className="text-xs text-slate-500 dark:text-slate-400">Nhap ma nguon Arduino / MicroPython / C++ cho du an.</p>
+                            <p className="text-xs text-slate-500 dark:text-slate-400">Nhập mã nguồn Arduino / MicroPython / C++ cho dự án.</p>
                             <textarea
                                 value={codeSnippets}
                                 onChange={e => setCodeSnippets(e.target.value)}
@@ -340,7 +340,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                         className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-sm disabled:opacity-50 shadow-md shadow-blue-500/20 transition-all"
                     >
                         <i className={`fa-solid ${saving ? 'fa-spinner fa-spin' : mode === 'add' ? 'fa-floppy-disk' : 'fa-pen-to-square'}`}></i>
-                        {saving ? 'Dang luu...' : mode === 'add' ? 'Luu Du An' : 'Cap Nhat'}
+                        {saving ? 'Đang lưu...' : mode === 'add' ? 'Lưu Dự Án' : 'Cập Nhật'}
                     </button>
                 </div>
             </div>
