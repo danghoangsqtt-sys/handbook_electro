@@ -30,7 +30,13 @@ async function getAllTerms() {
         return cachedTerms || [];
     }
 
-    cachedTerms = data || [];
+    // Normalize: PostgreSQL stores unquoted column names as lowercase.
+    // Remap to camelCase so the frontend (TermsList.tsx) works correctly.
+    cachedTerms = (data || []).map((t: Record<string, unknown>) => ({
+        ...t,
+        fullName: t.fullname || t.fullName || '',
+        youtubeUrl: t.youtubeurl || t.youtubeUrl || '',
+    }));
     lastFetchTime = Date.now();
     return cachedTerms;
 }
@@ -57,9 +63,9 @@ export async function GET(request: Request) {
         const scoredResults = results.map(t => {
             let score = 0;
             const termRaw = t.term || '';
-            const fullNameRaw = t.fullName || '';
+            const fullNameRaw = t.fullName || t.fullname || '';
             const defRaw = t.definition || '';
-            const appsRaw = t.applications ? t.applications.join(' ') : '';
+            const appsRaw = Array.isArray(t.applications) ? t.applications.join(' ') : '';
             
             const termClean = removeAccents(termRaw).toLowerCase();
             const fullNameClean = removeAccents(fullNameRaw).toLowerCase();

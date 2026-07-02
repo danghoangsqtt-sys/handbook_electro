@@ -46,15 +46,15 @@ async function seed() {
       process.exit(0);
   }
 
-  // Map data to match Supabase schema
+  // Map data to match Supabase schema (PostgreSQL lowercases all unquoted column names)
   const payload = allTerms.map(term => ({
       term: term.term || '',
-      fullName: term.fullName || '',
+      fullname: term.fullName || '',       // PostgreSQL stores as lowercase
       category: term.category || 'Khác',
       definition: term.definition || '',
       applications: term.applications || [],
-      tags: [], // Local JSON didn't have tags
-      youtubeUrl: term.youtubeUrl || '',
+      tags: [],
+      youtubeurl: term.youtubeUrl || '',   // PostgreSQL stores as lowercase
       icon: term.icon || '',
       is_active: true
   }));
