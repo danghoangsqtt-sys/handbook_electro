@@ -6,11 +6,20 @@ import CommentSection from './CommentSection';
 
 // BOMItem is imported from @/store/useBOMStore
 
-
 interface CodeSnippet {
     language: string;
     label?: string;
     code: string;
+}
+
+interface PinConnection {
+    component: string;
+    component_pin: string;
+    mcu: string;
+    mcu_pin: string;
+    protocol: string;
+    voltage?: string;
+    note?: string;
 }
 
 interface CommunityProject {
@@ -20,6 +29,8 @@ interface CommunityProject {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     bom_data: any[];
     diagram_code: string | null;
+    schematic_image_url: string | null;
+    pin_connections: PinConnection[] | null;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code_snippets: any;
     likes_count: number;
@@ -37,6 +48,86 @@ interface ProjectDetailModalProps {
 }
 
 type TabId = 'overview' | 'bom' | 'diagram' | 'code';
+type DiagramSubTab = 'schematic' | 'pinout' | 'block';
+
+// Protocol badge colors
+const PROTOCOL_COLORS: Record<string, string> = {
+    'I2C':    'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20',
+    'SPI':    'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20',
+    'UART':   'bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20',
+    'GPIO':   'bg-slate-500/10 text-slate-600 dark:text-slate-400 border border-slate-500/20',
+    'PWM':    'bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20',
+    'ADC':    'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20',
+    'Power':  'bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20',
+    'GND':    'bg-zinc-500/10 text-zinc-600 dark:text-zinc-400 border border-zinc-500/20',
+};
+
+function ProtocolBadge({ protocol }: { protocol: string }) {
+    const cls = PROTOCOL_COLORS[protocol] || PROTOCOL_COLORS['GPIO'];
+    return (
+        <span className={`text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest font-mono ${cls}`}>
+            {protocol}
+        </span>
+    );
+}
+
+function PinConnectionTable({ pins }: { pins: PinConnection[] }) {
+    if (!pins || pins.length === 0) {
+        return (
+            <div className="text-center py-12 text-slate-400">
+                <i className="fa-solid fa-plug text-3xl mb-2 block opacity-40"></i>
+                <p className="text-sm">Chưa có bảng kết nối chân.</p>
+            </div>
+        );
+    }
+
+    // Group by component
+    const groups = pins.reduce((acc, pin) => {
+        if (!acc[pin.component]) acc[pin.component] = [];
+        acc[pin.component].push(pin);
+        return acc;
+    }, {} as Record<string, PinConnection[]>);
+
+    return (
+        <div className="space-y-5">
+            {Object.entries(groups).map(([component, rows]) => (
+                <div key={component}>
+                    <div className="flex items-center gap-2 mb-2">
+                        <i className="fa-solid fa-microchip text-[#2D9CDB] text-xs"></i>
+                        <span className="text-sm font-bold text-slate-700 dark:text-slate-200 font-mono">{component}</span>
+                        <span className="text-xs text-slate-400">— {rows.length} chân</span>
+                    </div>
+                    <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-[#30363D]">
+                        <table className="w-full text-xs">
+                            <thead>
+                                <tr className="bg-slate-50 dark:bg-[#161B22]">
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest">Chân LK</th>
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest hidden sm:table-cell">MCU</th>
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest">Chân MCU</th>
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest">Giao thức</th>
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest hidden md:table-cell">Điện áp</th>
+                                    <th className="px-3 py-2 text-left font-bold text-slate-400 uppercase tracking-widest hidden lg:table-cell">Ghi chú</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100 dark:divide-[#30363D]">
+                                {rows.map((row, idx) => (
+                                    <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-white/3 transition-colors">
+                                        <td className="px-3 py-2.5 font-mono font-semibold text-slate-700 dark:text-slate-200">{row.component_pin}</td>
+                                        <td className="px-3 py-2.5 text-slate-500 dark:text-slate-400 hidden sm:table-cell">{row.mcu}</td>
+                                        <td className="px-3 py-2.5 font-mono text-[#2D9CDB] font-bold">{row.mcu_pin}</td>
+                                        <td className="px-3 py-2.5"><ProtocolBadge protocol={row.protocol} /></td>
+                                        <td className="px-3 py-2.5 text-slate-500 dark:text-slate-400 hidden md:table-cell">{row.voltage || '—'}</td>
+                                        <td className="px-3 py-2.5 text-slate-400 hidden lg:table-cell">{row.note || '—'}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
 
 export default function ProjectDetailModal({
     project,
@@ -46,9 +137,11 @@ export default function ProjectDetailModal({
     likingId
 }: ProjectDetailModalProps) {
     const [activeTab, setActiveTab] = useState<TabId>('overview');
+    const [diagramSubTab, setDiagramSubTab] = useState<DiagramSubTab>('schematic');
     const [mermaidLoaded, setMermaidLoaded] = useState(false);
     const [mermaidError, setMermaidError] = useState(false);
     const [copiedIdx, setCopiedIdx] = useState<number | null>(null);
+    const [schematicFullscreen, setSchematicFullscreen] = useState(false);
     const diagramRef = useRef<HTMLDivElement>(null);
     const { addItem, setIsProjectStudioOpen } = useBOMStore();
 
@@ -72,9 +165,29 @@ export default function ProjectDetailModal({
         return [];
     })();
 
+    // Parse pin_connections
+    const pinConnections: PinConnection[] = (() => {
+        if (!project?.pin_connections) return [];
+        if (typeof project.pin_connections === 'string') {
+            try { return JSON.parse(project.pin_connections); } catch { return []; }
+        }
+        if (Array.isArray(project.pin_connections)) return project.pin_connections;
+        return [];
+    })();
+
+    // Auto-select best sub-tab when opening diagram tab
+    useEffect(() => {
+        if (activeTab === 'diagram') {
+            if (project?.schematic_image_url) setDiagramSubTab('schematic');
+            else if (pinConnections.length > 0) setDiagramSubTab('pinout');
+            else setDiagramSubTab('block');
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeTab, project?.id]);
+
     // Render Mermaid diagram
     useEffect(() => {
-        if (activeTab !== 'diagram' || !project?.diagram_code || !diagramRef.current) return;
+        if (activeTab !== 'diagram' || diagramSubTab !== 'block' || !project?.diagram_code || !diagramRef.current) return;
 
         setMermaidLoaded(false);
         setMermaidError(false);
@@ -102,7 +215,7 @@ export default function ProjectDetailModal({
         };
 
         renderDiagram();
-    }, [activeTab, project]);
+    }, [activeTab, diagramSubTab, project]);
 
     const handleCloneAll = () => {
         bomItems.forEach(item => addItem({ ...item, image_url: item.image_url ?? null }));
@@ -141,9 +254,19 @@ export default function ProjectDetailModal({
         { id: 'code', label: 'Mã nguồn', icon: 'fa-code', count: codeSnippets.length || undefined },
     ];
 
+    // Diagram sub-tabs — only show tabs with data
+    const diagramSubTabs: { id: DiagramSubTab; label: string; icon: string; available: boolean }[] = [
+        { id: 'schematic', label: 'Nguyên Lý', icon: 'fa-image', available: !!project.schematic_image_url },
+        { id: 'pinout', label: 'Kết Nối Chân', icon: 'fa-plug', available: pinConnections.length > 0 },
+        { id: 'block', label: 'Sơ đồ Khối', icon: 'fa-share-nodes', available: !!project.diagram_code },
+    ];
+    const availableSubTabs = diagramSubTabs.filter(t => t.available);
+    const hasDiagramData = availableSubTabs.length > 0;
+
     const isLiked = likedProjects.has(project.id);
 
     return (
+        <>
         <div
             className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/70 backdrop-blur-md p-0 sm:p-4"
             onClick={handleBackdrop}
@@ -167,13 +290,13 @@ export default function ProjectDetailModal({
                     <div className="flex items-center gap-3 mb-3">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src={project.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(project.profiles?.display_name || 'A')}&background=ffffff&color=3b82f6`}
+                            src={project.profiles?.avatar_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(project.profiles?.display_name || 'A')}&background=2D9CDB&color=fff`}
                             alt="avatar"
-                            className="w-10 h-10 rounded-full object-cover ring-2 ring-white/50"
+                            className="w-10 h-10 rounded-full object-cover ring-2 ring-white/20"
                         />
                         <div>
                             <p className="font-semibold text-sm">{project.profiles?.display_name || 'Anonymous'}</p>
-                            <p className="text-xs text-blue-100">
+                            <p className="text-xs text-blue-200/70">
                                 {new Date(project.created_at).toLocaleDateString('vi-VN', { day: '2-digit', month: 'long', year: 'numeric' })}
                             </p>
                         </div>
@@ -186,7 +309,7 @@ export default function ProjectDetailModal({
                                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
                                     isLiked
                                         ? 'bg-white text-red-500'
-                                        : 'bg-white/20 hover:bg-white/30 text-white'
+                                        : 'bg-white/10 hover:bg-white/20 border border-white/10 text-white'
                                 }`}
                             >
                                 <i className={`fa-${isLiked ? 'solid' : 'regular'} fa-heart`}></i>
@@ -195,14 +318,15 @@ export default function ProjectDetailModal({
                         </div>
                     </div>
 
-                    <h2 className="text-lg font-black leading-snug pr-8">{project.title}</h2>
+                    <h2 className="text-lg font-black leading-snug pr-10">{project.title}</h2>
 
                     {/* Quick stats */}
-                    <div className="flex items-center gap-3 mt-2 text-xs text-blue-100">
-                        <span><i className="fa-solid fa-microchip mr-1"></i>{bomItems.length} linh kiện</span>
-                        {project.diagram_code && <span><i className="fa-solid fa-diagram-project mr-1"></i>Có sơ đồ</span>}
-                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1"></i>{codeSnippets.length} đoạn code</span>}
-                        {(project.comments_count ?? 0) > 0 && <span><i className="fa-solid fa-comments mr-1"></i>{project.comments_count} bình luận</span>}
+                    <div className="flex items-center gap-3 mt-2 text-xs text-blue-200/60 flex-wrap">
+                        <span><i className="fa-solid fa-microchip mr-1 text-[#2D9CDB]"></i>{bomItems.length} linh kiện</span>
+                        {project.schematic_image_url && <span><i className="fa-solid fa-image mr-1 text-emerald-400"></i>Sơ đồ nguyên lý</span>}
+                        {pinConnections.length > 0 && <span><i className="fa-solid fa-plug mr-1 text-amber-400"></i>{pinConnections.length} kết nối chân</span>}
+                        {project.diagram_code && <span><i className="fa-solid fa-share-nodes mr-1 text-violet-400"></i>Sơ đồ khối</span>}
+                        {codeSnippets.length > 0 && <span><i className="fa-solid fa-code mr-1 text-cyan-400"></i>{codeSnippets.length} đoạn code</span>}
                     </div>
                 </div>
 
@@ -243,7 +367,7 @@ export default function ProjectDetailModal({
                                 </p>
                             </div>
                             {/* Comment section dưới overview */}
-                            <div className="border-t border-slate-100 dark:border-slate-800 pt-6 mt-6">
+                            <div className="border-t border-slate-100 dark:border-white/5 pt-6 mt-6">
                                 <CommentSection projectId={project.id} />
                             </div>
                         </div>
@@ -254,7 +378,7 @@ export default function ProjectDetailModal({
                         <div>
                             {bomItems.length === 0 ? (
                                 <div className="text-center py-12 text-slate-400">
-                                    <i className="fa-solid fa-box-open text-3xl mb-2 block"></i>
+                                    <i className="fa-solid fa-box-open text-3xl mb-2 block opacity-40"></i>
                                     <p className="text-sm">Không có danh sách linh kiện.</p>
                                 </div>
                             ) : (
@@ -263,31 +387,31 @@ export default function ProjectDetailModal({
                                         <span className="text-sm text-slate-500">{bomItems.length} linh kiện</span>
                                         <button
                                             onClick={handleCloneAll}
-                                            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 transition-all"
+                                            className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-xs shadow-md shadow-blue-500/20 transition-all"
                                         >
                                             <i className="fa-solid fa-code-branch"></i>
                                             Clone tất cả vào dự án
                                         </button>
                                     </div>
-                                    <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                                    <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-[#30363D]">
                                         <table className="w-full text-sm">
                                             <thead>
-                                                <tr className="bg-slate-50 dark:bg-slate-800 text-left">
+                                                <tr className="bg-slate-50 dark:bg-[#161B22] text-left">
                                                     <th className="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider">Tên linh kiện</th>
                                                     <th className="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider hidden sm:table-cell">Danh mục</th>
                                                     <th className="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider text-center">SL</th>
                                                     <th className="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Thêm</th>
                                                 </tr>
                                             </thead>
-                                            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                                            <tbody className="divide-y divide-slate-100 dark:divide-[#30363D]">
                                                 {bomItems.map((item, idx) => (
-                                                    <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                                    <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-white/3 transition-colors">
                                                         <td className="px-4 py-3">
                                                             <div className="font-semibold text-slate-800 dark:text-slate-200">{item.name}</div>
                                                             <div className="text-xs text-slate-400 sm:hidden">{item.category}</div>
                                                         </td>
                                                         <td className="px-4 py-3 hidden sm:table-cell">
-                                                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
+                                                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 dark:bg-[#2D9CDB]/10 text-blue-600 dark:text-[#2D9CDB]">
                                                                 {item.category}
                                                             </span>
                                                         </td>
@@ -298,7 +422,7 @@ export default function ProjectDetailModal({
                                                             <button
                                                                 onClick={() => handleAddSingle(item)}
                                                                 title="Thêm vào dự án"
-                                                                className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center ml-auto transition-colors"
+                                                                className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-[#2D9CDB]/10 hover:bg-blue-100 dark:hover:bg-[#2D9CDB]/20 text-blue-600 dark:text-[#2D9CDB] flex items-center justify-center ml-auto transition-colors"
                                                             >
                                                                 <i className="fa-solid fa-plus text-xs"></i>
                                                             </button>
@@ -313,46 +437,134 @@ export default function ProjectDetailModal({
                         </div>
                     )}
 
-                    {/* Tab: Sơ đồ */}
+                    {/* Tab: Sơ đồ — 3-in-1 */}
                     {activeTab === 'diagram' && (
                         <div>
-                            {!project.diagram_code ? (
-                                <div className="text-center py-12 text-slate-400">
-                                    <i className="fa-solid fa-diagram-project text-3xl mb-2 block"></i>
-                                    <p className="text-sm">Dự án này không có sơ đồ kết nối.</p>
-                                </div>
-                            ) : mermaidError ? (
-                                <div className="text-center py-12 text-red-400">
-                                    <i className="fa-solid fa-triangle-exclamation text-3xl mb-2 block"></i>
-                                    <p className="text-sm">Không thể render sơ đồ.</p>
-                                    <pre className="mt-4 text-left text-xs bg-slate-100 dark:bg-slate-800 p-4 rounded-xl overflow-auto text-slate-600 dark:text-slate-400">
-                                        {project.diagram_code}
-                                    </pre>
+                            {!hasDiagramData ? (
+                                <div className="text-center py-16 text-slate-400">
+                                    <i className="fa-solid fa-diagram-project text-4xl mb-3 block opacity-30"></i>
+                                    <p className="text-sm font-medium">Dự án này chưa có sơ đồ.</p>
+                                    <p className="text-xs text-slate-300 dark:text-slate-600 mt-1">Tác giả chưa chia sẻ sơ đồ nguyên lý, kết nối chân hoặc sơ đồ khối.</p>
                                 </div>
                             ) : (
-                                <div>
-                                    {!mermaidLoaded && (
-                                        <div className="flex items-center justify-center py-12 text-slate-400">
-                                            <i className="fa-solid fa-spinner fa-spin text-2xl mr-2"></i>
-                                            Đang render sơ đồ...
+                                <>
+                                    {/* Sub-tab bar */}
+                                    {availableSubTabs.length > 1 && (
+                                        <div className="flex gap-1 mb-5 bg-slate-100 dark:bg-white/5 rounded-xl p-1">
+                                            {availableSubTabs.map(st => (
+                                                <button
+                                                    key={st.id}
+                                                    onClick={() => setDiagramSubTab(st.id)}
+                                                    className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all ${
+                                                        diagramSubTab === st.id
+                                                            ? 'bg-white dark:bg-[#161B22] text-[#2D9CDB] shadow-sm'
+                                                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                                                    }`}
+                                                >
+                                                    <i className={`fa-solid ${st.icon} text-[10px]`}></i>
+                                                    {st.label}
+                                                </button>
+                                            ))}
                                         </div>
                                     )}
-                                    <div
-                                        ref={diagramRef}
-                                        className={`overflow-auto bg-white dark:bg-slate-950 rounded-xl p-4 border border-slate-200 dark:border-slate-800 ${!mermaidLoaded ? 'hidden' : ''}`}
-                                    />
-                                    {/* Raw code fallback */}
-                                    {mermaidLoaded && (
-                                        <details className="mt-4">
-                                            <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300">
-                                                Xem mã Mermaid gốc
-                                            </summary>
-                                            <pre className="mt-2 text-xs bg-slate-100 dark:bg-slate-800 p-4 rounded-xl overflow-auto text-slate-600 dark:text-slate-400 whitespace-pre-wrap">
-                                                {project.diagram_code}
-                                            </pre>
-                                        </details>
+
+                                    {/* Sub-tab: Sơ đồ Nguyên Lý */}
+                                    {diagramSubTab === 'schematic' && (
+                                        <div>
+                                            {project.schematic_image_url ? (
+                                                <div className="relative group">
+                                                    <div className="bg-white dark:bg-[#161B22] rounded-xl border border-slate-200 dark:border-[#30363D] overflow-hidden">
+                                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                        <img
+                                                            src={project.schematic_image_url}
+                                                            alt="Sơ đồ nguyên lý"
+                                                            className="w-full object-contain max-h-[500px] cursor-zoom-in"
+                                                            onClick={() => setSchematicFullscreen(true)}
+                                                        />
+                                                    </div>
+                                                    <button
+                                                        onClick={() => setSchematicFullscreen(true)}
+                                                        className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-black/60 hover:bg-black/80 text-white text-xs px-2.5 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-all"
+                                                    >
+                                                        <i className="fa-solid fa-expand text-[10px]"></i>
+                                                        Phóng to
+                                                    </button>
+                                                    <p className="text-xs text-slate-400 mt-2 text-center">
+                                                        <i className="fa-solid fa-circle-info mr-1"></i>
+                                                        Click ảnh để phóng to — Sơ đồ nguyên lý do tác giả tải lên
+                                                    </p>
+                                                </div>
+                                            ) : (
+                                                <div className="text-center py-12 text-slate-400">
+                                                    <i className="fa-solid fa-image text-3xl mb-2 block opacity-30"></i>
+                                                    <p className="text-sm">Chưa có sơ đồ nguyên lý.</p>
+                                                </div>
+                                            )}
+                                        </div>
                                     )}
-                                </div>
+
+                                    {/* Sub-tab: Kết Nối Chân */}
+                                    {diagramSubTab === 'pinout' && (
+                                        <div>
+                                            <div className="flex items-center gap-2 mb-4">
+                                                <h4 className="text-sm font-bold text-slate-700 dark:text-slate-200">Bảng Kết Nối Chân</h4>
+                                                <div className="flex gap-1 flex-wrap">
+                                                    {Object.entries(PROTOCOL_COLORS).slice(0, 5).map(([p, cls]) => (
+                                                        <span key={p} className={`text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase font-mono ${cls}`}>{p}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <PinConnectionTable pins={pinConnections} />
+                                        </div>
+                                    )}
+
+                                    {/* Sub-tab: Sơ đồ Khối Mermaid */}
+                                    {diagramSubTab === 'block' && (
+                                        <div>
+                                            <div className="flex items-center gap-2 mb-4">
+                                                <h4 className="text-sm font-bold text-slate-700 dark:text-slate-200">Sơ đồ Khối</h4>
+                                                <span className="text-xs bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded-full">Block Diagram</span>
+                                            </div>
+                                            {!project.diagram_code ? (
+                                                <div className="text-center py-12 text-slate-400">
+                                                    <i className="fa-solid fa-share-nodes text-3xl mb-2 block opacity-30"></i>
+                                                    <p className="text-sm">Chưa có sơ đồ khối.</p>
+                                                </div>
+                                            ) : mermaidError ? (
+                                                <div className="text-center py-10 text-red-400">
+                                                    <i className="fa-solid fa-triangle-exclamation text-2xl mb-2 block"></i>
+                                                    <p className="text-sm mb-3">Không thể render sơ đồ.</p>
+                                                    <pre className="text-left text-xs bg-slate-100 dark:bg-[#161B22] p-4 rounded-xl overflow-auto text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-[#30363D]">
+                                                        {project.diagram_code}
+                                                    </pre>
+                                                </div>
+                                            ) : (
+                                                <div>
+                                                    {!mermaidLoaded && (
+                                                        <div className="flex items-center justify-center py-12 text-slate-400 gap-2">
+                                                            <i className="fa-solid fa-spinner fa-spin text-xl text-[#2D9CDB]"></i>
+                                                            <span className="text-sm">Đang render sơ đồ...</span>
+                                                        </div>
+                                                    )}
+                                                    <div
+                                                        ref={diagramRef}
+                                                        className={`overflow-auto bg-white dark:bg-[#161B22] rounded-xl p-4 border border-slate-200 dark:border-[#30363D] ${!mermaidLoaded ? 'hidden' : ''}`}
+                                                    />
+                                                    {mermaidLoaded && (
+                                                        <details className="mt-4">
+                                                            <summary className="text-xs text-slate-400 cursor-pointer hover:text-slate-600 dark:hover:text-slate-300">
+                                                                Xem mã Mermaid gốc
+                                                            </summary>
+                                                            <pre className="mt-2 text-xs bg-slate-100 dark:bg-[#161B22] p-4 rounded-xl overflow-auto text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-[#30363D] whitespace-pre-wrap">
+                                                                {project.diagram_code}
+                                                            </pre>
+                                                        </details>
+                                                    )}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+                                </>
                             )}
                         </div>
                     )}
@@ -362,22 +574,22 @@ export default function ProjectDetailModal({
                         <div>
                             {codeSnippets.length === 0 ? (
                                 <div className="text-center py-12 text-slate-400">
-                                    <i className="fa-solid fa-code text-3xl mb-2 block"></i>
+                                    <i className="fa-solid fa-code text-3xl mb-2 block opacity-30"></i>
                                     <p className="text-sm">Dự án này không có mã nguồn được chia sẻ.</p>
                                 </div>
                             ) : (
                                 <div className="space-y-5">
                                     {codeSnippets.map((snippet, idx) => (
-                                        <div key={idx} className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                                        <div key={idx} className="rounded-xl overflow-hidden border border-slate-200 dark:border-[#30363D]">
                                             {/* Code header */}
-                                            <div className="flex items-center justify-between px-4 py-2.5 bg-slate-800 dark:bg-slate-950">
+                                            <div className="flex items-center justify-between px-4 py-2.5 bg-[#161B22] dark:bg-[#0D1117]">
                                                 <div className="flex items-center gap-2">
-                                                    <i className="fa-solid fa-code text-blue-400 text-xs"></i>
-                                                    <span className="text-xs font-bold text-slate-300">
+                                                    <i className="fa-solid fa-code text-[#2D9CDB] text-xs"></i>
+                                                    <span className="text-xs font-bold text-slate-300 font-mono">
                                                         {snippet.label || snippet.language || 'Code'}
                                                     </span>
                                                     {snippet.language && (
-                                                        <span className="text-xs px-1.5 py-0.5 rounded bg-slate-700 text-slate-400 font-mono">
+                                                        <span className="text-xs px-1.5 py-0.5 rounded bg-[#30363D] text-slate-400 font-mono">
                                                             {snippet.language}
                                                         </span>
                                                     )}
@@ -387,7 +599,7 @@ export default function ProjectDetailModal({
                                                     className={`flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg transition-all ${
                                                         copiedIdx === idx
                                                             ? 'bg-emerald-500/20 text-emerald-400'
-                                                            : 'bg-slate-700 hover:bg-slate-600 text-slate-300'
+                                                            : 'bg-[#30363D] hover:bg-[#3d444d] text-slate-300'
                                                     }`}
                                                 >
                                                     <i className={`fa-solid ${copiedIdx === idx ? 'fa-check' : 'fa-copy'}`}></i>
@@ -395,7 +607,7 @@ export default function ProjectDetailModal({
                                                 </button>
                                             </div>
                                             {/* Code body */}
-                                            <pre className="p-4 overflow-auto text-xs leading-relaxed bg-slate-900 text-slate-200 max-h-80">
+                                            <pre className="p-4 overflow-auto text-xs leading-relaxed bg-[#0D1117] text-slate-200 max-h-80 font-mono">
                                                 <code>{snippet.code}</code>
                                             </pre>
                                         </div>
@@ -407,5 +619,28 @@ export default function ProjectDetailModal({
                 </div>
             </div>
         </div>
+
+        {/* Schematic Fullscreen */}
+        {schematicFullscreen && project.schematic_image_url && (
+            <div
+                className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 cursor-zoom-out"
+                onClick={() => setSchematicFullscreen(false)}
+            >
+                <button
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors"
+                    onClick={() => setSchematicFullscreen(false)}
+                >
+                    <i className="fa-solid fa-xmark"></i>
+                </button>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={project.schematic_image_url}
+                    alt="Sơ đồ nguyên lý — toàn màn hình"
+                    className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+                    onClick={e => e.stopPropagation()}
+                />
+            </div>
+        )}
+        </>
     );
 }

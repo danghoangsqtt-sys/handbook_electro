@@ -29,6 +29,7 @@ export default function ProjectStudioWorkspace() {
   const [result, setResult] = useState<AIResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [lastAnalyzedHash, setLastAnalyzedHash] = useState<string>('');
+  const [showPublishModal, setShowPublishModal] = useState(false);
 
   React.useEffect(() => {
     let active = true;
@@ -322,23 +323,8 @@ export default function ProjectStudioWorkspace() {
                   >
                     <i className="fa-solid fa-file-pdf"></i> Export PDF
                   </button>
-                  <button 
-                    onClick={async () => {
-                        const title = prompt('Nh·∫≠p t√™n cho D·ª± √°n n√†y:');
-                        if (!title) return;
-                        const supabase = (await import('@/lib/supabase/client')).createClient();
-                        const { data: { user } } = await supabase.auth.getUser();
-                        if (!user) { alert('B·∫°n c·∫ßn ƒëƒÉng nh·∫≠p ƒë·ªÉ Publish d·ª± √°n!'); return; }
-                        const { error } = await supabase.from('public_projects').insert([{
-                            title,
-                            description: projectIdea || 'Kh√¥ng c√≥ m√¥ t·∫£',
-                            bom_data: projectItems,
-                            diagram_code: result?.wiring_diagram || '',
-                            user_id: user.id
-                        }]);
-                        if (error) alert('L·ªói: ' + error.message);
-                        else alert('Publish th√†nh c√¥ng! M·ªçi ng∆∞·ªùi c√≥ th·ªÉ xem d·ª± √°n n√†y trong Th∆∞ Vi·ªán C·ªông ƒê·ªìng.');
-                    }}
+                  <button
+                    onClick={() => setShowPublishModal(true)}
                     className="px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded text-xs font-bold transition-all shadow-sm flex items-center gap-2"
                   >
                     <i className="fa-solid fa-cloud-arrow-up"></i> Publish to Community
@@ -424,4 +410,168 @@ export default function ProjectStudioWorkspace() {
       </div>
     </div>
   );
+}
+
+/* ----------------------------------------------------------- */
+/* PublishProjectModal                                          */
+/* ----------------------------------------------------------- */
+interface PinRow {
+    component: string;
+    component_pin: string;
+    mcu: string;
+    mcu_pin: string;
+    protocol: string;
+    voltage: string;
+    note: string;
+}
+
+const PROTOCOLS = ['I2C', 'SPI', 'UART', 'GPIO', 'PWM', 'ADC', 'Power', 'GND'];
+const EMPTY_PIN: PinRow = { component: '', component_pin: '', mcu: 'ESP32', mcu_pin: '', protocol: 'GPIO', voltage: '3.3V', note: '' };
+
+function PublishProjectModal({
+    projectIdea, projectItems, diagramCode, onClose,
+}: {
+    projectIdea: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    projectItems: any[];
+    diagramCode: string;
+    onClose: () => void;
+}) {
+    const [title, setTitle] = React.useState('');
+    const [description, setDescription] = React.useState(projectIdea || '');
+    const [schematicUrl, setSchematicUrl] = React.useState('');
+    const [uploadFile, setUploadFile] = React.useState<File | null>(null);
+    const [pinRows, setPinRows] = React.useState<PinRow[]>([{ ...EMPTY_PIN }]);
+    const [publishing, setPublishing] = React.useState(false);
+    const [uploadProgress, setUploadProgress] = React.useState('');
+    const [success, setSuccess] = React.useState(false);
+
+    const addPin = () => setPinRows(p => [...p, { ...EMPTY_PIN }]);
+    const removePin = (i: number) => setPinRows(p => p.filter((_, idx) => idx !== i));
+    const updatePin = (i: number, f: keyof PinRow, v: string) => setPinRows(p => p.map((r, idx) => idx === i ? { ...r, [f]: v } : r));
+
+    const handlePublish = async () => {
+        if (!title.trim()) { alert('Vui lÚng nh?p tÍn d? ·n!'); return; }
+        setPublishing(true);
+        try {
+            const supabase = (await import('@/lib/supabase/client')).createClient();
+            const { data: { user } } = await supabase.auth.getUser();
+            if (!user) { alert('B?n c?n dang nh?p!'); setPublishing(false); return; }
+            let finalSchematicUrl: string | null = schematicUrl.trim() || null;
+            if (uploadFile) {
+                setUploadProgress('–ang upload ?nh so d?...');
+                const ext = uploadFile.name.split('.').pop();
+                const path = `${user.id}/${Date.now()}.${ext}`;
+                const { error: ue } = await supabase.storage.from('schematics').upload(path, uploadFile, { upsert: true });
+                if (ue) { alert('L?i upload: ' + ue.message); setPublishing(false); setUploadProgress(''); return; }
+                const { data: { publicUrl } } = supabase.storage.from('schematics').getPublicUrl(path);
+                finalSchematicUrl = publicUrl;
+            }
+            const validPins = pinRows.filter(r => r.component.trim() && r.component_pin.trim() && r.mcu_pin.trim());
+            setUploadProgress('–ang publish...');
+            const { error } = await supabase.from('public_projects').insert([{
+                title: title.trim(),
+                description: description.trim() || 'KhÙng cÛ mÙ t?',
+                bom_data: projectItems,
+                diagram_code: diagramCode || null,
+                schematic_image_url: finalSchematicUrl,
+                pin_connections: validPins.length > 0 ? validPins : null,
+                user_id: user.id,
+            }]);
+            if (error) alert('L?i: ' + error.message);
+            else setSuccess(true);
+        } finally { setPublishing(false); setUploadProgress(''); }
+    };
+
+    if (success) return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+            <div className="bg-white dark:bg-[#161B22] rounded-3xl border border-white/10 p-10 text-center max-w-sm w-full shadow-2xl">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4">
+                    <i className="fa-solid fa-check text-emerald-400 text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-black dark:text-slate-100 mb-2">Publish th‡nh cÙng!</h3>
+                <p className="text-sm text-slate-500 mb-6">D? ·n d„ lÍn Thu Vi?n C?ng –?ng.</p>
+                <button onClick={onClose} className="w-full py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl">–Ûng</button>
+            </div>
+        </div>
+    );
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+            <div className="relative w-full max-w-2xl bg-white dark:bg-[#0D1117] rounded-3xl border border-white/10 shadow-2xl max-h-[95vh] flex flex-col">
+                <div className="flex items-center justify-between p-5 border-b border-slate-200 dark:border-white/5 flex-shrink-0">
+                    <div>
+                        <h2 className="font-black dark:text-slate-100 text-lg flex items-center gap-2"><i className="fa-solid fa-cloud-arrow-up text-[#2D9CDB]"></i>Publish D? ¡n</h2>
+                        <p className="text-xs text-slate-400 mt-0.5">Chia s? d? ·n v?i c?ng d?ng k? thu?t</p>
+                    </div>
+                    <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
+                        <i className="fa-solid fa-xmark text-slate-500 dark:text-slate-400 text-sm"></i>
+                    </button>
+                </div>
+                <div className="flex-1 overflow-y-auto p-5 space-y-5 custom-scrollbar">
+                    <div className="space-y-3">
+                        <div>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">TÍn d? ·n *</label>
+                            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="VD: Tr?m Th?i Ti?t IoT v?i ESP32" className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"/>
+                        </div>
+                        <div>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">MÙ t?</label>
+                            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="MÙ t? ng?n v? d? ·n..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"/>
+                        </div>
+                    </div>
+                    <div>
+                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-1.5"><i className="fa-solid fa-image text-emerald-400"></i>So d? NguyÍn L˝ (t˘y ch?n)</label>
+                        <div className="space-y-2">
+                            <label className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-[#161B22] border border-dashed border-slate-300 dark:border-[#30363D] rounded-xl cursor-pointer hover:border-[#2D9CDB] transition-colors group">
+                                <i className="fa-solid fa-cloud-arrow-up text-slate-400 group-hover:text-[#2D9CDB]"></i>
+                                <div className="flex-1 min-w-0">
+                                    <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{uploadFile ? uploadFile.name : 'Upload PNG/JPG t? KiCad, EasyEDA, Fritzing...'}</p>
+                                    {!uploadFile && <p className="text-[10px] text-slate-400">T?i da 5MB</p>}
+                                </div>
+                                <input type="file" accept="image/*" className="hidden" onChange={e => { setUploadFile(e.target.files?.[0] || null); if (e.target.files?.[0]) setSchematicUrl(''); }}/>
+                                {uploadFile && <button onClick={e => { e.preventDefault(); setUploadFile(null); }} className="text-xs text-red-400"><i className="fa-solid fa-xmark"></i></button>}
+                            </label>
+                            <div className="flex items-center gap-2"><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div><span className="text-xs text-slate-400">ho?c URL</span><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div></div>
+                            <input type="url" value={schematicUrl} onChange={e => { setSchematicUrl(e.target.value); if (e.target.value) setUploadFile(null); }} placeholder="https://easyeda.com/..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex items-center justify-between mb-2">
+                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider flex items-center gap-1.5"><i className="fa-solid fa-plug text-amber-400"></i>K?t N?i Ch‚n (t˘y ch?n)</label>
+                            <button onClick={addPin} className="text-xs text-[#2D9CDB] font-bold flex items-center gap-1"><i className="fa-solid fa-plus text-[10px]"></i>ThÍm dÚng</button>
+                        </div>
+                        <div className="rounded-xl border border-slate-200 dark:border-[#30363D] overflow-hidden">
+                            <div className="grid grid-cols-12 text-[9px] font-bold uppercase tracking-widest text-slate-400 bg-slate-50 dark:bg-[#161B22] px-2 py-1.5">
+                                <span className="col-span-2">Linh ki?n</span><span className="col-span-2">Ch‚n LK</span><span className="col-span-2">MCU</span><span className="col-span-2">Ch‚n MCU</span><span className="col-span-2">Giao th?c</span><span className="col-span-1">Vcc</span><span className="col-span-1"></span>
+                            </div>
+                            <div className="divide-y divide-slate-100 dark:divide-[#30363D]">
+                                {pinRows.map((row, i) => (
+                                    <div key={i} className="grid grid-cols-12 gap-1 items-center p-1.5 bg-white dark:bg-[#0D1117]">
+                                        <input value={row.component} onChange={e => updatePin(i,'component',e.target.value)} placeholder="BME280" className="col-span-2 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]"/>
+                                        <input value={row.component_pin} onChange={e => updatePin(i,'component_pin',e.target.value)} placeholder="SDA" className="col-span-2 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs font-mono dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]"/>
+                                        <input value={row.mcu} onChange={e => updatePin(i,'mcu',e.target.value)} placeholder="ESP32" className="col-span-2 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]"/>
+                                        <input value={row.mcu_pin} onChange={e => updatePin(i,'mcu_pin',e.target.value)} placeholder="GPIO21" className="col-span-2 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs font-mono dark:text-[#2D9CDB] focus:outline-none focus:border-[#2D9CDB]"/>
+                                        <select value={row.protocol} onChange={e => updatePin(i,'protocol',e.target.value)} className="col-span-2 px-1 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]">
+                                            {PROTOCOLS.map(p => <option key={p}>{p}</option>)}
+                                        </select>
+                                        <input value={row.voltage} onChange={e => updatePin(i,'voltage',e.target.value)} placeholder="3.3V" className="col-span-1 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]"/>
+                                        <button onClick={() => removePin(i)} className="col-span-1 flex justify-center text-slate-400 hover:text-red-400 transition-colors"><i className="fa-solid fa-xmark text-xs"></i></button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <p className="text-[10px] text-slate-400 mt-1.5">Ch? dÚng cÛ d? Linh ki?n + Ch‚n LK + Ch‚n MCU m?i du?c luu.</p>
+                    </div>
+                </div>
+                <div className="flex-shrink-0 p-5 border-t border-slate-200 dark:border-white/5 flex items-center gap-3 justify-end">
+                    {uploadProgress && <span className="text-xs text-[#2D9CDB] flex items-center gap-1.5 mr-auto"><i className="fa-solid fa-spinner fa-spin text-[10px]"></i>{uploadProgress}</span>}
+                    <button onClick={onClose} className="px-5 py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 transition-all">H?y</button>
+                    <button onClick={handlePublish} disabled={publishing} className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-sm disabled:opacity-50 shadow-md shadow-blue-500/20 transition-all">
+                        <i className={`fa-solid ${publishing ? 'fa-spinner fa-spin' : 'fa-cloud-arrow-up'}`}></i>
+                        {publishing ? '–ang publish...' : 'Publish ??'}
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
 }

@@ -14,6 +14,9 @@ interface CommunityProject {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     bom_data: any[];
     diagram_code: string | null;
+    schematic_image_url: string | null;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    pin_connections: any[] | null;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code_snippets: any;
     likes_count: number;
@@ -102,6 +105,7 @@ export default function CommunityShowcase() {
             .from('public_projects')
             .select(`
                 id, title, description, bom_data, diagram_code, code_snippets,
+                schematic_image_url, pin_connections,
                 likes_count, comments_count, created_at,
                 profiles:user_id (display_name, avatar_url)
             `)
