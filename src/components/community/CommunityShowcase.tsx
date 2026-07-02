@@ -9,7 +9,7 @@ export default function CommunityShowcase() {
     const [projects, setProjects] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
     const supabase = createClient();
-    const { addComponent, toggleProjectStudio } = useBOMStore();
+    const { addItem, setIsProjectStudioOpen } = useBOMStore();
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -35,11 +35,11 @@ export default function CommunityShowcase() {
         if (project.bom_data && Array.isArray(project.bom_data)) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             project.bom_data.forEach((item: any) => {
-                addComponent(item);
+                addItem(item);
             });
         }
         // Open Project Studio
-        toggleProjectStudio();
+        setIsProjectStudioOpen(true);
         alert('Đã clone dự án vào Project Studio thành công!');
     };
 
