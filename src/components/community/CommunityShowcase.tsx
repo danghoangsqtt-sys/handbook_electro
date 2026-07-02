@@ -217,7 +217,7 @@ export default function ProjectLibrary() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {[1,2,3,4,5,6].map(i => <SkeletonCard key={i} />)}
                     </div>
-                ) : !isLoggedIn || projects.length === 0 && !searchQuery ? (
+                ) : (!isLoggedIn || (projects.length === 0 && !searchQuery)) ? (
                     <EmptyState onAdd={() => { setEditingProject(null); setShowFormModal(true); }} isLoggedIn={isLoggedIn} />
                 ) : filtered.length === 0 ? (
                     <div className="text-center py-20">
@@ -376,7 +376,7 @@ function ProjectCard({
             <div className="flex items-center gap-2 mb-4">
                 {hasDiagram && (
                     <span className="flex items-center gap-1 text-[9px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                        <i className="fa-solid fa-image"></i> So Do
+                        <i className="fa-solid fa-image"></i> Sơ Đồ
                     </span>
                 )}
                 {hasPins && (

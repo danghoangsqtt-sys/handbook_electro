@@ -125,7 +125,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
 
     const SECTIONS = [
         { id: 'info', label: 'Thông Tin', icon: 'fa-circle-info' },
-        { id: 'schematic', label: 'So Do', icon: 'fa-image' },
+        { id: 'schematic', label: 'Sơ Đồ', icon: 'fa-image' },
         { id: 'pins', label: 'Kết Nối Chân', icon: 'fa-plug' },
         { id: 'code', label: 'Mã Nguồn', icon: 'fa-code' },
     ] as const;
@@ -184,7 +184,7 @@ export default function ProjectFormModal({ mode, initialData, onClose, onSaved }
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Mo Ta</label>
+                                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Mô Tả</label>
                                 <textarea
                                     value={description}
                                     onChange={e => setDescription(e.target.value)}
