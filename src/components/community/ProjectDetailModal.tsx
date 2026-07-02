@@ -89,7 +89,9 @@ export default function ProjectDetailModal({
                     flowchart: { useMaxWidth: true, htmlLabels: true },
                 });
                 const id = `mermaid-${project.id}`;
-                const { svg } = await mermaid.render(id, project.diagram_code!);
+                // Unescape literal \n stored as string (from SQL seed data)
+                const diagramCode = project.diagram_code!.replace(/\\n/g, '\n');
+                const { svg } = await mermaid.render(id, diagramCode);
                 if (diagramRef.current) {
                     diagramRef.current.innerHTML = svg;
                     setMermaidLoaded(true);
@@ -143,18 +145,22 @@ export default function ProjectDetailModal({
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4"
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/70 backdrop-blur-md p-0 sm:p-4"
             onClick={handleBackdrop}
         >
-            <div className="relative w-full sm:max-w-3xl bg-white dark:bg-slate-900 rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col max-h-[95vh] sm:max-h-[90vh] overflow-hidden animate-slide-up">
+            <div className="relative w-full sm:max-w-5xl bg-white dark:bg-[#0D1117] rounded-t-3xl sm:rounded-3xl shadow-2xl shadow-black/50 flex flex-col max-h-[97vh] sm:max-h-[92vh] overflow-hidden animate-slide-up border-0 sm:border sm:border-white/10">
 
                 {/* Header */}
-                <div className="flex-shrink-0 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 p-5 text-white relative">
+                <div className="flex-shrink-0 bg-gradient-to-br from-[#0f2744] via-[#1a3a5c] to-[#0D1117] p-5 text-white relative overflow-hidden">
+                    {/* Blur blobs */}
+                    <div className="absolute -top-8 -right-8 w-40 h-40 bg-[#2D9CDB]/20 rounded-full blur-2xl pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#2D9CDB]/40 via-[#00D4FF]/20 to-transparent"></div>
+
                     <button
                         onClick={onClose}
-                        className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors"
+                        className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center transition-colors"
                     >
-                        <i className="fa-solid fa-xmark"></i>
+                        <i className="fa-solid fa-xmark text-sm"></i>
                     </button>
 
                     {/* Author */}
@@ -201,7 +207,7 @@ export default function ProjectDetailModal({
                 </div>
 
                 {/* Tabs */}
-                <div className="flex-shrink-0 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-2 overflow-x-auto">
+                <div className="flex-shrink-0 border-b border-slate-200 dark:border-white/5 bg-white dark:bg-[#161B22] px-2 overflow-x-auto">
                     <div className="flex">
                         {tabs.map(tab => (
                             <button
@@ -209,14 +215,14 @@ export default function ProjectDetailModal({
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex items-center gap-1.5 px-4 py-3 text-sm font-semibold border-b-2 transition-all whitespace-nowrap ${
                                     activeTab === tab.id
-                                        ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                                        ? 'border-[#2D9CDB] text-[#2D9CDB]'
                                         : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                                 }`}
                             >
                                 <i className={`fa-solid ${tab.icon}`}></i>
                                 {tab.label}
                                 {tab.count !== undefined && (
-                                    <span className="text-xs bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-full font-bold">
+                                    <span className="text-xs bg-blue-100 dark:bg-[#2D9CDB]/20 text-blue-600 dark:text-[#2D9CDB] px-1.5 py-0.5 rounded-full font-bold">
                                         {tab.count}
                                     </span>
                                 )}
@@ -226,7 +232,7 @@ export default function ProjectDetailModal({
                 </div>
 
                 {/* Tab Content */}
-                <div className="flex-1 overflow-y-auto p-5">
+                <div className="flex-1 overflow-y-auto p-5 bg-white dark:bg-[#0D1117] custom-scrollbar">
 
                     {/* Tab: Mô tả */}
                     {activeTab === 'overview' && (

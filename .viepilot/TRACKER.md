@@ -1,8 +1,10 @@
 # Progress Tracker
 
 ## Current State
-- **Phase 27**: `[COMPLETED]` - Auth Migration, AI Vision, & Flashcard System.
-- **Phase 28**: `[COMPLETED]` - User Profile, Community Showcase, OAuth, Export PDF/BOM, PDF Analysis.
+- **Phase 29**: `[COMPLETED]` - Terms Permission & Setup SQL.
+- **Phase 30**: `[COMPLETED]` - Remove BOM Terminology & Community Showcase Like/Search/Filter.
+- **Phase 31**: `[COMPLETED]` - Community Library Detail Modal, Comments, Mermaid Diagram & Code Viewer.
+- **Phase 32**: `[IN_PROGRESS]` - Community Social Network Upgrade & Dark Engineering UI.
 
 ## Progress Overview
 - [x] Phase 1: 100%

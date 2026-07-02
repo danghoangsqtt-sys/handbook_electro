@@ -1,14 +1,23 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @theme inline {
-  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --color-brand-50: #f0f7ff;
   --color-brand-100: #e0effe;
   --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-900: #1e3a8a;
   --color-brand-950: #0f172a;
+
+  /* Dark Engineering Hub theme */
+  --color-hub-bg: #0D1117;
+  --color-hub-surface: #161B22;
+  --color-hub-border: rgba(48, 54, 61, 0.9);
+  --color-hub-accent: #2D9CDB;
+  --color-hub-cyan: #00D4FF;
+  --color-hub-glow: rgba(45, 156, 219, 0.15);
 }
 
 @layer utilities {
@@ -24,10 +33,59 @@
     border-radius: 4px;
   }
   .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #475569;
+    background: #30363d;
+  }
+
+  /* Dark Engineering Hub utilities */
+  .hub-bg {
+    background-color: var(--color-hub-bg);
+  }
+  .hub-surface {
+    background-color: var(--color-hub-surface);
+    border: 1px solid var(--color-hub-border);
+  }
+  .hub-glow {
+    box-shadow: 0 0 20px var(--color-hub-glow), 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .hub-glow-sm {
+    box-shadow: 0 0 10px var(--color-hub-glow);
+  }
+  .text-accent {
+    color: var(--color-hub-accent);
+  }
+  .bg-accent {
+    background: linear-gradient(135deg, var(--color-hub-accent), var(--color-hub-cyan));
+  }
+  .border-hub {
+    border-color: var(--color-hub-border);
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    background: rgba(22, 27, 34, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(48, 54, 61, 0.8);
+    border-radius: 12px;
+  }
+
+  /* Noise texture overlay */
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Badge glow */
+  .badge-glow {
+    box-shadow: 0 0 8px currentColor;
   }
 }
 
+/* Animations */
 @keyframes slide-up {
   from { transform: translateY(100%); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
@@ -36,10 +94,55 @@
   from { transform: translateX(100%); opacity: 0; }
   to   { transform: translateX(0);    opacity: 1; }
 }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(45,156,219,0.4); }
+  50%       { box-shadow: 0 0 20px rgba(45,156,219,0.8), 0 0 40px rgba(0,212,255,0.2); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 .animate-slide-up {
-  animation: slide-up 0.3s cubic-bezier(0.32, 0.72, 0, 1) both;
+  animation: slide-up 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 .animate-slide-in-right {
   animation: slide-in-right 0.25s ease-out both;
 }
+.animate-fade-in {
+  animation: fade-in 0.4s ease both;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
 
+/* Staggered fade-in for feed items */
+.feed-item:nth-child(1)  { animation: fade-in 0.35s 0.05s ease both; }
+.feed-item:nth-child(2)  { animation: fade-in 0.35s 0.10s ease both; }
+.feed-item:nth-child(3)  { animation: fade-in 0.35s 0.15s ease both; }
+.feed-item:nth-child(4)  { animation: fade-in 0.35s 0.20s ease both; }
+.feed-item:nth-child(5)  { animation: fade-in 0.35s 0.25s ease both; }
+.feed-item:nth-child(n+6){ animation: fade-in 0.35s 0.30s ease both; }
+
+/* Shimmer skeleton loader */
+.shimmer {
+  background: linear-gradient(90deg, #21262d 25%, #30363d 50%, #21262d 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.4s linear infinite;
+}
+.light .shimmer {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% auto;
+}
+
+/* Font family override */
+body {
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+code, pre, kbd, samp {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
