@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { useBOMStore } from '@/store/useBOMStore';
+import ProjectDetailModal from './ProjectDetailModal';
 
 interface CommunityProject {
     id: string;
@@ -10,8 +11,11 @@ interface CommunityProject {
     description: string;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     bom_data: any[];
-    diagram_code: string;
+    diagram_code: string | null;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    code_snippets: any;
     likes_count: number;
+    comments_count?: number;
     created_at: string;
     profiles: { display_name: string; avatar_url: string | null } | null;
 }
@@ -25,6 +29,7 @@ export default function CommunityShowcase() {
     const [sortBy, setSortBy] = useState<SortOption>('newest');
     const [likedProjects, setLikedProjects] = useState<Set<string>>(new Set());
     const [likingId, setLikingId] = useState<string | null>(null);
+    const [selectedProject, setSelectedProject] = useState<CommunityProject | null>(null);
     const supabase = createClient();
     const { addItem, setIsProjectStudioOpen } = useBOMStore();
 
@@ -33,7 +38,8 @@ export default function CommunityShowcase() {
         const { data, error } = await supabase
             .from('public_projects')
             .select(`
-                id, title, description, bom_data, diagram_code, likes_count, created_at,
+                id, title, description, bom_data, diagram_code, code_snippets,
+                likes_count, comments_count, created_at,
                 profiles:user_id (display_name, avatar_url)
             `)
             .order('created_at', { ascending: false });
@@ -46,7 +52,6 @@ export default function CommunityShowcase() {
     }, []);
 
     useEffect(() => {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         fetchProjects();
     }, [fetchProjects]);
 
@@ -61,30 +66,37 @@ export default function CommunityShowcase() {
                 ? { ...p, likes_count: isLiked ? currentLikes - 1 : currentLikes + 1 }
                 : p
         ));
+        // Cập nhật selectedProject nếu đang mở
+        setSelectedProject(prev => prev?.id === projectId
+            ? { ...prev, likes_count: isLiked ? currentLikes - 1 : currentLikes + 1 }
+            : prev
+        );
+
         setLikedProjects(prev => {
             const next = new Set(prev);
             if (isLiked) { next.delete(projectId); } else { next.add(projectId); }
             return next;
         });
 
-        // Persist to Supabase
         const { error } = await supabase
             .from('public_projects')
             .update({ likes_count: isLiked ? currentLikes - 1 : currentLikes + 1 })
             .eq('id', projectId);
 
         if (error) {
-            // Rollback on error
             setProjects(prev => prev.map(p =>
                 p.id === projectId ? { ...p, likes_count: currentLikes } : p
             ));
+            setSelectedProject(prev => prev?.id === projectId
+                ? { ...prev, likes_count: currentLikes }
+                : prev
+            );
         }
         setLikingId(null);
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleClone = (project: any) => {
-        // Thêm tất cả linh kiện từ dự án
         if (project.bom_data && Array.isArray(project.bom_data)) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             project.bom_data.forEach((item: any) => {
@@ -109,6 +121,7 @@ export default function CommunityShowcase() {
         });
 
     return (
+        <>
         <div className="w-full max-w-6xl mx-auto p-4 md:p-8">
             {/* Header */}
             <div className="text-center mb-10">
@@ -188,7 +201,8 @@ export default function CommunityShowcase() {
                     {filtered.map(project => (
                         <div
                             key={project.id}
-                            className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 group flex flex-col overflow-hidden"
+                            className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 group flex flex-col overflow-hidden cursor-pointer"
+                            onClick={() => setSelectedProject(project)}
                         >
                             {/* Card Header Gradient */}
                             <div className="h-2 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500"></div>
@@ -212,7 +226,7 @@ export default function CommunityShowcase() {
                                     </div>
                                     {/* Like Button */}
                                     <button
-                                        onClick={() => handleLike(project.id, project.likes_count)}
+                                        onClick={(e) => { e.stopPropagation(); handleLike(project.id, project.likes_count); }}
                                         disabled={likingId === project.id}
                                         className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold transition-all ${likedProjects.has(project.id)
                                             ? 'bg-red-50 dark:bg-red-900/30 text-red-500 dark:text-red-400'
@@ -237,22 +251,37 @@ export default function CommunityShowcase() {
                                     <div className="flex items-center gap-3 text-xs text-slate-500">
                                         <span className="flex items-center gap-1.5">
                                             <i className="fa-solid fa-microchip text-blue-400"></i>
-                                            <span className="font-bold text-slate-700 dark:text-slate-300">{project.bom_data ? project.bom_data.length : 0}</span> linh kiện
+                                            <span className="font-bold text-slate-700 dark:text-slate-300">{project.bom_data ? project.bom_data.length : 0}</span> LK
                                         </span>
                                         {project.diagram_code && (
-                                            <span className="flex items-center gap-1.5">
+                                            <span className="flex items-center gap-1">
                                                 <i className="fa-solid fa-diagram-project text-emerald-400"></i>
-                                                Có sơ đồ
+                                                <span className="hidden sm:inline">Sơ đồ</span>
+                                            </span>
+                                        )}
+                                        {(project.comments_count ?? 0) > 0 && (
+                                            <span className="flex items-center gap-1">
+                                                <i className="fa-solid fa-comments text-violet-400"></i>
+                                                {project.comments_count}
                                             </span>
                                         )}
                                     </div>
-                                    <button
-                                        onClick={() => handleClone(project)}
-                                        className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-lg text-xs transition-all shadow-sm shadow-blue-500/20"
-                                    >
-                                        <i className="fa-solid fa-code-branch"></i>
-                                        Clone
-                                    </button>
+                                    <div className="flex items-center gap-2">
+                                        <button
+                                            onClick={(e) => { e.stopPropagation(); handleClone(project); }}
+                                            className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold rounded-lg text-xs transition-all"
+                                        >
+                                            <i className="fa-solid fa-code-branch"></i>
+                                            Clone
+                                        </button>
+                                        <button
+                                            onClick={(e) => { e.stopPropagation(); setSelectedProject(project); }}
+                                            className="flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-lg text-xs transition-all shadow-sm shadow-blue-500/20"
+                                        >
+                                            <i className="fa-solid fa-eye"></i>
+                                            Xem chi tiết
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -260,5 +289,15 @@ export default function CommunityShowcase() {
                 </div>
             )}
         </div>
+
+        {/* Project Detail Modal */}
+        <ProjectDetailModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+            likedProjects={likedProjects}
+            onLike={handleLike}
+            likingId={likingId}
+        />
+        </>
     );
 }
