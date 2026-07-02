@@ -80,13 +80,13 @@ export default function ProjectStudioWorkspace() {
 
   const handleAnalyze = async () => {
     if (projectItems.length === 0) {
-      setError('Vui lòng thêm linh kiện vào dự án trước khi phân tích.');
+      setError('Vui l├▓ng th├¬m linh kiß╗çn v├áo dß╗▒ ├ín tr╞░ß╗¢c khi ph├ón t├¡ch.');
       return;
     }
 
     const currentHash = JSON.stringify(projectItems) + '|' + projectIdea;
     if (currentHash === lastAnalyzedHash && result) {
-      alert("Dữ liệu không thay đổi. Vui lòng thêm linh kiện hoặc sửa ý tưởng để phân tích lại!");
+      alert("Dß╗» liß╗çu kh├┤ng thay ─æß╗òi. Vui l├▓ng th├¬m linh kiß╗çn hoß║╖c sß╗¡a ├╜ t╞░ß╗ƒng ─æß╗â ph├ón t├¡ch lß║íi!");
       return;
     }
 
@@ -101,8 +101,8 @@ export default function ProjectStudioWorkspace() {
       });
 
       if (!res.ok) {
-         if (res.status === 429) throw new Error('Hệ thống AI đang quá tải. Vui lòng thử lại sau giây lát!');
-         throw new Error('Có lỗi xảy ra khi kết nối với AI.');
+         if (res.status === 429) throw new Error('Hß╗ç thß╗æng AI ─æang qu├í tß║úi. Vui l├▓ng thß╗¡ lß║íi sau gi├óy l├ít!');
+         throw new Error('C├│ lß╗ùi xß║úy ra khi kß║┐t nß╗æi vß╗¢i AI.');
       }
 
       const data = await res.json();
@@ -110,7 +110,7 @@ export default function ProjectStudioWorkspace() {
       setActiveTab('overview');
       setLastAnalyzedHash(currentHash);
 
-      const sessionTitle = `Dự án: ${projectIdea || projectItems.map(i => i.name).join(', ')}`.substring(0, 40);
+      const sessionTitle = `Dß╗▒ ├ín: ${projectIdea || projectItems.map(i => i.name).join(', ')}`.substring(0, 40);
       const saveRes = await fetch('/api/project-sessions', {
         method: currentProjectId ? 'PATCH' : 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -130,7 +130,7 @@ export default function ProjectStudioWorkspace() {
           window.dispatchEvent(new Event('reloadSessions'));
       }
     } catch (err) {
-      setError((err as Error).message || 'Lỗi không xác định.');
+      setError((err as Error).message || 'Lß╗ùi kh├┤ng x├íc ─æß╗ïnh.');
     } finally {
       setIsLoading(false);
     }
@@ -162,7 +162,7 @@ export default function ProjectStudioWorkspace() {
         <div className="w-full md:w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#050505] flex flex-col flex-shrink-0">
           <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-100/50 dark:bg-[#0A0A0A]">
             <h3 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
-              Giỏ Linh Kiện
+              Giß╗Å Linh Kiß╗çn
             </h3>
             <div className="flex items-center gap-2">
               <span className="text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-1.5 py-0.5 rounded font-mono">
@@ -170,7 +170,7 @@ export default function ProjectStudioWorkspace() {
               </span>
               <button
                 onClick={() => {
-                  const header = ['ID,Tên Linh Kiện,Danh Mục,Số Lượng'];
+                  const header = ['ID,T├¬n Linh Kiß╗çn,Danh Mß╗Ñc,Sß╗æ L╞░ß╗úng'];
                   const rows = projectItems.map(item => `${item.id},"${item.name}","${item.category}",${item.quantity}`);
                   const csvContent = "data:text/csv;charset=utf-8,\uFEFF" + header.concat(rows).join("\n");
                   const encodedUri = encodeURI(csvContent);
@@ -182,7 +182,7 @@ export default function ProjectStudioWorkspace() {
                   document.body.removeChild(link);
                 }}
                 className="text-slate-400 hover:text-green-500 transition-colors"
-                title="Xuất Danh Sách (CSV)"
+                title="Xuß║Ñt Danh S├ích (CSV)"
               >
                 <i className="fa-solid fa-file-csv"></i>
               </button>
@@ -191,7 +191,7 @@ export default function ProjectStudioWorkspace() {
                   onClick={() => {
                      // eslint-disable-next-line @typescript-eslint/no-unused-vars
                      projectItems.forEach(({ quantity, ...rest }) => addItem(rest));
-                     alert("Đã thêm toàn bộ linh kiện của dự án này vào Giỏ hàng hiện tại!");
+                     alert("─É├ú th├¬m to├án bß╗Ö linh kiß╗çn cß╗ºa dß╗▒ ├ín n├áy v├áo Giß╗Å h├áng hiß╗çn tß║íi!");
                   }}
                   className="text-slate-400 hover:text-cyan-500 transition-colors"
                   title="Copy to Cart"
@@ -221,7 +221,7 @@ export default function ProjectStudioWorkspace() {
               </div>
             ))}
             {projectItems.length === 0 && (
-              <p className="text-[10px] text-slate-500 italic px-4 mt-2">Chưa có linh kiện nào.</p>
+              <p className="text-[10px] text-slate-500 italic px-4 mt-2">Ch╞░a c├│ linh kiß╗çn n├áo.</p>
             )}
 
             <div className="mt-4 border-t border-slate-200 dark:border-slate-800">
@@ -264,7 +264,7 @@ export default function ProjectStudioWorkspace() {
               <i className="fa-solid fa-code text-cyan-500/30 dark:text-cyan-500/10 text-6xl mb-6"></i>
               <h3 className="text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest mb-3">Workspace Ready</h3>
               <p className="text-slate-400 dark:text-slate-500 text-xs font-mono max-w-sm leading-relaxed">
-                Thêm linh kiện vào <span className="text-cyan-600 dark:text-cyan-400">Giỏ Linh Kiện</span> và nhấn <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> để tạo sơ đồ mạch và code.
+                Th├¬m linh kiß╗çn v├áo <span className="text-cyan-600 dark:text-cyan-400">Giß╗Å Linh Kiß╗çn</span> v├á nhß║Ñn <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> ─æß╗â tß║ío s╞í ─æß╗ô mß║ích v├á code.
               </p>
             </div>
           )}
@@ -323,7 +323,7 @@ export default function ProjectStudioWorkspace() {
                   >
                     <i className="fa-solid fa-file-pdf"></i> Export PDF
                   </button>
-                  <button
+                  <button 
                     onClick={() => setShowPublishModal(true)}
                     className="px-3 py-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded text-xs font-bold transition-all shadow-sm flex items-center gap-2"
                   >
@@ -353,7 +353,7 @@ export default function ProjectStudioWorkspace() {
                     <div className="bg-amber-50/50 dark:bg-amber-950/20 border-l-4 border-amber-500 p-4 text-amber-700 dark:text-amber-500/90 text-xs font-mono flex gap-3">
                       <i className="fa-solid fa-triangle-exclamation mt-0.5"></i>
                       <div className="leading-relaxed">
-                        Nội dung do AI tạo tự động. Kiểm tra kỹ trước khi triển khai thực tế.
+                        Nß╗Öi dung do AI tß║ío tß╗▒ ─æß╗Öng. Kiß╗âm tra kß╗╣ tr╞░ß╗¢c khi triß╗ân khai thß╗▒c tß║┐.
                       </div>
                     </div>
                     
@@ -408,13 +408,23 @@ export default function ProjectStudioWorkspace() {
           )}
         </div>
       </div>
+
+      {/* Publish Modal */}
+      {showPublishModal && (
+        <PublishProjectModal
+          projectIdea={projectIdea}
+          projectItems={projectItems}
+          diagramCode={result?.wiring_diagram || ''}
+          onClose={() => setShowPublishModal(false)}
+        />
+      )}
     </div>
   );
 }
 
-/* ----------------------------------------------------------- */
-/* PublishProjectModal                                          */
-/* ----------------------------------------------------------- */
+/* ================================================================ */
+/* PublishProjectModal                                               */
+/* ================================================================ */
 interface PinRow {
     component: string;
     component_pin: string;
@@ -448,37 +458,38 @@ function PublishProjectModal({
 
     const addPin = () => setPinRows(p => [...p, { ...EMPTY_PIN }]);
     const removePin = (i: number) => setPinRows(p => p.filter((_, idx) => idx !== i));
-    const updatePin = (i: number, f: keyof PinRow, v: string) => setPinRows(p => p.map((r, idx) => idx === i ? { ...r, [f]: v } : r));
+    const updatePin = (i: number, f: keyof PinRow, v: string) =>
+        setPinRows(p => p.map((r, idx) => idx === i ? { ...r, [f]: v } : r));
 
     const handlePublish = async () => {
-        if (!title.trim()) { alert('Vui l�ng nh?p t�n d? �n!'); return; }
+        if (!title.trim()) { alert('Vui long nhap ten du an!'); return; }
         setPublishing(true);
         try {
             const supabase = (await import('@/lib/supabase/client')).createClient();
             const { data: { user } } = await supabase.auth.getUser();
-            if (!user) { alert('B?n c?n dang nh?p!'); setPublishing(false); return; }
+            if (!user) { alert('Ban can dang nhap!'); setPublishing(false); return; }
             let finalSchematicUrl: string | null = schematicUrl.trim() || null;
             if (uploadFile) {
-                setUploadProgress('�ang upload ?nh so d?...');
+                setUploadProgress('Uploading schematic...');
                 const ext = uploadFile.name.split('.').pop();
                 const path = `${user.id}/${Date.now()}.${ext}`;
                 const { error: ue } = await supabase.storage.from('schematics').upload(path, uploadFile, { upsert: true });
-                if (ue) { alert('L?i upload: ' + ue.message); setPublishing(false); setUploadProgress(''); return; }
+                if (ue) { alert('Upload error: ' + ue.message); setPublishing(false); setUploadProgress(''); return; }
                 const { data: { publicUrl } } = supabase.storage.from('schematics').getPublicUrl(path);
                 finalSchematicUrl = publicUrl;
             }
             const validPins = pinRows.filter(r => r.component.trim() && r.component_pin.trim() && r.mcu_pin.trim());
-            setUploadProgress('�ang publish...');
+            setUploadProgress('Publishing...');
             const { error } = await supabase.from('public_projects').insert([{
                 title: title.trim(),
-                description: description.trim() || 'Kh�ng c� m� t?',
+                description: description.trim() || 'No description',
                 bom_data: projectItems,
                 diagram_code: diagramCode || null,
                 schematic_image_url: finalSchematicUrl,
                 pin_connections: validPins.length > 0 ? validPins : null,
                 user_id: user.id,
             }]);
-            if (error) alert('L?i: ' + error.message);
+            if (error) alert('Publish error: ' + error.message);
             else setSuccess(true);
         } finally { setPublishing(false); setUploadProgress(''); }
     };
@@ -489,9 +500,9 @@ function PublishProjectModal({
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-4">
                     <i className="fa-solid fa-check text-emerald-400 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-black dark:text-slate-100 mb-2">Publish th�nh c�ng!</h3>
-                <p className="text-sm text-slate-500 mb-6">D? �n d� l�n Thu Vi?n C?ng �?ng.</p>
-                <button onClick={onClose} className="w-full py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl">��ng</button>
+                <h3 className="text-xl font-black dark:text-slate-100 mb-2">Published!</h3>
+                <p className="text-sm text-slate-500 mb-6">Project is now in the Community Library.</p>
+                <button onClick={onClose} className="w-full py-3 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] text-white font-bold rounded-xl">Close</button>
             </div>
         </div>
     );
@@ -499,50 +510,72 @@ function PublishProjectModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
             <div className="relative w-full max-w-2xl bg-white dark:bg-[#0D1117] rounded-3xl border border-white/10 shadow-2xl max-h-[95vh] flex flex-col">
+                {/* Header */}
                 <div className="flex items-center justify-between p-5 border-b border-slate-200 dark:border-white/5 flex-shrink-0">
                     <div>
-                        <h2 className="font-black dark:text-slate-100 text-lg flex items-center gap-2"><i className="fa-solid fa-cloud-arrow-up text-[#2D9CDB]"></i>Publish D? �n</h2>
-                        <p className="text-xs text-slate-400 mt-0.5">Chia s? d? �n v?i c?ng d?ng k? thu?t</p>
+                        <h2 className="font-black dark:text-slate-100 text-lg flex items-center gap-2">
+                            <i className="fa-solid fa-cloud-arrow-up text-[#2D9CDB]"></i> Publish Project
+                        </h2>
+                        <p className="text-xs text-slate-400 mt-0.5">Share your project with the engineering community</p>
                     </div>
                     <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 flex items-center justify-center transition-colors">
                         <i className="fa-solid fa-xmark text-slate-500 dark:text-slate-400 text-sm"></i>
                     </button>
                 </div>
+
+                {/* Body */}
                 <div className="flex-1 overflow-y-auto p-5 space-y-5 custom-scrollbar">
+                    {/* Info */}
                     <div className="space-y-3">
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">T�n d? �n *</label>
-                            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="VD: Tr?m Th?i Ti?t IoT v?i ESP32" className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"/>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Project Name *</label>
+                            <input value={title} onChange={e => setTitle(e.target.value)} placeholder="e.g. IoT Weather Station with ESP32" className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600"/>
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">M� t?</label>
-                            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="M� t? ng?n v? d? �n..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"/>
+                            <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Description</label>
+                            <textarea value={description} onChange={e => setDescription(e.target.value)} rows={3} placeholder="Brief description..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200 resize-none"/>
                         </div>
                     </div>
+
+                    {/* Schematic Upload */}
                     <div>
-                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-1.5"><i className="fa-solid fa-image text-emerald-400"></i>So d? Nguy�n L� (t�y ch?n)</label>
+                        <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider flex items-center gap-1.5">
+                            <i className="fa-solid fa-image text-emerald-400"></i> Schematic Diagram (optional)
+                        </label>
                         <div className="space-y-2">
                             <label className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-[#161B22] border border-dashed border-slate-300 dark:border-[#30363D] rounded-xl cursor-pointer hover:border-[#2D9CDB] transition-colors group">
                                 <i className="fa-solid fa-cloud-arrow-up text-slate-400 group-hover:text-[#2D9CDB]"></i>
                                 <div className="flex-1 min-w-0">
-                                    <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{uploadFile ? uploadFile.name : 'Upload PNG/JPG t? KiCad, EasyEDA, Fritzing...'}</p>
-                                    {!uploadFile && <p className="text-[10px] text-slate-400">T?i da 5MB</p>}
+                                    <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{uploadFile ? uploadFile.name : 'Upload PNG/JPG from KiCad, EasyEDA, Fritzing...'}</p>
+                                    {!uploadFile && <p className="text-[10px] text-slate-400">Max 5MB</p>}
                                 </div>
                                 <input type="file" accept="image/*" className="hidden" onChange={e => { setUploadFile(e.target.files?.[0] || null); if (e.target.files?.[0]) setSchematicUrl(''); }}/>
                                 {uploadFile && <button onClick={e => { e.preventDefault(); setUploadFile(null); }} className="text-xs text-red-400"><i className="fa-solid fa-xmark"></i></button>}
                             </label>
-                            <div className="flex items-center gap-2"><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div><span className="text-xs text-slate-400">ho?c URL</span><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div></div>
+                            <div className="flex items-center gap-2"><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div><span className="text-xs text-slate-400">or URL</span><div className="flex-1 h-px bg-slate-200 dark:bg-white/5"></div></div>
                             <input type="url" value={schematicUrl} onChange={e => { setSchematicUrl(e.target.value); if (e.target.value) setUploadFile(null); }} placeholder="https://easyeda.com/..." className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2D9CDB] dark:text-slate-200"/>
                         </div>
                     </div>
+
+                    {/* Pin Table Builder */}
                     <div>
                         <div className="flex items-center justify-between mb-2">
-                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider flex items-center gap-1.5"><i className="fa-solid fa-plug text-amber-400"></i>K?t N?i Ch�n (t�y ch?n)</label>
-                            <button onClick={addPin} className="text-xs text-[#2D9CDB] font-bold flex items-center gap-1"><i className="fa-solid fa-plus text-[10px]"></i>Th�m d�ng</button>
+                            <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                                <i className="fa-solid fa-plug text-amber-400"></i> Pin Connections (optional)
+                            </label>
+                            <button onClick={addPin} className="text-xs text-[#2D9CDB] font-bold flex items-center gap-1">
+                                <i className="fa-solid fa-plus text-[10px]"></i> Add row
+                            </button>
                         </div>
                         <div className="rounded-xl border border-slate-200 dark:border-[#30363D] overflow-hidden">
                             <div className="grid grid-cols-12 text-[9px] font-bold uppercase tracking-widest text-slate-400 bg-slate-50 dark:bg-[#161B22] px-2 py-1.5">
-                                <span className="col-span-2">Linh ki?n</span><span className="col-span-2">Ch�n LK</span><span className="col-span-2">MCU</span><span className="col-span-2">Ch�n MCU</span><span className="col-span-2">Giao th?c</span><span className="col-span-1">Vcc</span><span className="col-span-1"></span>
+                                <span className="col-span-2">Component</span>
+                                <span className="col-span-2">Pin</span>
+                                <span className="col-span-2">MCU</span>
+                                <span className="col-span-2">MCU Pin</span>
+                                <span className="col-span-2">Protocol</span>
+                                <span className="col-span-1">Vcc</span>
+                                <span className="col-span-1"></span>
                             </div>
                             <div className="divide-y divide-slate-100 dark:divide-[#30363D]">
                                 {pinRows.map((row, i) => (
@@ -555,20 +588,24 @@ function PublishProjectModal({
                                             {PROTOCOLS.map(p => <option key={p}>{p}</option>)}
                                         </select>
                                         <input value={row.voltage} onChange={e => updatePin(i,'voltage',e.target.value)} placeholder="3.3V" className="col-span-1 px-1.5 py-1 bg-slate-50 dark:bg-[#161B22] border border-slate-200 dark:border-[#30363D] rounded text-xs dark:text-slate-200 focus:outline-none focus:border-[#2D9CDB]"/>
-                                        <button onClick={() => removePin(i)} className="col-span-1 flex justify-center text-slate-400 hover:text-red-400 transition-colors"><i className="fa-solid fa-xmark text-xs"></i></button>
+                                        <button onClick={() => removePin(i)} className="col-span-1 flex justify-center text-slate-400 hover:text-red-400 transition-colors">
+                                            <i className="fa-solid fa-xmark text-xs"></i>
+                                        </button>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <p className="text-[10px] text-slate-400 mt-1.5">Ch? d�ng c� d? Linh ki?n + Ch�n LK + Ch�n MCU m?i du?c luu.</p>
+                        <p className="text-[10px] text-slate-400 mt-1.5">Only rows with Component + Pin + MCU Pin will be saved.</p>
                     </div>
                 </div>
+
+                {/* Footer */}
                 <div className="flex-shrink-0 p-5 border-t border-slate-200 dark:border-white/5 flex items-center gap-3 justify-end">
                     {uploadProgress && <span className="text-xs text-[#2D9CDB] flex items-center gap-1.5 mr-auto"><i className="fa-solid fa-spinner fa-spin text-[10px]"></i>{uploadProgress}</span>}
-                    <button onClick={onClose} className="px-5 py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 transition-all">H?y</button>
+                    <button onClick={onClose} className="px-5 py-2 rounded-xl border border-slate-200 dark:border-[#30363D] text-sm text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-white/5 transition-all">Cancel</button>
                     <button onClick={handlePublish} disabled={publishing} className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-[#2D9CDB] to-[#00D4FF] hover:opacity-90 text-white font-bold rounded-xl text-sm disabled:opacity-50 shadow-md shadow-blue-500/20 transition-all">
                         <i className={`fa-solid ${publishing ? 'fa-spinner fa-spin' : 'fa-cloud-arrow-up'}`}></i>
-                        {publishing ? '�ang publish...' : 'Publish ??'}
+                        {publishing ? 'Publishing...' : 'Publish'}
                     </button>
                 </div>
             </div>
