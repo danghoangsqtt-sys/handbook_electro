@@ -97,7 +97,7 @@ export default function UserProfile() {
                             <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-500 flex items-center justify-center mx-auto mb-3 text-xl">
                                 <i className="fa-solid fa-microchip"></i>
                             </div>
-                            <div className="text-xs font-bold text-slate-700 dark:text-slate-300">Chuyên Gia BOM</div>
+                            <div className="text-xs font-bold text-slate-700 dark:text-slate-300">Chuyên Gia Linh Kiện</div>
                         </div>
                     </div>
                 </div>

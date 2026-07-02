@@ -33,7 +33,7 @@ export default function ComponentCard({
 }: ComponentCardProps) {
   const addItem = useBOMStore((state) => state.addItem);
 
-  const handleAddToBOM = () => {
+  const handleAddToProject = () => {
     addItem({
       id,
       name,
@@ -42,7 +42,7 @@ export default function ComponentCard({
       specs,
       shopee_link
     });
-    alert(`Đã thêm ${name} vào AI Project Studio Workspace!`);
+    alert(`Đã thêm ${name} vào Giỏ Linh Kiện!`);
   };
 
   return (
@@ -119,7 +119,7 @@ export default function ComponentCard({
         <div className="mt-auto flex flex-col gap-2 pt-2">
           {/* Mobile Add Button (Absolute) */}
           <button 
-            onClick={handleAddToBOM}
+            onClick={handleAddToProject}
             className="sm:hidden absolute bottom-3 right-3 w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30 active:scale-95 transition-transform"
           >
             <i className="fa-solid fa-plus text-xs"></i>
@@ -127,7 +127,7 @@ export default function ComponentCard({
 
           {/* Desktop Add Button */}
           <button 
-            onClick={handleAddToBOM}
+            onClick={handleAddToProject}
             className="hidden sm:flex w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-blue-500/20 transition-all items-center justify-center gap-2 group/btn"
           >
             <i className="fa-solid fa-plus transition-transform group-hover/btn:rotate-90"></i>

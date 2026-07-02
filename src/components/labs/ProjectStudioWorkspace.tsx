@@ -161,7 +161,7 @@ export default function ProjectStudioWorkspace() {
         <div className="w-full md:w-64 border-r border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#050505] flex flex-col flex-shrink-0">
           <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center bg-slate-100/50 dark:bg-[#0A0A0A]">
             <h3 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
-              BOM Explorer
+              Giỏ Linh Kiện
             </h3>
             <div className="flex items-center gap-2">
               <span className="text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-1.5 py-0.5 rounded font-mono">
@@ -181,7 +181,7 @@ export default function ProjectStudioWorkspace() {
                   document.body.removeChild(link);
                 }}
                 className="text-slate-400 hover:text-green-500 transition-colors"
-                title="Export BOM (CSV)"
+                title="Xuất Danh Sách (CSV)"
               >
                 <i className="fa-solid fa-file-csv"></i>
               </button>
@@ -220,7 +220,7 @@ export default function ProjectStudioWorkspace() {
               </div>
             ))}
             {projectItems.length === 0 && (
-              <p className="text-[10px] text-slate-500 italic px-4 mt-2">No components found.</p>
+              <p className="text-[10px] text-slate-500 italic px-4 mt-2">Chưa có linh kiện nào.</p>
             )}
 
             <div className="mt-4 border-t border-slate-200 dark:border-slate-800">
@@ -263,7 +263,7 @@ export default function ProjectStudioWorkspace() {
               <i className="fa-solid fa-code text-cyan-500/30 dark:text-cyan-500/10 text-6xl mb-6"></i>
               <h3 className="text-sm font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest mb-3">Workspace Ready</h3>
               <p className="text-slate-400 dark:text-slate-500 text-xs font-mono max-w-sm leading-relaxed">
-                Add components to the BOM Explorer and press <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> to generate schematics and code.
+                Thêm linh kiện vào <span className="text-cyan-600 dark:text-cyan-400">Giỏ Linh Kiện</span> và nhấn <span className="text-cyan-600 dark:text-cyan-400">Run Analysis</span> để tạo sơ đồ mạch và code.
               </p>
             </div>
           )}
